@@ -39,13 +39,13 @@ export default async function BookPage({
     <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-4 py-8 md:px-8 md:py-12">
       <Link
         href={`/classes/${book.classNum}`}
-        className="flex items-center gap-1 self-start text-sm font-medium text-muted-foreground hover:text-foreground"
+        className="flex items-center gap-1 self-start text-sm font-bold text-muted-foreground hover:text-foreground"
       >
         <ChevronLeft className="size-4" /> Class {toRoman(book.classNum)}
       </Link>
 
       <div className="flex gap-4 md:gap-6">
-        <div className="relative aspect-[3/4] w-24 shrink-0 overflow-hidden rounded-lg border border-border bg-muted md:w-32">
+        <div className="relative aspect-[3/4] w-24 shrink-0 overflow-hidden rounded-xl border border-border bg-muted md:w-32">
           <Image
             src={assetPath(book.cover || '/covers/general.png')}
             alt=""
@@ -55,13 +55,13 @@ export default async function BookPage({
           />
         </div>
         <div className="flex min-w-0 flex-col gap-2">
-          <p className="text-xs font-medium text-primary">
+          <p className="text-sm font-bold text-primary">
             Class {toRoman(book.classNum)} · {book.subject}
           </p>
-          <h1 className="font-sans text-xl font-semibold leading-tight tracking-tight md:text-3xl text-balance">
+          <h1 className="font-sans text-xl font-extrabold leading-tight tracking-tight md:text-3xl text-balance">
             {book.title}
           </h1>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm font-medium text-muted-foreground">
             {book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'}
           </p>
           <div className="mt-1 flex flex-wrap items-center gap-2">
@@ -70,9 +70,9 @@ export default async function BookPage({
               href="https://ncert.nic.in/textbook.php"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="flex items-center gap-1.5 rounded-lg border border-border px-3.5 py-2 text-sm font-bold text-muted-foreground transition-colors duration-150 hover:text-foreground"
             >
-              <ExternalLink className="size-3.5" /> NCERT official
+              <ExternalLink className="size-4" /> NCERT official
             </a>
           </div>
         </div>

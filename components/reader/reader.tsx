@@ -1,5 +1,6 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Download, ExternalLink } from 'lucide-react'
@@ -8,6 +9,21 @@ import { NCERT_PDF_BASE, toRoman } from '@/lib/catalog'
 import { useRecents } from '@/lib/library-store'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
+
+const PdfViewer = dynamic(
+  () => import('@/components/reader/pdf-viewer').then((mod) => mod.PdfViewer),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex flex-1 items-center justify-center py-20">
+        <div className="flex flex-col items-center gap-3">
+          <div className="size-8 animate-spin rounded-full border-4 border-muted border-t-primary" />
+          <p className="text-sm font-medium text-muted-foreground">Loading PDF viewer...</p>
+        </div>
+      </div>
+    ),
+  },
+)
 
 export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   const { addRecent } = useRecents()
@@ -23,21 +39,21 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   const pdfUrl = `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
 
   return (
-    <div className="flex h-svh flex-col bg-muted">
+    <div className="flex h-svh flex-col gradient-hero-light dark:gradient-hero-dark">
       {/* Top bar */}
-      <header className="flex items-center gap-2 border-b border-border bg-background px-3 py-2 md:px-4">
+      <header className="flex items-center gap-2 border-b border-border bg-background/95 px-3 py-2 backdrop-blur md:px-4">
         <Link
           href={`/book/${book.id}`}
           aria-label={`Back to ${book.title}`}
-          className="flex size-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+          className="flex size-11 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
         >
-          <ChevronLeft className="size-5" />
+          <ChevronLeft className="size-6" />
         </Link>
         <div className="min-w-0 flex-1">
-          <h1 className="truncate text-sm font-semibold leading-tight">
+          <h1 className="truncate text-base font-extrabold leading-tight">
             {chapter.title}
           </h1>
-          <p className="truncate text-xs text-muted-foreground">
+          <p className="truncate text-xs font-medium text-muted-foreground">
             {book.title} · Class {toRoman(book.classNum)}
           </p>
         </div>
@@ -46,56 +62,30 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
             href={pdfUrl}
             download
             aria-label="Download chapter PDF"
-            className="flex size-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            className="flex size-11 items-center justify-center rounded-lg text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
           >
-            <Download className="size-4.5" />
+            <Download className="size-5" />
           </a>
           <a
             href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open official NCERT PDF"
-            className="flex size-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            className="flex size-11 items-center justify-center rounded-lg text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
           >
-            <ExternalLink className="size-4.5" />
+            <ExternalLink className="size-5" />
           </a>
           <ThemeToggle />
         </div>
       </header>
 
-      {/* PDF link area */}
-      <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
-        <div className="rounded-xl border border-border bg-background p-8 shadow-sm">
-          <p className="text-sm font-medium">{chapter.title}</p>
-          <p className="mt-1 text-xs text-muted-foreground">
-            {book.title} · Class {toRoman(book.classNum)}
-          </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a
-              href={pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              <ExternalLink className="size-4" />
-              View PDF
-            </a>
-            <a
-              href={pdfUrl}
-              download
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-            >
-              <Download className="size-4" />
-              Download PDF
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* PDF viewer */}
+      <PdfViewer url={pdfUrl} title={chapter.title} />
 
       {/* Bottom chapter nav */}
-      <footer className="flex items-center justify-between gap-2 border-t border-border bg-background px-3 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] md:px-4">
+      <footer className="flex items-center justify-between gap-2 border-t border-border bg-background/95 px-3 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] backdrop-blur md:px-4">
         <ChapterNavLink chapter={prev} direction="prev" />
-        <p className="text-xs text-muted-foreground">
+        <p className="text-xs font-bold text-muted-foreground">
           {idx + 1} / {book.chapters.length}
         </p>
         <ChapterNavLink chapter={next} direction="next" />
@@ -116,23 +106,23 @@ function ChapterNavLink({
     return (
       <span
         aria-hidden="true"
-        className="flex w-24 items-center gap-1 px-2 py-1.5 text-sm text-muted-foreground/40 md:w-32"
+        className="flex w-28 items-center gap-1 px-2 py-2 text-sm font-medium text-muted-foreground/40 md:w-36"
       >
-        {direction === 'prev' && <ChevronLeft className="size-4" />}
+        {direction === 'prev' && <ChevronLeft className="size-5" />}
         <span className={cn(direction === 'next' && 'ml-auto')}>{label}</span>
-        {direction === 'next' && <ChevronRight className="size-4" />}
+        {direction === 'next' && <ChevronRight className="size-5" />}
       </span>
     )
   }
   return (
     <Link
       href={`/read/${chapter.pdfCode}`}
-      className="flex w-24 items-center gap-1 rounded-lg px-2 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary md:w-32"
+      className="flex w-28 items-center gap-1 rounded-lg px-2 py-2 text-sm font-bold text-foreground transition-colors duration-150 hover:bg-secondary md:w-36"
       title={chapter.title}
     >
-      {direction === 'prev' && <ChevronLeft className="size-4" />}
+      {direction === 'prev' && <ChevronLeft className="size-5" />}
       <span className={cn('truncate', direction === 'next' && 'ml-auto')}>{label}</span>
-      {direction === 'next' && <ChevronRight className="size-4" />}
+      {direction === 'next' && <ChevronRight className="size-5" />}
     </Link>
   )
 }

@@ -37,12 +37,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-svh">
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-svh w-60 shrink-0 flex-col border-r border-sidebar-border bg-sidebar md:flex">
-        <div className="flex items-center gap-2.5 px-5 pt-6 pb-4">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <BookOpen className="h-4.5 w-4.5" />
+      <aside className="sticky top-0 hidden h-svh w-64 shrink-0 flex-col border-r border-sidebar-border gradient-sidebar-light dark:gradient-sidebar-dark md:flex">
+        <div className="flex items-center gap-3 px-5 pt-6 pb-4">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+            <BookOpen className="h-5 w-5" />
           </span>
-          <span className="font-sans text-lg font-semibold tracking-tight text-sidebar-foreground">
+          <span className="font-sans text-xl font-extrabold tracking-tight text-sidebar-foreground">
             Open NCERT
           </span>
         </div>
@@ -53,20 +53,20 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               key={href}
               href={href}
               className={cn(
-                'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors duration-150',
                 isActive(pathname, href)
                   ? 'bg-sidebar-accent text-sidebar-accent-foreground'
                   : 'text-muted-foreground hover:bg-sidebar-accent/60 hover:text-sidebar-foreground',
               )}
             >
-              <Icon className="h-4 w-4" />
+              <Icon className="h-5 w-5" />
               {label}
             </Link>
           ))}
         </nav>
 
         <div className="mt-6 flex-1 overflow-y-auto px-3 pb-4">
-          <p className="px-3 pb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+          <p className="px-3 pb-2 text-xs font-semibold tracking-wide text-muted-foreground uppercase">
             Browse classes
           </p>
           <div className="grid grid-cols-4 gap-1.5 px-1">
@@ -77,7 +77,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   key={r}
                   href={href}
                   className={cn(
-                    'flex h-9 items-center justify-center rounded-lg text-xs font-semibold transition-colors',
+                    'flex h-11 items-center justify-center rounded-lg text-sm font-bold transition-colors duration-150',
                     isActive(pathname, href)
                       ? 'bg-primary text-primary-foreground'
                       : 'bg-sidebar-accent/50 text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
@@ -91,7 +91,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
 
         <div className="flex items-center justify-between border-t border-sidebar-border px-4 py-3">
-          <span className="text-xs text-muted-foreground">Theme</span>
+          <span className="text-xs font-semibold text-muted-foreground">Theme</span>
           <ThemeToggle />
         </div>
       </aside>
@@ -100,18 +100,18 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Mobile top bar */}
         <header className="sticky top-0 z-40 flex items-center justify-between border-b border-border bg-background/90 px-4 py-3 backdrop-blur md:hidden">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
-              <BookOpen className="h-4 w-4" />
+          <Link href="/" className="flex items-center gap-2.5">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+              <BookOpen className="h-5 w-5" />
             </span>
-            <span className="font-sans text-base font-semibold tracking-tight">
+            <span className="font-sans text-lg font-extrabold tracking-tight">
               Open NCERT
             </span>
           </Link>
           <ThemeToggle />
         </header>
 
-        <main className="flex-1 pb-20 md:pb-0">{children}</main>
+        <main className="flex-1 pb-24 md:pb-0">{children}</main>
 
         <footer className="hidden border-t border-border px-6 py-4 md:block">
           <p className="text-xs text-muted-foreground">
@@ -141,11 +141,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               key={href}
               href={href}
               className={cn(
-                'flex flex-1 flex-col items-center gap-1 pt-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom))] text-[11px] font-medium transition-colors',
+                'flex flex-1 flex-col items-center gap-1 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-xs font-semibold transition-colors duration-150',
                 active ? 'text-primary' : 'text-muted-foreground',
               )}
             >
-              <Icon className="h-5 w-5" />
+              <Icon className="h-6 w-6" />
               {label}
             </Link>
           )
