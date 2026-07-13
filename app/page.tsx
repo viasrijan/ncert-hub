@@ -21,7 +21,7 @@ export default function HomePage() {
           <Library className="size-3.5" />
           {BOOKS.length} textbooks · {totalChapters.toLocaleString()} chapters
         </div>
-        <h1 className="max-w-2xl font-serif text-3xl font-semibold leading-tight tracking-tight md:text-5xl text-balance">
+        <h1 className="max-w-2xl font-sans text-3xl font-semibold leading-tight tracking-tight md:text-5xl text-balance">
           Every NCERT textbook, beautifully organized
         </h1>
         <p className="max-w-xl text-base leading-relaxed text-muted-foreground text-pretty">

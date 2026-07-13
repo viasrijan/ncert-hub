@@ -42,7 +42,7 @@ export default async function ClassPage({
         >
           <ChevronLeft className="size-4" /> All classes
         </Link>
-        <h1 className="font-serif text-2xl font-semibold tracking-tight md:text-3xl">
+        <h1 className="font-sans text-2xl font-semibold tracking-tight md:text-3xl">
           Class {toRoman(c)}
         </h1>
         <p className="text-sm text-muted-foreground">

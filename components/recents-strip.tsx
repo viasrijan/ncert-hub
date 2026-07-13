@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Clock } from 'lucide-react'
 import { getBook, toRoman } from '@/lib/catalog'
 import { useRecents } from '@/lib/library-store'
+import { assetPath } from '@/lib/utils'
 
 export function RecentsStrip() {
   const { recents } = useRecents()
@@ -31,7 +32,7 @@ export function RecentsStrip() {
               className="flex w-56 shrink-0 items-center gap-3 rounded-xl border border-border bg-card p-3 transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <div className="relative size-12 shrink-0 overflow-hidden rounded-lg bg-muted">
-                <Image src={book.cover || '/covers/general.png'} alt="" fill sizes="48px" className="object-cover" />
+                <Image src={assetPath(book.cover || '/covers/general.png')} alt="" fill sizes="48px" className="object-cover" />
               </div>
               <div className="min-w-0">
                 <p className="truncate text-sm font-medium text-card-foreground">

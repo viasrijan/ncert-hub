@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BookOpen, FileText, Search, X } from 'lucide-react'
 import { BOOKS, toRoman, type Book, type Chapter } from '@/lib/catalog'
-import { cn } from '@/lib/utils'
+import { cn, assetPath } from '@/lib/utils'
 
 interface BookHit {
   type: 'book'
@@ -71,7 +71,7 @@ export function SearchView() {
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 px-4 py-8 md:px-8 md:py-12">
-      <h1 className="font-serif text-2xl font-semibold tracking-tight md:text-3xl">Search</h1>
+      <h1 className="font-sans text-2xl font-semibold tracking-tight md:text-3xl">Search</h1>
 
       {/* Input */}
       <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 focus-within:ring-2 focus-within:ring-ring">
@@ -139,7 +139,7 @@ export function SearchView() {
                   className="flex items-center gap-3 px-4 py-3 transition-colors hover:bg-secondary"
                 >
                   <div className="relative size-10 shrink-0 overflow-hidden rounded-md bg-muted">
-                    <Image src={hit.book.cover || '/covers/general.png'} alt="" fill sizes="40px" className="object-cover" />
+                    <Image src={assetPath(hit.book.cover || '/covers/general.png')} alt="" fill sizes="40px" className="object-cover" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-medium">{hit.book.title}</p>

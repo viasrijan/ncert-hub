@@ -42,7 +42,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <BookOpen className="h-4.5 w-4.5" />
           </span>
-          <span className="font-serif text-lg font-semibold tracking-tight text-sidebar-foreground">
+          <span className="font-sans text-lg font-semibold tracking-tight text-sidebar-foreground">
             Open NCERT
           </span>
         </div>
@@ -104,7 +104,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <span className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
               <BookOpen className="h-4 w-4" />
             </span>
-            <span className="font-serif text-base font-semibold tracking-tight">
+            <span className="font-sans text-base font-semibold tracking-tight">
               Open NCERT
             </span>
           </Link>

@@ -6,7 +6,7 @@ import { Bookmark } from 'lucide-react'
 import type { Book } from '@/lib/catalog'
 import { toRoman } from '@/lib/catalog'
 import { useBookmarks } from '@/lib/library-store'
-import { cn } from '@/lib/utils'
+import { cn, assetPath } from '@/lib/utils'
 
 export function BookCard({ book, showClass = false }: { book: Book; showClass?: boolean }) {
   const { bookmarks, toggleBookmark } = useBookmarks()
@@ -20,7 +20,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
       >
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
           <Image
-            src={book.cover || '/covers/general.png'}
+            src={assetPath(book.cover || '/covers/general.png')}
             alt=""
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 240px"

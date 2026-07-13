@@ -6,6 +6,7 @@ import { Bookmark, Clock, Trash2 } from 'lucide-react'
 import { getBook, toRoman } from '@/lib/catalog'
 import { useBookmarks, useRecents } from '@/lib/library-store'
 import { BookCard } from '@/components/book-card'
+import { assetPath } from '@/lib/utils'
 
 export function BookmarksView() {
   const { bookmarks } = useBookmarks()
@@ -21,7 +22,7 @@ export function BookmarksView() {
       <section aria-labelledby="saved-heading" className="flex flex-col gap-3">
         <div className="flex items-center gap-2">
           <Bookmark className="size-4 text-primary" />
-          <h1 id="saved-heading" className="font-serif text-2xl font-semibold tracking-tight">
+          <h1 id="saved-heading" className="font-sans text-2xl font-semibold tracking-tight">
             Saved books
           </h1>
         </div>
@@ -85,7 +86,7 @@ export function BookmarksView() {
                   >
                     <div className="relative size-10 shrink-0 overflow-hidden rounded-md bg-muted">
                       <Image
-                        src={book.cover || '/covers/general.png'}
+                        src={assetPath(book.cover || '/covers/general.png')}
                         alt=""
                         fill
                         sizes="40px"

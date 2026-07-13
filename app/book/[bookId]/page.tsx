@@ -6,6 +6,7 @@ import { ChevronLeft, ExternalLink } from 'lucide-react'
 import { BOOKS, getBook, toRoman } from '@/lib/catalog'
 import { ChapterList } from '@/components/chapter-list'
 import { BookmarkButton } from '@/components/bookmark-button'
+import { assetPath } from '@/lib/utils'
 
 export function generateStaticParams() {
   return BOOKS.map((b) => ({ bookId: b.id }))
@@ -46,7 +47,7 @@ export default async function BookPage({
       <div className="flex gap-4 md:gap-6">
         <div className="relative aspect-[3/4] w-24 shrink-0 overflow-hidden rounded-lg border border-border bg-muted md:w-32">
           <Image
-            src={book.cover || '/covers/general.png'}
+            src={assetPath(book.cover || '/covers/general.png')}
             alt=""
             fill
             sizes="(max-width: 768px) 96px, 128px"
@@ -57,7 +58,7 @@ export default async function BookPage({
           <p className="text-xs font-medium text-primary">
             Class {toRoman(book.classNum)} · {book.subject}
           </p>
-          <h1 className="font-serif text-xl font-semibold leading-tight tracking-tight md:text-3xl text-balance">
+          <h1 className="font-sans text-xl font-semibold leading-tight tracking-tight md:text-3xl text-balance">
             {book.title}
           </h1>
           <p className="text-sm text-muted-foreground">
