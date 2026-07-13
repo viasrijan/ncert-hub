@@ -1,2 +1,0 @@
-:HL["/open-ncert/_next/static/chunks/0xf6gwq6wm9ja.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Cv4N0_cvUS3t4P51qasCo"}
