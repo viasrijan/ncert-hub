@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -88,14 +88,14 @@ export function SearchView() {
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 px-4 py-8 md:px-8 md:py-12">
-      <h1 className="font-sans text-xl font-extrabold uppercase tracking-widest md:text-2xl">Search</h1>
+      <h1 className="font-sans text-2xl font-extrabold tracking-tight md:text-3xl">Search</h1>
 
       {/* Input */}
       <div
-        className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3 focus-within:ring-2 focus-within:ring-ring"
+        className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3.5 focus-within:ring-2 focus-within:ring-ring"
         onKeyDown={handleKeyDown}
       >
-        <Search className="size-4 shrink-0 text-muted-foreground" />
+        <Search className="size-5 shrink-0 text-muted-foreground" />
         <input
           ref={inputRef}
           type="search"
@@ -103,7 +103,7 @@ export function SearchView() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Books, subjects, or chapter names..."
           autoFocus
-          className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden"
+          className="min-w-0 flex-1 bg-transparent text-base text-foreground outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden"
         />
         {query && (
           <button
@@ -115,7 +115,7 @@ export function SearchView() {
             aria-label="Clear search"
             className="text-muted-foreground hover:text-foreground"
           >
-            <X className="size-4" />
+            <X className="size-5" />
           </button>
         )}
       </div>
@@ -128,7 +128,7 @@ export function SearchView() {
             type="button"
             onClick={() => setClassFilter(c)}
             className={cn(
-              'shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold transition-all duration-150',
+              'shrink-0 rounded-full px-3.5 py-2 text-sm font-bold transition-all duration-150',
               classFilter === c
                 ? 'bg-primary text-primary-foreground'
                 : 'border border-border bg-card text-muted-foreground hover:text-foreground',
@@ -141,11 +141,11 @@ export function SearchView() {
 
       {/* Results */}
       {query.trim().length < 2 ? (
-        <p className="py-8 text-center text-sm text-muted-foreground">
+        <p className="py-8 text-center text-base text-muted-foreground">
           Start typing to search {BOOKS.length} textbooks and their chapters.
         </p>
       ) : showEmpty ? (
-        <p className="py-8 text-center text-sm text-muted-foreground">
+        <p className="py-8 text-center text-base text-muted-foreground">
           No results for &ldquo;{query}&rdquo;
           {classFilter !== 0 && ` in Class ${toRoman(classFilter)}`}.
         </p>
@@ -156,31 +156,31 @@ export function SearchView() {
               {hit.type === 'book' ? (
                 <Link
                   href={`/book/${hit.book.id}`}
-                  className="flex items-center gap-3 px-4 py-3 transition-colors duration-150 hover:bg-secondary"
+                  className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-secondary"
                 >
-                  <div className="relative size-10 shrink-0 overflow-hidden rounded-md bg-muted">
-                    <Image src={assetPath(hit.book.cover || '/covers/general.png')} alt="" fill sizes="40px" className="object-cover" />
+                  <div className="relative size-11 shrink-0 overflow-hidden rounded-lg bg-muted">
+                    <Image src={assetPath(hit.book.cover || '/covers/general.png')} alt="" fill sizes="44px" className="object-cover" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-semibold">{hit.book.title}</p>
-                    <p className="truncate text-xs text-muted-foreground">
+                    <p className="truncate text-base font-bold">{hit.book.title}</p>
+                    <p className="truncate text-sm text-muted-foreground">
                       Class {toRoman(hit.book.classNum)} · {hit.book.subject} ·{' '}
                       {hit.book.chapters.length} chapters
                     </p>
                   </div>
-                  <BookOpen className="size-4 shrink-0 text-muted-foreground" />
+                  <BookOpen className="size-5 shrink-0 text-muted-foreground" />
                 </Link>
               ) : (
                 <Link
                   href={`/read/${hit.chapter.pdfCode}`}
-                  className="flex items-center gap-3 px-4 py-3 transition-colors duration-150 hover:bg-secondary"
+                  className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-secondary"
                 >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-secondary">
-                    <FileText className="size-4 text-secondary-foreground" />
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-secondary">
+                    <FileText className="size-5 text-secondary-foreground" />
                   </span>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-semibold">{hit.chapter.title}</p>
-                    <p className="truncate text-xs text-muted-foreground">
+                    <p className="truncate text-base font-bold">{hit.chapter.title}</p>
+                    <p className="truncate text-sm text-muted-foreground">
                       {hit.book.title} · Class {toRoman(hit.book.classNum)}
                     </p>
                   </div>

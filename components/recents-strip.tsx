@@ -14,8 +14,8 @@ export function RecentsStrip() {
   return (
     <section aria-labelledby="recents-heading" className="flex flex-col gap-3">
       <div className="flex items-center gap-2">
-        <Clock className="size-4 text-muted-foreground" />
-        <h2 id="recents-heading" className="text-sm font-extrabold uppercase tracking-widest">
+        <Clock className="size-5 text-primary" />
+        <h2 id="recents-heading" className="text-lg font-extrabold">
           Continue reading
         </h2>
       </div>
@@ -29,16 +29,16 @@ export function RecentsStrip() {
             <Link
               key={r.pdfCode}
               href={`/read/${r.pdfCode}`}
-              className="flex w-56 shrink-0 items-center gap-3 rounded-lg border border-border bg-card p-3 transition-all duration-200 hover:shadow-md hover:scale-[1.01] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="flex w-56 shrink-0 items-center gap-3 rounded-lg border border-border bg-card p-3 transition-all duration-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <div className="relative size-10 shrink-0 overflow-hidden rounded-md bg-muted">
-                <Image src={assetPath(book.cover || '/covers/general.png')} alt="" fill sizes="40px" className="object-cover" />
+              <div className="relative size-12 shrink-0 overflow-hidden rounded-lg bg-muted">
+                <Image src={assetPath(book.cover || '/covers/general.png')} alt="" fill sizes="48px" className="object-cover" />
               </div>
               <div className="min-w-0">
-                <p className="truncate text-sm font-semibold text-card-foreground">
+                <p className="truncate text-sm font-bold text-card-foreground">
                   {chapter.title}
                 </p>
-                <p className="truncate text-[11px] text-muted-foreground">
+                <p className="truncate text-xs text-muted-foreground">
                   {book.title} · Class {toRoman(book.classNum)}
                 </p>
               </div>

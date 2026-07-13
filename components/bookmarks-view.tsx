@@ -21,20 +21,20 @@ export function BookmarksView() {
       {/* Saved books */}
       <section aria-labelledby="saved-heading" className="flex flex-col gap-3">
         <div className="flex items-center gap-2">
-          <Bookmark className="size-4 text-muted-foreground" />
-          <h1 id="saved-heading" className="font-sans text-xl font-extrabold uppercase tracking-widest">
+          <Bookmark className="size-5 text-primary" />
+          <h1 id="saved-heading" className="font-sans text-2xl font-extrabold tracking-tight">
             Saved books
           </h1>
         </div>
         {savedBooks.length === 0 ? (
           <div className="flex flex-col items-center gap-2 rounded-lg border border-dashed border-border py-12 text-center">
-            <p className="text-sm font-semibold">No saved books yet</p>
+            <p className="text-base font-bold">No saved books yet</p>
             <p className="max-w-xs text-sm text-muted-foreground">
               Tap the bookmark icon on any textbook to keep it here for quick access.
             </p>
             <Link
               href="/classes"
-              className="mt-2 rounded-md bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"
+              className="mt-2 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"
             >
               Browse classes
             </Link>
@@ -52,8 +52,8 @@ export function BookmarksView() {
       <section aria-labelledby="recents-heading" className="flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Clock className="size-4 text-muted-foreground" />
-            <h2 id="recents-heading" className="text-sm font-extrabold uppercase tracking-widest">
+            <Clock className="size-5 text-primary" />
+            <h2 id="recents-heading" className="text-lg font-extrabold">
               Recently read
             </h2>
           </div>
@@ -61,9 +61,9 @@ export function BookmarksView() {
             <button
               type="button"
               onClick={clearRecents}
-              className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground transition-colors duration-150 hover:text-destructive"
+              className="flex items-center gap-1.5 text-sm font-semibold text-muted-foreground transition-colors duration-150 hover:text-destructive"
             >
-              <Trash2 className="size-3.5" /> Clear
+              <Trash2 className="size-4" /> Clear
             </button>
           )}
         </div>
@@ -82,26 +82,26 @@ export function BookmarksView() {
                 <li key={r.pdfCode}>
                   <Link
                     href={`/read/${r.pdfCode}`}
-                    className="flex items-center gap-3 px-4 py-3 transition-colors duration-150 hover:bg-secondary"
+                    className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-secondary"
                   >
-                    <div className="relative size-10 shrink-0 overflow-hidden rounded-md bg-muted">
+                    <div className="relative size-11 shrink-0 overflow-hidden rounded-lg bg-muted">
                       <Image
                         src={assetPath(book.cover || '/covers/general.png')}
                         alt=""
                         fill
-                        sizes="40px"
+                        sizes="44px"
                         className="object-cover"
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-semibold">{chapter.title}</p>
-                      <p className="truncate text-[11px] text-muted-foreground">
+                      <p className="truncate text-base font-bold">{chapter.title}</p>
+                      <p className="truncate text-sm text-muted-foreground">
                         {book.title} · Class {toRoman(book.classNum)}
                       </p>
                     </div>
                     <time
                       dateTime={new Date(r.openedAt).toISOString()}
-                      className="shrink-0 text-[11px] text-muted-foreground"
+                      className="shrink-0 text-xs text-muted-foreground"
                     >
                       {formatRelative(r.openedAt)}
                     </time>

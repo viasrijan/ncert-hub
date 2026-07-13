@@ -16,15 +16,15 @@ export default function HomePage() {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-8 md:px-8 md:py-12">
       {/* Hero */}
-      <section className="flex flex-col gap-5 rounded-lg bg-secondary/50 p-6 md:p-8">
-        <div className="flex items-center gap-2 self-start rounded-full border border-border bg-card px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-secondary-foreground">
-          <Library className="size-3.5" />
+      <section className="flex flex-col gap-5 rounded-xl bg-secondary/80 p-6 md:p-8">
+        <div className="flex items-center gap-2 self-start rounded-full border border-border bg-card px-3 py-1 text-sm font-bold text-secondary-foreground">
+          <Library className="size-4" />
           {BOOKS.length} textbooks · {totalChapters.toLocaleString()} chapters
         </div>
-        <h1 className="max-w-2xl font-sans text-3xl font-extrabold uppercase leading-tight tracking-tight md:text-5xl text-balance">
+        <h1 className="max-w-2xl font-sans text-4xl font-extrabold leading-tight tracking-tight md:text-5xl text-balance">
           Every NCERT textbook, beautifully organized
         </h1>
-        <p className="max-w-xl text-sm leading-relaxed text-muted-foreground text-pretty">
+        <p className="max-w-xl text-base leading-relaxed text-secondary-foreground text-pretty">
           Browse, read, and download official NCERT textbooks for Classes I to XII.
           Free, fast, and made for students.
         </p>
@@ -36,25 +36,25 @@ export default function HomePage() {
       {/* Class picker */}
       <section aria-labelledby="classes-heading" className="flex flex-col gap-3">
         <div className="flex items-center justify-between">
-          <h2 id="classes-heading" className="text-sm font-extrabold uppercase tracking-widest">
+          <h2 id="classes-heading" className="text-lg font-extrabold">
             Browse by class
           </h2>
           <Link
             href="/classes"
-            className="flex items-center gap-1 text-xs font-bold text-primary hover:underline"
+            className="flex items-center gap-1 text-sm font-bold text-primary hover:underline"
           >
-            All classes <ArrowRight className="size-3.5" />
+            All classes <ArrowRight className="size-4" />
           </Link>
         </div>
-        <div className="grid grid-cols-4 gap-1.5 sm:grid-cols-6 lg:grid-cols-12">
+        <div className="grid grid-cols-4 gap-2 sm:grid-cols-6 lg:grid-cols-12">
           {CLASSES.map((c) => (
             <Link
               key={c}
               href={`/classes/${c}`}
-              className="flex flex-col items-center gap-0.5 rounded-md border border-border bg-card py-3 transition-all duration-150 hover:border-primary hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="flex flex-col items-center gap-0.5 rounded-lg border border-border bg-card py-3.5 transition-all duration-150 hover:border-primary hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <span className="text-sm font-extrabold text-card-foreground">{toRoman(c)}</span>
-              <span className="text-[10px] text-muted-foreground">
+              <span className="text-base font-extrabold text-card-foreground">{toRoman(c)}</span>
+              <span className="text-xs text-muted-foreground">
                 {getBooksByClass(c).length} books
               </span>
             </Link>
@@ -64,7 +64,7 @@ export default function HomePage() {
 
       {/* Featured books */}
       <section aria-labelledby="featured-heading" className="flex flex-col gap-3">
-        <h2 id="featured-heading" className="text-sm font-extrabold uppercase tracking-widest">
+        <h2 id="featured-heading" className="text-lg font-extrabold">
           Popular textbooks
         </h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-4">

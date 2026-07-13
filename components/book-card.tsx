@@ -13,7 +13,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
   const bookmarked = bookmarks.includes(book.id)
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-200 hover:shadow-md hover:scale-[1.01]">
+    <div className="group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-200 hover:shadow-md">
       <Link
         href={`/book/${book.id}`}
         className="flex flex-1 flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
@@ -27,14 +27,14 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
-        <div className="flex flex-1 flex-col gap-0.5 p-3">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+        <div className="flex flex-1 flex-col gap-1 p-3">
+          <p className="text-xs font-bold text-primary">
             {showClass ? `Class ${toRoman(book.classNum)} · ${book.subject}` : book.subject}
           </p>
-          <h3 className="line-clamp-2 text-sm font-bold leading-snug text-card-foreground text-pretty">
+          <h3 className="line-clamp-2 text-base font-bold leading-snug text-card-foreground text-pretty">
             {book.title}
           </h3>
-          <p className="mt-auto pt-1 text-[11px] text-muted-foreground">
+          <p className="mt-auto pt-1 text-xs text-muted-foreground">
             {book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'}
           </p>
         </div>
@@ -51,7 +51,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
             : 'bg-background/70 text-muted-foreground opacity-0 hover:text-foreground focus-visible:opacity-100 group-hover:opacity-100',
         )}
       >
-        <Bookmark className={cn('size-3.5', bookmarked && 'fill-current')} />
+        <Bookmark className={cn('size-4', bookmarked && 'fill-current')} />
       </button>
     </div>
   )

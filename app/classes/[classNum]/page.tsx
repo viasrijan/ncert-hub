@@ -38,14 +38,14 @@ export default async function ClassPage({
       <div className="flex flex-col gap-2">
         <Link
           href="/classes"
-          className="flex items-center gap-1 self-start text-xs font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground"
+          className="flex items-center gap-1 self-start text-sm font-bold text-muted-foreground hover:text-foreground"
         >
-          <ChevronLeft className="size-3.5" /> All classes
+          <ChevronLeft className="size-4" /> All classes
         </Link>
-        <h1 className="font-sans text-xl font-extrabold uppercase tracking-widest md:text-2xl">
+        <h1 className="font-sans text-2xl font-extrabold tracking-tight md:text-3xl">
           Class {toRoman(c)}
         </h1>
-        <p className="text-xs text-muted-foreground">
+        <p className="text-base text-muted-foreground">
           {books.length} {books.length === 1 ? 'textbook' : 'textbooks'} across{' '}
           {subjects.length} {subjects.length === 1 ? 'subject' : 'subjects'}
         </p>
@@ -54,8 +54,8 @@ export default async function ClassPage({
       <div className="flex flex-col gap-8">
         {subjects.map((subject) => (
           <section key={subject} aria-label={subject} className="flex flex-col gap-3">
-            <h2 className="text-xs font-extrabold uppercase tracking-widest">{subject}</h2>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-3 lg:grid-cols-4">
+            <h2 className="text-lg font-extrabold">{subject}</h2>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-4">
               {books
                 .filter((b) => b.subject === subject)
                 .map((book) => (
