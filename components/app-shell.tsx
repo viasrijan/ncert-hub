@@ -39,10 +39,7 @@ function ThemeNavItem() {
         isDark && 'text-white/75 hover:text-white',
       )}
     >
-      <Icon className={cn(
-        'h-5 w-5 shrink-0 transition-colors duration-200',
-        !isDark && 'text-gold',
-      )} />
+      <Icon className={cn('h-5 w-5 shrink-0 transition-colors duration-200', !isDark && 'text-gold')} />
       Lights
     </button>
   )
@@ -59,7 +56,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-svh">
       {/* LEFT SIDEBAR */}
       <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-r border-sidebar-border bg-sidebar/60 backdrop-blur-md lg:flex">
-        <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-12">
+        <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-6">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
             return (
@@ -67,7 +64,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 key={href}
                 href={href}
                 className={cn(
-                  'nav-btn',
+                  'nav-btn w-full max-w-[200px]',
                   active && 'nav-btn-active',
                 )}
               >
@@ -76,7 +73,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </Link>
             )
           })}
-          <ThemeNavItem />
+          <div className="w-full max-w-[200px]">
+            <ThemeNavItem />
+          </div>
         </nav>
       </aside>
 
@@ -84,7 +83,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
         <header className="sticky top-0 z-40 flex justify-center border-b border-border/30 bg-sidebar/70 px-4 py-5 backdrop-blur-xl">
           <Link href="/" className="flex items-center gap-4 group">
-            <span className="flex h-10 w-10 items-center justify-center rounded-2xl overflow-hidden shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105">
+            <span className="flex h-10 w-10 items-center justify-center rounded-2xl overflow-hidden shadow-elevated transition-all duration-300 group-hover:shadow-elevated group-hover:scale-105">
               <Image src={assetPath('/apple-icon.png')} alt="NCERT Hub" width={40} height={40} className="h-10 w-10 object-cover" />
             </span>
             <span className="font-display text-2xl font-extrabold tracking-tight text-white">NCERT Hub</span>
@@ -105,7 +104,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </footer>
       </div>
 
-      {/* RIGHT SIDEBAR */}
+      {/* RIGHT SIDEBAR — yellow circles */}
       <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-l border-sidebar-border bg-sidebar/60 backdrop-blur-md lg:flex">
         <div className="flex flex-col items-center gap-5 px-4">
           <p className="text-[22px] font-extrabold tracking-widest text-white uppercase text-center">
@@ -120,10 +119,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   key={r}
                   href={href}
                   className={cn(
-                    'flex items-center justify-center rounded-full text-[15px] font-extrabold transition-all duration-200 aspect-square',
+                    'flex items-center justify-center rounded-full text-[15px] font-extrabold transition-all duration-200 aspect-square shadow-card',
                     active
-                      ? 'bg-white text-sidebar-primary-foreground shadow-lg scale-105'
-                      : 'bg-white/5 text-white hover:bg-white/10 hover:scale-105',
+                      ? 'bg-white text-sidebar-primary-foreground shadow-elevated scale-105'
+                      : 'bg-gold/15 text-gold hover:bg-gold/25 hover:scale-105',
                   )}
                 >
                   {r}

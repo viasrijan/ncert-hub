@@ -15,34 +15,30 @@ export default function HomePage() {
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-20 px-6 py-12 md:px-8 md:py-16">
-      {/* Hero */}
       <section className="flex flex-col items-center text-center gap-6 animate-fade-in-up">
-        {/* Stats pill */}
-        <div className="flex items-center gap-3 rounded-full border border-border/40 bg-card/60 px-7 py-3.5 text-base font-bold text-white uppercase tracking-wider backdrop-blur-sm shadow-sm">
-          <span>{BOOKS.length} TEXTBOOKS</span>
+        <div className="flex items-center gap-3 rounded-full border border-border/40 bg-card/60 px-7 py-3.5 text-base font-bold text-white uppercase tracking-wider backdrop-blur-sm shadow-card">
+          <span className="num-gold">{BOOKS.length}</span> TEXTBOOKS
           <span className="text-border/60">·</span>
-          <span>{totalChapters.toLocaleString()} CHAPTERS</span>
+          <span className="num-gold">{totalChapters.toLocaleString()}</span> CHAPTERS
         </div>
 
         <h1 className="max-w-3xl font-display text-2xl font-normal leading-relaxed tracking-tight md:text-3xl text-balance text-white">
           Welcome to <strong className="font-bold">NCERT Hub</strong>.
           <br />
-          An <em className="italic underline decoration-gold/40 underline-offset-4">unofficial library</em> for <strong className="font-bold">NCERT books</strong>.
+          An <em className="italic underline decoration-gold/40 underline-offset-4 text-gold">unofficial library</em> for <strong className="font-bold">NCERT books</strong>.
         </h1>
 
-        {/* Search */}
         <div className="flex justify-center w-full mt-4">
           <SearchTrigger />
         </div>
 
-        {/* Quick jump */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
           <span className="text-sm font-semibold text-white/50">Jump to:</span>
           {[6, 8, 10, 12].map((c) => (
             <Link
               key={c}
               href={`/classes/${c}`}
-              className="rounded-full border border-border/40 bg-card/60 px-5 py-3 text-sm font-bold text-white transition-all duration-200 hover:border-gold/50 hover:text-gold hover:shadow-md hover:scale-105 active:scale-95"
+              className="rounded-full border border-border/40 bg-card/60 px-5 py-3 text-sm font-bold text-white transition-all duration-200 hover:border-gold/50 hover:text-gold hover:shadow-card hover:scale-105 active:scale-95"
             >
               Class {toRoman(c)}
             </Link>
@@ -58,7 +54,6 @@ export default function HomePage() {
 
       <RecentsStrip />
 
-      {/* Featured books */}
       <section aria-labelledby="featured-heading" className="flex flex-col items-center gap-6">
         <div className="flex flex-col items-center gap-2">
           <h2 id="featured-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-white">

@@ -9,12 +9,12 @@ export function ChapterList({ book }: { book: Book }) {
   return (
     <section aria-label="Chapters" className="flex flex-col gap-2">
       <h2 className="text-lg font-extrabold text-white">Chapters</h2>
-      <ol className="flex flex-col divide-y divide-border overflow-hidden rounded-lg border border-border bg-card/60 backdrop-blur-sm">
+      <ol className="flex flex-col divide-y divide-border overflow-hidden rounded-lg border border-border bg-card/60 backdrop-blur-sm shadow-card">
         {book.chapters.map((chapter) => (
           <li key={chapter.pdfCode} className="flex items-stretch">
             <Link
               href={`/read/${chapter.pdfCode}`}
-              className="flex min-w-0 flex-1 items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
+              className="flex min-w-0 flex-1 items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-white/[0.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
             >
               <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-sm font-bold text-gold">
                 {chapter.number}

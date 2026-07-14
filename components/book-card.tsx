@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Bookmark } from 'lucide-react'
 import type { Book } from '@/lib/catalog'
-import { toRoman } from '@/lib/catalog'
 import { useBookmarks } from '@/lib/library-store'
 import { cn, assetPath } from '@/lib/utils'
 
@@ -13,7 +12,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
   const bookmarked = bookmarks.includes(book.id)
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/30 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/30 bg-card/80 backdrop-blur-sm shadow-card transition-all duration-300 hover:shadow-elevated hover:-translate-y-1 w-full">
       <Link
         href={`/book/${book.id}`}
         className="flex flex-1 flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -45,7 +44,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
         className={cn(
           'absolute right-3 top-3 rounded-full p-2.5 backdrop-blur-md transition-all duration-200',
           bookmarked
-            ? 'bg-gold text-black shadow-lg opacity-100 scale-105'
+            ? 'bg-gold text-black shadow-elevated opacity-100 scale-105'
             : 'bg-background/60 text-white/50 opacity-0 hover:text-white focus-visible:opacity-100 group-hover:opacity-100 hover:bg-background/80',
         )}
       >

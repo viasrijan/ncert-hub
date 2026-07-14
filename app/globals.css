@@ -43,58 +43,31 @@
   --radius-4xl: calc(var(--radius) * 2.5);
 }
 
-:root {
-  --background: #0f0f0f;
+:root, .dark {
+  --background: #0c0c0c;
   --foreground: #ffffff;
-  --card: rgba(20,20,20,0.95);
+  --card: rgba(16,16,16,0.95);
   --card-foreground: #ffffff;
-  --popover: rgba(20,20,20,0.98);
+  --popover: rgba(16,16,16,0.98);
   --popover-foreground: #ffffff;
   --primary: #ffffff;
-  --primary-foreground: #0f0f0f;
-  --secondary: rgba(25,25,25,0.8);
+  --primary-foreground: #0c0c0c;
+  --secondary: rgba(20,20,20,0.8);
   --secondary-foreground: #d4d4d8;
-  --muted: rgba(25,25,25,0.8);
+  --muted: rgba(20,20,20,0.8);
   --muted-foreground: rgba(255,255,255,0.5);
-  --accent: rgba(30,30,30,0.7);
+  --accent: rgba(24,24,24,0.7);
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --border: rgba(255,255,255,0.08);
   --input: rgba(255,255,255,0.1);
   --ring: #ebdf44;
   --radius: 0.75rem;
-  --sidebar: rgba(15,15,15,0.92);
+  --sidebar: rgba(12,12,12,0.92);
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #0f0f0f;
-  --sidebar-accent: rgba(30,30,30,0.7);
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(255,255,255,0.08);
-  --sidebar-ring: #ebdf44;
-  --gold: #ebdf44;
-}
-
-.dark {
-  --background: #0f0f0f;
-  --foreground: #ffffff;
-  --card: rgba(20,20,20,0.95);
-  --card-foreground: #ffffff;
-  --primary: #ffffff;
-  --primary-foreground: #0f0f0f;
-  --secondary: rgba(25,25,25,0.8);
-  --secondary-foreground: #d4d4d8;
-  --muted: rgba(25,25,25,0.8);
-  --muted-foreground: rgba(255,255,255,0.5);
-  --accent: rgba(30,30,30,0.7);
-  --accent-foreground: #ffffff;
-  --border: rgba(255,255,255,0.08);
-  --input: rgba(255,255,255,0.1);
-  --ring: #ebdf44;
-  --sidebar: rgba(15,15,15,0.92);
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #0f0f0f;
-  --sidebar-accent: rgba(30,30,30,0.7);
+  --sidebar-primary-foreground: #0c0c0c;
+  --sidebar-accent: rgba(24,24,24,0.7);
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(255,255,255,0.08);
   --sidebar-ring: #ebdf44;
@@ -107,14 +80,14 @@
   *::-webkit-scrollbar { display: none; }
   html, body { overflow-x: hidden; }
 
-  /* Film grain texture — prominent */
+  /* Film grain */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
     z-index: 9999;
     pointer-events: none;
-    opacity: 0.12;
+    opacity: 0.10;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     background-size: 256px 256px;
   }
@@ -123,15 +96,23 @@
     @apply text-foreground text-lg leading-relaxed;
     font-feature-settings: 'cv02','cv03','cv04','cv11';
     min-height: 100vh;
-    /* Global gradient: #0f0f0f → #000000 */
-    background: linear-gradient(180deg, #0f0f0f 0%, #000000 100%);
+    background: linear-gradient(180deg, #0c0c0c 0%, #000000 100%);
     background-attachment: fixed;
   }
   html { scroll-behavior: smooth; }
-  ::selection { background-color: var(--gold); color: #0f0f0f; }
+  ::selection { background-color: var(--gold); color: #0c0c0c; }
+
+  /* Number highlight utility */
+  .num-gold { color: var(--gold); }
 }
 
-/* All sections share the global gradient — no separate overrides needed */
+/* Shadows */
+.shadow-card {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 1px 4px rgba(0,0,0,0.2);
+}
+.shadow-elevated {
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.3);
+}
 
 @keyframes fade-in-up {
   from { opacity:0; transform:translateY(20px); }
@@ -172,7 +153,7 @@
 .stagger-children>*:nth-child(9){animation-delay:0.36s}
 .stagger-children>*:nth-child(10){animation-delay:0.40s}
 
-/* nav-button style — same width hover & active */
+/* nav-button style */
 .nav-btn {
   @apply flex items-center justify-center gap-3 rounded-3xl py-3 text-[15px] font-semibold transition-all duration-200;
   @apply text-white/75 hover:text-white;
