@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Library } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { BOOKS, toRoman } from '@/lib/catalog'
 import { BookCard } from '@/components/book-card'
 import { RecentsStrip } from '@/components/recents-strip'
@@ -24,10 +24,10 @@ export default function HomePage() {
           <span>{totalChapters.toLocaleString()} CHAPTERS</span>
         </div>
 
-        <h1 className="max-w-3xl font-display text-2xl font-bold leading-relaxed tracking-tight md:text-3xl text-balance text-white">
-          Welcome to <span className="text-gold">NCERT Hub</span>.
+        <h1 className="max-w-3xl font-display text-2xl font-normal leading-relaxed tracking-tight md:text-3xl text-balance text-white">
+          Welcome to <strong className="font-bold">NCERT Hub</strong>.
           <br />
-          An unofficial library for NCERT books.
+          An <em className="italic underline decoration-gold/40 underline-offset-4">unofficial library</em> for <strong className="font-bold">NCERT books</strong>.
         </h1>
 
         {/* Search */}
