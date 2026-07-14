@@ -14,28 +14,23 @@ export default function HomePage() {
   const totalChapters = BOOKS.reduce((n, b) => n + b.chapters.length, 0)
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-20 px-6 py-16 md:px-8 md:py-24">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-20 px-6 py-12 md:px-8 md:py-16">
       {/* Hero — everything centered */}
       <section className="flex flex-col items-center text-center gap-6 animate-fade-in-up">
-        {/* Stats pill */}
-        <div className="flex items-center gap-3 rounded-full border border-border/40 bg-card/60 px-7 py-3.5 text-xl font-bold text-muted-foreground backdrop-blur-sm shadow-sm">
-          <Library className="size-6 text-coral" />
-          <span>{BOOKS.length} textbooks</span>
+        {/* Stats pill — ALL CAPS */}
+        <div className="flex items-center gap-3 rounded-full border border-border/40 bg-card/60 px-7 py-3.5 text-base font-bold text-muted-foreground backdrop-blur-sm shadow-sm uppercase tracking-wider">
+          <span>{BOOKS.length} TEXTBOOKS</span>
           <span className="text-border/60">·</span>
-          <span>{totalChapters.toLocaleString()} chapters</span>
+          <span>{totalChapters.toLocaleString()} CHAPTERS</span>
         </div>
 
-        <h1 className="max-w-3xl font-display text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl text-balance">
-          Every NCERT textbook,{' '}
-          <span className="bg-gradient-to-r from-coral via-teal to-indigo bg-clip-text text-transparent animate-gradient bg-[length:200%_200%]">
-            beautifully
-          </span>{' '}
-          organized
+        <h1 className="max-w-3xl font-display text-2xl font-bold leading-relaxed tracking-tight md:text-3xl text-balance">
+          Welcome to{' '}
+          <span className="text-orange">NCERT Hub</span>. An unofficial library for NCERT books.
         </h1>
 
-        <p className="max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl text-pretty">
-          Browse, read, and download official NCERT textbooks for Classes I to XII.
-          Free, fast, and made for students.
+        <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg text-pretty">
+          Browse, Read, and Download Official NCERT Textbooks for Classes I to XII.
         </p>
 
         {/* Search — center USP */}
@@ -45,19 +40,19 @@ export default function HomePage() {
 
         {/* Quick jump */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
-          <span className="text-base font-bold text-muted-foreground/50">Jump to:</span>
+          <span className="text-sm font-semibold text-muted-foreground/50">Jump to:</span>
           {[6, 8, 10, 12].map((c) => (
             <Link
               key={c}
               href={`/classes/${c}`}
-              className="rounded-full border border-border/40 bg-card/60 px-5 py-3 text-base font-bold text-muted-foreground transition-all duration-200 hover:border-coral/40 hover:text-coral hover:shadow-md hover:scale-105 active:scale-95"
+              className="rounded-full border border-border/40 bg-card/60 px-5 py-3 text-sm font-bold text-muted-foreground transition-all duration-200 hover:border-orange/40 hover:text-orange hover:shadow-md hover:scale-105 active:scale-95"
             >
               Class {toRoman(c)}
             </Link>
           ))}
           <Link
             href="/classes"
-            className="rounded-full border border-coral/30 bg-coral/5 px-5 py-3 text-base font-bold text-coral transition-all duration-200 hover:bg-coral/10 hover:scale-105 active:scale-95"
+            className="rounded-full border border-orange/30 bg-orange/5 px-5 py-3 text-sm font-bold text-orange transition-all duration-200 hover:bg-orange/10 hover:scale-105 active:scale-95"
           >
             All classes →
           </Link>
@@ -69,14 +64,14 @@ export default function HomePage() {
       {/* Featured books */}
       <section aria-labelledby="featured-heading" className="flex flex-col items-center gap-6">
         <div className="flex flex-col items-center gap-2">
-          <h2 id="featured-heading" className="font-display text-3xl font-bold tracking-tight md:text-4xl text-center">
+          <h2 id="featured-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center">
             Popular textbooks
           </h2>
           <Link
             href="/classes"
-            className="group flex items-center gap-2 text-lg font-bold text-muted-foreground transition-colors hover:text-primary"
+            className="group flex items-center gap-2 text-base font-semibold text-muted-foreground transition-colors hover:text-foreground"
           >
-            View all <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
+            View all <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5 lg:grid-cols-4 stagger-children w-full">

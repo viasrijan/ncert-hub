@@ -34,7 +34,7 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
         </div>
         <div className="flex flex-col items-center gap-2">
           <p className="flex items-center gap-2 text-[13px] font-bold text-muted-foreground uppercase tracking-wider">
-            <span className="inline-flex items-center justify-center rounded-lg bg-coral/10 px-2 py-1 text-[11px] font-extrabold text-coral">{toRoman(book.classNum)}</span>
+            <span className="inline-flex items-center justify-center rounded-lg bg-orange/10 px-2 py-1 text-[11px] font-extrabold text-orange">{toRoman(book.classNum)}</span>
             {book.subject}
           </p>
           <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl text-balance">{book.title}</h1>

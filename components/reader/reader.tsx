@@ -17,7 +17,7 @@ const PdfViewer = dynamic(
     loading: () => (
       <div className="flex flex-1 items-center justify-center py-20">
         <div className="flex flex-col items-center gap-3">
-          <div className="size-8 animate-spin rounded-full border-4 border-muted border-t-coral" />
+          <div className="size-8 animate-spin rounded-full border-4 border-muted border-t-orange" />
           <p className="text-sm text-muted-foreground">Loading PDF viewer...</p>
         </div>
       </div>

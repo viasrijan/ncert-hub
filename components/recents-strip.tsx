@@ -14,7 +14,7 @@ export function RecentsStrip() {
   return (
     <section aria-labelledby="recents-heading" className="flex flex-col items-center gap-4 animate-fade-in-up animate-delay-100">
       <div className="flex items-center gap-2.5">
-        <Clock className="h-[20px] w-[20px] text-teal" />
+        <Clock className="h-[20px] w-[20px] text-orange" />
         <h2 id="recents-heading" className="font-display text-xl font-bold tracking-tight">
           Continue reading
         </h2>
@@ -29,7 +29,7 @@ export function RecentsStrip() {
             <Link
               key={r.pdfCode}
               href={`/read/${r.pdfCode}`}
-              className="flex w-64 shrink-0 items-center gap-3.5 rounded-2xl border border-border/30 bg-card/80 backdrop-blur-sm p-3.5 transition-all duration-200 hover:shadow-lg hover:border-teal/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="flex w-64 shrink-0 items-center gap-3.5 rounded-2xl border border-border/30 bg-card/80 backdrop-blur-sm p-3.5 transition-all duration-200 hover:shadow-lg hover:border-orange/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-muted shadow-sm">
                 <Image src={assetPath(book.cover || '/covers/general.png')} alt="" fill sizes="56px" className="object-cover" />

@@ -22,7 +22,7 @@ export function SearchTrigger() {
     <button
       type="button"
       onClick={() => router.push('/search')}
-      className="flex w-full max-w-2xl items-center gap-4 rounded-2xl border-2 border-border/40 bg-card/80 px-6 py-5 text-left text-xl text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:border-coral/40 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="flex w-full max-w-2xl items-center gap-4 rounded-2xl border-2 border-border/40 bg-card/80 px-6 py-5 text-left text-lg text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:border-orange/40 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     >
       <Search className="h-6 w-6 shrink-0 text-muted-foreground/50" />
       <span className="flex-1 font-semibold">Search books and chapters...</span>

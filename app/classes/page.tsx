@@ -27,12 +27,12 @@ export default function ClassesPage() {
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-coral/10 text-xl font-extrabold text-coral transition-colors group-hover:bg-coral group-hover:text-white">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-xl font-extrabold text-orange transition-colors group-hover:bg-orange group-hover:text-white">
                     {toRoman(c)}
                   </span>
                   <h2 className="font-display text-2xl font-bold tracking-tight text-card-foreground">Class {toRoman(c)}</h2>
                 </div>
-                <ArrowRight className="size-5 text-muted-foreground/30 transition-all duration-300 group-hover:text-coral group-hover:translate-x-1" />
+                <ArrowRight className="size-5 text-muted-foreground/30 transition-all duration-300 group-hover:text-orange group-hover:translate-x-1" />
               </div>
               <div className="flex flex-col gap-1">
                 <p className="text-[15px] font-semibold text-muted-foreground">

@@ -31,7 +31,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
         <div className="flex flex-1 flex-col items-center text-center gap-1.5 p-4">
           {showClass && (
             <p className="flex items-center gap-2 text-[13px] font-bold text-muted-foreground uppercase tracking-wider">
-              <span className="inline-flex items-center justify-center rounded-lg bg-coral/10 px-2 py-1 text-[11px] font-extrabold text-coral">
+              <span className="inline-flex items-center justify-center rounded-lg bg-orange/10 px-2 py-1 text-[11px] font-extrabold text-orange">
                 {toRoman(book.classNum)}
               </span>
               {book.subject}
@@ -58,7 +58,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
         className={cn(
           'absolute right-3 top-3 rounded-full p-2.5 backdrop-blur-md transition-all duration-200',
           bookmarked
-            ? 'bg-coral text-white shadow-lg opacity-100 scale-105'
+            ? 'bg-orange text-white shadow-lg opacity-100 scale-105'
             : 'bg-background/60 text-muted-foreground opacity-0 hover:text-foreground focus-visible:opacity-100 group-hover:opacity-100 hover:bg-background/80',
         )}
       >
