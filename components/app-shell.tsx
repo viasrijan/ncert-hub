@@ -26,17 +26,14 @@ function ThemeNavItem() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
-  const isDark = mounted && theme === 'dark'
+  const isDark = mounted ? (theme === 'dark') : true
   const Icon = isDark ? Sun : Moon
 
   return (
     <button
       type="button"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className={cn(
-        'nav-btn group flex w-full items-center justify-center gap-3 rounded-3xl py-3 text-[15px] font-semibold transition-colors duration-200',
-        isDark ? 'text-white/75' : 'text-gold',
-      )}
+      className="nav-btn group flex w-full items-center justify-center gap-3 rounded-3xl py-3 text-[15px] font-semibold transition-colors duration-200 text-white/75"
     >
       <Icon className="h-5 w-5 shrink-0" />
       Lights
@@ -64,7 +61,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 href={href}
                 className={cn(
                   'nav-btn w-full max-w-[150px]',
-                  active && 'nav-btn-active',
+                  active && 'bg-gold/10 text-gold',
                 )}
               >
                 <Icon className="h-5 w-5 shrink-0" />
@@ -103,7 +100,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </footer>
       </div>
 
-      {/* RIGHT SIDEBAR */}
+      {/* RIGHT SIDEBAR — yellow filled circles */}
       <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-l border-sidebar-border bg-sidebar/60 backdrop-blur-md lg:flex">
         <div className="flex flex-col items-center gap-5 px-4">
           <p className="text-[22px] font-extrabold tracking-widest text-white uppercase text-center">
@@ -121,7 +118,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     'flex items-center justify-center rounded-full text-[15px] font-extrabold transition-colors duration-200 aspect-square shadow-card',
                     active
                       ? 'bg-white text-sidebar-primary-foreground shadow-elevated'
-                      : 'border-2 border-gold text-gold bg-transparent hover:bg-gold/20',
+                      : 'bg-gold/20 text-gold hover:bg-gold/30',
                   )}
                 >
                   {r}

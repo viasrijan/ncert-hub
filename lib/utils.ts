@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-const BASE_PATH = '/open-ncert'
+const BASE_PATH = '/ncert-hub'
 
 export function assetPath(path: string) {
   if (path.startsWith('http://') || path.startsWith('https://')) return path

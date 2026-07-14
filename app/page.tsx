@@ -22,10 +22,10 @@ export default function HomePage() {
           <span className="num-gold">{totalChapters.toLocaleString()}</span> CHAPTERS
         </div>
 
-        <h1 className="max-w-3xl font-display text-2xl font-normal leading-relaxed tracking-tight md:text-3xl text-balance text-white">
-          Welcome to <strong className="font-bold">NCERT Hub</strong>.
+        <h1 className="max-w-3xl font-display leading-relaxed tracking-tight text-balance text-white">
+          <span className="text-2xl md:text-3xl"><strong className="font-bold">Welcome to NCERT Hub</strong>.</span>
           <br />
-          An <strong className="font-bold italic underline decoration-gold/40 underline-offset-4 text-gold">unofficial library</strong> for <strong className="font-bold">NCERT books</strong>.
+          <span className="text-sm md:text-base">An <strong className="font-bold italic underline decoration-gold/40 underline-offset-4 text-gold">unofficial library</strong> for <strong className="font-bold">NCERT books</strong>.</span>
         </h1>
 
         <div className="flex justify-center w-full mt-4">
@@ -59,10 +59,7 @@ export default function HomePage() {
           <h2 id="featured-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-white">
             Popular textbooks
           </h2>
-          <Link
-            href="/classes"
-            className="group flex items-center gap-2 text-base font-semibold text-white/60 transition-colors hover:text-white"
-          >
+          <Link href="/classes" className="group flex items-center gap-2 text-base font-semibold text-gold transition-colors hover:text-gold/70">
             View all <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: 'Browse, read, and download NCERT textbooks for Classes I to XII.',
   generator: 'v0.app',
   icons: {
-    icon: '/open-ncert/icon.svg',
-    apple: '/open-ncert/apple-icon.png',
+    icon: '/ncert-hub/icon.svg',
+    apple: '/ncert-hub/apple-icon.png',
   },
 }
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`bg-background ${geist.variable}`}>
       <body className="font-sans antialiased">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+        <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark" disableTransitionOnChange>
           <AppShell>{children}</AppShell>
         </ThemeProvider>
       </body>
