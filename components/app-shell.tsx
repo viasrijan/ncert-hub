@@ -122,7 +122,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     'flex items-center justify-center rounded-full text-[15px] font-extrabold transition-all duration-200 aspect-square shadow-card',
                     active
                       ? 'bg-white text-sidebar-primary-foreground shadow-elevated scale-105'
-                      : 'bg-gold/15 text-gold hover:bg-gold/25 hover:scale-105',
+                      : 'border-2 border-gold text-gold bg-transparent hover:bg-gold/25 hover:scale-105',
                   )}
                 >
                   {r}

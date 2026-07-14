@@ -27,7 +27,7 @@ export default function ClassesPage() {
               href={`/classes/${c}`}
               className="group flex items-center gap-4 rounded-2xl border border-border/30 bg-card/80 backdrop-blur-sm p-5 shadow-card transition-all duration-300 hover:border-gold/30 hover:shadow-elevated hover:-translate-y-0.5"
             >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold/10 text-gold transition-colors group-hover:bg-gold group-hover:text-black">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold text-gold bg-transparent transition-colors group-hover:bg-gold group-hover:text-black">
                 <Icon className="size-5" />
               </span>
               <div className="flex flex-col min-w-0 flex-1">
