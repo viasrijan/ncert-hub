@@ -13,7 +13,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
   const bookmarked = bookmarks.includes(book.id)
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/30 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <Link
         href={`/book/${book.id}`}
         className="flex flex-1 flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -28,7 +28,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
-        <div className="flex flex-1 flex-col gap-1.5 p-4">
+        <div className="flex flex-1 flex-col items-center text-center gap-1.5 p-4">
           {showClass && (
             <p className="flex items-center gap-2 text-[13px] font-bold text-muted-foreground uppercase tracking-wider">
               <span className="inline-flex items-center justify-center rounded-lg bg-coral/10 px-2 py-1 text-[11px] font-extrabold text-coral">
@@ -58,7 +58,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
         className={cn(
           'absolute right-3 top-3 rounded-full p-2.5 backdrop-blur-md transition-all duration-200',
           bookmarked
-            ? 'bg-coral text-white shadow-md opacity-100 scale-105'
+            ? 'bg-coral text-white shadow-lg opacity-100 scale-105'
             : 'bg-background/60 text-muted-foreground opacity-0 hover:text-foreground focus-visible:opacity-100 group-hover:opacity-100 hover:bg-background/80',
         )}
       >
