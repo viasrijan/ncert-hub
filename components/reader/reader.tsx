@@ -4,10 +4,10 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Download, ExternalLink } from 'lucide-react'
+import { useTheme } from 'next-themes'
 import type { Book, Chapter } from '@/lib/catalog'
 import { NCERT_PDF_BASE, toRoman } from '@/lib/catalog'
 import { useRecents } from '@/lib/library-store'
-import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 
 const PdfViewer = dynamic(
@@ -17,7 +17,7 @@ const PdfViewer = dynamic(
     loading: () => (
       <div className="flex flex-1 items-center justify-center py-20">
         <div className="flex flex-col items-center gap-3">
-          <div className="size-8 animate-spin rounded-full border-4 border-muted border-t-primary" />
+          <div className="size-8 animate-spin rounded-full border-4 border-muted border-t-coral" />
           <p className="text-sm text-muted-foreground">Loading PDF viewer...</p>
         </div>
       </div>
@@ -75,7 +75,6 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
           >
             <ExternalLink className="size-4" />
           </a>
-          <ThemeToggle />
         </div>
       </header>
 
