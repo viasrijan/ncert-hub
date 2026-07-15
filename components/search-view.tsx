@@ -119,7 +119,7 @@ export function SearchView() {
             <li key={hit.type === 'book' ? `b-${hit.book.id}` : `c-${hit.chapter.pdfCode}`}>
               {hit.type === 'book' ? (
                 <Link href={`/book/${hit.book.id}`}
-                  className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-white/[0.03]">
+                  className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50">
                   <div className="relative size-11 shrink-0 overflow-hidden rounded-lg" style={{ background: getSubjectGradient(hit.book.subject).gradient }}>
                     {(() => { const Ic = getSubjectGradient(hit.book.subject).icon; return <Ic className="size-5 text-white/40 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
                   </div>
@@ -131,7 +131,7 @@ export function SearchView() {
                 </Link>
               ) : (
                 <Link href={`/read/${hit.chapter.pdfCode}`}
-                  className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-white/[0.03]">
+                  className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50">
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-gold/10 border-2 border-gold">
                     <FileText className="size-5 text-gold" />
                   </span>

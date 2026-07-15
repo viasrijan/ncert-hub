@@ -12,7 +12,7 @@ export function BookmarksView() {
 
   if (books.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center gap-3 py-20 text-white/40">
+      <div className="flex flex-col items-center justify-center gap-3 py-20 text-muted-foreground">
         <p className="text-lg font-semibold">No saved books yet</p>
         <p className="text-sm">Bookmark books by tapping the icon on any cover.</p>
       </div>

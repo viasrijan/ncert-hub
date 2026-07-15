@@ -24,7 +24,7 @@ export function RecentsStrip() {
   return (
     <section aria-labelledby="recents-heading" className="flex flex-col items-center gap-6 animate-fade-in-up animate-delay-100">
       <div className="flex flex-col items-center gap-2">
-        <h2 id="recents-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-white">
+        <h2 id="recents-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
           Continue reading
         </h2>
         <Link href="/bookmarks" className="group flex items-center gap-2 text-base font-semibold text-gold transition-colors hover:text-gold/70">
