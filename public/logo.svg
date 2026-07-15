@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#588157"/>
+      <stop offset="100%" stop-color="#3a5a40"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+  <g transform="translate(256,240)" fill="white">
+    <!-- mortarboard top -->
+    <polygon points="-110,-20 0,-65 110,-20 0,15" opacity="0.95"/>
+    <!-- mortarboard board -->
+    <polygon points="-130,-15 130,-15 110,-25 -110,-25" opacity="0.9"/>
+    <!-- tassel -->
+    <rect x="50" y="-20" width="8" height="45" rx="4" opacity="0.85"/>
+    <circle cx="54" cy="30" r="10" opacity="0.85"/>
+    <!-- cap base -->
+    <path d="M-50,5 Q-50,-15 0,-25 Q50,-15 50,5 L45,30 Q0,40 -45,30 Z" opacity="0.9"/>
+  </g>
+</svg>
