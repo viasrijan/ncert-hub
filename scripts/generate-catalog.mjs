@@ -24,6 +24,13 @@ const NUMBER_OFFSET = {
 // Curated chapter titles (rationalized 2023-24 syllabus).
 // Applied ONLY when list length matches the verified chapter count.
 const TITLES = {
+  // Class 1
+  aemr1: ['Two Little Hands', 'Greetings', 'Picture Time', 'The Cap-seller and the Monkeys', 'A Farm', 'Fun with Pictures', 'The Food we Eat', 'The Four Seasons', "Anandi's Rainbow"],
+  aejm1: ['Finding the Furry Cat!', 'What is Long? What is Round?', 'Mango Treat', 'Making 10', 'How Many?', 'Lengths', 'Names of Numbers', 'Which Season is it Now?', 'Data Handling', 'Patterns', 'How Much?', 'How Much Can We Spend?', 'So Many Toys'],
+  // Class 2
+  bemr1: ['My Bicycle', 'Picture Reading', 'It Is Fun', 'Seeing without Seeing', 'Come Back Soon', 'Between Home and School', 'This is My Town', 'A Show of Clouds', 'My Name', 'The Crow', 'The Smart Monkey', 'Little Drops of Water', 'We Are All Indians'],
+  bejm1: ['A Day at the Beach', 'Shapes Around Us', 'Fun with Numbers', 'Shadow Story', 'Playing with Lines', 'Decoration for Festival', "Rani's Gift", 'Grouping and Sharing', 'Which Season is it?', 'Fun at the Fair', 'Data Handling'],
+  // Class 10
   jemh1: ['Real Numbers', 'Polynomials', 'Pair of Linear Equations in Two Variables', 'Quadratic Equations', 'Arithmetic Progressions', 'Triangles', 'Coordinate Geometry', 'Introduction to Trigonometry', 'Some Applications of Trigonometry', 'Circles', 'Areas Related to Circles', 'Surface Areas and Volumes', 'Statistics', 'Probability'],
   jesc1: ['Chemical Reactions and Equations', 'Acids, Bases and Salts', 'Metals and Non-metals', 'Carbon and its Compounds', 'Life Processes', 'Control and Coordination', 'How do Organisms Reproduce?', 'Heredity', 'Light – Reflection and Refraction', 'The Human Eye and the Colourful World', 'Electricity', 'Magnetic Effects of Electric Current', 'Our Environment'],
   jeff1: ['A Letter to God', 'Nelson Mandela: Long Walk to Freedom', 'Two Stories about Flying', 'From the Diary of Anne Frank', 'Glimpses of India', 'Mijbil the Otter', 'Madam Rides the Bus', 'The Sermon at Benares', 'The Proposal'],
