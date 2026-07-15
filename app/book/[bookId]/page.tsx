@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ChevronLeft, ExternalLink } from 'lucide-react'
 import { BOOKS, getBook, toRoman } from '@/lib/catalog'
 import { ChapterList } from '@/components/chapter-list'
 import { BookmarkButton } from '@/components/bookmark-button'
-import { assetPath } from '@/lib/utils'
+import { getSubjectGradient } from '@/lib/subject-gradients'
 
 export function generateStaticParams() { return BOOKS.map((b) => ({ bookId: b.id })) }
 
@@ -29,8 +28,8 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
       </Link>
 
       <div className="flex flex-col items-center text-center gap-5 animate-fade-in-up">
-        <div className="relative aspect-[3/4] w-36 shrink-0 overflow-hidden rounded-2xl border border-border/30 shadow-lg md:w-44">
-          <Image src={assetPath(book.cover || '/covers/general.png')} alt="" fill sizes="176px" className="object-cover" />
+        <div className="relative aspect-[3/4] w-36 shrink-0 overflow-hidden rounded-2xl border border-border/30 shadow-lg md:w-44" style={{ background: getSubjectGradient(book.subject).gradient }}>
+          {(() => { const Ic = getSubjectGradient(book.subject).icon; return <Ic className="size-12 text-white/30 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
         </div>
         <div className="flex flex-col items-center gap-2">
           <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl text-white text-balance">{book.title}</h1>

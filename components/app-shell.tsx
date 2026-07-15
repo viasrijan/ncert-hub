@@ -63,17 +63,17 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
         <header className="sticky top-0 z-40 flex justify-center border-b border-border/30 bg-sidebar/70 px-4 py-4 backdrop-blur-xl">
           <Link href="/" className="flex items-center gap-3 group">
-            <span className="flex h-8 w-8 items-center justify-center rounded-2xl overflow-hidden shadow-elevated">
-              <Image src={assetPath('/apple-icon.png')} alt="NCERT Hub" width={32} height={32} className="h-8 w-8 object-cover" />
+            <span className="flex h-8 w-8 items-center justify-center rounded-full overflow-hidden shadow-elevated">
+              <Image src={assetPath('/logo-192.png')} alt="NCERT Hub" width={32} height={32} className="h-8 w-8 object-cover" />
             </span>
             <span className="font-display text-xl font-extrabold tracking-tight text-gold">NCERT Hub</span>
           </Link>
         </header>
         <main className="flex-1 pb-28 lg:pb-0">{children}</main>
         <footer className="hidden border-t border-border/30 px-8 py-6 lg:flex lg:items-center lg:justify-center">
-          <p className="text-base font-medium text-white text-center">
+          <p className="text-base font-medium text-foreground text-center">
             An Unofficial Library of NCERT Books.{' '}Visit the official website at{' '}
-            <a href="https://ncert.nic.in" target="_blank" rel="noopener noreferrer" className="font-bold text-gold no-underline hover:text-white">
+            <a href="https://ncert.nic.in" target="_blank" rel="noopener noreferrer" className="font-bold text-gold no-underline hover:text-foreground">
               © NCERT. ncert.nic.in
             </a>
           </p>
@@ -82,7 +82,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-l border-sidebar-border bg-sidebar/60 backdrop-blur-md lg:flex">
         <div className="flex flex-col items-center gap-5 px-4">
-          <p className="text-[22px] font-extrabold tracking-widest text-white uppercase text-center">Standard</p>
+          <p className="text-[22px] font-extrabold tracking-widest text-foreground uppercase text-center">Standard</p>
           <div className="grid grid-cols-3 gap-3 w-full max-w-[220px]">
             {ROMAN.map((r, i) => {
               const href = `/classes/${i + 1}`
@@ -91,7 +91,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 <Link key={r} href={href}
                   className={cn(
                     'flex items-center justify-center rounded-full text-[15px] font-extrabold transition-colors duration-200 aspect-square shadow-card',
-                    active ? 'bg-white text-gold shadow-elevated' : 'bg-gold text-black hover:bg-gold/80',
+                    active ? 'bg-white text-black shadow-elevated' : 'bg-gold text-black hover:bg-gold/80',
                   )}>
                   {r}
                 </Link>
@@ -106,7 +106,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           const active = isActive(pathname, href)
           return (
             <Link key={href} href={href}
-              className={cn('flex flex-1 flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] font-bold tracking-tight', active ? 'text-white' : 'text-white/50')}>
+              className={cn('flex flex-1 flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] font-bold tracking-tight', active ? 'text-foreground' : 'text-muted-foreground')}>
               <Icon className="h-6 w-6" /> {label}
             </Link>
           )

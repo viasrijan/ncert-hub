@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: 'Browse, read, and download NCERT textbooks for Classes I to XII.',
   generator: 'v0.app',
   icons: {
-    icon: '/ncert-hub/apple-icon.png',
-    apple: '/ncert-hub/apple-icon.png',
+    icon: '/ncert-hub/logo-192.png',
+    apple: '/ncert-hub/logo-192.png',
   },
 }
 

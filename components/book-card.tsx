@@ -1,15 +1,16 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { Bookmark } from 'lucide-react'
 import type { Book } from '@/lib/catalog'
 import { useBookmarks } from '@/lib/library-store'
-import { cn, assetPath } from '@/lib/utils'
+import { cn } from '@/lib/utils'
+import { getSubjectGradient } from '@/lib/subject-gradients'
 
 export function BookCard({ book, showClass = false }: { book: Book; showClass?: boolean }) {
   const { bookmarks, toggleBookmark } = useBookmarks()
   const bookmarked = bookmarks.includes(book.id)
+  const { gradient, icon: Icon } = getSubjectGradient(book.subject)
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/30 bg-card/80 backdrop-blur-sm shadow-card transition-colors duration-200 w-[260px] max-w-full">
@@ -17,14 +18,11 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
         href={`/book/${book.id}`}
         className="flex flex-1 flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
-          <Image
-            src={assetPath(book.cover || '/covers/general.png')}
-            alt=""
-            fill
-            sizes="260px"
-            className="object-cover transition-colors duration-300 group-hover:brightness-110"
-          />
+        <div className="relative aspect-[4/3] w-full overflow-hidden" style={{ background: gradient }}>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Icon className="h-16 w-16 text-white/30" strokeWidth={1.5} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
         <div className="flex flex-1 flex-col items-center text-center gap-1.5 p-4">

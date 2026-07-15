@@ -1,11 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { Clock } from 'lucide-react'
 import { getBook, toRoman } from '@/lib/catalog'
 import { useRecents } from '@/lib/library-store'
-import { assetPath } from '@/lib/utils'
+import { getSubjectGradient } from '@/lib/subject-gradients'
 
 export function RecentsStrip() {
   const { recents } = useRecents()
@@ -31,8 +30,8 @@ export function RecentsStrip() {
               href={`/read/${r.pdfCode}`}
               className="flex w-64 shrink-0 items-center gap-3.5 rounded-2xl border border-border/30 bg-card/80 backdrop-blur-sm p-3.5 shadow-card transition-colors duration-200 hover:shadow-elevated hover:border-gold/20"
             >
-              <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-muted shadow-sm">
-                <Image src={assetPath(book.cover || '/covers/general.png')} alt="" fill sizes="56px" className="object-cover" />
+              <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl shadow-sm" style={{ background: getSubjectGradient(book.subject).gradient }}>
+                {(() => { const Ic = getSubjectGradient(book.subject).icon; return <Ic className="size-5 text-white/40 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
               </div>
               <div className="min-w-0">
                 <p className="truncate text-base font-bold text-white">{chapter.title}</p>

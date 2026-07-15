@@ -1,12 +1,12 @@
 'use client'
 
 import { useCallback, useMemo, useRef, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { BookOpen, FileText, Search, X } from 'lucide-react'
 import { BOOKS, toRoman, type Book, type Chapter } from '@/lib/catalog'
-import { cn, assetPath } from '@/lib/utils'
+import { cn } from '@/lib/utils'
+import { getSubjectGradient } from '@/lib/subject-gradients'
 
 interface BookHit {
   type: 'book'
@@ -120,8 +120,8 @@ export function SearchView() {
               {hit.type === 'book' ? (
                 <Link href={`/book/${hit.book.id}`}
                   className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-white/[0.03]">
-                  <div className="relative size-11 shrink-0 overflow-hidden rounded-lg bg-muted">
-                    <Image src={assetPath(hit.book.cover || '/covers/general.png')} alt="" fill sizes="44px" className="object-cover" />
+                  <div className="relative size-11 shrink-0 overflow-hidden rounded-lg" style={{ background: getSubjectGradient(hit.book.subject).gradient }}>
+                    {(() => { const Ic = getSubjectGradient(hit.book.subject).icon; return <Ic className="size-5 text-white/40 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-base font-bold text-white">{hit.book.title}</p>
