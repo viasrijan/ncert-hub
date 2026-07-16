@@ -21,7 +21,7 @@ export function BookmarkButton({ bookId }: { bookId: string }) {
           : 'bg-card/80 text-muted-foreground hover:text-foreground hover:bg-card',
       )}
     >
-      <Bookmark className={cn('h-[18px] w-[18px]', bookmarked && 'fill-current')} />
+      <Bookmark className={cn('h-[18px] w-[18px]', bookmarked && 'fill-white text-white')} />
       {bookmarked ? 'Saved' : 'Save'}
     </button>
   )

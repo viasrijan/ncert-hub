@@ -90,7 +90,7 @@ export function SearchView() {
         )}
       </div>
 
-      <div className="flex gap-1.5 overflow-x-auto pb-1 md:flex-wrap">
+      <div className="flex justify-center gap-1.5 overflow-x-auto pb-1 md:flex-wrap">
         {CLASS_FILTERS.map((c) => (
           <button key={c} type="button" onClick={() => setClassFilter(c)}
             className={cn(

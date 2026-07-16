@@ -30,7 +30,7 @@ export default function HomePage() {
           <SearchTrigger />
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-2 mx-auto w-full max-w-3xl">
           <span className="text-sm font-semibold text-muted-foreground">Jump to:</span>
           {[6, 8, 10, 12].map((c) => (
             <Link key={c} href={`/classes/${c}`}

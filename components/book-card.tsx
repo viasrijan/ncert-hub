@@ -42,11 +42,11 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
         className={cn(
           'absolute right-3 top-3 rounded-full p-2.5 backdrop-blur-md transition-colors duration-200',
           bookmarked
-            ? 'bg-gold text-black shadow-elevated opacity-100'
+            ? 'bg-gold text-white shadow-elevated opacity-100'
             : 'bg-background/60 text-muted-foreground opacity-0 hover:text-foreground focus-visible:opacity-100 group-hover:opacity-100 hover:bg-background/80',
         )}
       >
-        <Bookmark className={cn('h-[18px] w-[18px]', bookmarked && 'fill-current')} />
+        <Bookmark className={cn('h-[18px] w-[18px]', bookmarked && 'fill-white text-white')} />
       </button>
     </div>
   )
