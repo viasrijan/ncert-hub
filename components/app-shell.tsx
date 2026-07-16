@@ -29,14 +29,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-svh">
       <aside className="sidebar-left sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center backdrop-blur-md lg:flex">
-        <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-8">
+        <nav aria-label="Main" className="flex flex-col items-start gap-1.5 px-8">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
             return (
               <Link key={href} href={href}
-                className={cn('nav-btn w-full max-w-[150px] flex-row-reverse text-right uppercase transition-colors duration-200', active && 'nav-btn-active text-white')}>
-                <span className="flex-1">{label}</span>
-                <Icon className="h-5 w-5 shrink-0 self-center" />
+                className={cn('nav-btn w-full max-w-[150px] uppercase transition-colors duration-200', active && 'nav-btn-active text-white')}>
+                <Icon className="h-5 w-5 shrink-0" /> {label}
               </Link>
             )
           })}
