@@ -11,7 +11,7 @@ export default function SearchPage() {
     <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 px-6 py-12 md:px-8 md:py-16">
       <div className="flex flex-col items-center text-center gap-2 animate-fade-in-up">
         <h1 className="font-display text-6xl font-bold tracking-tight md:text-7xl text-foreground text-center">Search</h1>
-        <p className="text-lg text-muted-foreground -mt-4">Find textbooks and chapters by name, subject, or class.</p>
+        <p className="text-lg text-muted-foreground">Find textbooks and chapters by name, subject, or class.</p>
       </div>
       <SearchView />
     </div>

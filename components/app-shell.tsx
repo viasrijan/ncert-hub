@@ -29,7 +29,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-svh">
       <aside className="sidebar-left sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center backdrop-blur-md lg:flex">
-        <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-8">
+        <nav aria-label="Main" className="flex flex-col items-end gap-1.5 px-8">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
             return (
@@ -43,15 +43,17 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
-        <header className="sticky top-0 z-50 flex justify-center bg-sidebar/80 backdrop-blur-xl px-4 py-5 shadow-[0_6px_20px_-4px_rgba(0,0,0,0.45)]">
-          <Link href="/" className="flex items-center gap-3 group">
-            <span className="flex h-[30px] w-[30px] items-center justify-center rounded-full overflow-hidden shadow-elevated">
-              <Image src={assetPath('/logo.png')} alt="NCERT Hub" width={30} height={30} className="h-[30px] w-[30px]" />
-            </span>
-            <span className="font-display text-[30px] leading-none font-extrabold tracking-tight text-gold">NCERT Hub</span>
-          </Link>
-        </header>
-        <main className="flex-1 pb-28 lg:pb-0 mt-4">{children}</main>
+        <main className="flex-1 pb-28 lg:pb-0 mt-4">
+          <div className="mx-auto w-full max-w-5xl flex items-center justify-center gap-3 px-6 pt-10 pb-4 md:px-8">
+            <Link href="/" className="flex items-center gap-3 group">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full overflow-hidden shadow-elevated md:h-12 md:w-12">
+                <Image src={assetPath('/logo.png')} alt="NCERT Hub" width={48} height={48} className="h-9 w-9 md:h-12 md:w-12" />
+              </span>
+              <span className="font-display text-3xl font-extrabold tracking-tight text-gold md:text-5xl">NCERT Hub</span>
+            </Link>
+          </div>
+          {children}
+        </main>
         <footer className="hidden px-8 py-6 lg:flex lg:items-center lg:justify-center">
           <p className="text-sm font-normal text-foreground text-center">
             An <strong className="font-bold">Unofficial Library</strong> of NCERT Books.{' '}Visit the official website at{' '}
@@ -65,7 +67,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <aside className="sidebar-right sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center backdrop-blur-md lg:flex">
         <div className="flex flex-col items-center gap-5 px-4 scale-80 origin-center">
           <p className="text-[22px] font-extrabold tracking-widest text-sidebar-foreground uppercase text-center">Standard</p>
-          <div className="grid grid-cols-3 gap-3 w-full max-w-[220px]">
+          <div className="grid grid-cols-3 gap-5 w-full max-w-[220px]">
             {ROMAN.map((r, i) => {
               const href = `/classes/${i + 1}`
               const active = isActive(pathname, href)
