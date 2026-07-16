@@ -108,34 +108,34 @@
 }
 
 .light {
-  --background: #e8e3db;
+  --background: #f5f2ed;
   --foreground: #1c1917;
-  --card: #f2ede5;
+  --card: #ffffff;
   --card-foreground: #1c1917;
-  --popover: #f2ede5;
+  --popover: #ffffff;
   --popover-foreground: #1c1917;
   --primary: #1c1917;
-  --primary-foreground: #e8e3db;
-  --secondary: #ddd7cd;
+  --primary-foreground: #f5f2ed;
+  --secondary: #ebe7e0;
   --secondary-foreground: #57534e;
-  --muted: #ddd7cd;
+  --muted: #ebe7e0;
   --muted-foreground: rgba(28,25,23,0.55);
-  --accent: #d5cfc3;
+  --accent: #e7e3db;
   --accent-foreground: #1c1917;
   --destructive: #dc2626;
   --border: rgba(28,25,23,0.1);
   --input: rgba(28,25,23,0.12);
-  --ring: #8b6f47;
-  --sidebar: #6b4f2a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #8b6f47;
-  --sidebar-accent: rgba(255,255,255,0.15);
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(255,255,255,0.2);
-  --sidebar-ring: #ffffff;
-  --gold: #8b6f47;
-  --gold-gradient: linear-gradient(135deg, #a67c52 0%, #6b4f2a 100%);
+  --ring: #2d6a4f;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1c1917;
+  --sidebar-primary: #1c1917;
+  --sidebar-primary-foreground: #f5f2ed;
+  --sidebar-accent: #ebe7e0;
+  --sidebar-accent-foreground: #1c1917;
+  --sidebar-border: rgba(28,25,23,0.1);
+  --sidebar-ring: #2d6a4f;
+  --gold: #2d6a4f;
+  --gold-gradient: linear-gradient(135deg, #40916c 0%, #2d6a4f 100%);
 }
 
 @layer base {
@@ -164,7 +164,7 @@
     background-attachment: fixed;
   }
   .light body {
-    background: linear-gradient(180deg, #e8e3db 0%, #ddd7cd 100%);
+    background: linear-gradient(180deg, #f5f2ed 0%, #ebe7e0 100%);
   }
   html { scroll-behavior: smooth; }
   ::selection { background-color: var(--gold); color: #1a1a1a; }
@@ -187,7 +187,7 @@
     color: #ffffff;
   }
   .light .btn-gradient:hover {
-    box-shadow: 0 4px 20px rgba(139,111,71,0.25);
+    box-shadow: 0 4px 20px rgba(45,106,79,0.25);
   }
 }
 
@@ -257,14 +257,14 @@
   color: var(--gold);
 }
 .light .nav-btn {
-  color: #ffffff;
+  color: var(--gold);
 }
 .light .nav-btn:hover {
-  opacity: 0.85;
+  opacity: 0.8;
 }
 .light .nav-btn-active {
-  background: rgba(166,124,82,0.5);
-  color: #ffffff;
+  background: color-mix(in srgb, var(--gold) 10%, transparent);
+  color: var(--gold);
 }
 .light .btn-gradient {
   color: #ffffff;
