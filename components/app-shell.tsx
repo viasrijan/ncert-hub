@@ -29,7 +29,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-svh">
       <aside className="sidebar-left sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center backdrop-blur-md lg:flex">
-        <nav aria-label="Main" className="flex flex-col items-start gap-1.5 px-8">
+        <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-8">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
             return (
