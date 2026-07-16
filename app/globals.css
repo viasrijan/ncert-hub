@@ -126,7 +126,7 @@
   --border: rgba(28,25,23,0.1);
   --input: rgba(28,25,23,0.12);
   --ring: #8b6f47;
-  --sidebar: #8b6f47;
+  --sidebar: #6b4f2a;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #ffffff;
   --sidebar-primary-foreground: #8b6f47;
@@ -263,7 +263,7 @@
   opacity: 0.85;
 }
 .light .nav-btn-active {
-  background: rgba(255,255,255,0.15);
+  background: rgba(166,124,82,0.5);
   color: #ffffff;
 }
 .light .btn-gradient {

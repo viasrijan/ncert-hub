@@ -45,7 +45,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-svh">
-      <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-r border-sidebar-border bg-sidebar/60 backdrop-blur-md lg:flex">
+      <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-r border-white/20 bg-gradient-to-b from-[#8b6f47] to-[#6b4f2a] lg:flex">
         <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-8">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
@@ -61,12 +61,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
-        <header className="sticky top-0 z-40 flex justify-center border-b border-border/30 bg-sidebar/70 px-4 py-4 backdrop-blur-xl">
+        <header className="sticky top-0 z-50 flex justify-center border-b border-border/30 bg-[#0c0c0c]/90 px-4 py-4 backdrop-blur-xl">
           <Link href="/" className="flex items-center gap-3 group">
             <span className="flex h-8 w-8 items-center justify-center rounded-full overflow-hidden shadow-elevated">
               <Image src={assetPath('/logo.svg')} alt="NCERT Hub" width={32} height={32} className="h-8 w-8" />
             </span>
-            <span className="font-display text-xl font-extrabold tracking-tight text-sidebar-foreground">NCERT Hub</span>
+            <span className="font-display text-xl font-extrabold tracking-tight text-gold">NCERT Hub</span>
           </Link>
         </header>
         <main className="flex-1 pb-28 lg:pb-0">{children}</main>
@@ -80,7 +80,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </footer>
       </div>
 
-      <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-l border-sidebar-border bg-sidebar/60 backdrop-blur-md lg:flex">
+      <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-l border-white/20 bg-gradient-to-b from-[#8b6f47] to-[#6b4f2a] lg:flex">
         <div className="flex flex-col items-center gap-5 px-4">
           <p className="text-[22px] font-extrabold tracking-widest text-sidebar-foreground uppercase text-center">Standard</p>
           <div className="grid grid-cols-3 gap-3 w-full max-w-[220px]">
@@ -91,7 +91,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 <Link key={r} href={href}
                   className={cn(
                     'flex items-center justify-center rounded-full text-[15px] font-extrabold transition-colors duration-200 aspect-square shadow-card',
-                    active ? 'bg-white text-[#8b6f47] shadow-elevated' : 'btn-gradient hover:opacity-90',
+                    active ? 'bg-white text-[#6b4f2a] shadow-elevated' : 'btn-gradient hover:opacity-90',
                   )}>
                   {r}
                 </Link>
