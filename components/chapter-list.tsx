@@ -1,11 +1,57 @@
 'use client'
 
 import Link from 'next/link'
+import { useState } from 'react'
 import { Download } from 'lucide-react'
 import type { Book } from '@/lib/catalog'
 import { NCERT_PDF_BASE } from '@/lib/catalog'
 
+const JD_BASES = [
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-1@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-2@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-3@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@main',
+]
+const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
+
+async function resolvePdfUrl(file: string): Promise<string> {
+  for (const base of JD_BASES) {
+    const candidate = `${base}/${file}`
+    try {
+      const res = await fetch(candidate, { method: 'HEAD' })
+      if (res.ok) return candidate
+    } catch {
+      // try next mirror
+    }
+  }
+  return `${PROXY_BASE}/pdf/${file}`
+}
+
 export function ChapterList({ book }: { book: Book }) {
+  const [downloading, setDownloading] = useState<string | null>(null)
+
+  const handleDownload = async (pdfCode: string) => {
+    const file = `${pdfCode}.pdf`
+    setDownloading(pdfCode)
+    try {
+      const url = await resolvePdfUrl(file)
+      const res = await fetch(url)
+      const blob = await res.blob()
+      const objUrl = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = objUrl
+      a.download = file
+      document.body.appendChild(a)
+      a.click()
+      a.remove()
+      URL.revokeObjectURL(objUrl)
+    } catch {
+      window.open(`${NCERT_PDF_BASE}/${file}`, '_blank', 'noopener,noreferrer')
+    } finally {
+      setDownloading(null)
+    }
+  }
+
   return (
     <section aria-label="Chapters" className="flex flex-col gap-2">
       <h2 className="text-lg font-extrabold text-foreground">Chapters</h2>
@@ -23,16 +69,15 @@ export function ChapterList({ book }: { book: Book }) {
                 {chapter.title}
               </span>
             </Link>
-            <a
-              href={`${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`}
-              download
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => handleDownload(chapter.pdfCode)}
+              disabled={downloading === chapter.pdfCode}
               aria-label={`Download ${chapter.title} PDF`}
-              className="flex items-center px-4 text-muted-foreground transition-colors duration-150 hover:text-foreground"
+              className="flex items-center px-4 text-muted-foreground transition-colors duration-150 hover:text-foreground disabled:opacity-50"
             >
               <Download className="size-5" />
-            </a>
+            </button>
           </li>
         ))}
       </ol>
