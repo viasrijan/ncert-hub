@@ -68,6 +68,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <aside className="sidebar-right sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center backdrop-blur-md lg:flex">
         <div className="flex flex-col items-center gap-5 px-4 scale-80 origin-center">
           <p className="text-[22px] font-extrabold tracking-widest text-sidebar-foreground uppercase text-center">Standard</p>
+          <div className="h-4" />
+          <div className="grid grid-cols-3 gap-5 w-full max-w-[220px]">
           <div className="grid grid-cols-3 gap-5 w-full max-w-[220px]">
             {ROMAN.map((r, i) => {
               const href = `/classes/${i + 1}`
