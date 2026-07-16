@@ -46,7 +46,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <header className="sticky top-0 z-50 flex justify-center border-b border-border/30 bg-sidebar/80 backdrop-blur-xl px-4 py-5">
           <Link href="/" className="flex items-center gap-4 group">
             <span className="flex h-10 w-10 items-center justify-center rounded-full overflow-hidden shadow-elevated">
-              <Image src={assetPath('/logo.svg')} alt="NCERT Hub" width={40} height={40} className="h-10 w-10" />
+              <Image src={assetPath('/logo.png')} alt="NCERT Hub" width={40} height={40} className="h-10 w-10" />
             </span>
             <span className="font-display text-2xl font-extrabold tracking-tight text-gold">NCERT Hub</span>
           </Link>
@@ -73,7 +73,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 <Link key={r} href={href}
                   className={cn(
                     'flex items-center justify-center rounded-full text-[15px] font-extrabold transition-colors duration-200 aspect-square shadow-card',
-                    active ? 'bg-white text-[#2d6a4f] shadow-elevated' : 'btn-gradient hover:opacity-90',
+                    active ? 'bg-white text-[#355d34] shadow-elevated' : 'btn-gradient hover:opacity-90',
                   )}>
                   {r}
                 </Link>
