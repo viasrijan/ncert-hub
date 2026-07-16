@@ -8,9 +8,8 @@ import { ChevronLeft, ChevronRight, TriangleAlert } from 'lucide-react'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
-// Cloudflare Worker CORS proxy (deployed separately).
-// Replace with your deployed worker URL after `wrangler deploy`.
-const PROXY_BASE = process.env.NEXT_PUBLIC_PDF_PROXY || 'https://ncert-pdf-proxy.workers.dev'
+// Cloudflare Worker CORS proxy (deployed at ncert-pdf-proxy.srijan-pratap1998.workers.dev)
+const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
 
 export function PdfViewer({ url, title }: { url: string; title: string }) {
   const [numPages, setNumPages] = useState(0)
