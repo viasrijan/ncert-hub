@@ -4,7 +4,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
-import { ChevronLeft, ChevronRight, TriangleAlert } from 'lucide-react'
+import { ChevronLeft, ChevronRight, TriangleAlert, Download } from 'lucide-react'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
@@ -92,6 +92,30 @@ export function PdfViewer({ url, title }: { url: string; title: string }) {
   const goToPrev = () => setCurrentPage((p) => Math.max(1, p - 1))
   const goToNext = () => setCurrentPage((p) => Math.min(numPages, p + 1))
 
+  const [downloading, setDownloading] = useState(false)
+
+  const downloadPdf = useCallback(async () => {
+    if (!pdfUrl) return
+    setDownloading(true)
+    try {
+      const res = await fetch(pdfUrl)
+      const blob = await res.blob()
+      const objUrl = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = objUrl
+      a.download = file || 'chapter.pdf'
+      document.body.appendChild(a)
+      a.click()
+      a.remove()
+      URL.revokeObjectURL(objUrl)
+    } catch {
+      // fall back to opening in new tab if blob fetch fails
+      window.open(pdfUrl, '_blank', 'noopener,noreferrer')
+    } finally {
+      setDownloading(false)
+    }
+  }, [pdfUrl, file])
+
   return (
     <div className="relative flex min-h-0 flex-1 flex-col bg-sidebar">
       <div className="flex-1 overflow-auto flex items-start justify-center p-4">
@@ -109,10 +133,10 @@ export function PdfViewer({ url, title }: { url: string; title: string }) {
                 className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-base font-bold text-black transition-colors hover:opacity-90">
                 Open in new tab
               </a>
-              <a href={pdfUrl ?? url} download
-                className="inline-flex items-center gap-2 rounded-xl border-2 border-white/20 px-6 py-3 text-base font-bold text-white transition-colors hover:bg-white/10">
-                Download PDF
-              </a>
+              <button type="button" onClick={downloadPdf} disabled={downloading}
+                className="inline-flex items-center gap-2 rounded-xl border-2 border-white/20 px-6 py-3 text-base font-bold text-white transition-colors hover:bg-white/10 disabled:opacity-50">
+                {downloading ? 'Preparing…' : 'Download PDF'}
+              </button>
             </div>
           </div>
         ) : (
@@ -158,6 +182,10 @@ export function PdfViewer({ url, title }: { url: string; title: string }) {
           <button type="button" onClick={goToNext} disabled={currentPage >= numPages} aria-label="Next page"
             className="flex size-10 items-center justify-center text-white transition-colors hover:bg-white/10 disabled:opacity-30">
             <ChevronRight className="size-5" />
+          </button>
+          <button type="button" onClick={downloadPdf} disabled={downloading} aria-label="Download PDF"
+            className="flex size-10 items-center justify-center text-white transition-colors hover:bg-white/10 disabled:opacity-30">
+            <Download className="size-5" />
           </button>
         </div>
       )}
