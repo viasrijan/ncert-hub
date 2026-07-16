@@ -73,7 +73,7 @@
   --sidebar-border: rgba(255,255,255,0.08);
   --sidebar-ring: #5da25b;
   --gold: #69a667;
-  --gold-gradient: linear-gradient(135deg, #69a667 0%, #40663f 100%);
+  --gold-gradient: linear-gradient(225deg, #69a667 0%, #40663f 100%);
 }
 
 .dark {
@@ -104,7 +104,7 @@
   --sidebar-border: rgba(255,255,255,0.08);
   --sidebar-ring: #5da25b;
   --gold: #69a667;
-  --gold-gradient: linear-gradient(135deg, #69a667 0%, #40663f 100%);
+  --gold-gradient: linear-gradient(225deg, #69a667 0%, #40663f 100%);
 }
 
 .light {
@@ -135,7 +135,7 @@
   --sidebar-border: rgba(28,25,23,0.1);
   --sidebar-ring: #5da25b;
   --gold: #69a667;
-  --gold-gradient: linear-gradient(135deg, #69a667 0%, #40663f 100%);
+  --gold-gradient: linear-gradient(225deg, #69a667 0%, #40663f 100%);
 }
 
 @layer base {
@@ -215,6 +215,21 @@
 }
 .light .shadow-elevated {
   box-shadow: 0 2px 6px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* Sidebar gradients: darker toward the inner edge (left sidebar darker on right,
+   right sidebar darker on left) */
+.sidebar-left {
+  background: linear-gradient(to right, rgba(18,18,18,0.55), rgba(0,0,0,0.85));
+}
+.sidebar-right {
+  background: linear-gradient(to left, rgba(18,18,18,0.55), rgba(0,0,0,0.85));
+}
+.light .sidebar-left {
+  background: linear-gradient(to right, rgba(245,242,237,0.7), rgba(208,202,194,0.95));
+}
+.light .sidebar-right {
+  background: linear-gradient(to left, rgba(245,242,237,0.7), rgba(208,202,194,0.95));
 }
 
 @keyframes fade-in-up {

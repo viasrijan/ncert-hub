@@ -28,7 +28,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-svh">
-      <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-r border-sidebar-border bg-sidebar/60 backdrop-blur-md lg:flex">
+      <aside className="sidebar-left sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-r border-sidebar-border backdrop-blur-md lg:flex">
         <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-8">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
@@ -43,12 +43,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
-        <header className="sticky top-0 z-50 flex justify-center border-b border-border/30 bg-sidebar/80 backdrop-blur-xl px-4 py-5">
+        <header className="sticky top-0 z-50 flex justify-center border-b border-border/30 bg-sidebar/80 backdrop-blur-xl px-4 py-5 shadow-[0_6px_20px_-4px_rgba(0,0,0,0.45)]">
           <Link href="/" className="flex items-center gap-4 group">
             <span className="flex h-10 w-10 items-center justify-center rounded-full overflow-hidden shadow-elevated">
               <Image src={assetPath('/logo.png')} alt="NCERT Hub" width={40} height={40} className="h-10 w-10" />
             </span>
-            <span className="font-display text-2xl font-extrabold tracking-tight text-gold">NCERT Hub</span>
+            <span className="font-display text-[40px] leading-none font-extrabold tracking-tight text-gold">NCERT Hub</span>
           </Link>
         </header>
         <main className="flex-1 pb-28 lg:pb-0 mt-4">{children}</main>
@@ -62,7 +62,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </footer>
       </div>
 
-      <aside className="sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-l border-sidebar-border bg-sidebar/60 backdrop-blur-md lg:flex">
+      <aside className="sidebar-right sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center border-l border-sidebar-border backdrop-blur-md lg:flex">
         <div className="flex flex-col items-center gap-5 px-4">
           <p className="text-[22px] font-extrabold tracking-widest text-sidebar-foreground uppercase text-center">Standard</p>
           <div className="grid grid-cols-3 gap-3 w-full max-w-[220px]">
