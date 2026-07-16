@@ -61,7 +61,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
-        <header className="sticky top-0 z-50 flex justify-center border-b border-border/30 bg-white/90 backdrop-blur-xl px-4 py-4">
+        <header className="sticky top-0 z-50 flex justify-center border-b border-border/30 bg-background/90 backdrop-blur-xl px-4 py-4">
           <Link href="/" className="flex items-center gap-3 group">
             <span className="flex h-8 w-8 items-center justify-center rounded-full overflow-hidden shadow-elevated">
               <Image src={assetPath('/logo.svg')} alt="NCERT Hub" width={32} height={32} className="h-8 w-8" />
