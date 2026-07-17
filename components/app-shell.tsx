@@ -44,7 +44,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
         <main className="flex-1 pb-28 lg:pb-0 mt-4">
-          <div className="mx-auto w-full max-w-5xl flex items-center justify-center gap-3 px-6 pt-10 pb-4 md:px-8">
+          <div className="mx-auto w-full max-w-5xl flex items-center justify-center gap-3 px-6 pt-10 pb-10 md:px-8">
             <Link href="/" className="flex items-center gap-3 group">
               <span className="flex h-9 w-9 items-center justify-center rounded-full overflow-hidden shadow-elevated md:h-12 md:w-12">
                 <Image src={assetPath('/logo.png')} alt="NCERT Hub" width={48} height={48} className="h-9 w-9 md:h-12 md:w-12" />

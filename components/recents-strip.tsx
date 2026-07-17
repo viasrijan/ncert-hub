@@ -22,7 +22,7 @@ export function RecentsStrip() {
   if (recentBooks.length === 0) return null
 
   return (
-    <section aria-labelledby="recents-heading" className="flex flex-col items-center gap-10 animate-fade-in-up animate-delay-100">
+    <section aria-labelledby="recents-heading" className="mt-10 flex flex-col items-center gap-10 animate-fade-in-up animate-delay-100">
       <div className="flex flex-col items-center gap-2">
         <h2 id="recents-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
           Continue reading
