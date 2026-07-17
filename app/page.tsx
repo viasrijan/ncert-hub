@@ -15,22 +15,22 @@ export default function HomePage() {
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-20 px-6 py-12 md:px-8 md:py-16">
-      <section className="flex flex-col items-center text-center gap-6 animate-fade-in-up">
+      <section className="flex flex-col items-center text-center gap-10 animate-fade-in-up">
         <div className="flex items-center gap-2 sm:gap-3 rounded-full bg-card/60 px-4 sm:px-7 py-2.5 sm:py-3.5 text-sm sm:text-base font-bold text-foreground uppercase tracking-wider backdrop-blur-sm shadow-card">
           <span className="num-gold">{BOOKS.length}</span> TEXTBOOKS
           <span className="text-border/60">·</span>
           <span className="num-gold">{totalChapters.toLocaleString()}</span> CHAPTERS
         </div>
 
-        <h1 className="mt-4 max-w-3xl font-display leading-relaxed tracking-tight text-balance text-foreground">
+        <h1 className="max-w-3xl font-display leading-relaxed tracking-tight text-balance text-foreground">
           <span className="text-lg md:text-2xl">An <strong className="font-bold text-gold">unofficial library</strong> of <strong className="font-bold">NCERT books</strong>.</span>
         </h1>
 
-        <div className="flex justify-center w-full mt-4">
+        <div className="flex justify-center w-full">
           <SearchTrigger />
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-2 mx-auto w-full max-w-3xl">
+        <div className="flex flex-wrap items-center justify-center gap-3 mx-auto w-full max-w-3xl">
           <span className="text-sm font-semibold text-muted-foreground">Jump to:</span>
           {[6, 8, 10, 12].map((c) => (
             <Link key={c} href={`/classes/${c}`}
