@@ -14,7 +14,7 @@ export default function HomePage() {
   const totalChapters = BOOKS.reduce((n, b) => n + b.chapters.length, 0)
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-20 px-6 py-12 md:px-8 md:py-16">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-12 md:px-8 md:py-16">
       <section className="flex flex-col items-center text-center gap-10 animate-fade-in-up">
         <div className="flex items-center gap-2 sm:gap-3 rounded-full bg-card/60 px-4 sm:px-7 py-2.5 sm:py-3.5 text-sm sm:text-base font-bold text-foreground uppercase tracking-wider backdrop-blur-sm shadow-card">
           <span className="num-gold">{BOOKS.length}</span> TEXTBOOKS
@@ -47,7 +47,7 @@ export default function HomePage() {
 
       <RecentsStrip />
 
-      <section aria-labelledby="featured-heading" className="flex flex-col items-center gap-6">
+      <section aria-labelledby="featured-heading" className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-2">
           <h2 id="featured-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
             Popular textbooks
