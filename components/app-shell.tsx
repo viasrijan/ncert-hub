@@ -1,10 +1,9 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Bookmark, GraduationCap, Heart, Home, Search, BookOpen } from 'lucide-react'
-import { cn, assetPath } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']
 
@@ -48,7 +47,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <div className="mx-auto w-full max-w-5xl flex items-center justify-center gap-3 px-6 pt-10 pb-10 md:px-8">
             <Link href="/" className="flex items-center gap-3 group">
               <span className="flex h-9 w-9 items-center justify-center rounded-full overflow-hidden shadow-elevated md:h-12 md:w-12">
-                <Image src={assetPath('/logo.png')} alt="NCERT Hub" width={48} height={48} className="h-9 w-9 md:h-12 md:w-12" />
+                <svg viewBox="0 0 20 20" className="h-6 w-6 text-gold md:h-8 md:w-8" fill="currentColor" aria-hidden="true">
+                  <path d="M3.33 8L10 12l10-6-10-6L0 6h10v2H3.33zM0 8v8l2-2.22V9.2L0 8zm10 12l-5-3-2-1.2v-6l7 4.2 7-4.2v6L10 20z" />
+                </svg>
               </span>
               <span className="font-display text-3xl font-extrabold tracking-tight text-gold md:text-5xl">NCERT Hub</span>
             </Link>
