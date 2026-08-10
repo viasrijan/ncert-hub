@@ -46,8 +46,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <main className="flex-1 pb-28 lg:pb-0 mt-4">
           <div className="mx-auto w-full max-w-5xl flex items-center justify-center gap-3 px-6 pt-10 pb-10 md:px-8">
             <Link href="/" className="flex items-center gap-3 group">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full overflow-hidden shadow-elevated md:h-12 md:w-12">
-                <svg viewBox="0 0 20 20" className="h-6 w-6 text-gold md:h-8 md:w-8" fill="currentColor" aria-hidden="true">
+              <span className="btn-gradient flex h-9 w-9 items-center justify-center rounded-full overflow-hidden shadow-elevated md:h-12 md:w-12">
+                <svg viewBox="0 0 20 20" className="h-6 w-6 md:h-8 md:w-8" fill="currentColor" aria-hidden="true">
                   <path d="M3.33 8L10 12l10-6-10-6L0 6h10v2H3.33zM0 8v8l2-2.22V9.2L0 8zm10 12l-5-3-2-1.2v-6l7 4.2 7-4.2v6L10 20z" />
                 </svg>
               </span>
