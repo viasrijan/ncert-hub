@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Donate',
+  title: 'Support',
   description: 'Support NCERT Hub so I can keep working on such projects.',
 }
 
-export default function DonatePage() {
+export default function SupportPage() {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 px-6 py-12 md:px-8 md:py-16">
       <div className="flex flex-col items-center gap-6 text-center animate-fade-in-up">
-        <h1 className="font-display text-6xl font-bold tracking-tight text-foreground md:text-7xl">Donate</h1>
+        <h1 className="font-display text-6xl font-bold tracking-tight text-foreground md:text-7xl">Support</h1>
         <p className="max-w-xl text-lg text-foreground/80">
-          If you find this website useful, feel free to Donate so I could keep working on such projects :)
+          If you find this website useful, feel free to support me so I could keep working on such projects :)
         </p>
         <a
           href="https://www.paypal.me/iSrijan"

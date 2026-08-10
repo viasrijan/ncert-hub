@@ -14,7 +14,7 @@ const NAV_ITEMS = [
   { href: '/subjects', label: 'Subjects', icon: BookOpen },
   { href: '/search', label: 'Search', icon: Search },
   { href: '/bookmarks', label: 'Saved', icon: Bookmark },
-  { href: '/donate', label: 'Donate', icon: Heart },
+  { href: '/support', label: 'Support', icon: Heart },
 ]
 
 function isActive(pathname: string, href: string) {
