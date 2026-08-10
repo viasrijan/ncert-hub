@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   <circle cx="10" cy="10" r="10" fill="url(#g)"/>
-  <g transform="translate(2.2 2.2) scale(0.62)">
+  <g transform="translate(3.8 3.8) scale(0.62)">
     <path d="M3.33 8L10 12l10-6-10-6L0 6h10v2H3.33zM0 8v8l2-2.22V9.2L0 8zm10 12l-5-3-2-1.2v-6l7 4.2 7-4.2v6L10 20z" fill="#ffffff"/>
   </g>
 </svg>
