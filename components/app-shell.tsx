@@ -55,7 +55,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
           {children}
         </main>
-        <footer className="hidden px-8 py-6 lg:flex lg:flex-col lg:items-center lg:justify-center lg:gap-4">
+        <footer className="hidden px-8 py-6 lg:flex lg:items-center lg:justify-center lg:gap-4">
           <p className="text-sm font-normal text-foreground text-center">
             An <strong className="font-bold">Unofficial Library</strong> of NCERT Books.{' '}Visit the official website at{' '}
             <a href="https://ncert.nic.in" target="_blank" rel="noopener noreferrer" className="font-bold text-gold no-underline hover:text-foreground">
