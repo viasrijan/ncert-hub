@@ -49,7 +49,11 @@ export default {
       try {
         const upstream = await fetch(target, {
           method: request.method,
-          headers: { Range: request.headers.get('Range') || '' },
+          headers: {
+            Range: request.headers.get('Range') || '',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            Accept: 'application/pdf,*/*',
+          },
           redirect: 'follow',
         })
 

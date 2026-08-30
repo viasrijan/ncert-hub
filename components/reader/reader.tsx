@@ -11,10 +11,10 @@ import { useRecents } from '@/lib/library-store'
 import { cn } from '@/lib/utils'
 
 const JD_BASES = [
-  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-1@fd6e9cdd734b97683a9774c0bdb1fced508db328',
-  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-2@34e234b78871fc705dc6b5afcd9ab917162ef47d',
-  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-3@d3f9fb8c668e8acfc4d37cddce92511fe8a0f3cc',
-  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@29fb9b0c4c6b25a7e20e18050755e4fa2e809fc4',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-1@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-2@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-3@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@main',
 ]
 const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
 
