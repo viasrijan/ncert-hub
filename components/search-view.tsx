@@ -100,7 +100,7 @@ export function SearchView({ scope = 'textbook' }: { scope?: 'textbook' | 'solut
             className={cn(
               'shrink-0 rounded-full px-3.5 py-2 text-sm font-bold transition-colors duration-150',
               classFilter === c
-                ? (isSolution ? 'btn-orange' : 'btn-gradient')
+                ? 'bg-gold text-black font-extrabold'
                 : 'bg-card/60 text-muted-foreground hover:text-foreground',
             )}>
             {c === 0 ? 'All classes' : toRoman(c)}

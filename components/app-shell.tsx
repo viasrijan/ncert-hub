@@ -9,9 +9,9 @@ const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI'
 
 const NAV_ITEMS = [
   { href: '/', label: 'Home', icon: Home },
+  { href: '/search', label: 'Search', icon: Search },
   { href: '/classes', label: 'Classes', icon: GraduationCap },
   { href: '/subjects', label: 'Subjects', icon: BookOpen },
-  { href: '/search', label: 'Search', icon: Search },
   { href: '/solutions', label: 'Solutions', icon: FileCheck },
   { href: '/bookmarks', label: 'Saved', icon: Bookmark },
   { href: '/support', label: 'Support', icon: Heart },
@@ -37,7 +37,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <Link key={href} href={href}
                 className={cn(
                   'nav-btn w-full max-w-[150px] transition-colors duration-200',
-                  active ? 'text-white' : 'text-gold',
+                  active ? 'text-white font-bold' : 'text-gold',
                 )}>
                 <Icon className="h-5 w-5 shrink-0" /> {label}
               </Link>

@@ -7690,15 +7690,13 @@ export const SOLUTIONS: Book[] = BOOKS.map((b) => {
   const solChapters: Chapter[] = b.chapters.map((c, idx) => {
     const driveIds = SOLUTION_DRIVE_IDS[b.id]
     const external = driveIds?.[idx] ? driveUrl(driveIds[idx]) : undefined
-    // For link-out solutions we keep pdfCode distinct but store per-chapter external URL via sourceUrl on book + chapter title link
-    // Single book sourceUrl is primary; per-chapter external is encoded as pdfCode suffix for now and resolved in UI
     return c
   })
   const bookDriveIds = SOLUTION_DRIVE_IDS[b.id]
   const primaryExternal = bookDriveIds ? driveUrl(bookDriveIds[0]) : `https://www.sarthaks.com/search?q=${encodeURIComponent(b.title + ' ncert solutions class ' + b.classNum)}`
   return {
     id: `${b.id}_sol`,
-    title: `${b.title} — Solutions`,
+    title: b.title,
     classNum: b.classNum,
     subject: b.subject,
     cover: b.cover,

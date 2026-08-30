@@ -46,7 +46,7 @@ export default function SolutionsPage() {
                   {toRoman(c)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <h3 className="font-display text-xl font-bold text-foreground">Class {toRoman(c)} - Solutions</h3>
+                  <h3 className="font-display text-xl font-bold text-foreground">Class {toRoman(c)}</h3>
                   <p className="text-[14px] font-semibold text-muted-foreground">
                     <span className="text-[#69a667]">{books.length}</span> <span className="text-[#69a667]">{books.length === 1 ? 'book' : 'books'}</span>
                   </p>
@@ -80,7 +80,7 @@ export default function SolutionsPage() {
                   {subject.charAt(0)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <h3 className="font-display text-xl font-bold text-foreground">{subject} - Solutions</h3>
+                  <h3 className="font-display text-xl font-bold text-foreground">{subject}</h3>
                   <p className="text-[14px] font-semibold text-muted-foreground">
                     <span className="text-[#69a667]">{books.length}</span> <span className="text-[#69a667]">{books.length === 1 ? 'book' : 'books'}</span>
                   </p>
