@@ -33,7 +33,7 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
         </p>
       </div>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-4 w-full place-items-center stagger-children">
-        {books.map((book) => (<BookCard key={book.id} book={book} />))}
+        {books.map((book) => (<BookCard key={book.id} book={book} showClass />))}
       </div>
     </div>
   )

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Bookmark } from 'lucide-react'
 import type { Book } from '@/lib/catalog'
+import { toRoman } from '@/lib/catalog'
 import { useBookmarks } from '@/lib/library-store'
 import { cn } from '@/lib/utils'
 import { getSubjectGradient } from '@/lib/subject-gradients'
@@ -25,7 +26,12 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
-        <div className="flex h-[120px] flex-col items-center text-center gap-1.5 p-4">
+        <div className="flex h-[132px] flex-col items-center text-center gap-1 p-4">
+          {showClass && (
+            <p className="text-[11px] font-extrabold tracking-widest uppercase text-gold leading-none">
+              Class {toRoman(book.classNum)}
+            </p>
+          )}
           <h3 className="line-clamp-2 text-lg font-bold leading-snug text-foreground text-pretty">
             {book.title}
           </h3>

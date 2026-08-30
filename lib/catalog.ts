@@ -3286,6 +3286,55 @@ export const BOOKS: Book[] = [
     ]
   },
   {
+    "id": "hees2",
+    "title": "Exploring Society India and Beyond Part-II",
+    "classNum": 8,
+    "subject": "Social Science",
+    "cover": "/covers/social-science.png",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "World Geography: Some Glimpses",
+        "pdfCode": "hees201"
+      },
+      {
+        "number": 2,
+        "title": "India's Long Road to Independence",
+        "pdfCode": "hees202"
+      },
+      {
+        "number": 3,
+        "title": "A Journey Through Indian Architecture",
+        "pdfCode": "hees203"
+      },
+      {
+        "number": 4,
+        "title": "The Role of the Judiciary in Our Society",
+        "pdfCode": "hees204"
+      },
+      {
+        "number": 5,
+        "title": "Citizenship: Rights and Duties",
+        "pdfCode": "hees205"
+      },
+      {
+        "number": 6,
+        "title": "Dynamics of Population",
+        "pdfCode": "hees206"
+      },
+      {
+        "number": 7,
+        "title": "India's Urban Landscape",
+        "pdfCode": "hees207"
+      },
+      {
+        "number": 8,
+        "title": "Cultural Currents: 13th to 17th Centuries",
+        "pdfCode": "hees208"
+      }
+    ]
+  },
+  {
     "id": "hess2",
     "title": "Our-Pasts-III",
     "classNum": 8,
