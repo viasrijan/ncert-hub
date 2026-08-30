@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Bookmark, GraduationCap, Heart, Home, Search, BookOpen } from 'lucide-react'
+import { Bookmark, GraduationCap, Heart, Home, Search, BookOpen, FileCheck } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']
@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { href: '/classes', label: 'Classes', icon: GraduationCap },
   { href: '/subjects', label: 'Subjects', icon: BookOpen },
   { href: '/search', label: 'Search', icon: Search },
+  { href: '/solutions', label: 'Solutions', icon: FileCheck },
   { href: '/bookmarks', label: 'Saved', icon: Bookmark },
   { href: '/support', label: 'Support', icon: Heart },
 ]
@@ -23,6 +24,7 @@ function isActive(pathname: string, href: string) {
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
+  const isSolutions = pathname.startsWith('/solutions')
 
   if (pathname.startsWith('/read/')) return <>{children}</>
 
@@ -32,9 +34,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-8">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
+            const isSolutionsItem = href === '/solutions'
             return (
               <Link key={href} href={href}
-                className={cn('nav-btn w-full max-w-[150px] transition-colors duration-200', active && 'nav-btn-active text-white')}>
+                className={cn(
+                  'nav-btn w-full max-w-[150px] transition-colors duration-200',
+                  isSolutionsItem ? 'nav-btn-orange' : 'nav-btn',
+                  active && (isSolutionsItem ? 'nav-btn-active bg-orange text-white' : 'nav-btn-active text-white'),
+                  active && !isSolutionsItem && 'bg-gold',
+                  active && isSolutionsItem && 'bg-orange',
+                )}>
                 <Icon className="h-5 w-5 shrink-0" /> {label}
               </Link>
             )
@@ -45,13 +54,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
         <main className="flex-1 pb-28 lg:pb-0 mt-4">
           <div className="mx-auto w-full max-w-5xl flex items-center justify-center gap-3 px-6 pt-10 pb-10 md:px-8">
-            <Link href="/" className="flex items-center gap-3 group">
-              <span className="btn-gradient flex h-9 w-9 items-center justify-center rounded-full overflow-hidden shadow-elevated md:h-12 md:w-12">
+            <Link href={isSolutions ? "/solutions" : "/"} className="flex items-center gap-3 group">
+              <span className={cn("flex h-9 w-9 items-center justify-center rounded-full overflow-hidden shadow-elevated md:h-12 md:w-12", isSolutions ? "btn-orange" : "btn-gradient")}>
                 <svg viewBox="0 0 20 20" className="h-[19px] w-[19px] text-white md:h-[26px] md:w-[26px]" fill="currentColor" aria-hidden="true">
                   <path d="M3.33 8L10 12l10-6-10-6L0 6h10v2H3.33zM0 8v8l2-2.22V9.2L0 8zm10 12l-5-3-2-1.2v-6l7 4.2 7-4.2v6L10 20z" />
                 </svg>
               </span>
-              <span className="font-display text-3xl font-extrabold tracking-tight text-gold md:text-5xl">NCERT Hub</span>
+              <span className={cn("font-display text-3xl font-extrabold tracking-tight md:text-5xl", isSolutions ? "text-orange" : "text-gold")}>{isSolutions ? "NCERT Solutions" : "NCERT Hub"}</span>
             </Link>
           </div>
           {children}
@@ -79,17 +88,19 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       <aside className="sidebar-right sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center backdrop-blur-md lg:flex">
         <div className="flex flex-col items-center gap-5 px-4 scale-80 origin-center">
-          <p className="text-[28px] font-extrabold tracking-widest text-sidebar-foreground text-center">Standard</p>
+          <p className={cn("text-[28px] font-extrabold tracking-widest text-center", isSolutions ? "text-orange" : "text-sidebar-foreground")}>Standard</p>
           <div className="h-4" />
           <div className="grid grid-cols-3 gap-5 w-full max-w-[220px]">
             {ROMAN.map((r, i) => {
-              const href = `/classes/${i + 1}`
+              const href = isSolutions ? `/solutions/classes/${i + 1}` : `/classes/${i + 1}`
               const active = isActive(pathname, href)
               return (
                 <Link key={r} href={href}
                   className={cn(
                     'flex items-center justify-center rounded-full text-[17px] font-extrabold transition-colors duration-200 aspect-square shadow-card scale-110 origin-center',
-                    active ? 'bg-white text-[#40663f] shadow-elevated' : 'btn-gradient hover:opacity-90',
+                    active ? 'bg-white shadow-elevated' : 'hover:opacity-90',
+                    active ? (isSolutions ? 'text-[#9a3412]' : 'text-[#40663f]') : '',
+                    !active && (isSolutions ? 'btn-orange' : 'btn-gradient'),
                   )}>
                   {r}
                 </Link>
@@ -102,9 +113,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <nav aria-label="Primary" className="fixed inset-x-0 bottom-0 z-40 flex bg-sidebar/90 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] lg:hidden">
         {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
           const active = isActive(pathname, href)
+          const isSolutionsItem = href === '/solutions'
           return (
             <Link key={href} href={href}
-              className={cn('flex flex-1 flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] font-bold tracking-tight', active ? 'text-sidebar-foreground' : 'text-sidebar-foreground/60')}>
+              className={cn('flex flex-1 flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] font-bold tracking-tight',
+                isSolutionsItem
+                  ? (active ? 'text-[#f97316]' : 'text-[#f97316]/60')
+                  : (active ? 'text-sidebar-foreground' : 'text-sidebar-foreground/60'))}>
               <Icon className="h-6 w-6" /> {label}
             </Link>
           )

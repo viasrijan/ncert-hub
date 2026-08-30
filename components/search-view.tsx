@@ -4,7 +4,8 @@ import { useCallback, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { BookOpen, FileText, Search, X } from 'lucide-react'
-import { BOOKS, toRoman, type Book, type Chapter } from '@/lib/catalog'
+import { BOOKS, SOLUTIONS, toRoman, type Book, type Chapter } from '@/lib/catalog'
+import { getSolutionDriveUrl } from '@/lib/catalog'
 import { cn } from '@/lib/utils'
 import { getSubjectGradient } from '@/lib/subject-gradients'
 
@@ -35,11 +36,12 @@ function scoreMatch(haystack: string, needle: string): number {
   return 0
 }
 
-function searchData(query: string, classFilter: number): Hit[] {
+function searchData(query: string, classFilter: number, scope: 'textbook' | 'solution'): Hit[] {
   const q = query.trim()
   if (q.length < 2) return []
+  const source = scope === 'solution' ? SOLUTIONS : BOOKS
   const hits: Hit[] = []
-  for (const book of BOOKS) {
+  for (const book of source) {
     if (classFilter !== 0 && book.classNum !== classFilter) continue
     const bookScore = Math.max(scoreMatch(book.title, q), scoreMatch(book.subject, q) - 10)
     if (bookScore > 0) hits.push({ type: 'book', book, score: bookScore })
@@ -52,14 +54,16 @@ function searchData(query: string, classFilter: number): Hit[] {
   return hits.sort((a, b) => b.score - a.score).slice(0, 30)
 }
 
-export function SearchView() {
+export function SearchView({ scope = 'textbook' }: { scope?: 'textbook' | 'solution' }) {
   const router = useRouter()
   const [query, setQuery] = useState('')
   const [classFilter, setClassFilter] = useState(0)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const hits = useMemo(() => searchData(query, classFilter), [query, classFilter])
+  const hits = useMemo(() => searchData(query, classFilter, scope), [query, classFilter, scope])
   const showEmpty = query.trim().length >= 2 && hits.length === 0
+  const isSolution = scope === 'solution'
+  const totalCount = isSolution ? SOLUTIONS.length : BOOKS.length
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
@@ -78,7 +82,7 @@ export function SearchView() {
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Books, subjects, or chapter names..."
+          placeholder={isSolution ? "Search solutions by book, subject, or chapter..." : "Books, subjects, or chapter names..."}
           autoFocus
           className="min-w-0 flex-1 bg-transparent text-base text-foreground outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden"
         />
@@ -96,7 +100,7 @@ export function SearchView() {
             className={cn(
               'shrink-0 rounded-full px-3.5 py-2 text-sm font-bold transition-colors duration-150',
               classFilter === c
-                ? 'btn-gradient'
+                ? (isSolution ? 'btn-orange' : 'btn-gradient')
                 : 'bg-card/60 text-muted-foreground hover:text-foreground',
             )}>
             {c === 0 ? 'All classes' : toRoman(c)}
@@ -106,7 +110,7 @@ export function SearchView() {
 
       {query.trim().length < 2 ? (
         <p className="py-8 text-center text-base text-muted-foreground">
-          Start typing to search {BOOKS.length} textbooks and their chapters.
+          Start typing to search {totalCount} {isSolution ? 'solution books' : 'textbooks'} and their chapters.
         </p>
       ) : showEmpty ? (
         <p className="py-8 text-center text-base text-muted-foreground">
@@ -115,21 +119,48 @@ export function SearchView() {
         </p>
       ) : (
         <ul className="flex flex-col overflow-hidden rounded-lg bg-card/60 backdrop-blur-sm shadow-card">
-          {hits.map((hit) => (
-            <li key={hit.type === 'book' ? `b-${hit.book.id}` : `c-${hit.chapter.pdfCode}`}>
-              {hit.type === 'book' ? (
-                <Link href={`/book/${hit.book.id}`}
-                  className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50">
-                  <div className="relative size-11 shrink-0 overflow-hidden rounded-lg" style={{ background: getSubjectGradient(hit.book.subject).gradient }}>
-                    {(() => { const Ic = getSubjectGradient(hit.book.subject).icon; return <Ic className="size-5 text-white/40 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-base font-bold text-foreground">{hit.book.title}</p>
-                    <p className="truncate text-sm text-muted-foreground">Class {toRoman(hit.book.classNum)} · {hit.book.subject} · {hit.book.chapters.length} chapters</p>
-                  </div>
-                  <BookOpen className="size-5 shrink-0 text-muted-foreground/50" />
-                </Link>
-              ) : (
+          {hits.map((hit) => {
+            const isSolBook = isSolution && hit.book.kind === 'solution'
+            if (hit.type === 'book') {
+              return (
+                <li key={`b-${hit.book.id}`}>
+                  <Link href={`/book/${hit.book.id}`}
+                    className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50">
+                    <div className="relative size-11 shrink-0 overflow-hidden rounded-lg" style={{ background: getSubjectGradient(hit.book.subject).gradient }}>
+                      {(() => { const Ic = getSubjectGradient(hit.book.subject).icon; return <Ic className="size-5 text-white/40 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-base font-bold text-foreground">{hit.book.title}</p>
+                      <p className="truncate text-sm text-muted-foreground">Class {toRoman(hit.book.classNum)} · {hit.book.subject} · {hit.book.chapters.length} chapters {isSolBook && <span className="ml-2 rounded-full bg-orange px-2 py-0.5 text-xs font-bold text-white">Solutions</span>}</p>
+                    </div>
+                    <BookOpen className="size-5 shrink-0 text-muted-foreground/50" />
+                  </Link>
+                </li>
+              )
+            }
+            // chapter hit
+            if (isSolBook) {
+              const idx = hit.book.chapters.findIndex((c) => c.pdfCode === hit.chapter.pdfCode)
+              const external = getSolutionDriveUrl(hit.book.solutionFor ?? hit.book.id.replace('_sol', ''), idx)
+              const href = external ?? hit.book.sourceUrl ?? `/book/${hit.book.id}`
+              const isExternal = Boolean(external || hit.book.sourceUrl)
+              return (
+                <li key={`c-${hit.chapter.pdfCode}`}>
+                  <a href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}
+                    className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50">
+                    <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[#ea580c]/10 border-2 border-[#ea580c]">
+                      <FileText className="size-5 text-[#ea580c]" />
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-base font-bold text-foreground">{hit.chapter.title}</p>
+                      <p className="truncate text-sm text-muted-foreground">{hit.book.title} · Class {toRoman(hit.book.classNum)}</p>
+                    </div>
+                  </a>
+                </li>
+              )
+            }
+            return (
+              <li key={`c-${hit.chapter.pdfCode}`}>
                 <Link href={`/read/${hit.chapter.pdfCode}`}
                   className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50">
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-gold/10 border-2 border-gold">
@@ -140,9 +171,9 @@ export function SearchView() {
                     <p className="truncate text-sm text-muted-foreground">{hit.book.title} · Class {toRoman(hit.book.classNum)}</p>
                   </div>
                 </Link>
-              )}
-            </li>
-          ))}
+              </li>
+            )
+          })}
         </ul>
       )}
     </div>

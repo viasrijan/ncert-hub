@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ChevronLeft, ExternalLink } from 'lucide-react'
-import { BOOKS, getBook, toRoman } from '@/lib/catalog'
+import { BOOKS, SOLUTIONS, getBook, toRoman } from '@/lib/catalog'
 import { ChapterList } from '@/components/chapter-list'
 import { BookmarkButton } from '@/components/bookmark-button'
 import { BookDownloadButton } from '@/components/book-download-button'
 import { getSubjectGradient } from '@/lib/subject-gradients'
 
-export function generateStaticParams() { return BOOKS.map((b) => ({ bookId: b.id })) }
+export function generateStaticParams() { return [...BOOKS, ...SOLUTIONS].map((b) => ({ bookId: b.id })) }
 
 export async function generateMetadata({ params }: { params: Promise<{ bookId: string }> }): Promise<Metadata> {
   const { bookId } = await params
@@ -21,11 +21,12 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
   const { bookId } = await params
   const book = getBook(bookId)
   if (!book) notFound()
+  const isSolution = book.kind === 'solution'
 
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 py-12 md:px-8 md:py-16">
-      <Link href={`/classes/${book.classNum}`} className="flex items-center gap-1.5 text-[14px] font-bold text-muted-foreground transition-colors hover:text-foreground animate-fade-in">
-        <ChevronLeft className="size-[18px]" /> Class {toRoman(book.classNum)}
+      <Link href={isSolution ? `/solutions/classes/${book.classNum}` : `/classes/${book.classNum}`} className={`flex items-center gap-1.5 text-[14px] font-bold transition-colors animate-fade-in ${isSolution ? 'text-orange hover:opacity-70' : 'text-muted-foreground hover:text-foreground'}`}>
+        <ChevronLeft className="size-[18px]" /> Class {toRoman(book.classNum)} {isSolution && '· Solutions'}
       </Link>
 
       <div className="flex flex-col items-center text-center gap-5 animate-fade-in-up">
@@ -33,22 +34,41 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
           {(() => { const Ic = getSubjectGradient(book.subject).icon; return <Ic className="size-12 text-white/30 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
         </div>
         <div className="flex flex-col items-center gap-2">
+          {isSolution && <span className="rounded-full bg-orange px-3 py-1 text-xs font-extrabold tracking-widest uppercase text-white">Solutions — external, legal-safe</span>}
           <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl text-foreground text-balance">{book.title}</h1>
-          <p className="text-[15px] font-semibold text-muted-foreground">{book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'}</p>
+          <p className="text-[15px] font-semibold text-muted-foreground">{book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'} {isSolution && '· External links open in new tabs'}</p>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
             <BookmarkButton bookId={book.id} />
-            <BookDownloadButton pdfCode={book.chapters[0].pdfCode} label="Download" />
+            {isSolution ? (
+              book.sourceUrl && (
+                <a href={book.sourceUrl} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 rounded-xl btn-orange px-4 py-3 text-[14px] font-bold transition-all duration-200 hover:opacity-90">
+                  <ExternalLink className="size-[16px]" /> Open Solutions
+                </a>
+              )
+            ) : (
+              <BookDownloadButton pdfCode={book.chapters[0].pdfCode} label="Download" />
+            )}
             <a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 rounded-xl bg-card/80 px-4 py-3 text-[14px] font-bold text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:text-foreground hover:shadow-sm">
               <ExternalLink className="size-[16px]" /> NCERT official
             </a>
           </div>
+          {isSolution && (
+            <p className="max-w-xl text-center text-xs leading-relaxed text-muted-foreground/70">Solutions are unofficial external guides. For legal safety we link out rather than host. Reuse of existing repos reserved for future licensed hosts. Not affiliated with NCERT.</p>
+          )}
         </div>
       </div>
 
       <div className="w-full">
         <ChapterList book={book} />
       </div>
+      {isSolution && book.solutionFor && (
+        <Link href={`/book/${book.solutionFor}`} className="text-sm font-bold text-gold hover:opacity-70">← View official textbook: {book.solutionFor}</Link>
+      )}
+      {!isSolution && (
+        <Link href={`/book/${book.id}_sol`} className="text-sm font-bold text-orange hover:opacity-70">View Solutions for this book →</Link>
+      )}
     </div>
   )
 }

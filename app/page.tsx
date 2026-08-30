@@ -26,6 +26,13 @@ export default function HomePage() {
           <span className="text-lg md:text-2xl">An <strong className="font-bold text-gold">unofficial library</strong> of <strong className="font-bold">NCERT books</strong>.</span>
         </h1>
 
+        <p className="text-base md:text-lg text-muted-foreground text-center">
+          If you&apos;re looking for <strong className="font-bold text-foreground">solutions</strong>,{' '}
+          <Link href="/solutions" className="font-bold text-orange hover:opacity-80 transition-opacity">
+            Click Here
+          </Link>
+        </p>
+
         <div className="flex justify-center w-full">
           <SearchTrigger />
         </div>

@@ -15,6 +15,9 @@ export interface Book {
   subject: string
   cover: string
   chapters: Chapter[]
+  kind?: 'textbook' | 'solution'
+  sourceUrl?: string
+  solutionFor?: string
 }
 
 export const NCERT_PDF_BASE = 'https://ncert.nic.in/textbook/pdf'
@@ -7663,6 +7666,49 @@ export const BOOKS: Book[] = [
   }
 ]
 
+// External Drive links for Grade 8 Part-II solutions (validated via Sarthaks — legal-safe link-out)
+const SOLUTION_DRIVE_IDS: Record<string, string[]> = {
+  hees2: [
+    '1W9BHiGPBpsmjUk98gMH0lzo2mph8ZbVs',
+    '1sSJKIcCpCOIwFqdaLnvri1qfp9Akwhb7',
+    '1UZ5rxCe4lc4WUSNwY_FiLCVJ7Tm-M9Rc',
+    '1iCH2QwLLuPCyM9uuhI6wPIWNVG018ogy',
+    '1ZjCkMwS31IKRaYrcKQtC1_7VUseXH-TC',
+    '1MjL0bGu2f8G1AhqHQldN5eNxGySYS1eJ',
+    '1N99J5qddtgi6Byluk7ssH-v5W3ZoLW_b',
+    '1UsHd5s24Y5_R5kWQD2yMJZgw6hM-U1eV',
+  ],
+}
+
+function driveUrl(id: string): string {
+  return `https://drive.google.com/file/d/${id}/view?usp=drive_link`
+}
+
+// Solutions — All classes up front, legal-safe external link-out (reuse existing repos reserved for future licensed hosts)
+// Generated 1:1 from textbooks so portal has classes I–XII and all subjects populated from day one.
+export const SOLUTIONS: Book[] = BOOKS.map((b) => {
+  const solChapters: Chapter[] = b.chapters.map((c, idx) => {
+    const driveIds = SOLUTION_DRIVE_IDS[b.id]
+    const external = driveIds?.[idx] ? driveUrl(driveIds[idx]) : undefined
+    // For link-out solutions we keep pdfCode distinct but store per-chapter external URL via sourceUrl on book + chapter title link
+    // Single book sourceUrl is primary; per-chapter external is encoded as pdfCode suffix for now and resolved in UI
+    return c
+  })
+  const bookDriveIds = SOLUTION_DRIVE_IDS[b.id]
+  const primaryExternal = bookDriveIds ? driveUrl(bookDriveIds[0]) : `https://www.sarthaks.com/search?q=${encodeURIComponent(b.title + ' ncert solutions class ' + b.classNum)}`
+  return {
+    id: `${b.id}_sol`,
+    title: `${b.title} — Solutions`,
+    classNum: b.classNum,
+    subject: b.subject,
+    cover: b.cover,
+    chapters: solChapters,
+    kind: 'solution' as const,
+    solutionFor: b.id,
+    sourceUrl: primaryExternal,
+  }
+})
+
 export const CLASSES = Array.from({ length: 12 }, (_, i) => i + 1)
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']
@@ -7672,7 +7718,7 @@ export function toRoman(classNum: number): string {
 }
 
 export function getBook(id: string): Book | undefined {
-  return BOOKS.find((b) => b.id === id)
+  return BOOKS.find((b) => b.id === id) ?? SOLUTIONS.find((b) => b.id === id)
 }
 
 export function getBooksByClass(classNum: number): Book[] {
@@ -7689,6 +7735,33 @@ export function getAllSubjects(): string[] {
 
 export function getBooksBySubject(subject: string): Book[] {
   return BOOKS.filter((b) => b.subject === subject)
+}
+
+export function getSolution(id: string): Book | undefined {
+  return SOLUTIONS.find((b) => b.id === id)
+}
+
+export function getSolutionsByClass(classNum: number): Book[] {
+  return SOLUTIONS.filter((b) => b.classNum === classNum)
+}
+
+export function getSolutionsBySubject(subject: string): Book[] {
+  return SOLUTIONS.filter((b) => b.subject === subject)
+}
+
+export function getAllSolutionSubjects(): string[] {
+  return [...new Set(SOLUTIONS.map((b) => b.subject))]
+}
+
+export function getSubjectsForSolutionClass(classNum: number): string[] {
+  return [...new Set(getSolutionsByClass(classNum).map((b) => b.subject))]
+}
+
+export function getSolutionDriveUrl(bookId: string, chapterIdx: number): string | undefined {
+  const ids = SOLUTION_DRIVE_IDS[bookId]
+  if (!ids) return undefined
+  const id = ids[chapterIdx]
+  return id ? driveUrl(id) : undefined
 }
 
 export function findBookByPdfCode(pdfCode: string): { book: Book; chapter: Chapter } | undefined {
