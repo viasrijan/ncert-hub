@@ -15,19 +15,19 @@ export default function SolutionsPage() {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-12 md:px-8 md:py-16">
       <div className="flex flex-col items-center text-center gap-3 animate-fade-in-up">
-        <h1 className="font-display text-5xl font-bold tracking-tight md:text-6xl text-foreground">NCERT Solutions</h1>
-        <p className="text-lg text-muted-foreground max-w-2xl">External, legal-safe answer guides for all NCERT textbooks — Classes I–XII. Solutions open in new tabs via trusted sources.</p>
+        <h1 className="font-display text-5xl font-bold tracking-tight md:text-6xl text-foreground">Solutions</h1>
+        <p className="text-lg text-muted-foreground max-w-2xl">Browse NCERT Solutions for Classes I to XII.</p>
       </div>
 
       <div className="flex flex-col gap-2">
-        <h2 className="text-center text-sm font-bold tracking-widest uppercase text-orange">Search Solutions</h2>
+        <h2 className="text-center text-sm font-bold tracking-widest uppercase text-gold">Search Solutions</h2>
         <SearchView scope="solution" />
       </div>
 
       <section aria-labelledby="sol-classes-heading" className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
           <h2 id="sol-classes-heading" className="font-display text-2xl font-bold tracking-tight text-foreground">Browse by Class</h2>
-          <span className="rounded-full bg-orange px-3 py-1 text-xs font-bold text-white">{CLASSES.length} classes</span>
+          <span className="rounded-full bg-card/60 px-3 py-1 text-xs font-bold text-foreground">{CLASSES.length} classes</span>
         </div>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
           {CLASSES.map((c) => {
@@ -46,12 +46,12 @@ export default function SolutionsPage() {
                   {toRoman(c)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <h3 className="font-display text-xl font-bold text-foreground">Class {toRoman(c)}</h3>
+                  <h3 className="font-display text-xl font-bold text-foreground">Class {toRoman(c)} - Solutions</h3>
                   <p className="text-[14px] font-semibold text-muted-foreground">
-                    <span className="text-[#ea580c]">{books.length}</span> <span className="text-[#ea580c]">{books.length === 1 ? 'solution book' : 'solution books'}</span>
+                    <span className="text-[#69a667]">{books.length}</span> <span className="text-[#69a667]">{books.length === 1 ? 'book' : 'books'}</span>
                   </p>
                 </div>
-                <ArrowRight className="size-5 shrink-0 text-muted-foreground/40 opacity-0 -translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-orange" />
+                <ArrowRight className="size-5 shrink-0 text-muted-foreground/40 opacity-0 -translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-gold" />
               </Link>
             )
           })}
@@ -61,7 +61,7 @@ export default function SolutionsPage() {
       <section aria-labelledby="sol-subjects-heading" className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
           <h2 id="sol-subjects-heading" className="font-display text-2xl font-bold tracking-tight text-foreground">Browse by Subject</h2>
-          <span className="rounded-full bg-orange px-3 py-1 text-xs font-bold text-white">{solutionSubjects.length} subjects</span>
+          <span className="rounded-full bg-card/60 px-3 py-1 text-xs font-bold text-foreground">{solutionSubjects.length} subjects</span>
         </div>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
           {solutionSubjects.map((subject) => {
@@ -80,12 +80,12 @@ export default function SolutionsPage() {
                   {subject.charAt(0)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <h3 className="font-display text-xl font-bold text-foreground">{subject}</h3>
+                  <h3 className="font-display text-xl font-bold text-foreground">{subject} - Solutions</h3>
                   <p className="text-[14px] font-semibold text-muted-foreground">
-                    <span className="text-[#ea580c]">{books.length}</span> <span className="text-[#ea580c]">{books.length === 1 ? 'solution book' : 'solution books'}</span>
+                    <span className="text-[#69a667]">{books.length}</span> <span className="text-[#69a667]">{books.length === 1 ? 'book' : 'books'}</span>
                   </p>
                 </div>
-                <ArrowRight className="size-5 shrink-0 text-muted-foreground/40 opacity-0 -translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-orange" />
+                <ArrowRight className="size-5 shrink-0 text-muted-foreground/40 opacity-0 -translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-gold" />
               </Link>
             )
           })}

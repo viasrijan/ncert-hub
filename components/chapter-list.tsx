@@ -9,11 +9,7 @@ export function ChapterList({ book }: { book: Book }) {
     <section aria-label="Chapters" className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <h2 className="text-lg font-extrabold text-foreground">Chapters</h2>
-        {isSolution && <span className="rounded-full bg-orange px-2 py-0.5 text-xs font-bold text-white">Solutions — external</span>}
       </div>
-      {isSolution && (
-        <p className="text-xs text-muted-foreground">Unofficial external guides — open in new tab. Not NCERT official. Reuse existing repos reserved for future licensed hosts.</p>
-      )}
       <ol className="flex flex-col overflow-hidden rounded-lg bg-card/60 backdrop-blur-sm shadow-card">
         {book.chapters.map((chapter, idx) => {
           if (isSolution) {
@@ -28,7 +24,7 @@ export function ChapterList({ book }: { book: Book }) {
                   rel={isExternal ? 'noopener noreferrer' : undefined}
                   className="flex min-w-0 flex-1 items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50"
                 >
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-[#ea580c] text-sm font-bold text-[#ea580c] bg-transparent">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-gold text-sm font-bold text-gold bg-transparent">
                     {chapter.number}
                   </span>
                   <span className="min-w-0 flex-1 truncate text-base font-semibold text-foreground">

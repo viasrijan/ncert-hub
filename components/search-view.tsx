@@ -131,7 +131,7 @@ export function SearchView({ scope = 'textbook' }: { scope?: 'textbook' | 'solut
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-base font-bold text-foreground">{hit.book.title}</p>
-                      <p className="truncate text-sm text-muted-foreground">Class {toRoman(hit.book.classNum)} · {hit.book.subject} · {hit.book.chapters.length} chapters {isSolBook && <span className="ml-2 rounded-full bg-orange px-2 py-0.5 text-xs font-bold text-white">Solutions</span>}</p>
+                      <p className="truncate text-sm text-muted-foreground">Class {toRoman(hit.book.classNum)} · {hit.book.subject} · {hit.book.chapters.length} chapters</p>
                     </div>
                     <BookOpen className="size-5 shrink-0 text-muted-foreground/50" />
                   </Link>
@@ -148,8 +148,8 @@ export function SearchView({ scope = 'textbook' }: { scope?: 'textbook' | 'solut
                 <li key={`c-${hit.chapter.pdfCode}`}>
                   <a href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}
                     className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50">
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[#ea580c]/10 border-2 border-[#ea580c]">
-                      <FileText className="size-5 text-[#ea580c]" />
+                    <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-gold/10 border-2 border-gold">
+                      <FileText className="size-5 text-gold" />
                     </span>
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-base font-bold text-foreground">{hit.chapter.title}</p>

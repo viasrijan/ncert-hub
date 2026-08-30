@@ -12,7 +12,6 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
   const { bookmarks, toggleBookmark } = useBookmarks()
   const bookmarked = bookmarks.includes(book.id)
   const { gradient, icon: Icon } = getSubjectGradient(book.subject)
-  const isSolution = book.kind === 'solution'
 
   return (
     <div className="group relative flex w-[260px] max-w-full flex-col overflow-hidden rounded-2xl bg-card/80 backdrop-blur-sm shadow-card transition-colors duration-200">
@@ -29,12 +28,9 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
         </div>
         <div className="flex h-[132px] flex-col items-center text-center gap-1 p-4">
           {showClass && (
-            <p className={cn("text-[11px] font-extrabold tracking-widest uppercase leading-none", isSolution ? "text-orange" : "text-gold")}>
+            <p className="text-[11px] font-extrabold tracking-widest uppercase text-gold leading-none">
               Class {toRoman(book.classNum)}
             </p>
-          )}
-          {isSolution && (
-            <span className="rounded-full bg-orange px-2.5 py-0.5 text-[10px] font-extrabold tracking-widest uppercase text-white">Solutions</span>
           )}
           <h3 className="line-clamp-2 text-lg font-bold leading-snug text-foreground text-pretty">
             {book.title}
@@ -52,7 +48,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
         className={cn(
           'absolute right-3 top-3 rounded-full p-2.5 backdrop-blur-md transition-colors duration-200',
           bookmarked
-            ? (isSolution ? 'bg-orange text-white shadow-elevated opacity-100' : 'bg-gold text-white shadow-elevated opacity-100')
+            ? 'bg-gold text-white shadow-elevated opacity-100'
             : 'bg-background/60 text-muted-foreground opacity-0 hover:text-foreground focus-visible:opacity-100 group-hover:opacity-100 hover:bg-background/80',
         )}
       >

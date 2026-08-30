@@ -25,7 +25,7 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
 
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 py-12 md:px-8 md:py-16">
-      <Link href={isSolution ? `/solutions/classes/${book.classNum}` : `/classes/${book.classNum}`} className={`flex items-center gap-1.5 text-[14px] font-bold transition-colors animate-fade-in ${isSolution ? 'text-orange hover:opacity-70' : 'text-muted-foreground hover:text-foreground'}`}>
+      <Link href={isSolution ? `/solutions/classes/${book.classNum}` : `/classes/${book.classNum}`} className="flex items-center gap-1.5 text-[14px] font-bold text-muted-foreground transition-colors hover:text-foreground animate-fade-in">
         <ChevronLeft className="size-[18px]" /> Class {toRoman(book.classNum)} {isSolution && '· Solutions'}
       </Link>
 
@@ -34,15 +34,14 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
           {(() => { const Ic = getSubjectGradient(book.subject).icon; return <Ic className="size-12 text-white/30 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
         </div>
         <div className="flex flex-col items-center gap-2">
-          {isSolution && <span className="rounded-full bg-orange px-3 py-1 text-xs font-extrabold tracking-widest uppercase text-white">Solutions — external, legal-safe</span>}
           <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl text-foreground text-balance">{book.title}</h1>
-          <p className="text-[15px] font-semibold text-muted-foreground">{book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'} {isSolution && '· External links open in new tabs'}</p>
+          <p className="text-[15px] font-semibold text-muted-foreground">{book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'}</p>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
             <BookmarkButton bookId={book.id} />
             {isSolution ? (
               book.sourceUrl && (
                 <a href={book.sourceUrl} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 rounded-xl btn-orange px-4 py-3 text-[14px] font-bold transition-all duration-200 hover:opacity-90">
+                  className="flex items-center gap-1.5 rounded-xl btn-gradient px-4 py-3 text-[14px] font-bold transition-all duration-200 hover:opacity-90">
                   <ExternalLink className="size-[16px]" /> Open Solutions
                 </a>
               )
@@ -54,9 +53,6 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
               <ExternalLink className="size-[16px]" /> NCERT official
             </a>
           </div>
-          {isSolution && (
-            <p className="max-w-xl text-center text-xs leading-relaxed text-muted-foreground/70">Solutions are unofficial external guides. For legal safety we link out rather than host. Reuse of existing repos reserved for future licensed hosts. Not affiliated with NCERT.</p>
-          )}
         </div>
       </div>
 
@@ -64,10 +60,10 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
         <ChapterList book={book} />
       </div>
       {isSolution && book.solutionFor && (
-        <Link href={`/book/${book.solutionFor}`} className="text-sm font-bold text-gold hover:opacity-70">← View official textbook: {book.solutionFor}</Link>
+        <Link href={`/book/${book.solutionFor}`} className="text-sm font-bold text-gold hover:opacity-70">← View textbook: {book.solutionFor}</Link>
       )}
       {!isSolution && (
-        <Link href={`/book/${book.id}_sol`} className="text-sm font-bold text-orange hover:opacity-70">View Solutions for this book →</Link>
+        <Link href={`/book/${book.id}_sol`} className="text-sm font-bold text-gold hover:opacity-70">View Solutions for this book →</Link>
       )}
     </div>
   )
