@@ -9,7 +9,6 @@ import { useTheme } from 'next-themes'
 import type { Book, Chapter } from '@/lib/catalog'
 import { NCERT_PDF_BASE, toRoman, getSolutionPdfUrl } from '@/lib/catalog'
 import { useRecents } from '@/lib/library-store'
-import { cn } from '@/lib/utils'
 
 const JD_BASES = [
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-1@main',
@@ -141,22 +140,22 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
 
   return (
     <div className="flex h-svh flex-col bg-[#0c0c0c] relative z-50">
-      {/* Top bar - locked visible, centered title, bigger buttons (size-14) with tooltips */}
-      <header className="flex items-center gap-3 bg-background/95 px-4 py-3.5 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0 z-50">
+      {/* Top bar - locked visible, title centered on the site, bigger buttons (size-14) with tooltips */}
+      <header className="relative z-50 flex items-center justify-between gap-3 bg-background/95 px-4 py-3.5 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0">
         <button
           type="button"
           onClick={handleBack}
           aria-label="Back"
           title="Back (Esc)"
-          className="flex size-14 shrink-0 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
+          className="z-10 flex size-14 shrink-0 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
         >
           <ChevronLeft className="size-7" />
         </button>
-        <div className="min-w-0 flex-1 text-center">
-          <h1 className="truncate text-base font-bold leading-tight md:text-xl text-foreground">
+        <div className="pointer-events-none absolute inset-x-0 top-1/2 flex min-w-0 -translate-y-1/2 flex-col items-center px-[4.5rem] text-center md:px-[6rem]">
+          <h1 className="w-full truncate text-base font-bold leading-tight md:text-xl text-foreground">
             {activeChapterTitle}
           </h1>
-          <p className="truncate text-xs text-muted-foreground md:text-sm">
+          <p className="w-full truncate text-xs text-muted-foreground md:text-sm">
             {book.title} · Class {toRoman(book.classNum)}
           </p>
         </div>
@@ -204,46 +203,34 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
         </div>
       </div>
 
+      {/* Floating prev/next round arrows hovering on either side of the document */}
+      {prev && (
+        <Link
+          href={`/read/${prev.pdfCode}`}
+          aria-label={`Previous chapter: ${prev.title}`}
+          title={prev.title}
+          className="fixed left-3 top-1/2 z-30 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-background/80 text-foreground shadow-elevated backdrop-blur transition-colors duration-150 hover:bg-secondary md:left-6 md:size-14"
+        >
+          <ChevronLeft className="size-6 md:size-7" />
+        </Link>
+      )}
+      {next && (
+        <Link
+          href={`/read/${next.pdfCode}`}
+          aria-label={`Next chapter: ${next.title}`}
+          title={next.title}
+          className="fixed right-3 top-1/2 z-30 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-background/80 text-foreground shadow-elevated backdrop-blur transition-colors duration-150 hover:bg-secondary md:right-6 md:size-14"
+        >
+          <ChevronRight className="size-6 md:size-7" />
+        </Link>
+      )}
+
       {/* Bottom bar - locked visible, only chapter count */}
-      <footer className="flex items-center justify-between gap-3 bg-background/95 px-4 py-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0">
-        <ChapterNavLink chapter={prev} direction="prev" />
+      <footer className="flex items-center justify-center gap-3 bg-background/95 px-4 py-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0">
         <p className="text-sm font-bold text-foreground">
           {book.chapters.length} chapters
         </p>
-        <ChapterNavLink chapter={next} direction="next" />
       </footer>
     </div>
-  )
-}
-function ChapterNavLink({
-  chapter,
-  direction,
-}: {
-  chapter: Chapter | null
-  direction: 'prev' | 'next'
-}) {
-  const label = direction === 'prev' ? 'Previous' : 'Next'
-  if (!chapter) {
-    return (
-      <span
-        aria-hidden="true"
-        className="flex w-28 items-center gap-1 px-2 py-2 text-xs text-muted-foreground/40 md:w-36"
-      >
-        {direction === 'prev' && <ChevronLeft className="size-4" />}
-        <span className={cn(direction === 'next' && 'ml-auto')}>{label}</span>
-        {direction === 'next' && <ChevronRight className="size-4" />}
-      </span>
-    )
-  }
-  return (
-    <Link
-      href={`/read/${chapter.pdfCode}`}
-      className="flex w-28 items-center gap-1 rounded-md px-2 py-2 text-xs font-semibold text-foreground transition-colors duration-150 hover:bg-secondary md:w-36"
-      title={chapter.title}
-    >
-      {direction === 'prev' && <ChevronLeft className="size-4" />}
-      <span className={cn('truncate', direction === 'next' && 'ml-auto')}>{label}</span>
-      {direction === 'next' && <ChevronRight className="size-4" />}
-    </Link>
   )
 }

@@ -24,54 +24,62 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
   const isSolution = book.kind === 'solution'
 
   return (
-    <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 py-12 md:px-8 md:py-16">
-      {isSolution && (
-        <h1 className="font-display text-5xl font-bold tracking-tight md:text-6xl text-foreground text-center animate-fade-in-up">Solutions</h1>
-      )}
-      <Link href={isSolution ? `/solutions/classes/${book.classNum}` : `/classes/${book.classNum}`} className="flex items-center gap-1.5 text-[14px] font-bold text-muted-foreground transition-colors hover:text-foreground animate-fade-in">
-        <ChevronLeft className="size-[18px]" /> Class {toRoman(book.classNum)} {isSolution && '· Solutions'}
-      </Link>
+    <div className="mx-auto flex w-full max-w-[1600px] flex-col items-stretch gap-8 px-6 py-6 md:px-10 lg:h-[calc(100svh-13.5rem)] lg:flex-row lg:gap-12 lg:overflow-hidden lg:py-4">
+      {/* Left: cover + actions, locked vertically in the middle of the site */}
+      <section className="flex flex-col lg:w-[42%] lg:shrink-0">
+        <Link
+          href={isSolution ? `/solutions/classes/${book.classNum}` : `/classes/${book.classNum}`}
+          className="flex shrink-0 items-center gap-1.5 self-start text-[14px] font-bold text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <ChevronLeft className="size-[18px]" /> Class {toRoman(book.classNum)} {isSolution && '· Solutions'}
+        </Link>
 
-      <div className="flex flex-col items-center text-center gap-5 animate-fade-in-up">
-        <div className="relative aspect-[3/4] w-36 shrink-0 overflow-hidden rounded-2xl shadow-lg md:w-44" style={{ background: getSubjectGradient(book.subject).gradient }}>
-          {(() => { const Ic = getSubjectGradient(book.subject).icon; return <Ic className="size-12 text-white/30 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl text-foreground text-balance">{book.title}</h1>
-          <p className="text-[15px] font-semibold text-muted-foreground">{book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'}</p>
-          <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
-            <BookmarkButton bookId={book.id} />
-            {isSolution ? (
-              book.sourceUrl && (
-                <a href={book.sourceUrl} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 rounded-xl btn-gradient px-4 py-3 text-[14px] font-bold transition-all duration-200 hover:opacity-90">
-                  <ExternalLink className="size-[16px]" /> Open Solutions
-                </a>
-              )
-            ) : (
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 py-8 text-center lg:py-0">
+          <div className="relative aspect-[3/4] w-40 shrink-0 overflow-hidden rounded-2xl shadow-lg md:w-52" style={{ background: getSubjectGradient(book.subject).gradient }}>
+            {(() => { const Ic = getSubjectGradient(book.subject).icon; return <Ic className="size-12 text-white/30 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl text-foreground text-balance">{book.title}</h1>
+            <p className="text-[15px] font-semibold text-muted-foreground">{book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'}</p>
+            <div className="flex flex-wrap items-center justify-center gap-2.5 mt-2">
+              <BookmarkButton bookId={book.id} />
               <BookDownloadButton pdfCode={book.chapters[0].pdfCode} label="Download" />
-            )}
-            <a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-xl bg-card/80 px-4 py-3 text-[14px] font-bold text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:text-foreground hover:shadow-sm">
-              <ExternalLink className="size-[16px]" /> NCERT official
-            </a>
+              {isSolution && book.sourceUrl && (
+                <a href={book.sourceUrl} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 rounded-xl btn-gradient px-3 py-2 text-[13px] font-bold transition-all duration-200 hover:opacity-90">
+                  <ExternalLink className="size-4" /> Open Solutions
+                </a>
+              )}
+              <a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1.5 rounded-xl bg-card/80 px-3 py-2 text-[13px] font-bold text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:text-foreground hover:shadow-sm">
+                <ExternalLink className="size-4" /> NCERT
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="w-full">
-        <ChapterList book={book} />
-      </div>
-      {isSolution && book.solutionFor && (
-        <Link href={`/book/${book.solutionFor}`} className="text-sm text-white hover:opacity-70">
-          ← <span className="font-normal">View</span> <strong className="font-bold">original textbook</strong>
-        </Link>
-      )}
-      {!isSolution && (
-        <Link href={`/book/${book.id}_sol`} className="text-sm text-white hover:opacity-70">
-          <span className="font-normal">View</span> <strong className="font-bold">solutions</strong> →
-        </Link>
-      )}
+      {/* Right: chapters, independently scrollable with an inner shadow */}
+      <section className="flex min-w-0 flex-1 flex-col">
+        <div className="relative min-h-0 flex-1">
+          <div className="h-full overflow-y-auto pr-1 lg:pr-3">
+            <ChapterList book={book} />
+          </div>
+          <div className="pointer-events-none absolute inset-0 rounded-xl shadow-[inset_0_26px_32px_-22px_rgba(0,0,0,0.7),inset_0_-26px_32px_-22px_rgba(0,0,0,0.7)]" />
+        </div>
+        <div className="flex shrink-0 items-center justify-center gap-8 pt-5">
+          {isSolution && book.solutionFor && (
+            <Link href={`/book/${book.solutionFor}`} className="text-sm font-semibold text-gold transition-opacity hover:opacity-70">
+              View <strong className="font-bold">original textbook</strong>
+            </Link>
+          )}
+          {!isSolution && (
+            <Link href={`/book/${book.id}_sol`} className="text-sm font-semibold text-gold transition-opacity hover:opacity-70">
+              View <strong className="font-bold">solutions</strong>
+            </Link>
+          )}
+        </div>
+      </section>
     </div>
   )
 }

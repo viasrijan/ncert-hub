@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
@@ -21,6 +21,17 @@ export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; ch
   const [numPages, setNumPages] = useState(0)
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  // Scroll the active chapter into view only once, after its PDF has loaded.
+  // Never re-scroll on re-renders, which caused the viewer to jump back to the
+  // top while the user was scrolling.
+  const hasScrolled = useRef(false)
+  useEffect(() => {
+    if (!isActive || hasScrolled.current || numPages === 0) return
+    hasScrolled.current = true
+    sectionRef.current?.scrollIntoView({ block: 'start' })
+  }, [isActive, numPages])
 
   const isSolution = book.kind === 'solution'
   const file = `${chapter.pdfCode}.pdf`
@@ -71,7 +82,7 @@ export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; ch
   }
 
   return (
-    <div ref={isActive ? (el) => el?.scrollIntoView({ behavior: 'smooth', block: 'start' }) : undefined} className="flex flex-col gap-2 w-full items-center bg-[#0c0c0c] py-4">
+    <div ref={sectionRef} className="flex flex-col gap-2 w-full items-center bg-[#0c0c0c] py-4">
       <Document
         file={pdfUrl}
         onLoadSuccess={onLoadSuccess}

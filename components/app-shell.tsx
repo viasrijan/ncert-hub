@@ -75,6 +75,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 </svg>
               </span>
               <span className="font-display text-3xl font-extrabold tracking-tight text-gold md:text-5xl">NCERT Hub</span>
+              {pathname.startsWith('/solutions') && (
+                <span className="font-display text-3xl font-extrabold tracking-tight text-white md:text-5xl">Solutions</span>
+              )}
             </Link>
           </div>
           {children}

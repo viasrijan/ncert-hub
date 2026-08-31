@@ -14,7 +14,7 @@ export default function SolutionSubjectsPage() {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-12 md:px-8 md:py-16">
       <div className="flex flex-col items-center text-center gap-2 animate-fade-in-up">
-        <h1 className="font-display text-5xl font-bold tracking-tight md:text-6xl text-foreground">Solutions by Subject</h1>
+        <h1 className="font-display text-5xl font-bold tracking-tight md:text-6xl text-foreground">By Subject</h1>
         <p className="text-lg text-muted-foreground">Pick a subject to see every book available for it.</p>
       </div>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 stagger-children">

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Download } from 'lucide-react'
+import { getSolutionPdfUrl } from '@/lib/catalog'
 
 const JD_BASES = [
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-1@main',
@@ -12,6 +13,9 @@ const JD_BASES = [
 const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
 
 async function resolvePdfUrl(file: string): Promise<string> {
+  if (file.endsWith('_sol.pdf')) {
+    return getSolutionPdfUrl(file.replace('.pdf', ''))
+  }
   for (const base of JD_BASES) {
     const candidate = `${base}/${file}`
     try {
@@ -43,7 +47,11 @@ export function BookDownloadButton({ pdfCode, label }: { pdfCode: string; label:
       a.remove()
       URL.revokeObjectURL(objUrl)
     } catch {
-      window.open(`https://ncert.nic.in/textbook/pdf/${file}`, '_blank', 'noopener,noreferrer')
+      try {
+        window.open(await resolvePdfUrl(file), '_blank', 'noopener,noreferrer')
+      } catch {
+        window.open(`https://ncert.nic.in/textbook/pdf/${file}`, '_blank', 'noopener,noreferrer')
+      }
     } finally {
       setDownloading(false)
     }
@@ -54,9 +62,9 @@ export function BookDownloadButton({ pdfCode, label }: { pdfCode: string; label:
       type="button"
       onClick={handleDownload}
       disabled={downloading}
-      className="flex items-center gap-1.5 rounded-xl bg-card/80 px-4 py-3 text-[14px] font-bold text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:text-foreground hover:shadow-sm disabled:opacity-50"
+      className="flex items-center gap-1.5 rounded-xl bg-card/80 px-3 py-2 text-[13px] font-bold text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:text-foreground hover:shadow-sm disabled:opacity-50"
     >
-      <Download className="size-[16px]" /> {downloading ? 'Preparing…' : label}
+      <Download className="size-4" /> {downloading ? 'Preparing…' : label}
     </button>
   )
 }
