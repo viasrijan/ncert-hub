@@ -92,7 +92,7 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
       {/* Top bar */}
       <header className="flex items-center gap-2 bg-background/95 px-3 py-2 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4">
         <Link
-          href={`/book/${book.id}`}
+          href={isSolution ? `/solutions` : `/book/${book.id}`}
           aria-label={`Back to ${book.title}`}
           className="flex size-10 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
         >

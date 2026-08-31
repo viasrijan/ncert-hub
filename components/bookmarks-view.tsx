@@ -39,10 +39,7 @@ export function BookmarksView() {
           <h2 className="text-sm font-bold tracking-widest uppercase text-muted-foreground">Solutions — {solutions.length}</h2>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5 lg:grid-cols-4 stagger-children w-full place-items-center">
             {solutions.map((book) => (
-              <div key={book.id} className="relative">
-                <BookCard book={book} showClass />
-                <span className="pointer-events-none absolute left-2 top-2 rounded-full bg-card/90 px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase text-foreground shadow">Solutions</span>
-              </div>
+              <BookCard key={book.id} book={book} showClass />
             ))}
           </div>
         </section>
