@@ -35,12 +35,13 @@ export function PdfViewer({
   const [loadFailed, setLoadFailed] = useState(false)
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
 
-  // Extract the PDF filename from the NCERT URL.
+  // Extract the PDF filename from URL (handles both absolute and relative paths).
   const file = (() => {
     try {
-      return new URL(url).pathname.split('/').pop() || ''
+      const u = new URL(url, typeof window !== 'undefined' ? window.location.origin : 'http://localhost')
+      return u.pathname.split('/').pop()?.split('?')[0] || ''
     } catch {
-      return ''
+      return url.split('/').pop()?.split('?')[0] || ''
     }
   })()
 
@@ -109,7 +110,7 @@ export function PdfViewer({
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col bg-sidebar">
-      <div className="flex-1 overflow-auto flex items-start justify-center p-4">
+      <div className="flex-1 overflow-auto flex items-center justify-center p-4 min-h-[60vh]">
         {loadFailed ? (
           <div className="flex h-full flex-col items-center justify-center gap-4 px-6 text-center py-16">
             <div className="flex size-16 items-center justify-center rounded-2xl bg-muted">
@@ -131,9 +132,9 @@ export function PdfViewer({
             </div>
           </div>
         ) : (
-          <div className="relative flex flex-col items-center">
+          <div className="relative flex min-h-[60vh] w-full flex-col items-center justify-center">
             {loading && (
-              <div className="absolute inset-0 z-10 flex items-center justify-center">
+              <div className="absolute inset-0 z-10 flex items-center justify-center bg-sidebar/60 backdrop-blur-sm">
                 <div className="flex flex-col items-center gap-4 rounded-2xl bg-background/90 backdrop-blur-md px-8 py-6 shadow-lg">
                   <div className="size-8 animate-spin rounded-full border-4 border-white/10 border-t-gold" />
                   <p className="text-sm font-semibold text-white/60">Loading PDF...</p>

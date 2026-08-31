@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { ChevronLeft, ChevronRight, Download, ExternalLink } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import type { Book, Chapter } from '@/lib/catalog'
@@ -35,16 +36,26 @@ const PdfViewer = dynamic(
 
 export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   const { addRecent } = useRecents()
+  const router = useRouter()
 
   useEffect(() => {
     addRecent({ pdfCode: chapter.pdfCode, bookId: book.id })
   }, [addRecent, chapter.pdfCode, book.id])
 
+  const isSolution = book.kind === 'solution'
+
+  const handleBack = useCallback(() => {
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      router.back()
+    } else {
+      router.push(isSolution ? '/solutions' : `/book/${book.id}`)
+    }
+  }, [router, book.id, isSolution])
+
   const idx = book.chapters.findIndex((c) => c.pdfCode === chapter.pdfCode)
   const prev = idx > 0 ? book.chapters[idx - 1] : null
   const next = idx < book.chapters.length - 1 ? book.chapters[idx + 1] : null
 
-  const isSolution = book.kind === 'solution'
   const pdfUrl = isSolution ? getSolutionPdfUrl(chapter.pdfCode) : `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
 
   const [downloading, setDownloading] = useState(false)
@@ -91,13 +102,14 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
     <div className="flex h-svh flex-col bg-muted">
       {/* Top bar */}
       <header className="flex items-center gap-2 bg-background/95 px-3 py-2 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4">
-        <Link
-          href={isSolution ? `/solutions` : `/book/${book.id}`}
+        <button
+          type="button"
+          onClick={handleBack}
           aria-label={`Back to ${book.title}`}
           className="flex size-10 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
         >
           <ChevronLeft className="size-5" />
-        </Link>
+        </button>
         <div className="min-w-0 flex-1">
           <h1 className="truncate text-sm font-bold leading-tight">
             {chapter.title}
