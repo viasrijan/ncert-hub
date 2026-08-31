@@ -60,10 +60,14 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
         <ChapterList book={book} />
       </div>
       {isSolution && book.solutionFor && (
-        <Link href={`/book/${book.solutionFor}`} className="text-sm font-bold text-gold hover:opacity-70">← View textbook: {book.solutionFor}</Link>
+        <Link href={`/book/${book.solutionFor}`} className="text-sm text-gold hover:opacity-70">
+          ← View <strong className="font-normal text-white">original textbook</strong>
+        </Link>
       )}
       {!isSolution && (
-        <Link href={`/book/${book.id}_sol`} className="text-sm font-bold text-gold hover:opacity-70">View Solutions for this book →</Link>
+        <Link href={`/book/${book.id}_sol`} className="text-sm text-gold hover:opacity-70">
+          View <strong className="font-normal text-white">solutions</strong> →
+        </Link>
       )}
     </div>
   )

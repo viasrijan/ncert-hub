@@ -305,15 +305,19 @@
 
 /* nav-button style */
 .nav-btn {
-  @apply flex items-center justify-center gap-3 rounded-3xl py-3 text-[15px] font-semibold transition-all duration-200;
+  @apply flex items-center justify-center gap-3 rounded-3xl py-3 text-[15px] font-semibold transition-colors duration-200 w-full max-w-[150px];
   color: var(--gold);
   border: 2px solid transparent;
 }
 .nav-btn:hover {
   color: #ffffff;
 }
+.nav-btn:hover svg {
+  color: #ffffff;
+}
 .nav-btn-active {
   color: #ffffff;
+  font-weight: 800;
 }
 .light .nav-btn {
   color: var(--gold);
@@ -323,6 +327,7 @@
 }
 .light .nav-btn-active {
   color: #ffffff;
+  font-weight: 800;
 }
 .light .btn-gradient {
   color: #ffffff;

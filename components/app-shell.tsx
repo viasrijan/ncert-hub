@@ -36,8 +36,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             return (
               <Link key={href} href={href}
                 className={cn(
-                  'flex items-center justify-center gap-3 rounded-3xl py-3 text-[15px] font-semibold transition-all duration-200 w-full max-w-[150px]',
-                  active ? 'text-white font-extrabold' : 'text-gold hover:text-white',
+                  'nav-btn',
+                  active ? 'text-white font-extrabold' : 'text-gold',
                 )}>
                 <Icon className="h-5 w-5 shrink-0" /> {label}
               </Link>
