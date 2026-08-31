@@ -7666,46 +7666,12 @@ export const BOOKS: Book[] = [
   }
 ]
 
-// External Drive links for Grade 8 Part-II solutions (validated via Sarthaks — legal-safe link-out)
-const SOLUTION_DRIVE_IDS: Record<string, string[]> = {
-  hees2: [
-    '1W9BHiGPBpsmjUk98gMH0lzo2mph8ZbVs',
-    '1sSJKIcCpCOIwFqdaLnvri1qfp9Akwhb7',
-    '1UZ5rxCe4lc4WUSNwY_FiLCVJ7Tm-M9Rc',
-    '1iCH2QwLLuPCyM9uuhI6wPIWNVG018ogy',
-    '1ZjCkMwS31IKRaYrcKQtC1_7VUseXH-TC',
-    '1MjL0bGu2f8G1AhqHQldN5eNxGySYS1eJ',
-    '1N99J5qddtgi6Byluk7ssH-v5W3ZoLW_b',
-    '1UsHd5s24Y5_R5kWQD2yMJZgw6hM-U1eV',
-  ],
-}
+import { SOLUTIONS_CATALOG } from './solutions-catalog'
 
-function driveUrl(id: string): string {
-  return `https://drive.google.com/file/d/${id}/view?usp=drive_link`
-}
-
-// Solutions — All classes up front, legal-safe external link-out (reuse existing repos reserved for future licensed hosts)
-// Generated 1:1 from textbooks so portal has classes I–XII and all subjects populated from day one.
-export const SOLUTIONS: Book[] = BOOKS.map((b) => {
-  const solChapters: Chapter[] = b.chapters.map((c, idx) => {
-    const driveIds = SOLUTION_DRIVE_IDS[b.id]
-    const external = driveIds?.[idx] ? driveUrl(driveIds[idx]) : undefined
-    return c
-  })
-  const bookDriveIds = SOLUTION_DRIVE_IDS[b.id]
-  const primaryExternal = bookDriveIds ? driveUrl(bookDriveIds[0]) : `https://www.sarthaks.com/search?q=${encodeURIComponent(b.title + ' ncert solutions class ' + b.classNum)}`
-  return {
-    id: `${b.id}_sol`,
-    title: b.title,
-    classNum: b.classNum,
-    subject: b.subject,
-    cover: b.cover,
-    chapters: solChapters,
-    kind: 'solution' as const,
-    solutionFor: b.id,
-    sourceUrl: primaryExternal,
-  }
-})
+export const SOLUTIONS: Book[] = SOLUTIONS_CATALOG.map((b) => ({
+  ...b,
+  kind: 'solution' as const,
+}))
 
 export const CLASSES = Array.from({ length: 12 }, (_, i) => i + 1)
 
@@ -7756,10 +7722,11 @@ export function getSubjectsForSolutionClass(classNum: number): string[] {
 }
 
 export function getSolutionDriveUrl(bookId: string, chapterIdx: number): string | undefined {
-  const ids = SOLUTION_DRIVE_IDS[bookId]
-  if (!ids) return undefined
-  const id = ids[chapterIdx]
-  return id ? driveUrl(id) : undefined
+  // Return local generated solution PDF path in public/solutions-pdf/
+  const book = SOLUTIONS.find((b) => b.id === bookId)
+  if (!book) return undefined
+  const chapter = book.chapters[chapterIdx]
+  return chapter ? `/solutions-pdf/${chapter.pdfCode}.pdf` : undefined
 }
 
 export function findBookByPdfCode(pdfCode: string): { book: Book; chapter: Chapter } | undefined {
