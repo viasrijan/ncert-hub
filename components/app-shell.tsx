@@ -24,8 +24,27 @@ function isActive(pathname: string, href: string) {
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
+  const isReader = pathname.startsWith('/read/')
 
-  if (pathname.startsWith('/read/')) return <>{children}</>
+  if (isReader) {
+    // Keep bottom bar locked visible even in reader - render viewer with chrome
+    return (
+      <div className="flex min-h-svh flex-col">
+        <div className="flex-1 min-h-0">{children}</div>
+        <nav aria-label="Primary" className="flex bg-sidebar/95 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+          {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+            const active = isActive(pathname, href)
+            return (
+              <Link key={href} href={href}
+                className={`flex min-w-[25%] snap-start flex-col items-center gap-1.5 py-3.5 text-[12px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
+                <Icon className="h-6 w-6" /> {label}
+              </Link>
+            )
+          })}
+        </nav>
+      </div>
+    )
+  }
 
   return (
     <div className="flex min-h-svh">
@@ -103,12 +122,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
 
-      <nav aria-label="Primary" className="fixed inset-x-0 bottom-0 z-40 flex bg-sidebar/90 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] lg:hidden">
+      <nav aria-label="Primary" className="fixed inset-x-0 bottom-0 z-40 flex bg-sidebar/90 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] lg:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide">
         {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
           const active = isActive(pathname, href)
           return (
             <Link key={href} href={href}
-              className={cn('flex flex-1 flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] font-bold tracking-tight', active ? 'text-sidebar-foreground' : 'text-sidebar-foreground/60')}>
+              className={`flex min-w-[25%] snap-start flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
               <Icon className="h-6 w-6" /> {label}
             </Link>
           )

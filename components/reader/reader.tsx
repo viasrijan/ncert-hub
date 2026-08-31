@@ -111,6 +111,7 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   }, [resolveUrl, pdfUrl, chapter.pdfCode])
 
   const [showChrome, setShowChrome] = useState(true)
+  const [activeChapterTitle, setActiveChapterTitle] = useState(chapter.title)
   const hideTimeoutRef = useState<NodeJS.Timeout | null>(null)[0] as unknown as React.MutableRefObject<NodeJS.Timeout | null>
   const chromeTimeout = useCallback(() => {
     if (hideTimeoutRef && hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current)
@@ -127,28 +128,49 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
     }
     window.addEventListener('mousemove', handleMove)
     window.addEventListener('touchstart', handleMove)
+    window.addEventListener('scroll', handleMove, true)
     return () => {
       window.removeEventListener('mousemove', handleMove)
       window.removeEventListener('touchstart', handleMove)
+      window.removeEventListener('scroll', handleMove, true)
       if (hideTimeoutRef && hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current)
     }
   }, [chromeTimeout])
 
+  // Track current chapter as user scrolls (for footer)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const title = entry.target.getAttribute('data-chapter-title')
+            if (title) setActiveChapterTitle(title)
+          }
+        }
+      },
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
+    )
+    const els = document.querySelectorAll('[data-chapter-title]')
+    els.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [book.chapters])
+
   return (
     <div className="flex h-svh flex-col bg-muted" onMouseMove={() => setShowChrome(true)}>
-      {/* Top bar - autohide, centered title, bigger buttons */}
+      {/* Top bar - autohide, centered title, bigger buttons with tooltips */}
       <header className={`flex items-center gap-2 bg-background/95 px-3 py-3 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4 transition-transform duration-300 ${showChrome ? 'translate-y-0' : '-translate-y-full'}`}>
         <button
           type="button"
           onClick={handleBack}
-          aria-label={`Back to ${book.title}`}
+          aria-label="Back"
+          title="Back"
           className="flex size-12 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
         >
           <ChevronLeft className="size-6" />
         </button>
         <div className="min-w-0 flex-1 text-center">
           <h1 className="truncate text-base font-bold leading-tight md:text-lg">
-            {chapter.title}
+            {activeChapterTitle}
           </h1>
           <p className="truncate text-xs text-muted-foreground md:text-[13px]">
             {book.title} · Class {toRoman(book.classNum)}
@@ -159,7 +181,8 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
             type="button"
             onClick={downloadPdf}
             disabled={downloading}
-            aria-label="Download chapter PDF"
+            aria-label="Download"
+            title="Download PDF"
             className="flex size-12 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground disabled:opacity-50"
           >
             <Download className="size-5" />
@@ -168,7 +191,8 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
             href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Open official NCERT PDF"
+            aria-label="Open in new tab"
+            title="Open in new tab"
             className="flex size-12 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
           >
             <ExternalLink className="size-5" />
@@ -176,7 +200,8 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
           <button
             type="button"
             onClick={handleBack}
-            aria-label="Close viewer"
+            aria-label="Close"
+            title="Close"
             className="flex size-12 items-center justify-center rounded-md bg-secondary text-foreground transition-colors duration-150 hover:bg-secondary/80"
           >
             <X className="size-6" />
@@ -184,23 +209,24 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
         </div>
       </header>
 
-      {/* Combined scrollable book viewer - all chapters */}
-      <div className="flex-1 overflow-auto bg-sidebar">
-        <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 p-4 md:p-6">
-          {book.chapters.map((ch) => (
-            <CombinedChapterPdf key={ch.pdfCode} book={book} chapter={ch} isActive={ch.pdfCode === chapter.pdfCode} />
-          ))}
+      {/* Combined scrollable book viewer - A4, full page, centered, cropped */}
+      <div className="flex-1 overflow-auto bg-[#0a0a0a] flex justify-center">
+        <div className="w-full max-w-[850px] bg-white shadow-2xl min-h-full">
+          <div className="flex flex-col">
+            {book.chapters.map((ch) => (
+              <div key={ch.pdfCode} data-chapter-title={ch.title} className="border-b border-gray-200 last:border-0">
+                <CombinedChapterPdf book={book} chapter={ch} isActive={ch.pdfCode === chapter.pdfCode} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Bottom chapter nav - locked visible */}
+      {/* Bottom bar - locked visible, only chapter count */}
       <footer className="flex items-center justify-between gap-2 bg-background/95 px-3 py-3 pb-[calc(0.5rem+env(safe-area-inset-bottom))] shadow-[0_-4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4">
         <ChapterNavLink chapter={prev} direction="prev" />
-        <p className="hidden text-xs font-semibold text-muted-foreground md:block">
-          {book.title} · {book.chapters.length} chapters
-        </p>
-        <p className="text-xs font-semibold text-muted-foreground md:hidden">
-          {idx + 1} / {book.chapters.length}
+        <p className="text-xs font-semibold text-muted-foreground">
+          {book.chapters.length} chapters
         </p>
         <ChapterNavLink chapter={next} direction="next" />
       </footer>

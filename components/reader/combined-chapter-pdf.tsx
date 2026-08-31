@@ -71,50 +71,31 @@ export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; ch
   }
 
   return (
-    <div ref={isActive ? (el) => el?.scrollIntoView({ behavior: 'smooth', block: 'start' }) : undefined} className="flex flex-col gap-4 rounded-xl bg-card/30 p-4">
-      <h3 className="text-center text-sm font-bold text-foreground md:text-base">
-        {chapter.number}. {chapter.title}
-      </h3>
+    <div ref={isActive ? (el) => el?.scrollIntoView({ behavior: 'smooth', block: 'start' }) : undefined} className="flex flex-col gap-2">
       <Document
         file={pdfUrl}
         onLoadSuccess={onLoadSuccess}
         loading={<div className="flex justify-center py-8"><div className="size-6 animate-spin rounded-full border-2 border-muted border-t-gold" /></div>}
         error={<div className="py-8 text-center text-sm text-muted-foreground">Failed to load chapter</div>}
       >
-        <div className="flex flex-col gap-4 md:gap-6">
-          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory md:hidden">
-            {Array.from({ length: numPages || 1 }, (_, i) => (
-              <div key={i} className="min-w-[23%] snap-start">
-                <Page
-                  pageNumber={i + 1}
-                  renderTextLayer={false}
-                  renderAnnotationLayer={false}
-                  className="shadow-md"
-                  width={typeof window !== 'undefined' ? Math.min(280, (window.innerWidth - 48) / 4) : 280}
-                />
-                <p className="mt-1 text-center text-[10px] text-muted-foreground">{i + 1}</p>
-              </div>
-            ))}
-          </div>
-          <div className="hidden flex-col gap-6 md:flex">
-            {Array.from({ length: numPages || 1 }, (_, i) => (
-              <Page
-                key={i}
-                pageNumber={i + 1}
-                renderTextLayer={false}
-                renderAnnotationLayer={false}
-                className="shadow-lg"
-                width={typeof window !== 'undefined' ? Math.min(700, window.innerWidth - 64) : 700}
-              />
-            ))}
-          </div>
+        <div className="flex flex-col gap-4">
+          {Array.from({ length: numPages || 1 }, (_, i) => (
+            <Page
+              key={i}
+              pageNumber={i + 1}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+              className="shadow-lg mx-auto"
+              width={typeof window !== 'undefined' ? Math.min(700, window.innerWidth - 32) : 700}
+            />
+          ))}
           {numPages === 0 && (
             <Page
               pageNumber={1}
               renderTextLayer={false}
               renderAnnotationLayer={false}
-              className="shadow-lg"
-              width={typeof window !== 'undefined' ? Math.min(700, window.innerWidth - 64) : 700}
+              className="shadow-lg mx-auto"
+              width={typeof window !== 'undefined' ? Math.min(700, window.innerWidth - 32) : 700}
             />
           )}
         </div>
