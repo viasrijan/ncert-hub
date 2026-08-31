@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { ChevronLeft, ChevronRight, Download, ExternalLink } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Download, ExternalLink, X } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import type { Book, Chapter } from '@/lib/catalog'
 import { NCERT_PDF_BASE, toRoman, getSolutionPdfUrl } from '@/lib/catalog'
@@ -137,6 +137,14 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
           >
             <ExternalLink className="size-4" />
           </a>
+          <button
+            type="button"
+            onClick={handleBack}
+            aria-label="Close viewer"
+            className="flex size-10 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
+          >
+            <X className="size-5" />
+          </button>
         </div>
       </header>
 

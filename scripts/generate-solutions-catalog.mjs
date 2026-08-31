@@ -12,7 +12,7 @@ async function main() {
   const solutionBooks = BOOKS.map((b) => {
     const solChapters = b.chapters.map((c) => ({
       number: c.number,
-      title: `${c.title} - Solutions`,
+      title: c.title,
       pdfCode: `${c.pdfCode}_sol`,
     }))
 

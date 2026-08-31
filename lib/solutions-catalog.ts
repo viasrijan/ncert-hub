@@ -13,47 +13,47 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Two Little Hands - Solutions",
+        "title": "Two Little Hands",
         "pdfCode": "aemr101_sol"
       },
       {
         "number": 2,
-        "title": "Greetings - Solutions",
+        "title": "Greetings",
         "pdfCode": "aemr102_sol"
       },
       {
         "number": 3,
-        "title": "Picture Time - Solutions",
+        "title": "Picture Time",
         "pdfCode": "aemr103_sol"
       },
       {
         "number": 4,
-        "title": "The Cap-seller and the Monkeys - Solutions",
+        "title": "The Cap-seller and the Monkeys",
         "pdfCode": "aemr104_sol"
       },
       {
         "number": 5,
-        "title": "A Farm - Solutions",
+        "title": "A Farm",
         "pdfCode": "aemr105_sol"
       },
       {
         "number": 6,
-        "title": "Fun with Pictures - Solutions",
+        "title": "Fun with Pictures",
         "pdfCode": "aemr106_sol"
       },
       {
         "number": 7,
-        "title": "The Food we Eat - Solutions",
+        "title": "The Food we Eat",
         "pdfCode": "aemr107_sol"
       },
       {
         "number": 8,
-        "title": "The Four Seasons - Solutions",
+        "title": "The Four Seasons",
         "pdfCode": "aemr108_sol"
       },
       {
         "number": 9,
-        "title": "Anandi's Rainbow - Solutions",
+        "title": "Anandi's Rainbow",
         "pdfCode": "aemr109_sol"
       }
     ],
@@ -69,67 +69,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Finding the Furry Cat! - Solutions",
+        "title": "Finding the Furry Cat!",
         "pdfCode": "aejm101_sol"
       },
       {
         "number": 2,
-        "title": "What is Long? What is Round? - Solutions",
+        "title": "What is Long? What is Round?",
         "pdfCode": "aejm102_sol"
       },
       {
         "number": 3,
-        "title": "Mango Treat - Solutions",
+        "title": "Mango Treat",
         "pdfCode": "aejm103_sol"
       },
       {
         "number": 4,
-        "title": "Making 10 - Solutions",
+        "title": "Making 10",
         "pdfCode": "aejm104_sol"
       },
       {
         "number": 5,
-        "title": "How Many? - Solutions",
+        "title": "How Many?",
         "pdfCode": "aejm105_sol"
       },
       {
         "number": 6,
-        "title": "Lengths - Solutions",
+        "title": "Lengths",
         "pdfCode": "aejm106_sol"
       },
       {
         "number": 7,
-        "title": "Names of Numbers - Solutions",
+        "title": "Names of Numbers",
         "pdfCode": "aejm107_sol"
       },
       {
         "number": 8,
-        "title": "Which Season is it Now? - Solutions",
+        "title": "Which Season is it Now?",
         "pdfCode": "aejm108_sol"
       },
       {
         "number": 9,
-        "title": "Data Handling - Solutions",
+        "title": "Data Handling",
         "pdfCode": "aejm109_sol"
       },
       {
         "number": 10,
-        "title": "Patterns - Solutions",
+        "title": "Patterns",
         "pdfCode": "aejm110_sol"
       },
       {
         "number": 11,
-        "title": "How Much? - Solutions",
+        "title": "How Much?",
         "pdfCode": "aejm111_sol"
       },
       {
         "number": 12,
-        "title": "How Much Can We Spend? - Solutions",
+        "title": "How Much Can We Spend?",
         "pdfCode": "aejm112_sol"
       },
       {
         "number": 13,
-        "title": "So Many Toys - Solutions",
+        "title": "So Many Toys",
         "pdfCode": "aejm113_sol"
       }
     ],
@@ -145,67 +145,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "My Bicycle - Solutions",
+        "title": "My Bicycle",
         "pdfCode": "bemr101_sol"
       },
       {
         "number": 2,
-        "title": "Picture Reading - Solutions",
+        "title": "Picture Reading",
         "pdfCode": "bemr102_sol"
       },
       {
         "number": 3,
-        "title": "It Is Fun - Solutions",
+        "title": "It Is Fun",
         "pdfCode": "bemr103_sol"
       },
       {
         "number": 4,
-        "title": "Seeing without Seeing - Solutions",
+        "title": "Seeing without Seeing",
         "pdfCode": "bemr104_sol"
       },
       {
         "number": 5,
-        "title": "Come Back Soon - Solutions",
+        "title": "Come Back Soon",
         "pdfCode": "bemr105_sol"
       },
       {
         "number": 6,
-        "title": "Between Home and School - Solutions",
+        "title": "Between Home and School",
         "pdfCode": "bemr106_sol"
       },
       {
         "number": 7,
-        "title": "This is My Town - Solutions",
+        "title": "This is My Town",
         "pdfCode": "bemr107_sol"
       },
       {
         "number": 8,
-        "title": "A Show of Clouds - Solutions",
+        "title": "A Show of Clouds",
         "pdfCode": "bemr108_sol"
       },
       {
         "number": 9,
-        "title": "My Name - Solutions",
+        "title": "My Name",
         "pdfCode": "bemr109_sol"
       },
       {
         "number": 10,
-        "title": "The Crow - Solutions",
+        "title": "The Crow",
         "pdfCode": "bemr110_sol"
       },
       {
         "number": 11,
-        "title": "The Smart Monkey - Solutions",
+        "title": "The Smart Monkey",
         "pdfCode": "bemr111_sol"
       },
       {
         "number": 12,
-        "title": "Little Drops of Water - Solutions",
+        "title": "Little Drops of Water",
         "pdfCode": "bemr112_sol"
       },
       {
         "number": 13,
-        "title": "We Are All Indians - Solutions",
+        "title": "We Are All Indians",
         "pdfCode": "bemr113_sol"
       }
     ],
@@ -221,57 +221,57 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "A Day at the Beach - Solutions",
+        "title": "A Day at the Beach",
         "pdfCode": "bejm101_sol"
       },
       {
         "number": 2,
-        "title": "Shapes Around Us - Solutions",
+        "title": "Shapes Around Us",
         "pdfCode": "bejm102_sol"
       },
       {
         "number": 3,
-        "title": "Fun with Numbers - Solutions",
+        "title": "Fun with Numbers",
         "pdfCode": "bejm103_sol"
       },
       {
         "number": 4,
-        "title": "Shadow Story - Solutions",
+        "title": "Shadow Story",
         "pdfCode": "bejm104_sol"
       },
       {
         "number": 5,
-        "title": "Playing with Lines - Solutions",
+        "title": "Playing with Lines",
         "pdfCode": "bejm105_sol"
       },
       {
         "number": 6,
-        "title": "Decoration for Festival - Solutions",
+        "title": "Decoration for Festival",
         "pdfCode": "bejm106_sol"
       },
       {
         "number": 7,
-        "title": "Rani's Gift - Solutions",
+        "title": "Rani's Gift",
         "pdfCode": "bejm107_sol"
       },
       {
         "number": 8,
-        "title": "Grouping and Sharing - Solutions",
+        "title": "Grouping and Sharing",
         "pdfCode": "bejm108_sol"
       },
       {
         "number": 9,
-        "title": "Which Season is it? - Solutions",
+        "title": "Which Season is it?",
         "pdfCode": "bejm109_sol"
       },
       {
         "number": 10,
-        "title": "Fun at the Fair - Solutions",
+        "title": "Fun at the Fair",
         "pdfCode": "bejm110_sol"
       },
       {
         "number": 11,
-        "title": "Data Handling - Solutions",
+        "title": "Data Handling",
         "pdfCode": "bejm111_sol"
       }
     ],
@@ -287,102 +287,102 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Objects in Art - Solutions",
+        "title": "Objects in Art",
         "pdfCode": "cebu101_sol"
       },
       {
         "number": 2,
-        "title": "Plants in Art - Solutions",
+        "title": "Plants in Art",
         "pdfCode": "cebu102_sol"
       },
       {
         "number": 3,
-        "title": "Animals in Art - Solutions",
+        "title": "Animals in Art",
         "pdfCode": "cebu103_sol"
       },
       {
         "number": 4,
-        "title": "People Around Us - Solutions",
+        "title": "People Around Us",
         "pdfCode": "cebu104_sol"
       },
       {
         "number": 5,
-        "title": "Festivals, Occasions, and Celebrations - Solutions",
+        "title": "Festivals, Occasions, and Celebrations",
         "pdfCode": "cebu105_sol"
       },
       {
         "number": 6,
-        "title": "Our National Anthem - Solutions",
+        "title": "Our National Anthem",
         "pdfCode": "cebu106_sol"
       },
       {
         "number": 7,
-        "title": "Feel the Rhythm ta ka ta ki Ta - Solutions",
+        "title": "Feel the Rhythm ta ka ta ki Ta",
         "pdfCode": "cebu107_sol"
       },
       {
         "number": 8,
-        "title": "Travel Around - Solutions",
+        "title": "Travel Around",
         "pdfCode": "cebu108_sol"
       },
       {
         "number": 9,
-        "title": "Musical Instruments - Solutions",
+        "title": "Musical Instruments",
         "pdfCode": "cebu109_sol"
       },
       {
         "number": 10,
-        "title": "Celebratory Notes - Solutions",
+        "title": "Celebratory Notes",
         "pdfCode": "cebu110_sol"
       },
       {
         "number": 11,
-        "title": "Let us Dance - Solutions",
+        "title": "Let us Dance",
         "pdfCode": "cebu111_sol"
       },
       {
         "number": 12,
-        "title": "Dance for Joy - Solutions",
+        "title": "Dance for Joy",
         "pdfCode": "cebu112_sol"
       },
       {
         "number": 13,
-        "title": "I Play and Dance - Solutions",
+        "title": "I Play and Dance",
         "pdfCode": "cebu113_sol"
       },
       {
         "number": 14,
-        "title": "Dance with Nature - Solutions",
+        "title": "Dance with Nature",
         "pdfCode": "cebu114_sol"
       },
       {
         "number": 15,
-        "title": "Explore - Solutions",
+        "title": "Explore",
         "pdfCode": "cebu115_sol"
       },
       {
         "number": 16,
-        "title": "Imagine - Solutions",
+        "title": "Imagine",
         "pdfCode": "cebu116_sol"
       },
       {
         "number": 17,
-        "title": "Let's Create - Solutions",
+        "title": "Let's Create",
         "pdfCode": "cebu117_sol"
       },
       {
         "number": 18,
-        "title": "Look Around - Solutions",
+        "title": "Look Around",
         "pdfCode": "cebu118_sol"
       },
       {
         "number": 19,
-        "title": "Activities - Solutions",
+        "title": "Activities",
         "pdfCode": "cebu119_sol"
       },
       {
         "number": 20,
-        "title": "Integrating All Art Forms - Solutions",
+        "title": "Integrating All Art Forms",
         "pdfCode": "cebu120_sol"
       }
     ],
@@ -398,62 +398,62 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Colours - Solutions",
+        "title": "Colours",
         "pdfCode": "cesa101_sol"
       },
       {
         "number": 2,
-        "title": "Badal and Moti - Solutions",
+        "title": "Badal and Moti",
         "pdfCode": "cesa102_sol"
       },
       {
         "number": 3,
-        "title": "Best Friends - Solutions",
+        "title": "Best Friends",
         "pdfCode": "cesa103_sol"
       },
       {
         "number": 4,
-        "title": "Out in the Garden - Solutions",
+        "title": "Out in the Garden",
         "pdfCode": "cesa104_sol"
       },
       {
         "number": 5,
-        "title": "Talking Toys - Solutions",
+        "title": "Talking Toys",
         "pdfCode": "cesa105_sol"
       },
       {
         "number": 6,
-        "title": "Paper Boats - Solutions",
+        "title": "Paper Boats",
         "pdfCode": "cesa106_sol"
       },
       {
         "number": 7,
-        "title": "The Big Laddoo - Solutions",
+        "title": "The Big Laddoo",
         "pdfCode": "cesa107_sol"
       },
       {
         "number": 8,
-        "title": "Thank God - Solutions",
+        "title": "Thank God",
         "pdfCode": "cesa108_sol"
       },
       {
         "number": 9,
-        "title": "Madhu's Wish - Solutions",
+        "title": "Madhu's Wish",
         "pdfCode": "cesa109_sol"
       },
       {
         "number": 10,
-        "title": "Night - Solutions",
+        "title": "Night",
         "pdfCode": "cesa110_sol"
       },
       {
         "number": 11,
-        "title": "Chanda Mama Counts the Stars - Solutions",
+        "title": "Chanda Mama Counts the Stars",
         "pdfCode": "cesa111_sol"
       },
       {
         "number": 12,
-        "title": "Chandrayaan - Solutions",
+        "title": "Chandrayaan",
         "pdfCode": "cesa112_sol"
       }
     ],
@@ -469,72 +469,72 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "What's in a Name? - Solutions",
+        "title": "What's in a Name?",
         "pdfCode": "cemm101_sol"
       },
       {
         "number": 2,
-        "title": "Toy Joy - Solutions",
+        "title": "Toy Joy",
         "pdfCode": "cemm102_sol"
       },
       {
         "number": 3,
-        "title": "Double Century - Solutions",
+        "title": "Double Century",
         "pdfCode": "cemm103_sol"
       },
       {
         "number": 4,
-        "title": "Vacation with My Nani Maa - Solutions",
+        "title": "Vacation with My Nani Maa",
         "pdfCode": "cemm104_sol"
       },
       {
         "number": 5,
-        "title": "Fun with Shapes - Solutions",
+        "title": "Fun with Shapes",
         "pdfCode": "cemm105_sol"
       },
       {
         "number": 6,
-        "title": "House of Hundreds-I - Solutions",
+        "title": "House of Hundreds-I",
         "pdfCode": "cemm106_sol"
       },
       {
         "number": 7,
-        "title": "Raksha Bandhan - Solutions",
+        "title": "Raksha Bandhan",
         "pdfCode": "cemm107_sol"
       },
       {
         "number": 8,
-        "title": "House of Hundreds-II - Solutions",
+        "title": "House of Hundreds-II",
         "pdfCode": "cemm108_sol"
       },
       {
         "number": 9,
-        "title": "How Many Times? - Solutions",
+        "title": "How Many Times?",
         "pdfCode": "cemm109_sol"
       },
       {
         "number": 10,
-        "title": "Fun at Class Party - Solutions",
+        "title": "Fun at Class Party",
         "pdfCode": "cemm110_sol"
       },
       {
         "number": 11,
-        "title": "Shares and Dealing - Solutions",
+        "title": "Shares and Dealing",
         "pdfCode": "cemm111_sol"
       },
       {
         "number": 12,
-        "title": "Rupees and Paise - Solutions",
+        "title": "Rupees and Paise",
         "pdfCode": "cemm112_sol"
       },
       {
         "number": 13,
-        "title": "Jugs and Mugs - Solutions",
+        "title": "Jugs and Mugs",
         "pdfCode": "cemm113_sol"
       },
       {
         "number": 14,
-        "title": "Smart Charts - Solutions",
+        "title": "Smart Charts",
         "pdfCode": "cemm114_sol"
       }
     ],
@@ -550,37 +550,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Throwing and Catching - Solutions",
+        "title": "Throwing and Catching",
         "pdfCode": "ceky101_sol"
       },
       {
         "number": 2,
-        "title": "Kicking and Receiving - Solutions",
+        "title": "Kicking and Receiving",
         "pdfCode": "ceky102_sol"
       },
       {
         "number": 3,
-        "title": "Strike the Ball - Solutions",
+        "title": "Strike the Ball",
         "pdfCode": "ceky103_sol"
       },
       {
         "number": 4,
-        "title": "Little Steps - Solutions",
+        "title": "Little Steps",
         "pdfCode": "ceky104_sol"
       },
       {
         "number": 5,
-        "title": "Local and Traditional Games - Solutions",
+        "title": "Local and Traditional Games",
         "pdfCode": "ceky105_sol"
       },
       {
         "number": 6,
-        "title": "Yoga for Daily Life - Solutions",
+        "title": "Yoga for Daily Life",
         "pdfCode": "ceky106_sol"
       },
       {
         "number": 7,
-        "title": "Yogic Practices (Yoga Sadhana) - Solutions",
+        "title": "Yogic Practices (Yoga Sadhana)",
         "pdfCode": "ceky107_sol"
       }
     ],
@@ -596,62 +596,62 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Family and Friends - Solutions",
+        "title": "Family and Friends",
         "pdfCode": "ceev101_sol"
       },
       {
         "number": 2,
-        "title": "Going to the Mela - Solutions",
+        "title": "Going to the Mela",
         "pdfCode": "ceev102_sol"
       },
       {
         "number": 3,
-        "title": "Celebrating Festivals - Solutions",
+        "title": "Celebrating Festivals",
         "pdfCode": "ceev103_sol"
       },
       {
         "number": 4,
-        "title": "Getting to Know Plants - Solutions",
+        "title": "Getting to Know Plants",
         "pdfCode": "ceev104_sol"
       },
       {
         "number": 5,
-        "title": "Plants and Animals Live Together - Solutions",
+        "title": "Plants and Animals Live Together",
         "pdfCode": "ceev105_sol"
       },
       {
         "number": 6,
-        "title": "Living in Harmony - Solutions",
+        "title": "Living in Harmony",
         "pdfCode": "ceev106_sol"
       },
       {
         "number": 7,
-        "title": "Water – A Precious Gift - Solutions",
+        "title": "Water – A Precious Gift",
         "pdfCode": "ceev107_sol"
       },
       {
         "number": 8,
-        "title": "Food We Eat - Solutions",
+        "title": "Food We Eat",
         "pdfCode": "ceev108_sol"
       },
       {
         "number": 9,
-        "title": "Staying Healthy and Happy - Solutions",
+        "title": "Staying Healthy and Happy",
         "pdfCode": "ceev109_sol"
       },
       {
         "number": 10,
-        "title": "This World of Things - Solutions",
+        "title": "This World of Things",
         "pdfCode": "ceev110_sol"
       },
       {
         "number": 11,
-        "title": "Making Things - Solutions",
+        "title": "Making Things",
         "pdfCode": "ceev111_sol"
       },
       {
         "number": 12,
-        "title": "Taking Charge of Waste - Solutions",
+        "title": "Taking Charge of Waste",
         "pdfCode": "ceev112_sol"
       }
     ],
@@ -667,92 +667,92 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Arrangements of Objects - Solutions",
+        "title": "Arrangements of Objects",
         "pdfCode": "debu101_sol"
       },
       {
         "number": 2,
-        "title": "Textures in Nature - Solutions",
+        "title": "Textures in Nature",
         "pdfCode": "debu102_sol"
       },
       {
         "number": 3,
-        "title": "Aqua World - Solutions",
+        "title": "Aqua World",
         "pdfCode": "debu103_sol"
       },
       {
         "number": 4,
-        "title": "People in Action - Solutions",
+        "title": "People in Action",
         "pdfCode": "debu104_sol"
       },
       {
         "number": 5,
-        "title": "Explore! - Solutions",
+        "title": "Explore!",
         "pdfCode": "debu105_sol"
       },
       {
         "number": 6,
-        "title": "Imagine - Solutions",
+        "title": "Imagine",
         "pdfCode": "debu106_sol"
       },
       {
         "number": 7,
-        "title": "Let's Create - Solutions",
+        "title": "Let's Create",
         "pdfCode": "debu107_sol"
       },
       {
         "number": 8,
-        "title": "Look Around - Solutions",
+        "title": "Look Around",
         "pdfCode": "debu108_sol"
       },
       {
         "number": 9,
-        "title": "Sing and Play - Solutions",
+        "title": "Sing and Play",
         "pdfCode": "debu109_sol"
       },
       {
         "number": 10,
-        "title": "Making Music - Solutions",
+        "title": "Making Music",
         "pdfCode": "debu110_sol"
       },
       {
         "number": 11,
-        "title": "Songs and Stories - Solutions",
+        "title": "Songs and Stories",
         "pdfCode": "debu111_sol"
       },
       {
         "number": 12,
-        "title": "Think, Feel, Create - Solutions",
+        "title": "Think, Feel, Create",
         "pdfCode": "debu112_sol"
       },
       {
         "number": 13,
-        "title": "Sounds and Instruments - Solutions",
+        "title": "Sounds and Instruments",
         "pdfCode": "debu113_sol"
       },
       {
         "number": 14,
-        "title": "My Body in Dance - Solutions",
+        "title": "My Body in Dance",
         "pdfCode": "debu114_sol"
       },
       {
         "number": 15,
-        "title": "My Dance Tells Stories - Solutions",
+        "title": "My Dance Tells Stories",
         "pdfCode": "debu115_sol"
       },
       {
         "number": 16,
-        "title": "Creating My Dance - Solutions",
+        "title": "Creating My Dance",
         "pdfCode": "debu116_sol"
       },
       {
         "number": 17,
-        "title": "Emotion and Expression in Dance - Solutions",
+        "title": "Emotion and Expression in Dance",
         "pdfCode": "debu117_sol"
       },
       {
         "number": 18,
-        "title": "Dances Around Me - Solutions",
+        "title": "Dances Around Me",
         "pdfCode": "debu118_sol"
       }
     ],
@@ -768,62 +768,62 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Together We Can - Solutions",
+        "title": "Together We Can",
         "pdfCode": "desa101_sol"
       },
       {
         "number": 2,
-        "title": "The Tinkling Bells - Solutions",
+        "title": "The Tinkling Bells",
         "pdfCode": "desa102_sol"
       },
       {
         "number": 3,
-        "title": "A Little Turtle - Solutions",
+        "title": "A Little Turtle",
         "pdfCode": "desa103_sol"
       },
       {
         "number": 4,
-        "title": "The Plant That Lied - Solutions",
+        "title": "The Plant That Lied",
         "pdfCode": "desa104_sol"
       },
       {
         "number": 5,
-        "title": "Don't Tell a Lie - Solutions",
+        "title": "Don't Tell a Lie",
         "pdfCode": "desa105_sol"
       },
       {
         "number": 6,
-        "title": "The Fair - Solutions",
+        "title": "The Fair",
         "pdfCode": "desa106_sol"
       },
       {
         "number": 7,
-        "title": "The Donkey, the Table, and the Stick - Solutions",
+        "title": "The Donkey, the Table, and the Stick",
         "pdfCode": "desa107_sol"
       },
       {
         "number": 8,
-        "title": "Little Elephants Big Trouble - Solutions",
+        "title": "Little Elephants Big Trouble",
         "pdfCode": "desa108_sol"
       },
       {
         "number": 9,
-        "title": "The Enormous Turnip - Solutions",
+        "title": "The Enormous Turnip",
         "pdfCode": "desa109_sol"
       },
       {
         "number": 10,
-        "title": "The Boy Who Cried Wolf - Solutions",
+        "title": "The Boy Who Cried Wolf",
         "pdfCode": "desa110_sol"
       },
       {
         "number": 11,
-        "title": "Healer Plant - Solutions",
+        "title": "Healer Plant",
         "pdfCode": "desa111_sol"
       },
       {
         "number": 12,
-        "title": "The Clever Monkey - Solutions",
+        "title": "The Clever Monkey",
         "pdfCode": "desa112_sol"
       }
     ],
@@ -839,137 +839,137 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Going to School - Solutions",
+        "title": "Going to School",
         "pdfCode": "deap101_sol"
       },
       {
         "number": 2,
-        "title": "Ear to Ear - Solutions",
+        "title": "Ear to Ear",
         "pdfCode": "deap102_sol"
       },
       {
         "number": 3,
-        "title": "A Day with Nandu - Solutions",
+        "title": "A Day with Nandu",
         "pdfCode": "deap103_sol"
       },
       {
         "number": 4,
-        "title": "The Story of Amrita - Solutions",
+        "title": "The Story of Amrita",
         "pdfCode": "deap104_sol"
       },
       {
         "number": 5,
-        "title": "Anita and the Honeybees - Solutions",
+        "title": "Anita and the Honeybees",
         "pdfCode": "deap105_sol"
       },
       {
         "number": 6,
-        "title": "Omana's Journey - Solutions",
+        "title": "Omana's Journey",
         "pdfCode": "deap106_sol"
       },
       {
         "number": 7,
-        "title": "From the Window - Solutions",
+        "title": "From the Window",
         "pdfCode": "deap107_sol"
       },
       {
         "number": 8,
-        "title": "Reaching Grandmother's Home - Solutions",
+        "title": "Reaching Grandmother's Home",
         "pdfCode": "deap108_sol"
       },
       {
         "number": 9,
-        "title": "Changing Families - Solutions",
+        "title": "Changing Families",
         "pdfCode": "deap109_sol"
       },
       {
         "number": 10,
-        "title": "Hu Tu Tu, Hu Tu Tu - Solutions",
+        "title": "Hu Tu Tu, Hu Tu Tu",
         "pdfCode": "deap110_sol"
       },
       {
         "number": 11,
-        "title": "The Valley of Flowers - Solutions",
+        "title": "The Valley of Flowers",
         "pdfCode": "deap111_sol"
       },
       {
         "number": 12,
-        "title": "Changing Times - Solutions",
+        "title": "Changing Times",
         "pdfCode": "deap112_sol"
       },
       {
         "number": 13,
-        "title": "A River's Tale - Solutions",
+        "title": "A River's Tale",
         "pdfCode": "deap113_sol"
       },
       {
         "number": 14,
-        "title": "Basva's Farm - Solutions",
+        "title": "Basva's Farm",
         "pdfCode": "deap114_sol"
       },
       {
         "number": 15,
-        "title": "From Market to Home - Solutions",
+        "title": "From Market to Home",
         "pdfCode": "deap115_sol"
       },
       {
         "number": 16,
-        "title": "A Busy Month - Solutions",
+        "title": "A Busy Month",
         "pdfCode": "deap116_sol"
       },
       {
         "number": 17,
-        "title": "Nandita in Mumbai - Solutions",
+        "title": "Nandita in Mumbai",
         "pdfCode": "deap117_sol"
       },
       {
         "number": 18,
-        "title": "Too Much Water, Too Little Water - Solutions",
+        "title": "Too Much Water, Too Little Water",
         "pdfCode": "deap118_sol"
       },
       {
         "number": 19,
-        "title": "Abdul in the Garden - Solutions",
+        "title": "Abdul in the Garden",
         "pdfCode": "deap119_sol"
       },
       {
         "number": 20,
-        "title": "Eating Together - Solutions",
+        "title": "Eating Together",
         "pdfCode": "deap120_sol"
       },
       {
         "number": 21,
-        "title": "Food and Fun - Solutions",
+        "title": "Food and Fun",
         "pdfCode": "deap121_sol"
       },
       {
         "number": 22,
-        "title": "The World in my Home - Solutions",
+        "title": "The World in my Home",
         "pdfCode": "deap122_sol"
       },
       {
         "number": 23,
-        "title": "Pochampalli - Solutions",
+        "title": "Pochampalli",
         "pdfCode": "deap123_sol"
       },
       {
         "number": 24,
-        "title": "Home and Abroad - Solutions",
+        "title": "Home and Abroad",
         "pdfCode": "deap124_sol"
       },
       {
         "number": 25,
-        "title": "Spicy Riddles - Solutions",
+        "title": "Spicy Riddles",
         "pdfCode": "deap125_sol"
       },
       {
         "number": 26,
-        "title": "Defence Officer: Wahida - Solutions",
+        "title": "Defence Officer: Wahida",
         "pdfCode": "deap126_sol"
       },
       {
         "number": 27,
-        "title": "Chuskit Goes to School - Solutions",
+        "title": "Chuskit Goes to School",
         "pdfCode": "deap127_sol"
       }
     ],
@@ -985,72 +985,72 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Shapes Around Us - Solutions",
+        "title": "Shapes Around Us",
         "pdfCode": "demm101_sol"
       },
       {
         "number": 2,
-        "title": "Hide and Seek - Solutions",
+        "title": "Hide and Seek",
         "pdfCode": "demm102_sol"
       },
       {
         "number": 3,
-        "title": "Pattern Around Us - Solutions",
+        "title": "Pattern Around Us",
         "pdfCode": "demm103_sol"
       },
       {
         "number": 4,
-        "title": "Thousands Around Us - Solutions",
+        "title": "Thousands Around Us",
         "pdfCode": "demm104_sol"
       },
       {
         "number": 5,
-        "title": "Sharing and Measuring - Solutions",
+        "title": "Sharing and Measuring",
         "pdfCode": "demm105_sol"
       },
       {
         "number": 6,
-        "title": "Measuring Length - Solutions",
+        "title": "Measuring Length",
         "pdfCode": "demm106_sol"
       },
       {
         "number": 7,
-        "title": "The Cleanest Village - Solutions",
+        "title": "The Cleanest Village",
         "pdfCode": "demm107_sol"
       },
       {
         "number": 8,
-        "title": "Weigh it, Pour it - Solutions",
+        "title": "Weigh it, Pour it",
         "pdfCode": "demm108_sol"
       },
       {
         "number": 9,
-        "title": "Equal Groups - Solutions",
+        "title": "Equal Groups",
         "pdfCode": "demm109_sol"
       },
       {
         "number": 10,
-        "title": "Elephants, Tigers, and Leopards - Solutions",
+        "title": "Elephants, Tigers, and Leopards",
         "pdfCode": "demm110_sol"
       },
       {
         "number": 11,
-        "title": "Fun with Symmetry - Solutions",
+        "title": "Fun with Symmetry",
         "pdfCode": "demm111_sol"
       },
       {
         "number": 12,
-        "title": "Ticking Clocks and Turning Calendar - Solutions",
+        "title": "Ticking Clocks and Turning Calendar",
         "pdfCode": "demm112_sol"
       },
       {
         "number": 13,
-        "title": "The Transport Museum - Solutions",
+        "title": "The Transport Museum",
         "pdfCode": "demm113_sol"
       },
       {
         "number": 14,
-        "title": "Data Handling - Solutions",
+        "title": "Data Handling",
         "pdfCode": "demm114_sol"
       }
     ],
@@ -1066,17 +1066,17 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Throwing and Catching - Solutions",
+        "title": "Throwing and Catching",
         "pdfCode": "deky101_sol"
       },
       {
         "number": 2,
-        "title": "Kicking and Receiving - Solutions",
+        "title": "Kicking and Receiving",
         "pdfCode": "deky102_sol"
       },
       {
         "number": 3,
-        "title": "Strike the Shuttlecock - Solutions",
+        "title": "Strike the Shuttlecock",
         "pdfCode": "deky103_sol"
       }
     ],
@@ -1092,52 +1092,52 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Family and Friends - Solutions",
+        "title": "Family and Friends",
         "pdfCode": "deev101_sol"
       },
       {
         "number": 2,
-        "title": "Going to the Mela - Solutions",
+        "title": "Going to the Mela",
         "pdfCode": "deev102_sol"
       },
       {
         "number": 3,
-        "title": "Celebrating Festivals - Solutions",
+        "title": "Celebrating Festivals",
         "pdfCode": "deev103_sol"
       },
       {
         "number": 4,
-        "title": "Getting to Know Plants - Solutions",
+        "title": "Getting to Know Plants",
         "pdfCode": "deev104_sol"
       },
       {
         "number": 5,
-        "title": "Plants and Animals Live Together - Solutions",
+        "title": "Plants and Animals Live Together",
         "pdfCode": "deev105_sol"
       },
       {
         "number": 6,
-        "title": "Living in Harmony - Solutions",
+        "title": "Living in Harmony",
         "pdfCode": "deev106_sol"
       },
       {
         "number": 7,
-        "title": "Water – A Precious Gift - Solutions",
+        "title": "Water – A Precious Gift",
         "pdfCode": "deev107_sol"
       },
       {
         "number": 8,
-        "title": "Food We Eat - Solutions",
+        "title": "Food We Eat",
         "pdfCode": "deev108_sol"
       },
       {
         "number": 9,
-        "title": "Staying Healthy and Happy - Solutions",
+        "title": "Staying Healthy and Happy",
         "pdfCode": "deev109_sol"
       },
       {
         "number": 10,
-        "title": "This World of Things - Solutions",
+        "title": "This World of Things",
         "pdfCode": "deev110_sol"
       }
     ],
@@ -1153,97 +1153,97 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Objects on the Move - Solutions",
+        "title": "Objects on the Move",
         "pdfCode": "eebu101_sol"
       },
       {
         "number": 2,
-        "title": "Peeping Out of the Window - Solutions",
+        "title": "Peeping Out of the Window",
         "pdfCode": "eebu102_sol"
       },
       {
         "number": 3,
-        "title": "Picturing Stories - Solutions",
+        "title": "Picturing Stories",
         "pdfCode": "eebu103_sol"
       },
       {
         "number": 4,
-        "title": "Imaginary Beings - Solutions",
+        "title": "Imaginary Beings",
         "pdfCode": "eebu104_sol"
       },
       {
         "number": 5,
-        "title": "Spreading the Message - Solutions",
+        "title": "Spreading the Message",
         "pdfCode": "eebu105_sol"
       },
       {
         "number": 6,
-        "title": "Create a Scene - Solutions",
+        "title": "Create a Scene",
         "pdfCode": "eebu106_sol"
       },
       {
         "number": 7,
-        "title": "Stitch It for a Story - Solutions",
+        "title": "Stitch It for a Story",
         "pdfCode": "eebu107_sol"
       },
       {
         "number": 8,
-        "title": "Time, Team, Technique - Solutions",
+        "title": "Time, Team, Technique",
         "pdfCode": "eebu108_sol"
       },
       {
         "number": 9,
-        "title": "View and Review - Solutions",
+        "title": "View and Review",
         "pdfCode": "eebu109_sol"
       },
       {
         "number": 10,
-        "title": "Sing and Play - Solutions",
+        "title": "Sing and Play",
         "pdfCode": "eebu110_sol"
       },
       {
         "number": 11,
-        "title": "Music Around Me - Solutions",
+        "title": "Music Around Me",
         "pdfCode": "eebu111_sol"
       },
       {
         "number": 12,
-        "title": "Sounds and Instruments - Solutions",
+        "title": "Sounds and Instruments",
         "pdfCode": "eebu112_sol"
       },
       {
         "number": 13,
-        "title": "Building Blocks - Solutions",
+        "title": "Building Blocks",
         "pdfCode": "eebu113_sol"
       },
       {
         "number": 14,
-        "title": "Ideas and Inspiration - Solutions",
+        "title": "Ideas and Inspiration",
         "pdfCode": "eebu114_sol"
       },
       {
         "number": 15,
-        "title": "My Everyday Activities in Modes of Dance - Solutions",
+        "title": "My Everyday Activities in Modes of Dance",
         "pdfCode": "eebu115_sol"
       },
       {
         "number": 16,
-        "title": "Dancing with Rhythm and Tempos - Solutions",
+        "title": "Dancing with Rhythm and Tempos",
         "pdfCode": "eebu116_sol"
       },
       {
         "number": 17,
-        "title": "Dances of My Nation - Solutions",
+        "title": "Dances of My Nation",
         "pdfCode": "eebu117_sol"
       },
       {
         "number": 18,
-        "title": "My Dance Expresses Emotions and Narrates Stories - Solutions",
+        "title": "My Dance Expresses Emotions and Narrates Stories",
         "pdfCode": "eebu118_sol"
       },
       {
         "number": 19,
-        "title": "My Dance and Your Dance - Solutions",
+        "title": "My Dance and Your Dance",
         "pdfCode": "eebu119_sol"
       }
     ],
@@ -1259,52 +1259,52 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Ice-Cream Man - Solutions",
+        "title": "Ice-Cream Man",
         "pdfCode": "eeen101_sol"
       },
       {
         "number": 2,
-        "title": "Wonderful Waste! - Solutions",
+        "title": "Wonderful Waste!",
         "pdfCode": "eeen102_sol"
       },
       {
         "number": 3,
-        "title": "Teamwork - Solutions",
+        "title": "Teamwork",
         "pdfCode": "eeen103_sol"
       },
       {
         "number": 4,
-        "title": "Flying Together - Solutions",
+        "title": "Flying Together",
         "pdfCode": "eeen104_sol"
       },
       {
         "number": 5,
-        "title": "My Shadow - Solutions",
+        "title": "My Shadow",
         "pdfCode": "eeen105_sol"
       },
       {
         "number": 6,
-        "title": "Robinson Crusoe Discovers a Footprint - Solutions",
+        "title": "Robinson Crusoe Discovers a Footprint",
         "pdfCode": "eeen106_sol"
       },
       {
         "number": 7,
-        "title": "Crying - Solutions",
+        "title": "Crying",
         "pdfCode": "eeen107_sol"
       },
       {
         "number": 8,
-        "title": "My Elder Brother - Solutions",
+        "title": "My Elder Brother",
         "pdfCode": "eeen108_sol"
       },
       {
         "number": 9,
-        "title": "The Lazy Frog - Solutions",
+        "title": "The Lazy Frog",
         "pdfCode": "eeen109_sol"
       },
       {
         "number": 10,
-        "title": "Rip Van Winkle - Solutions",
+        "title": "Rip Van Winkle",
         "pdfCode": "eeen110_sol"
       }
     ],
@@ -1320,52 +1320,52 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Papa's Spectacles - Solutions",
+        "title": "Papa's Spectacles",
         "pdfCode": "eesa101_sol"
       },
       {
         "number": 2,
-        "title": "Gone with the Scooter - Solutions",
+        "title": "Gone with the Scooter",
         "pdfCode": "eesa102_sol"
       },
       {
         "number": 3,
-        "title": "The Rainbow - Solutions",
+        "title": "The Rainbow",
         "pdfCode": "eesa103_sol"
       },
       {
         "number": 4,
-        "title": "The Wise Parrot - Solutions",
+        "title": "The Wise Parrot",
         "pdfCode": "eesa104_sol"
       },
       {
         "number": 5,
-        "title": "The Frog - Solutions",
+        "title": "The Frog",
         "pdfCode": "eesa105_sol"
       },
       {
         "number": 6,
-        "title": "What a Tank! - Solutions",
+        "title": "What a Tank!",
         "pdfCode": "eesa106_sol"
       },
       {
         "number": 7,
-        "title": "Gilli Danda - Solutions",
+        "title": "Gilli Danda",
         "pdfCode": "eesa107_sol"
       },
       {
         "number": 8,
-        "title": "The Decision of the Panchayat - Solutions",
+        "title": "The Decision of the Panchayat",
         "pdfCode": "eesa108_sol"
       },
       {
         "number": 9,
-        "title": "Vocation - Solutions",
+        "title": "Vocation",
         "pdfCode": "eesa109_sol"
       },
       {
         "number": 10,
-        "title": "Glass Bangles - Solutions",
+        "title": "Glass Bangles",
         "pdfCode": "eesa110_sol"
       }
     ],
@@ -1381,112 +1381,112 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Super Senses - Solutions",
+        "title": "Super Senses",
         "pdfCode": "eeap101_sol"
       },
       {
         "number": 2,
-        "title": "A Snake Charmer's Story - Solutions",
+        "title": "A Snake Charmer's Story",
         "pdfCode": "eeap102_sol"
       },
       {
         "number": 3,
-        "title": "From Tasting to Digesting - Solutions",
+        "title": "From Tasting to Digesting",
         "pdfCode": "eeap103_sol"
       },
       {
         "number": 4,
-        "title": "Mangoes Round the Year - Solutions",
+        "title": "Mangoes Round the Year",
         "pdfCode": "eeap104_sol"
       },
       {
         "number": 5,
-        "title": "Seeds and Seeds - Solutions",
+        "title": "Seeds and Seeds",
         "pdfCode": "eeap105_sol"
       },
       {
         "number": 6,
-        "title": "Every Drop Counts - Solutions",
+        "title": "Every Drop Counts",
         "pdfCode": "eeap106_sol"
       },
       {
         "number": 7,
-        "title": "Experiments with Water - Solutions",
+        "title": "Experiments with Water",
         "pdfCode": "eeap107_sol"
       },
       {
         "number": 8,
-        "title": "A Treat for Mosquitoes - Solutions",
+        "title": "A Treat for Mosquitoes",
         "pdfCode": "eeap108_sol"
       },
       {
         "number": 9,
-        "title": "Up You Go! - Solutions",
+        "title": "Up You Go!",
         "pdfCode": "eeap109_sol"
       },
       {
         "number": 10,
-        "title": "Walls Tell Stories - Solutions",
+        "title": "Walls Tell Stories",
         "pdfCode": "eeap110_sol"
       },
       {
         "number": 11,
-        "title": "Sunita in Space - Solutions",
+        "title": "Sunita in Space",
         "pdfCode": "eeap111_sol"
       },
       {
         "number": 12,
-        "title": "What if it Finishes...? - Solutions",
+        "title": "What if it Finishes...?",
         "pdfCode": "eeap112_sol"
       },
       {
         "number": 13,
-        "title": "A Shelter so High! - Solutions",
+        "title": "A Shelter so High!",
         "pdfCode": "eeap113_sol"
       },
       {
         "number": 14,
-        "title": "When the Earth Shook! - Solutions",
+        "title": "When the Earth Shook!",
         "pdfCode": "eeap114_sol"
       },
       {
         "number": 15,
-        "title": "Blow Hot, Blow Cold - Solutions",
+        "title": "Blow Hot, Blow Cold",
         "pdfCode": "eeap115_sol"
       },
       {
         "number": 16,
-        "title": "Who will do this Work? - Solutions",
+        "title": "Who will do this Work?",
         "pdfCode": "eeap116_sol"
       },
       {
         "number": 17,
-        "title": "Across the Wall - Solutions",
+        "title": "Across the Wall",
         "pdfCode": "eeap117_sol"
       },
       {
         "number": 18,
-        "title": "No Place for Us! - Solutions",
+        "title": "No Place for Us!",
         "pdfCode": "eeap118_sol"
       },
       {
         "number": 19,
-        "title": "A Seed tells a Farmer's Story - Solutions",
+        "title": "A Seed tells a Farmer's Story",
         "pdfCode": "eeap119_sol"
       },
       {
         "number": 20,
-        "title": "Whose Forests? - Solutions",
+        "title": "Whose Forests?",
         "pdfCode": "eeap120_sol"
       },
       {
         "number": 21,
-        "title": "Like Father, Like Daughter - Solutions",
+        "title": "Like Father, Like Daughter",
         "pdfCode": "eeap121_sol"
       },
       {
         "number": 22,
-        "title": "On the Move Again - Solutions",
+        "title": "On the Move Again",
         "pdfCode": "eeap122_sol"
       }
     ],
@@ -1502,72 +1502,72 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Fish Tale - Solutions",
+        "title": "The Fish Tale",
         "pdfCode": "eemh101_sol"
       },
       {
         "number": 2,
-        "title": "Shapes and Angles - Solutions",
+        "title": "Shapes and Angles",
         "pdfCode": "eemh102_sol"
       },
       {
         "number": 3,
-        "title": "How Many Squares? - Solutions",
+        "title": "How Many Squares?",
         "pdfCode": "eemh103_sol"
       },
       {
         "number": 4,
-        "title": "Parts and Wholes - Solutions",
+        "title": "Parts and Wholes",
         "pdfCode": "eemh104_sol"
       },
       {
         "number": 5,
-        "title": "Does it Look the Same? - Solutions",
+        "title": "Does it Look the Same?",
         "pdfCode": "eemh105_sol"
       },
       {
         "number": 6,
-        "title": "Be My Multiple, I'll be Your Factor - Solutions",
+        "title": "Be My Multiple, I'll be Your Factor",
         "pdfCode": "eemh106_sol"
       },
       {
         "number": 7,
-        "title": "Can You See the Pattern? - Solutions",
+        "title": "Can You See the Pattern?",
         "pdfCode": "eemh107_sol"
       },
       {
         "number": 8,
-        "title": "Mapping Your Way - Solutions",
+        "title": "Mapping Your Way",
         "pdfCode": "eemh108_sol"
       },
       {
         "number": 9,
-        "title": "Boxes and Sketches - Solutions",
+        "title": "Boxes and Sketches",
         "pdfCode": "eemh109_sol"
       },
       {
         "number": 10,
-        "title": "Tenths and Hundredths - Solutions",
+        "title": "Tenths and Hundredths",
         "pdfCode": "eemh110_sol"
       },
       {
         "number": 11,
-        "title": "Area and Its Boundary - Solutions",
+        "title": "Area and Its Boundary",
         "pdfCode": "eemh111_sol"
       },
       {
         "number": 12,
-        "title": "Smart Charts - Solutions",
+        "title": "Smart Charts",
         "pdfCode": "eemh112_sol"
       },
       {
         "number": 13,
-        "title": "Ways to Multiply and Divide - Solutions",
+        "title": "Ways to Multiply and Divide",
         "pdfCode": "eemh113_sol"
       },
       {
         "number": 14,
-        "title": "How Big? How Heavy? - Solutions",
+        "title": "How Big? How Heavy?",
         "pdfCode": "eemh114_sol"
       }
     ],
@@ -1583,77 +1583,77 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "We the Travellers—I - Solutions",
+        "title": "We the Travellers—I",
         "pdfCode": "eemm101_sol"
       },
       {
         "number": 2,
-        "title": "Fractions - Solutions",
+        "title": "Fractions",
         "pdfCode": "eemm102_sol"
       },
       {
         "number": 3,
-        "title": "Angles as Turns - Solutions",
+        "title": "Angles as Turns",
         "pdfCode": "eemm103_sol"
       },
       {
         "number": 4,
-        "title": "We the Travellers—II - Solutions",
+        "title": "We the Travellers—II",
         "pdfCode": "eemm104_sol"
       },
       {
         "number": 5,
-        "title": "Far and Near - Solutions",
+        "title": "Far and Near",
         "pdfCode": "eemm105_sol"
       },
       {
         "number": 6,
-        "title": "The Dairy Farm - Solutions",
+        "title": "The Dairy Farm",
         "pdfCode": "eemm106_sol"
       },
       {
         "number": 7,
-        "title": "Shapes and Patterns - Solutions",
+        "title": "Shapes and Patterns",
         "pdfCode": "eemm107_sol"
       },
       {
         "number": 8,
-        "title": "Weight and Capacity - Solutions",
+        "title": "Weight and Capacity",
         "pdfCode": "eemm108_sol"
       },
       {
         "number": 9,
-        "title": "Coconut Farm - Solutions",
+        "title": "Coconut Farm",
         "pdfCode": "eemm109_sol"
       },
       {
         "number": 10,
-        "title": "Symmetrical Designs - Solutions",
+        "title": "Symmetrical Designs",
         "pdfCode": "eemm110_sol"
       },
       {
         "number": 11,
-        "title": "Grandmother's Quilt - Solutions",
+        "title": "Grandmother's Quilt",
         "pdfCode": "eemm111_sol"
       },
       {
         "number": 12,
-        "title": "Racing Seconds - Solutions",
+        "title": "Racing Seconds",
         "pdfCode": "eemm112_sol"
       },
       {
         "number": 13,
-        "title": "Animal Jumps - Solutions",
+        "title": "Animal Jumps",
         "pdfCode": "eemm113_sol"
       },
       {
         "number": 14,
-        "title": "Maps and Locations - Solutions",
+        "title": "Maps and Locations",
         "pdfCode": "eemm114_sol"
       },
       {
         "number": 15,
-        "title": "Data Through Pictures - Solutions",
+        "title": "Data Through Pictures",
         "pdfCode": "eemm115_sol"
       }
     ],
@@ -1669,17 +1669,17 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Throwing and Catching - Solutions",
+        "title": "Throwing and Catching",
         "pdfCode": "eeky101_sol"
       },
       {
         "number": 2,
-        "title": "Kicking and Receiving - Solutions",
+        "title": "Kicking and Receiving",
         "pdfCode": "eeky102_sol"
       },
       {
         "number": 3,
-        "title": "Strike the Object - Solutions",
+        "title": "Strike the Object",
         "pdfCode": "eeky103_sol"
       }
     ],
@@ -1695,52 +1695,52 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Family and Friends - Solutions",
+        "title": "Family and Friends",
         "pdfCode": "eeev101_sol"
       },
       {
         "number": 2,
-        "title": "Going to the Mela - Solutions",
+        "title": "Going to the Mela",
         "pdfCode": "eeev102_sol"
       },
       {
         "number": 3,
-        "title": "Celebrating Festivals - Solutions",
+        "title": "Celebrating Festivals",
         "pdfCode": "eeev103_sol"
       },
       {
         "number": 4,
-        "title": "Getting to Know Plants - Solutions",
+        "title": "Getting to Know Plants",
         "pdfCode": "eeev104_sol"
       },
       {
         "number": 5,
-        "title": "Plants and Animals Live Together - Solutions",
+        "title": "Plants and Animals Live Together",
         "pdfCode": "eeev105_sol"
       },
       {
         "number": 6,
-        "title": "Living in Harmony - Solutions",
+        "title": "Living in Harmony",
         "pdfCode": "eeev106_sol"
       },
       {
         "number": 7,
-        "title": "Water – A Precious Gift - Solutions",
+        "title": "Water – A Precious Gift",
         "pdfCode": "eeev107_sol"
       },
       {
         "number": 8,
-        "title": "Food We Eat - Solutions",
+        "title": "Food We Eat",
         "pdfCode": "eeev108_sol"
       },
       {
         "number": 9,
-        "title": "Staying Healthy and Happy - Solutions",
+        "title": "Staying Healthy and Happy",
         "pdfCode": "eeev109_sol"
       },
       {
         "number": 10,
-        "title": "This World of Things - Solutions",
+        "title": "This World of Things",
         "pdfCode": "eeev110_sol"
       }
     ],
@@ -1756,112 +1756,112 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Objects and Still Life - Solutions",
+        "title": "Objects and Still Life",
         "pdfCode": "fekr101_sol"
       },
       {
         "number": 2,
-        "title": "Changing the Typical Picture - Solutions",
+        "title": "Changing the Typical Picture",
         "pdfCode": "fekr102_sol"
       },
       {
         "number": 3,
-        "title": "Portraying People - Solutions",
+        "title": "Portraying People",
         "pdfCode": "fekr103_sol"
       },
       {
         "number": 4,
-        "title": "Paper Crafts - Solutions",
+        "title": "Paper Crafts",
         "pdfCode": "fekr104_sol"
       },
       {
         "number": 5,
-        "title": "Seals to Prints - Solutions",
+        "title": "Seals to Prints",
         "pdfCode": "fekr105_sol"
       },
       {
         "number": 6,
-        "title": "Music and your Emotions - Solutions",
+        "title": "Music and your Emotions",
         "pdfCode": "fekr106_sol"
       },
       {
         "number": 7,
-        "title": "Musical Instruments - Solutions",
+        "title": "Musical Instruments",
         "pdfCode": "fekr107_sol"
       },
       {
         "number": 8,
-        "title": "Taal or Talam and Raga or Ragam in Indian Music - Solutions",
+        "title": "Taal or Talam and Raga or Ragam in Indian Music",
         "pdfCode": "fekr108_sol"
       },
       {
         "number": 9,
-        "title": "Melodies of Diversity - Solutions",
+        "title": "Melodies of Diversity",
         "pdfCode": "fekr109_sol"
       },
       {
         "number": 10,
-        "title": "Songwriting - Solutions",
+        "title": "Songwriting",
         "pdfCode": "fekr110_sol"
       },
       {
         "number": 11,
-        "title": "Music and Society - Solutions",
+        "title": "Music and Society",
         "pdfCode": "fekr111_sol"
       },
       {
         "number": 12,
-        "title": "My Body in Motion - Solutions",
+        "title": "My Body in Motion",
         "pdfCode": "fekr112_sol"
       },
       {
         "number": 13,
-        "title": "Breaking Barriers with Dance - Solutions",
+        "title": "Breaking Barriers with Dance",
         "pdfCode": "fekr113_sol"
       },
       {
         "number": 14,
-        "title": "Harmony in Motion - Solutions",
+        "title": "Harmony in Motion",
         "pdfCode": "fekr114_sol"
       },
       {
         "number": 15,
-        "title": "Dances of Our Land - Solutions",
+        "title": "Dances of Our Land",
         "pdfCode": "fekr115_sol"
       },
       {
         "number": 16,
-        "title": "Emotions Unveiled! - Solutions",
+        "title": "Emotions Unveiled!",
         "pdfCode": "fekr116_sol"
       },
       {
         "number": 17,
-        "title": "Let's Design - Solutions",
+        "title": "Let's Design",
         "pdfCode": "fekr117_sol"
       },
       {
         "number": 18,
-        "title": "In the Company of Theatre - Solutions",
+        "title": "In the Company of Theatre",
         "pdfCode": "fekr118_sol"
       },
       {
         "number": 19,
-        "title": "Stories of Shadows and Strings - Puppetry - Solutions",
+        "title": "Stories of Shadows and Strings - Puppetry",
         "pdfCode": "fekr119_sol"
       },
       {
         "number": 20,
-        "title": "The Grand Finale - Solutions",
+        "title": "The Grand Finale",
         "pdfCode": "fekr120_sol"
       },
       {
         "number": 21,
-        "title": "Integration of All Art Forms - Solutions",
+        "title": "Integration of All Art Forms",
         "pdfCode": "fekr121_sol"
       },
       {
         "number": 22,
-        "title": "Assessment - Solutions",
+        "title": "Assessment",
         "pdfCode": "fekr122_sol"
       }
     ],
@@ -1877,27 +1877,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Fables and Folk Tales - Solutions",
+        "title": "Fables and Folk Tales",
         "pdfCode": "fepr101_sol"
       },
       {
         "number": 2,
-        "title": "Friendship - Solutions",
+        "title": "Friendship",
         "pdfCode": "fepr102_sol"
       },
       {
         "number": 3,
-        "title": "Nurturing Nature - Solutions",
+        "title": "Nurturing Nature",
         "pdfCode": "fepr103_sol"
       },
       {
         "number": 4,
-        "title": "Sports and Wellness - Solutions",
+        "title": "Sports and Wellness",
         "pdfCode": "fepr104_sol"
       },
       {
         "number": 5,
-        "title": "Culture and Tradition - Solutions",
+        "title": "Culture and Tradition",
         "pdfCode": "fepr105_sol"
       }
     ],
@@ -1913,52 +1913,52 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Patterns in Mathematics - Solutions",
+        "title": "Patterns in Mathematics",
         "pdfCode": "fegp101_sol"
       },
       {
         "number": 2,
-        "title": "Lines and Angles - Solutions",
+        "title": "Lines and Angles",
         "pdfCode": "fegp102_sol"
       },
       {
         "number": 3,
-        "title": "Number Play - Solutions",
+        "title": "Number Play",
         "pdfCode": "fegp103_sol"
       },
       {
         "number": 4,
-        "title": "Data Handling and Presentation - Solutions",
+        "title": "Data Handling and Presentation",
         "pdfCode": "fegp104_sol"
       },
       {
         "number": 5,
-        "title": "Prime Time - Solutions",
+        "title": "Prime Time",
         "pdfCode": "fegp105_sol"
       },
       {
         "number": 6,
-        "title": "Perimeter and Area - Solutions",
+        "title": "Perimeter and Area",
         "pdfCode": "fegp106_sol"
       },
       {
         "number": 7,
-        "title": "Fractions - Solutions",
+        "title": "Fractions",
         "pdfCode": "fegp107_sol"
       },
       {
         "number": 8,
-        "title": "Playing with Constructions - Solutions",
+        "title": "Playing with Constructions",
         "pdfCode": "fegp108_sol"
       },
       {
         "number": 9,
-        "title": "Symmetry - Solutions",
+        "title": "Symmetry",
         "pdfCode": "fegp109_sol"
       },
       {
         "number": 10,
-        "title": "The Other Side of Zero - Solutions",
+        "title": "The Other Side of Zero",
         "pdfCode": "fegp110_sol"
       }
     ],
@@ -1974,27 +1974,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Importance of Physical Education and Well-being - Solutions",
+        "title": "Importance of Physical Education and Well-being",
         "pdfCode": "feky101_sol"
       },
       {
         "number": 2,
-        "title": "Motor Fitness - Solutions",
+        "title": "Motor Fitness",
         "pdfCode": "feky102_sol"
       },
       {
         "number": 3,
-        "title": "Fundamental Skills of Kho-Kho - Solutions",
+        "title": "Fundamental Skills of Kho-Kho",
         "pdfCode": "feky103_sol"
       },
       {
         "number": 4,
-        "title": "Fundamental Skills of Handball - Solutions",
+        "title": "Fundamental Skills of Handball",
         "pdfCode": "feky104_sol"
       },
       {
         "number": 5,
-        "title": "Yoga - Solutions",
+        "title": "Yoga",
         "pdfCode": "feky105_sol"
       }
     ],
@@ -2010,62 +2010,62 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Wonderful World of Science - Solutions",
+        "title": "The Wonderful World of Science",
         "pdfCode": "fecu101_sol"
       },
       {
         "number": 2,
-        "title": "Diversity in the Living World - Solutions",
+        "title": "Diversity in the Living World",
         "pdfCode": "fecu102_sol"
       },
       {
         "number": 3,
-        "title": "Mindful Eating: A Path to a Healthy Body - Solutions",
+        "title": "Mindful Eating: A Path to a Healthy Body",
         "pdfCode": "fecu103_sol"
       },
       {
         "number": 4,
-        "title": "Exploring Magnets - Solutions",
+        "title": "Exploring Magnets",
         "pdfCode": "fecu104_sol"
       },
       {
         "number": 5,
-        "title": "Measurement of Length and Motion - Solutions",
+        "title": "Measurement of Length and Motion",
         "pdfCode": "fecu105_sol"
       },
       {
         "number": 6,
-        "title": "Materials Around Us - Solutions",
+        "title": "Materials Around Us",
         "pdfCode": "fecu106_sol"
       },
       {
         "number": 7,
-        "title": "Temperature and its Measurement - Solutions",
+        "title": "Temperature and its Measurement",
         "pdfCode": "fecu107_sol"
       },
       {
         "number": 8,
-        "title": "A Journey through States of Water - Solutions",
+        "title": "A Journey through States of Water",
         "pdfCode": "fecu108_sol"
       },
       {
         "number": 9,
-        "title": "Methods of Separation in Everyday Life - Solutions",
+        "title": "Methods of Separation in Everyday Life",
         "pdfCode": "fecu109_sol"
       },
       {
         "number": 10,
-        "title": "Living Creatures: Exploring their Characteristics - Solutions",
+        "title": "Living Creatures: Exploring their Characteristics",
         "pdfCode": "fecu110_sol"
       },
       {
         "number": 11,
-        "title": "Nature's Treasures - Solutions",
+        "title": "Nature's Treasures",
         "pdfCode": "fecu111_sol"
       },
       {
         "number": 12,
-        "title": "Beyond Earth - Solutions",
+        "title": "Beyond Earth",
         "pdfCode": "fecu112_sol"
       }
     ],
@@ -2081,72 +2081,72 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Locating Places on the Earth - Solutions",
+        "title": "Locating Places on the Earth",
         "pdfCode": "fees101_sol"
       },
       {
         "number": 2,
-        "title": "Oceans and Continents - Solutions",
+        "title": "Oceans and Continents",
         "pdfCode": "fees102_sol"
       },
       {
         "number": 3,
-        "title": "Landforms and Life - Solutions",
+        "title": "Landforms and Life",
         "pdfCode": "fees103_sol"
       },
       {
         "number": 4,
-        "title": "Timeline and Sources of History - Solutions",
+        "title": "Timeline and Sources of History",
         "pdfCode": "fees104_sol"
       },
       {
         "number": 5,
-        "title": "India, That Is Bharat - Solutions",
+        "title": "India, That Is Bharat",
         "pdfCode": "fees105_sol"
       },
       {
         "number": 6,
-        "title": "The Beginnings of Indian Civilisation - Solutions",
+        "title": "The Beginnings of Indian Civilisation",
         "pdfCode": "fees106_sol"
       },
       {
         "number": 7,
-        "title": "India's Cultural Roots - Solutions",
+        "title": "India's Cultural Roots",
         "pdfCode": "fees107_sol"
       },
       {
         "number": 8,
-        "title": "Unity in Diversity, or Many in the One - Solutions",
+        "title": "Unity in Diversity, or Many in the One",
         "pdfCode": "fees108_sol"
       },
       {
         "number": 9,
-        "title": "Family and Community - Solutions",
+        "title": "Family and Community",
         "pdfCode": "fees109_sol"
       },
       {
         "number": 10,
-        "title": "Grassroots Democracy - Part 1: Governance - Solutions",
+        "title": "Grassroots Democracy - Part 1: Governance",
         "pdfCode": "fees110_sol"
       },
       {
         "number": 11,
-        "title": "Grassroots Democracy - Part 2: Local Government in Rural Areas - Solutions",
+        "title": "Grassroots Democracy - Part 2: Local Government in Rural Areas",
         "pdfCode": "fees111_sol"
       },
       {
         "number": 12,
-        "title": "Grassroots Democracy - Part 3: Local Government in Urban Areas - Solutions",
+        "title": "Grassroots Democracy - Part 3: Local Government in Urban Areas",
         "pdfCode": "fees112_sol"
       },
       {
         "number": 13,
-        "title": "The Value of Work - Solutions",
+        "title": "The Value of Work",
         "pdfCode": "fees113_sol"
       },
       {
         "number": 14,
-        "title": "Economic Activities Around Us - Solutions",
+        "title": "Economic Activities Around Us",
         "pdfCode": "fees114_sol"
       }
     ],
@@ -2162,32 +2162,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "School Kitchen Garden - Solutions",
+        "title": "School Kitchen Garden",
         "pdfCode": "fekb101_sol"
       },
       {
         "number": 2,
-        "title": "Biodiversity Register - Solutions",
+        "title": "Biodiversity Register",
         "pdfCode": "fekb102_sol"
       },
       {
         "number": 3,
-        "title": "Maker Skills - Solutions",
+        "title": "Maker Skills",
         "pdfCode": "fekb103_sol"
       },
       {
         "number": 4,
-        "title": "Animation and Games - Solutions",
+        "title": "Animation and Games",
         "pdfCode": "fekb104_sol"
       },
       {
         "number": 5,
-        "title": "School Museum - Solutions",
+        "title": "School Museum",
         "pdfCode": "fekb105_sol"
       },
       {
         "number": 6,
-        "title": "Cooking without Fire - Solutions",
+        "title": "Cooking without Fire",
         "pdfCode": "fekb106_sol"
       }
     ],
@@ -2203,102 +2203,102 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Understanding Emotions - Solutions",
+        "title": "Understanding Emotions",
         "pdfCode": "gekr101_sol"
       },
       {
         "number": 2,
-        "title": "Say More without Speech — Mime - Solutions",
+        "title": "Say More without Speech — Mime",
         "pdfCode": "gekr102_sol"
       },
       {
         "number": 3,
-        "title": "Let's Design — Stage Technicals - Solutions",
+        "title": "Let's Design — Stage Technicals",
         "pdfCode": "gekr103_sol"
       },
       {
         "number": 4,
-        "title": "Story of India's Storytelling Tradition - Solutions",
+        "title": "Story of India's Storytelling Tradition",
         "pdfCode": "gekr104_sol"
       },
       {
         "number": 5,
-        "title": "Making Music - Solutions",
+        "title": "Making Music",
         "pdfCode": "gekr105_sol"
       },
       {
         "number": 6,
-        "title": "Music, Emotions and Creativity - Solutions",
+        "title": "Music, Emotions and Creativity",
         "pdfCode": "gekr106_sol"
       },
       {
         "number": 7,
-        "title": "Ragas and Talas - Solutions",
+        "title": "Ragas and Talas",
         "pdfCode": "gekr107_sol"
       },
       {
         "number": 8,
-        "title": "The Music of the People - Solutions",
+        "title": "The Music of the People",
         "pdfCode": "gekr108_sol"
       },
       {
         "number": 9,
-        "title": "Performance - Solutions",
+        "title": "Performance",
         "pdfCode": "gekr109_sol"
       },
       {
         "number": 10,
-        "title": "Dance and Sculpture - Solutions",
+        "title": "Dance and Sculpture",
         "pdfCode": "gekr110_sol"
       },
       {
         "number": 11,
-        "title": "Dance Vocabulary and Techniques - Solutions",
+        "title": "Dance Vocabulary and Techniques",
         "pdfCode": "gekr111_sol"
       },
       {
         "number": 12,
-        "title": "Dance, You and Creativity - Solutions",
+        "title": "Dance, You and Creativity",
         "pdfCode": "gekr112_sol"
       },
       {
         "number": 13,
-        "title": "Personalities - Solutions",
+        "title": "Personalities",
         "pdfCode": "gekr113_sol"
       },
       {
         "number": 14,
-        "title": "Natya - Solutions",
+        "title": "Natya",
         "pdfCode": "gekr114_sol"
       },
       {
         "number": 15,
-        "title": "Objects in Icons and Symbols - Solutions",
+        "title": "Objects in Icons and Symbols",
         "pdfCode": "gekr115_sol"
       },
       {
         "number": 16,
-        "title": "Nature's Palette - Solutions",
+        "title": "Nature's Palette",
         "pdfCode": "gekr116_sol"
       },
       {
         "number": 17,
-        "title": "How You Feel - Solutions",
+        "title": "How You Feel",
         "pdfCode": "gekr117_sol"
       },
       {
         "number": 18,
-        "title": "Textiles and Traditions - Solutions",
+        "title": "Textiles and Traditions",
         "pdfCode": "gekr118_sol"
       },
       {
         "number": 19,
-        "title": "The Art of Calligraphy - Solutions",
+        "title": "The Art of Calligraphy",
         "pdfCode": "gekr119_sol"
       },
       {
         "number": 20,
-        "title": "Weaving Stories - Solutions",
+        "title": "Weaving Stories",
         "pdfCode": "gekr120_sol"
       }
     ],
@@ -2314,27 +2314,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Learning Together - Solutions",
+        "title": "Learning Together",
         "pdfCode": "gepr101_sol"
       },
       {
         "number": 2,
-        "title": "Wit and Humour - Solutions",
+        "title": "Wit and Humour",
         "pdfCode": "gepr102_sol"
       },
       {
         "number": 3,
-        "title": "Dreams and Discoveries - Solutions",
+        "title": "Dreams and Discoveries",
         "pdfCode": "gepr103_sol"
       },
       {
         "number": 4,
-        "title": "Travel and Adventure - Solutions",
+        "title": "Travel and Adventure",
         "pdfCode": "gepr104_sol"
       },
       {
         "number": 5,
-        "title": "Bravehearts - Solutions",
+        "title": "Bravehearts",
         "pdfCode": "gepr105_sol"
       }
     ],
@@ -2350,42 +2350,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Large Numbers Around Us - Solutions",
+        "title": "Large Numbers Around Us",
         "pdfCode": "gegp101_sol"
       },
       {
         "number": 2,
-        "title": "Arithmetic Expressions - Solutions",
+        "title": "Arithmetic Expressions",
         "pdfCode": "gegp102_sol"
       },
       {
         "number": 3,
-        "title": "A Peek Beyond the Point - Solutions",
+        "title": "A Peek Beyond the Point",
         "pdfCode": "gegp103_sol"
       },
       {
         "number": 4,
-        "title": "Expressions using Letter-Numbers - Solutions",
+        "title": "Expressions using Letter-Numbers",
         "pdfCode": "gegp104_sol"
       },
       {
         "number": 5,
-        "title": "Parallel and Intersecting Lines - Solutions",
+        "title": "Parallel and Intersecting Lines",
         "pdfCode": "gegp105_sol"
       },
       {
         "number": 6,
-        "title": "Number Play - Solutions",
+        "title": "Number Play",
         "pdfCode": "gegp106_sol"
       },
       {
         "number": 7,
-        "title": "A Tale of Three Intersecting Lines - Solutions",
+        "title": "A Tale of Three Intersecting Lines",
         "pdfCode": "gegp107_sol"
       },
       {
         "number": 8,
-        "title": "Working with Fractions - Solutions",
+        "title": "Working with Fractions",
         "pdfCode": "gegp108_sol"
       }
     ],
@@ -2401,37 +2401,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Geometric Twins - Solutions",
+        "title": "Geometric Twins",
         "pdfCode": "gegp201_sol"
       },
       {
         "number": 2,
-        "title": "Writing Algebraic Expressions - Solutions",
+        "title": "Writing Algebraic Expressions",
         "pdfCode": "gegp202_sol"
       },
       {
         "number": 3,
-        "title": "A First Look at Equations - Solutions",
+        "title": "A First Look at Equations",
         "pdfCode": "gegp203_sol"
       },
       {
         "number": 4,
-        "title": "Comparing Quantities - Solutions",
+        "title": "Comparing Quantities",
         "pdfCode": "gegp204_sol"
       },
       {
         "number": 5,
-        "title": "Data and Its Features - Solutions",
+        "title": "Data and Its Features",
         "pdfCode": "gegp205_sol"
       },
       {
         "number": 6,
-        "title": "The Triangle and its Properties - Solutions",
+        "title": "The Triangle and its Properties",
         "pdfCode": "gegp206_sol"
       },
       {
         "number": 7,
-        "title": "Symmetry and Constructions - Solutions",
+        "title": "Symmetry and Constructions",
         "pdfCode": "gegp207_sol"
       }
     ],
@@ -2447,32 +2447,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Importance of Physical Education and Well-being - Solutions",
+        "title": "Importance of Physical Education and Well-being",
         "pdfCode": "geky101_sol"
       },
       {
         "number": 2,
-        "title": "Motor Fitness - Solutions",
+        "title": "Motor Fitness",
         "pdfCode": "geky102_sol"
       },
       {
         "number": 3,
-        "title": "Fundamental Skills of Kho-Kho - Solutions",
+        "title": "Fundamental Skills of Kho-Kho",
         "pdfCode": "geky103_sol"
       },
       {
         "number": 4,
-        "title": "Fundamental Skills of Handball - Solutions",
+        "title": "Fundamental Skills of Handball",
         "pdfCode": "geky104_sol"
       },
       {
         "number": 5,
-        "title": "Yoga - Solutions",
+        "title": "Yoga",
         "pdfCode": "geky105_sol"
       },
       {
         "number": 6,
-        "title": "Physical Fitness and Well-being - Solutions",
+        "title": "Physical Fitness and Well-being",
         "pdfCode": "geky106_sol"
       }
     ],
@@ -2488,62 +2488,62 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Ever-Evolving World of Science - Solutions",
+        "title": "The Ever-Evolving World of Science",
         "pdfCode": "gecu101_sol"
       },
       {
         "number": 2,
-        "title": "Exploring Substances: Acidic, Basic, and Neutral - Solutions",
+        "title": "Exploring Substances: Acidic, Basic, and Neutral",
         "pdfCode": "gecu102_sol"
       },
       {
         "number": 3,
-        "title": "Electricity: Circuits and their Components - Solutions",
+        "title": "Electricity: Circuits and their Components",
         "pdfCode": "gecu103_sol"
       },
       {
         "number": 4,
-        "title": "The World of Metals and Non-metals - Solutions",
+        "title": "The World of Metals and Non-metals",
         "pdfCode": "gecu104_sol"
       },
       {
         "number": 5,
-        "title": "Changes Around Us: Physical and Chemical - Solutions",
+        "title": "Changes Around Us: Physical and Chemical",
         "pdfCode": "gecu105_sol"
       },
       {
         "number": 6,
-        "title": "Adolescence: A Stage of Growth and Change - Solutions",
+        "title": "Adolescence: A Stage of Growth and Change",
         "pdfCode": "gecu106_sol"
       },
       {
         "number": 7,
-        "title": "Heat Transfer in Nature - Solutions",
+        "title": "Heat Transfer in Nature",
         "pdfCode": "gecu107_sol"
       },
       {
         "number": 8,
-        "title": "Measurement of Time and Motion - Solutions",
+        "title": "Measurement of Time and Motion",
         "pdfCode": "gecu108_sol"
       },
       {
         "number": 9,
-        "title": "Life Processes in Animals - Solutions",
+        "title": "Life Processes in Animals",
         "pdfCode": "gecu109_sol"
       },
       {
         "number": 10,
-        "title": "Life Processes in Plants - Solutions",
+        "title": "Life Processes in Plants",
         "pdfCode": "gecu110_sol"
       },
       {
         "number": 11,
-        "title": "Light: Shadows and Reflections - Solutions",
+        "title": "Light: Shadows and Reflections",
         "pdfCode": "gecu111_sol"
       },
       {
         "number": 12,
-        "title": "Earth, Moon, and the Sun - Solutions",
+        "title": "Earth, Moon, and the Sun",
         "pdfCode": "gecu112_sol"
       }
     ],
@@ -2559,62 +2559,62 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Geographical Diversity of India - Solutions",
+        "title": "Geographical Diversity of India",
         "pdfCode": "gees101_sol"
       },
       {
         "number": 2,
-        "title": "Understanding the Weather - Solutions",
+        "title": "Understanding the Weather",
         "pdfCode": "gees102_sol"
       },
       {
         "number": 3,
-        "title": "Climates of India - Solutions",
+        "title": "Climates of India",
         "pdfCode": "gees103_sol"
       },
       {
         "number": 4,
-        "title": "New Beginnings: Cities and States - Solutions",
+        "title": "New Beginnings: Cities and States",
         "pdfCode": "gees104_sol"
       },
       {
         "number": 5,
-        "title": "The Rise of Empires - Solutions",
+        "title": "The Rise of Empires",
         "pdfCode": "gees105_sol"
       },
       {
         "number": 6,
-        "title": "The Age of Reorganisation - Solutions",
+        "title": "The Age of Reorganisation",
         "pdfCode": "gees106_sol"
       },
       {
         "number": 7,
-        "title": "The Gupta Era: An Age of Tireless Creativity - Solutions",
+        "title": "The Gupta Era: An Age of Tireless Creativity",
         "pdfCode": "gees107_sol"
       },
       {
         "number": 8,
-        "title": "How the Land Becomes Sacred - Solutions",
+        "title": "How the Land Becomes Sacred",
         "pdfCode": "gees108_sol"
       },
       {
         "number": 9,
-        "title": "From the Rulers to the Ruled: Types of Governments - Solutions",
+        "title": "From the Rulers to the Ruled: Types of Governments",
         "pdfCode": "gees109_sol"
       },
       {
         "number": 10,
-        "title": "The Constitution of India — An Introduction - Solutions",
+        "title": "The Constitution of India — An Introduction",
         "pdfCode": "gees110_sol"
       },
       {
         "number": 11,
-        "title": "From Barter to Money - Solutions",
+        "title": "From Barter to Money",
         "pdfCode": "gees111_sol"
       },
       {
         "number": 12,
-        "title": "Understanding Markets - Solutions",
+        "title": "Understanding Markets",
         "pdfCode": "gees112_sol"
       }
     ],
@@ -2630,42 +2630,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Story of Indian Farming - Solutions",
+        "title": "The Story of Indian Farming",
         "pdfCode": "gees201_sol"
       },
       {
         "number": 2,
-        "title": "India and Her Neighbours - Solutions",
+        "title": "India and Her Neighbours",
         "pdfCode": "gees202_sol"
       },
       {
         "number": 3,
-        "title": "Empires and Kingdoms: 6th to 10th Centuries - Solutions",
+        "title": "Empires and Kingdoms: 6th to 10th Centuries",
         "pdfCode": "gees203_sol"
       },
       {
         "number": 4,
-        "title": "Turning Tides: 11th and 12th Centuries - Solutions",
+        "title": "Turning Tides: 11th and 12th Centuries",
         "pdfCode": "gees204_sol"
       },
       {
         "number": 5,
-        "title": "India, a Home to Many - Solutions",
+        "title": "India, a Home to Many",
         "pdfCode": "gees205_sol"
       },
       {
         "number": 6,
-        "title": "Handmade in India - Solutions",
+        "title": "Handmade in India",
         "pdfCode": "gees206_sol"
       },
       {
         "number": 7,
-        "title": "Infrastructure: Engine of India's Development - Solutions",
+        "title": "Infrastructure: Engine of India's Development",
         "pdfCode": "gees207_sol"
       },
       {
         "number": 8,
-        "title": "Banks and the Magic of Finance - Solutions",
+        "title": "Banks and the Magic of Finance",
         "pdfCode": "gees208_sol"
       }
     ],
@@ -2681,37 +2681,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Plant Nursery - Solutions",
+        "title": "Plant Nursery",
         "pdfCode": "gekb101_sol"
       },
       {
         "number": 2,
-        "title": "School Habitat Garden - Solutions",
+        "title": "School Habitat Garden",
         "pdfCode": "gekb102_sol"
       },
       {
         "number": 3,
-        "title": "Tie and Dye - Solutions",
+        "title": "Tie and Dye",
         "pdfCode": "gekb103_sol"
       },
       {
         "number": 4,
-        "title": "AI Assistant - Solutions",
+        "title": "AI Assistant",
         "pdfCode": "gekb104_sol"
       },
       {
         "number": 5,
-        "title": "Storytime with Puppets - Solutions",
+        "title": "Storytime with Puppets",
         "pdfCode": "gekb105_sol"
       },
       {
         "number": 6,
-        "title": "Family Health Handbook - Solutions",
+        "title": "Family Health Handbook",
         "pdfCode": "gekb106_sol"
       },
       {
         "number": 7,
-        "title": "Planning for Kaushal Mela - Solutions",
+        "title": "Planning for Kaushal Mela",
         "pdfCode": "gekb107_sol"
       }
     ],
@@ -2727,97 +2727,97 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Bringing Words Alive — Play Reading - Solutions",
+        "title": "Bringing Words Alive — Play Reading",
         "pdfCode": "hekr101_sol"
       },
       {
         "number": 2,
-        "title": "One Stage, Many Scripts - Solutions",
+        "title": "One Stage, Many Scripts",
         "pdfCode": "hekr102_sol"
       },
       {
         "number": 3,
-        "title": "From Page to Stage - Solutions",
+        "title": "From Page to Stage",
         "pdfCode": "hekr103_sol"
       },
       {
         "number": 4,
-        "title": "Applause and Advice - Solutions",
+        "title": "Applause and Advice",
         "pdfCode": "hekr104_sol"
       },
       {
         "number": 5,
-        "title": "Discovering the Elements of Music - Solutions",
+        "title": "Discovering the Elements of Music",
         "pdfCode": "hekr105_sol"
       },
       {
         "number": 6,
-        "title": "Musical Instruments - Solutions",
+        "title": "Musical Instruments",
         "pdfCode": "hekr106_sol"
       },
       {
         "number": 7,
-        "title": "Indian Classical Music - Solutions",
+        "title": "Indian Classical Music",
         "pdfCode": "hekr107_sol"
       },
       {
         "number": 8,
-        "title": "Inspiration and Imagination - Solutions",
+        "title": "Inspiration and Imagination",
         "pdfCode": "hekr108_sol"
       },
       {
         "number": 9,
-        "title": "My World of Music - Solutions",
+        "title": "My World of Music",
         "pdfCode": "hekr109_sol"
       },
       {
         "number": 10,
-        "title": "Inner Dynamics of Dance - Solutions",
+        "title": "Inner Dynamics of Dance",
         "pdfCode": "hekr110_sol"
       },
       {
         "number": 11,
-        "title": "Pan Indian Dance Forms - Solutions",
+        "title": "Pan Indian Dance Forms",
         "pdfCode": "hekr111_sol"
       },
       {
         "number": 12,
-        "title": "Dance for Well-being - Solutions",
+        "title": "Dance for Well-being",
         "pdfCode": "hekr112_sol"
       },
       {
         "number": 13,
-        "title": "Innovation, Inclusivity and Inspiring Change - Solutions",
+        "title": "Innovation, Inclusivity and Inspiring Change",
         "pdfCode": "hekr113_sol"
       },
       {
         "number": 14,
-        "title": "A Presentation of Dance and Choreography - Solutions",
+        "title": "A Presentation of Dance and Choreography",
         "pdfCode": "hekr114_sol"
       },
       {
         "number": 15,
-        "title": "Elements and Principles of Visual Art and Design - Solutions",
+        "title": "Elements and Principles of Visual Art and Design",
         "pdfCode": "hekr115_sol"
       },
       {
         "number": 16,
-        "title": "Still Life in Colour - Solutions",
+        "title": "Still Life in Colour",
         "pdfCode": "hekr116_sol"
       },
       {
         "number": 17,
-        "title": "People in Places - Solutions",
+        "title": "People in Places",
         "pdfCode": "hekr117_sol"
       },
       {
         "number": 18,
-        "title": "Arts of the People, With the People, For the People - Solutions",
+        "title": "Arts of the People, With the People, For the People",
         "pdfCode": "hekr118_sol"
       },
       {
         "number": 19,
-        "title": "Campaign for Art Awareness - Solutions",
+        "title": "Campaign for Art Awareness",
         "pdfCode": "hekr119_sol"
       }
     ],
@@ -2833,42 +2833,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Best Christmas Present in the World - Solutions",
+        "title": "The Best Christmas Present in the World",
         "pdfCode": "hehd101_sol"
       },
       {
         "number": 2,
-        "title": "The Tsunami - Solutions",
+        "title": "The Tsunami",
         "pdfCode": "hehd102_sol"
       },
       {
         "number": 3,
-        "title": "Glimpses of the Past - Solutions",
+        "title": "Glimpses of the Past",
         "pdfCode": "hehd103_sol"
       },
       {
         "number": 4,
-        "title": "Bepin Choudhury's Lapse of Memory - Solutions",
+        "title": "Bepin Choudhury's Lapse of Memory",
         "pdfCode": "hehd104_sol"
       },
       {
         "number": 5,
-        "title": "The Summit Within - Solutions",
+        "title": "The Summit Within",
         "pdfCode": "hehd105_sol"
       },
       {
         "number": 6,
-        "title": "This is Jody's Fawn - Solutions",
+        "title": "This is Jody's Fawn",
         "pdfCode": "hehd106_sol"
       },
       {
         "number": 7,
-        "title": "A Visit to Cambridge - Solutions",
+        "title": "A Visit to Cambridge",
         "pdfCode": "hehd107_sol"
       },
       {
         "number": 8,
-        "title": "A Short Monsoon Diary - Solutions",
+        "title": "A Short Monsoon Diary",
         "pdfCode": "hehd108_sol"
       }
     ],
@@ -2884,42 +2884,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "How the Camel Got His Hump - Solutions",
+        "title": "How the Camel Got His Hump",
         "pdfCode": "heih101_sol"
       },
       {
         "number": 2,
-        "title": "Children at Work - Solutions",
+        "title": "Children at Work",
         "pdfCode": "heih102_sol"
       },
       {
         "number": 3,
-        "title": "The Selfish Giant - Solutions",
+        "title": "The Selfish Giant",
         "pdfCode": "heih103_sol"
       },
       {
         "number": 4,
-        "title": "The Treasure Within - Solutions",
+        "title": "The Treasure Within",
         "pdfCode": "heih104_sol"
       },
       {
         "number": 5,
-        "title": "Princess September - Solutions",
+        "title": "Princess September",
         "pdfCode": "heih105_sol"
       },
       {
         "number": 6,
-        "title": "The Fight - Solutions",
+        "title": "The Fight",
         "pdfCode": "heih106_sol"
       },
       {
         "number": 7,
-        "title": "Jalebis - Solutions",
+        "title": "Jalebis",
         "pdfCode": "heih107_sol"
       },
       {
         "number": 8,
-        "title": "The Ancient Chanakya - Solutions",
+        "title": "The Ancient Chanakya",
         "pdfCode": "heih108_sol"
       }
     ],
@@ -2935,27 +2935,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Wit and Wisdom - Solutions",
+        "title": "Wit and Wisdom",
         "pdfCode": "hepr101_sol"
       },
       {
         "number": 2,
-        "title": "Values and Dispositions - Solutions",
+        "title": "Values and Dispositions",
         "pdfCode": "hepr102_sol"
       },
       {
         "number": 3,
-        "title": "Mystery and Magic - Solutions",
+        "title": "Mystery and Magic",
         "pdfCode": "hepr103_sol"
       },
       {
         "number": 4,
-        "title": "Environment - Solutions",
+        "title": "Environment",
         "pdfCode": "hepr104_sol"
       },
       {
         "number": 5,
-        "title": "Science and Curiosity - Solutions",
+        "title": "Science and Curiosity",
         "pdfCode": "hepr105_sol"
       }
     ],
@@ -2971,37 +2971,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "A Square and A Cube - Solutions",
+        "title": "A Square and A Cube",
         "pdfCode": "hegp101_sol"
       },
       {
         "number": 2,
-        "title": "Power Play - Solutions",
+        "title": "Power Play",
         "pdfCode": "hegp102_sol"
       },
       {
         "number": 3,
-        "title": "A Story of Numbers - Solutions",
+        "title": "A Story of Numbers",
         "pdfCode": "hegp103_sol"
       },
       {
         "number": 4,
-        "title": "Quadrilaterals - Solutions",
+        "title": "Quadrilaterals",
         "pdfCode": "hegp104_sol"
       },
       {
         "number": 5,
-        "title": "Number Play - Solutions",
+        "title": "Number Play",
         "pdfCode": "hegp105_sol"
       },
       {
         "number": 6,
-        "title": "We Distribute, Yet Things Multiply - Solutions",
+        "title": "We Distribute, Yet Things Multiply",
         "pdfCode": "hegp106_sol"
       },
       {
         "number": 7,
-        "title": "Proportional Reasoning-1 - Solutions",
+        "title": "Proportional Reasoning-1",
         "pdfCode": "hegp107_sol"
       }
     ],
@@ -3017,37 +3017,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Fractions in Disguise - Solutions",
+        "title": "Fractions in Disguise",
         "pdfCode": "hegp201_sol"
       },
       {
         "number": 2,
-        "title": "The Baudhayana-Pythagoras Theorem - Solutions",
+        "title": "The Baudhayana-Pythagoras Theorem",
         "pdfCode": "hegp202_sol"
       },
       {
         "number": 3,
-        "title": "Proportional Reasoning-2 - Solutions",
+        "title": "Proportional Reasoning-2",
         "pdfCode": "hegp203_sol"
       },
       {
         "number": 4,
-        "title": "Exploring Some Geometric Themes - Solutions",
+        "title": "Exploring Some Geometric Themes",
         "pdfCode": "hegp204_sol"
       },
       {
         "number": 5,
-        "title": "Tales by Dots and Lines - Solutions",
+        "title": "Tales by Dots and Lines",
         "pdfCode": "hegp205_sol"
       },
       {
         "number": 6,
-        "title": "Algebra Play - Solutions",
+        "title": "Algebra Play",
         "pdfCode": "hegp206_sol"
       },
       {
         "number": 7,
-        "title": "Area - Solutions",
+        "title": "Area",
         "pdfCode": "hegp207_sol"
       }
     ],
@@ -3063,67 +3063,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Rational Numbers - Solutions",
+        "title": "Rational Numbers",
         "pdfCode": "hemh101_sol"
       },
       {
         "number": 2,
-        "title": "Linear Equations in One Variable - Solutions",
+        "title": "Linear Equations in One Variable",
         "pdfCode": "hemh102_sol"
       },
       {
         "number": 3,
-        "title": "Understanding Quadrilaterals - Solutions",
+        "title": "Understanding Quadrilaterals",
         "pdfCode": "hemh103_sol"
       },
       {
         "number": 4,
-        "title": "Data Handling - Solutions",
+        "title": "Data Handling",
         "pdfCode": "hemh104_sol"
       },
       {
         "number": 5,
-        "title": "Squares and Square Roots - Solutions",
+        "title": "Squares and Square Roots",
         "pdfCode": "hemh105_sol"
       },
       {
         "number": 6,
-        "title": "Cubes and Cube Roots - Solutions",
+        "title": "Cubes and Cube Roots",
         "pdfCode": "hemh106_sol"
       },
       {
         "number": 7,
-        "title": "Comparing Quantities - Solutions",
+        "title": "Comparing Quantities",
         "pdfCode": "hemh107_sol"
       },
       {
         "number": 8,
-        "title": "Algebraic Expressions and Identities - Solutions",
+        "title": "Algebraic Expressions and Identities",
         "pdfCode": "hemh108_sol"
       },
       {
         "number": 9,
-        "title": "Mensuration - Solutions",
+        "title": "Mensuration",
         "pdfCode": "hemh109_sol"
       },
       {
         "number": 10,
-        "title": "Exponents and Powers - Solutions",
+        "title": "Exponents and Powers",
         "pdfCode": "hemh110_sol"
       },
       {
         "number": 11,
-        "title": "Direct and Inverse Proportions - Solutions",
+        "title": "Direct and Inverse Proportions",
         "pdfCode": "hemh111_sol"
       },
       {
         "number": 12,
-        "title": "Factorisation - Solutions",
+        "title": "Factorisation",
         "pdfCode": "hemh112_sol"
       },
       {
         "number": 13,
-        "title": "Introduction to Graphs - Solutions",
+        "title": "Introduction to Graphs",
         "pdfCode": "hemh113_sol"
       }
     ],
@@ -3139,32 +3139,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Importance of Physical Education and Well-being - Solutions",
+        "title": "Importance of Physical Education and Well-being",
         "pdfCode": "heky101_sol"
       },
       {
         "number": 2,
-        "title": "Motor Fitness - Solutions",
+        "title": "Motor Fitness",
         "pdfCode": "heky102_sol"
       },
       {
         "number": 3,
-        "title": "Fundamental Skills of Kho-Kho - Solutions",
+        "title": "Fundamental Skills of Kho-Kho",
         "pdfCode": "heky103_sol"
       },
       {
         "number": 4,
-        "title": "Fundamental Skills of Handball - Solutions",
+        "title": "Fundamental Skills of Handball",
         "pdfCode": "heky104_sol"
       },
       {
         "number": 5,
-        "title": "Yoga - Solutions",
+        "title": "Yoga",
         "pdfCode": "heky105_sol"
       },
       {
         "number": 6,
-        "title": "Physical Fitness and Well-being - Solutions",
+        "title": "Physical Fitness and Well-being",
         "pdfCode": "heky106_sol"
       }
     ],
@@ -3180,67 +3180,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Exploring the Investigative World of Science - Solutions",
+        "title": "Exploring the Investigative World of Science",
         "pdfCode": "hecu101_sol"
       },
       {
         "number": 2,
-        "title": "The Invisible Living World: Beyond Our Naked Eye - Solutions",
+        "title": "The Invisible Living World: Beyond Our Naked Eye",
         "pdfCode": "hecu102_sol"
       },
       {
         "number": 3,
-        "title": "Health: The Ultimate Treasure - Solutions",
+        "title": "Health: The Ultimate Treasure",
         "pdfCode": "hecu103_sol"
       },
       {
         "number": 4,
-        "title": "Electricity: Magnetic and Heating Effects - Solutions",
+        "title": "Electricity: Magnetic and Heating Effects",
         "pdfCode": "hecu104_sol"
       },
       {
         "number": 5,
-        "title": "Exploring Forces - Solutions",
+        "title": "Exploring Forces",
         "pdfCode": "hecu105_sol"
       },
       {
         "number": 6,
-        "title": "Pressure, Winds, Storms, and Cyclones - Solutions",
+        "title": "Pressure, Winds, Storms, and Cyclones",
         "pdfCode": "hecu106_sol"
       },
       {
         "number": 7,
-        "title": "Particulate Nature of Matter - Solutions",
+        "title": "Particulate Nature of Matter",
         "pdfCode": "hecu107_sol"
       },
       {
         "number": 8,
-        "title": "Nature of Matter: Elements, Compounds, and Mixtures - Solutions",
+        "title": "Nature of Matter: Elements, Compounds, and Mixtures",
         "pdfCode": "hecu108_sol"
       },
       {
         "number": 9,
-        "title": "The Amazing World of Solutes, Solvents, and Solutions - Solutions",
+        "title": "The Amazing World of Solutes, Solvents, and Solutions",
         "pdfCode": "hecu109_sol"
       },
       {
         "number": 10,
-        "title": "Light: Mirrors and Lenses - Solutions",
+        "title": "Light: Mirrors and Lenses",
         "pdfCode": "hecu110_sol"
       },
       {
         "number": 11,
-        "title": "Keeping Time with the Skies - Solutions",
+        "title": "Keeping Time with the Skies",
         "pdfCode": "hecu111_sol"
       },
       {
         "number": 12,
-        "title": "How Nature Works in Harmony - Solutions",
+        "title": "How Nature Works in Harmony",
         "pdfCode": "hecu112_sol"
       },
       {
         "number": 13,
-        "title": "Our Home: Earth, a Unique Life Sustaining Planet - Solutions",
+        "title": "Our Home: Earth, a Unique Life Sustaining Planet",
         "pdfCode": "hecu113_sol"
       }
     ],
@@ -3256,67 +3256,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Crop Production and Management - Solutions",
+        "title": "Crop Production and Management",
         "pdfCode": "hesc101_sol"
       },
       {
         "number": 2,
-        "title": "Microorganisms: Friend and Foe - Solutions",
+        "title": "Microorganisms: Friend and Foe",
         "pdfCode": "hesc102_sol"
       },
       {
         "number": 3,
-        "title": "Coal and Petroleum - Solutions",
+        "title": "Coal and Petroleum",
         "pdfCode": "hesc103_sol"
       },
       {
         "number": 4,
-        "title": "Combustion and Flame - Solutions",
+        "title": "Combustion and Flame",
         "pdfCode": "hesc104_sol"
       },
       {
         "number": 5,
-        "title": "Conservation of Plants and Animals - Solutions",
+        "title": "Conservation of Plants and Animals",
         "pdfCode": "hesc105_sol"
       },
       {
         "number": 6,
-        "title": "Reproduction in Animals - Solutions",
+        "title": "Reproduction in Animals",
         "pdfCode": "hesc106_sol"
       },
       {
         "number": 7,
-        "title": "Reaching the Age of Adolescence - Solutions",
+        "title": "Reaching the Age of Adolescence",
         "pdfCode": "hesc107_sol"
       },
       {
         "number": 8,
-        "title": "Force and Pressure - Solutions",
+        "title": "Force and Pressure",
         "pdfCode": "hesc108_sol"
       },
       {
         "number": 9,
-        "title": "Friction - Solutions",
+        "title": "Friction",
         "pdfCode": "hesc109_sol"
       },
       {
         "number": 10,
-        "title": "Sound - Solutions",
+        "title": "Sound",
         "pdfCode": "hesc110_sol"
       },
       {
         "number": 11,
-        "title": "Chemical Effects of Electric Current - Solutions",
+        "title": "Chemical Effects of Electric Current",
         "pdfCode": "hesc111_sol"
       },
       {
         "number": 12,
-        "title": "Some Natural Phenomena - Solutions",
+        "title": "Some Natural Phenomena",
         "pdfCode": "hesc112_sol"
       },
       {
         "number": 13,
-        "title": "Light - Solutions",
+        "title": "Light",
         "pdfCode": "hesc113_sol"
       }
     ],
@@ -3332,37 +3332,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Natural Resources and Their Use - Solutions",
+        "title": "Natural Resources and Their Use",
         "pdfCode": "hees101_sol"
       },
       {
         "number": 2,
-        "title": "Reshaping India's Political Map - Solutions",
+        "title": "Reshaping India's Political Map",
         "pdfCode": "hees102_sol"
       },
       {
         "number": 3,
-        "title": "The Rise of the Marathas - Solutions",
+        "title": "The Rise of the Marathas",
         "pdfCode": "hees103_sol"
       },
       {
         "number": 4,
-        "title": "The Colonial Era in India - Solutions",
+        "title": "The Colonial Era in India",
         "pdfCode": "hees104_sol"
       },
       {
         "number": 5,
-        "title": "Universal Franchise and India's Electoral System - Solutions",
+        "title": "Universal Franchise and India's Electoral System",
         "pdfCode": "hees105_sol"
       },
       {
         "number": 6,
-        "title": "The Parliamentary System — Legislature and Executive - Solutions",
+        "title": "The Parliamentary System — Legislature and Executive",
         "pdfCode": "hees106_sol"
       },
       {
         "number": 7,
-        "title": "Factors of Production - Solutions",
+        "title": "Factors of Production",
         "pdfCode": "hees107_sol"
       }
     ],
@@ -3378,42 +3378,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "World Geography: Some Glimpses - Solutions",
+        "title": "World Geography: Some Glimpses",
         "pdfCode": "hees201_sol"
       },
       {
         "number": 2,
-        "title": "India's Long Road to Independence - Solutions",
+        "title": "India's Long Road to Independence",
         "pdfCode": "hees202_sol"
       },
       {
         "number": 3,
-        "title": "A Journey Through Indian Architecture - Solutions",
+        "title": "A Journey Through Indian Architecture",
         "pdfCode": "hees203_sol"
       },
       {
         "number": 4,
-        "title": "The Role of the Judiciary in Our Society - Solutions",
+        "title": "The Role of the Judiciary in Our Society",
         "pdfCode": "hees204_sol"
       },
       {
         "number": 5,
-        "title": "Citizenship: Rights and Duties - Solutions",
+        "title": "Citizenship: Rights and Duties",
         "pdfCode": "hees205_sol"
       },
       {
         "number": 6,
-        "title": "Dynamics of Population - Solutions",
+        "title": "Dynamics of Population",
         "pdfCode": "hees206_sol"
       },
       {
         "number": 7,
-        "title": "India's Urban Landscape - Solutions",
+        "title": "India's Urban Landscape",
         "pdfCode": "hees207_sol"
       },
       {
         "number": 8,
-        "title": "Cultural Currents: 13th to 17th Centuries - Solutions",
+        "title": "Cultural Currents: 13th to 17th Centuries",
         "pdfCode": "hees208_sol"
       }
     ],
@@ -3429,42 +3429,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "How, When and Where - Solutions",
+        "title": "How, When and Where",
         "pdfCode": "hess201_sol"
       },
       {
         "number": 2,
-        "title": "From Trade to Territory - Solutions",
+        "title": "From Trade to Territory",
         "pdfCode": "hess202_sol"
       },
       {
         "number": 3,
-        "title": "Ruling the Countryside - Solutions",
+        "title": "Ruling the Countryside",
         "pdfCode": "hess203_sol"
       },
       {
         "number": 4,
-        "title": "Tribals, Dikus and the Vision of a Golden Age - Solutions",
+        "title": "Tribals, Dikus and the Vision of a Golden Age",
         "pdfCode": "hess204_sol"
       },
       {
         "number": 5,
-        "title": "When People Revolt 1857 and After - Solutions",
+        "title": "When People Revolt 1857 and After",
         "pdfCode": "hess205_sol"
       },
       {
         "number": 6,
-        "title": "Civilising the \"Native\", Educating the Nation - Solutions",
+        "title": "Civilising the \"Native\", Educating the Nation",
         "pdfCode": "hess206_sol"
       },
       {
         "number": 7,
-        "title": "Women, Caste and Reform - Solutions",
+        "title": "Women, Caste and Reform",
         "pdfCode": "hess207_sol"
       },
       {
         "number": 8,
-        "title": "The Making of the National Movement: 1870s–1947 - Solutions",
+        "title": "The Making of the National Movement: 1870s–1947",
         "pdfCode": "hess208_sol"
       }
     ],
@@ -3480,27 +3480,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Resources - Solutions",
+        "title": "Resources",
         "pdfCode": "hess401_sol"
       },
       {
         "number": 2,
-        "title": "Land, Soil, Water, Natural Vegetation and Wildlife Resources - Solutions",
+        "title": "Land, Soil, Water, Natural Vegetation and Wildlife Resources",
         "pdfCode": "hess402_sol"
       },
       {
         "number": 3,
-        "title": "Agriculture - Solutions",
+        "title": "Agriculture",
         "pdfCode": "hess403_sol"
       },
       {
         "number": 4,
-        "title": "Industries - Solutions",
+        "title": "Industries",
         "pdfCode": "hess404_sol"
       },
       {
         "number": 5,
-        "title": "Human Resources - Solutions",
+        "title": "Human Resources",
         "pdfCode": "hess405_sol"
       }
     ],
@@ -3516,42 +3516,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Indian Constitution - Solutions",
+        "title": "The Indian Constitution",
         "pdfCode": "hess301_sol"
       },
       {
         "number": 2,
-        "title": "Understanding Secularism - Solutions",
+        "title": "Understanding Secularism",
         "pdfCode": "hess302_sol"
       },
       {
         "number": 3,
-        "title": "Parliament and the Making of Laws - Solutions",
+        "title": "Parliament and the Making of Laws",
         "pdfCode": "hess303_sol"
       },
       {
         "number": 4,
-        "title": "Judiciary - Solutions",
+        "title": "Judiciary",
         "pdfCode": "hess304_sol"
       },
       {
         "number": 5,
-        "title": "Understanding Marginalisation - Solutions",
+        "title": "Understanding Marginalisation",
         "pdfCode": "hess305_sol"
       },
       {
         "number": 6,
-        "title": "Confronting Marginalisation - Solutions",
+        "title": "Confronting Marginalisation",
         "pdfCode": "hess306_sol"
       },
       {
         "number": 7,
-        "title": "Public Facilities - Solutions",
+        "title": "Public Facilities",
         "pdfCode": "hess307_sol"
       },
       {
         "number": 8,
-        "title": "Law and Social Justice - Solutions",
+        "title": "Law and Social Justice",
         "pdfCode": "hess308_sol"
       }
     ],
@@ -3567,37 +3567,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Plant Nursery - Solutions",
+        "title": "Plant Nursery",
         "pdfCode": "hekb101_sol"
       },
       {
         "number": 2,
-        "title": "School Habitat Garden - Solutions",
+        "title": "School Habitat Garden",
         "pdfCode": "hekb102_sol"
       },
       {
         "number": 3,
-        "title": "Tie and Dye - Solutions",
+        "title": "Tie and Dye",
         "pdfCode": "hekb103_sol"
       },
       {
         "number": 4,
-        "title": "AI Assistant - Solutions",
+        "title": "AI Assistant",
         "pdfCode": "hekb104_sol"
       },
       {
         "number": 5,
-        "title": "Storytime with Puppets - Solutions",
+        "title": "Storytime with Puppets",
         "pdfCode": "hekb105_sol"
       },
       {
         "number": 6,
-        "title": "Family Health Handbook - Solutions",
+        "title": "Family Health Handbook",
         "pdfCode": "hekb106_sol"
       },
       {
         "number": 7,
-        "title": "Planning for Kaushal Mela - Solutions",
+        "title": "Planning for Kaushal Mela",
         "pdfCode": "hekb107_sol"
       }
     ],
@@ -3613,87 +3613,87 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to the History of Arts - Solutions",
+        "title": "Introduction to the History of Arts",
         "pdfCode": "iemr101_sol"
       },
       {
         "number": 2,
-        "title": "The Stage Is Yours - Solutions",
+        "title": "The Stage Is Yours",
         "pdfCode": "iemr102_sol"
       },
       {
         "number": 3,
-        "title": "Symbols and Metaphors on Stage - Solutions",
+        "title": "Symbols and Metaphors on Stage",
         "pdfCode": "iemr103_sol"
       },
       {
         "number": 4,
-        "title": "Creativity in Light and Sound - Solutions",
+        "title": "Creativity in Light and Sound",
         "pdfCode": "iemr104_sol"
       },
       {
         "number": 5,
-        "title": "From Vision to Performance: Direction and Acting - Solutions",
+        "title": "From Vision to Performance: Direction and Acting",
         "pdfCode": "iemr105_sol"
       },
       {
         "number": 6,
-        "title": "Music and Us - Solutions",
+        "title": "Music and Us",
         "pdfCode": "iemr106_sol"
       },
       {
         "number": 7,
-        "title": "The Science of Music - Solutions",
+        "title": "The Science of Music",
         "pdfCode": "iemr107_sol"
       },
       {
         "number": 8,
-        "title": "Rāga and Tāla - Solutions",
+        "title": "Rāga and Tāla",
         "pdfCode": "iemr108_sol"
       },
       {
         "number": 9,
-        "title": "Music Travels Around the World - Solutions",
+        "title": "Music Travels Around the World",
         "pdfCode": "iemr109_sol"
       },
       {
         "number": 10,
-        "title": "Components of Dance - Solutions",
+        "title": "Components of Dance",
         "pdfCode": "iemr110_sol"
       },
       {
         "number": 11,
-        "title": "Dance as Visual Storytelling - Solutions",
+        "title": "Dance as Visual Storytelling",
         "pdfCode": "iemr111_sol"
       },
       {
         "number": 12,
-        "title": "Cultural Connections Through Dance - Solutions",
+        "title": "Cultural Connections Through Dance",
         "pdfCode": "iemr112_sol"
       },
       {
         "number": 13,
-        "title": "Dance Choreography - Solutions",
+        "title": "Dance Choreography",
         "pdfCode": "iemr113_sol"
       },
       {
         "number": 14,
-        "title": "Exploring the Fundamentals of Visual Arts - Solutions",
+        "title": "Exploring the Fundamentals of Visual Arts",
         "pdfCode": "iemr114_sol"
       },
       {
         "number": 15,
-        "title": "Mediums and Techniques in Visual Art - Solutions",
+        "title": "Mediums and Techniques in Visual Art",
         "pdfCode": "iemr115_sol"
       },
       {
         "number": 16,
-        "title": "Visual Composition - Solutions",
+        "title": "Visual Composition",
         "pdfCode": "iemr116_sol"
       },
       {
         "number": 17,
-        "title": "Branches of Visual Arts - Solutions",
+        "title": "Branches of Visual Arts",
         "pdfCode": "iemr117_sol"
       }
     ],
@@ -3709,42 +3709,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "How I Taught My Grandmother to Read - Solutions",
+        "title": "How I Taught My Grandmother to Read",
         "pdfCode": "iebe101_sol"
       },
       {
         "number": 2,
-        "title": "The Pot Maker - Solutions",
+        "title": "The Pot Maker",
         "pdfCode": "iebe102_sol"
       },
       {
         "number": 3,
-        "title": "Winds of Change - Solutions",
+        "title": "Winds of Change",
         "pdfCode": "iebe103_sol"
       },
       {
         "number": 4,
-        "title": "Vitamin-M - Solutions",
+        "title": "Vitamin-M",
         "pdfCode": "iebe104_sol"
       },
       {
         "number": 5,
-        "title": "The World of Limitless Possibilities - Solutions",
+        "title": "The World of Limitless Possibilities",
         "pdfCode": "iebe105_sol"
       },
       {
         "number": 6,
-        "title": "Twin Melodies - Solutions",
+        "title": "Twin Melodies",
         "pdfCode": "iebe106_sol"
       },
       {
         "number": 7,
-        "title": "Carrier of Words - Solutions",
+        "title": "Carrier of Words",
         "pdfCode": "iebe107_sol"
       },
       {
         "number": 8,
-        "title": "Follow That Dream - Solutions",
+        "title": "Follow That Dream",
         "pdfCode": "iebe108_sol"
       }
     ],
@@ -3760,42 +3760,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Orienting Yourself: The Use of Coordinates - Solutions",
+        "title": "Orienting Yourself: The Use of Coordinates",
         "pdfCode": "iemh101_sol"
       },
       {
         "number": 2,
-        "title": "Introduction to Linear Polynomials - Solutions",
+        "title": "Introduction to Linear Polynomials",
         "pdfCode": "iemh102_sol"
       },
       {
         "number": 3,
-        "title": "The World of Numbers - Solutions",
+        "title": "The World of Numbers",
         "pdfCode": "iemh103_sol"
       },
       {
         "number": 4,
-        "title": "Exploring Algebraic Identities - Solutions",
+        "title": "Exploring Algebraic Identities",
         "pdfCode": "iemh104_sol"
       },
       {
         "number": 5,
-        "title": "I'm Up and Down, and Round and Round - Solutions",
+        "title": "I'm Up and Down, and Round and Round",
         "pdfCode": "iemh105_sol"
       },
       {
         "number": 6,
-        "title": "Measuring Space: Perimeter and Area - Solutions",
+        "title": "Measuring Space: Perimeter and Area",
         "pdfCode": "iemh106_sol"
       },
       {
         "number": 7,
-        "title": "The Mathematics of Maybe: Introduction to Probabilty - Solutions",
+        "title": "The Mathematics of Maybe: Introduction to Probabilty",
         "pdfCode": "iemh107_sol"
       },
       {
         "number": 8,
-        "title": "Predicting What Comes Next: Exploring Sequences and Progressions - Solutions",
+        "title": "Predicting What Comes Next: Exploring Sequences and Progressions",
         "pdfCode": "iemh108_sol"
       }
     ],
@@ -3811,32 +3811,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Evolution of Physical Education and Well-being - Solutions",
+        "title": "Evolution of Physical Education and Well-being",
         "pdfCode": "iehp101_sol"
       },
       {
         "number": 2,
-        "title": "Science and Sports - Solutions",
+        "title": "Science and Sports",
         "pdfCode": "iehp102_sol"
       },
       {
         "number": 3,
-        "title": "Olympism - Solutions",
+        "title": "Olympism",
         "pdfCode": "iehp103_sol"
       },
       {
         "number": 4,
-        "title": "Sports for All - Solutions",
+        "title": "Sports for All",
         "pdfCode": "iehp104_sol"
       },
       {
         "number": 5,
-        "title": "Sports - Solutions",
+        "title": "Sports",
         "pdfCode": "iehp105_sol"
       },
       {
         "number": 6,
-        "title": "Yoga for Holistic Health and Personal Excellence - Solutions",
+        "title": "Yoga for Holistic Health and Personal Excellence",
         "pdfCode": "iehp106_sol"
       }
     ],
@@ -3852,67 +3852,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Exploration: Entering the World of Secondary Science - Solutions",
+        "title": "Exploration: Entering the World of Secondary Science",
         "pdfCode": "iesc101_sol"
       },
       {
         "number": 2,
-        "title": "Cell — The Building Block of Life - Solutions",
+        "title": "Cell — The Building Block of Life",
         "pdfCode": "iesc102_sol"
       },
       {
         "number": 3,
-        "title": "Tissues in Action - Solutions",
+        "title": "Tissues in Action",
         "pdfCode": "iesc103_sol"
       },
       {
         "number": 4,
-        "title": "Describing Motion Around Us - Solutions",
+        "title": "Describing Motion Around Us",
         "pdfCode": "iesc104_sol"
       },
       {
         "number": 5,
-        "title": "Exploring Mixtures and their Separation - Solutions",
+        "title": "Exploring Mixtures and their Separation",
         "pdfCode": "iesc105_sol"
       },
       {
         "number": 6,
-        "title": "How Forces Affect Motion - Solutions",
+        "title": "How Forces Affect Motion",
         "pdfCode": "iesc106_sol"
       },
       {
         "number": 7,
-        "title": "Work, Energy, and Simple Machines - Solutions",
+        "title": "Work, Energy, and Simple Machines",
         "pdfCode": "iesc107_sol"
       },
       {
         "number": 8,
-        "title": "Journey Inside the Atom - Solutions",
+        "title": "Journey Inside the Atom",
         "pdfCode": "iesc108_sol"
       },
       {
         "number": 9,
-        "title": "Atomic Foundations of Matter - Solutions",
+        "title": "Atomic Foundations of Matter",
         "pdfCode": "iesc109_sol"
       },
       {
         "number": 10,
-        "title": "Sound Waves: Characteristics and Applications - Solutions",
+        "title": "Sound Waves: Characteristics and Applications",
         "pdfCode": "iesc110_sol"
       },
       {
         "number": 11,
-        "title": "Reproduction: How Life Continues - Solutions",
+        "title": "Reproduction: How Life Continues",
         "pdfCode": "iesc111_sol"
       },
       {
         "number": 12,
-        "title": "Patterns in Life: Diversity and Classification - Solutions",
+        "title": "Patterns in Life: Diversity and Classification",
         "pdfCode": "iesc112_sol"
       },
       {
         "number": 13,
-        "title": "Earth as a System: Energy, Matter, and Life - Solutions",
+        "title": "Earth as a System: Energy, Matter, and Life",
         "pdfCode": "iesc113_sol"
       }
     ],
@@ -3928,62 +3928,62 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to Agricultural Practices - Solutions",
+        "title": "Introduction to Agricultural Practices",
         "pdfCode": "iekv101_sol"
       },
       {
         "number": 2,
-        "title": "Rooftop Gardening - Solutions",
+        "title": "Rooftop Gardening",
         "pdfCode": "iekv102_sol"
       },
       {
         "number": 3,
-        "title": "Precision Farming - Solutions",
+        "title": "Precision Farming",
         "pdfCode": "iekv103_sol"
       },
       {
         "number": 4,
-        "title": "Additional Vocations - Solutions",
+        "title": "Additional Vocations",
         "pdfCode": "iekv104_sol"
       },
       {
         "number": 5,
-        "title": "Shaping Materials - Solutions",
+        "title": "Shaping Materials",
         "pdfCode": "iekv105_sol"
       },
       {
         "number": 6,
-        "title": "Construction - Solutions",
+        "title": "Construction",
         "pdfCode": "iekv106_sol"
       },
       {
         "number": 7,
-        "title": "Apparel - Solutions",
+        "title": "Apparel",
         "pdfCode": "iekv107_sol"
       },
       {
         "number": 8,
-        "title": "Additional Vocations - Solutions",
+        "title": "Additional Vocations",
         "pdfCode": "iekv108_sol"
       },
       {
         "number": 9,
-        "title": "Personal and Lifestyle Services - Solutions",
+        "title": "Personal and Lifestyle Services",
         "pdfCode": "iekv109_sol"
       },
       {
         "number": 10,
-        "title": "Healthcare - Solutions",
+        "title": "Healthcare",
         "pdfCode": "iekv110_sol"
       },
       {
         "number": 11,
-        "title": "Tourism - Solutions",
+        "title": "Tourism",
         "pdfCode": "iekv111_sol"
       },
       {
         "number": 12,
-        "title": "Additional Vocations - Solutions",
+        "title": "Additional Vocations",
         "pdfCode": "iekv112_sol"
       }
     ],
@@ -3999,47 +3999,47 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Understanding Social Science - Solutions",
+        "title": "Understanding Social Science",
         "pdfCode": "iest101_sol"
       },
       {
         "number": 2,
-        "title": "Shaping of the Earth's Surface - Solutions",
+        "title": "Shaping of the Earth's Surface",
         "pdfCode": "iest102_sol"
       },
       {
         "number": 3,
-        "title": "Atmosphere and Climate - Solutions",
+        "title": "Atmosphere and Climate",
         "pdfCode": "iest103_sol"
       },
       {
         "number": 4,
-        "title": "Early Humans and Beginning of Civilisation - Solutions",
+        "title": "Early Humans and Beginning of Civilisation",
         "pdfCode": "iest104_sol"
       },
       {
         "number": 5,
-        "title": "State and Society up to 1000 CE - Solutions",
+        "title": "State and Society up to 1000 CE",
         "pdfCode": "iest105_sol"
       },
       {
         "number": 6,
-        "title": "Understanding Democracy - Solutions",
+        "title": "Understanding Democracy",
         "pdfCode": "iest106_sol"
       },
       {
         "number": 7,
-        "title": "Elections - Solutions",
+        "title": "Elections",
         "pdfCode": "iest107_sol"
       },
       {
         "number": 8,
-        "title": "Building Blocks in Economics: The Problem of Choice - Solutions",
+        "title": "Building Blocks in Economics: The Problem of Choice",
         "pdfCode": "iest108_sol"
       },
       {
         "number": 9,
-        "title": "The Price Puzzle: What Drives the Market - Solutions",
+        "title": "The Price Puzzle: What Drives the Market",
         "pdfCode": "iest109_sol"
       }
     ],
@@ -4055,47 +4055,47 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "A Letter to God - Solutions",
+        "title": "A Letter to God",
         "pdfCode": "jeff101_sol"
       },
       {
         "number": 2,
-        "title": "Nelson Mandela: Long Walk to Freedom - Solutions",
+        "title": "Nelson Mandela: Long Walk to Freedom",
         "pdfCode": "jeff102_sol"
       },
       {
         "number": 3,
-        "title": "Two Stories about Flying - Solutions",
+        "title": "Two Stories about Flying",
         "pdfCode": "jeff103_sol"
       },
       {
         "number": 4,
-        "title": "From the Diary of Anne Frank - Solutions",
+        "title": "From the Diary of Anne Frank",
         "pdfCode": "jeff104_sol"
       },
       {
         "number": 5,
-        "title": "Glimpses of India - Solutions",
+        "title": "Glimpses of India",
         "pdfCode": "jeff105_sol"
       },
       {
         "number": 6,
-        "title": "Mijbil the Otter - Solutions",
+        "title": "Mijbil the Otter",
         "pdfCode": "jeff106_sol"
       },
       {
         "number": 7,
-        "title": "Madam Rides the Bus - Solutions",
+        "title": "Madam Rides the Bus",
         "pdfCode": "jeff107_sol"
       },
       {
         "number": 8,
-        "title": "The Sermon at Benares - Solutions",
+        "title": "The Sermon at Benares",
         "pdfCode": "jeff108_sol"
       },
       {
         "number": 9,
-        "title": "The Proposal - Solutions",
+        "title": "The Proposal",
         "pdfCode": "jeff109_sol"
       }
     ],
@@ -4111,47 +4111,47 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "A Triumph of Surgery - Solutions",
+        "title": "A Triumph of Surgery",
         "pdfCode": "jefp101_sol"
       },
       {
         "number": 2,
-        "title": "The Thief's Story - Solutions",
+        "title": "The Thief's Story",
         "pdfCode": "jefp102_sol"
       },
       {
         "number": 3,
-        "title": "The Midnight Visitor - Solutions",
+        "title": "The Midnight Visitor",
         "pdfCode": "jefp103_sol"
       },
       {
         "number": 4,
-        "title": "A Question of Trust - Solutions",
+        "title": "A Question of Trust",
         "pdfCode": "jefp104_sol"
       },
       {
         "number": 5,
-        "title": "Footprints without Feet - Solutions",
+        "title": "Footprints without Feet",
         "pdfCode": "jefp105_sol"
       },
       {
         "number": 6,
-        "title": "The Making of a Scientist - Solutions",
+        "title": "The Making of a Scientist",
         "pdfCode": "jefp106_sol"
       },
       {
         "number": 7,
-        "title": "The Necklace - Solutions",
+        "title": "The Necklace",
         "pdfCode": "jefp107_sol"
       },
       {
         "number": 8,
-        "title": "Bholi - Solutions",
+        "title": "Bholi",
         "pdfCode": "jefp108_sol"
       },
       {
         "number": 9,
-        "title": "The Book That Saved the Earth - Solutions",
+        "title": "The Book That Saved the Earth",
         "pdfCode": "jefp109_sol"
       }
     ],
@@ -4167,37 +4167,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Unit 1: Trust and Integrity - Solutions",
+        "title": "Unit 1: Trust and Integrity",
         "pdfCode": "jewe201_sol"
       },
       {
         "number": 2,
-        "title": "Unit 2: Communication and Interpersonal Skills - Solutions",
+        "title": "Unit 2: Communication and Interpersonal Skills",
         "pdfCode": "jewe202_sol"
       },
       {
         "number": 3,
-        "title": "Unit 3: Empathy and Compassion - Solutions",
+        "title": "Unit 3: Empathy and Compassion",
         "pdfCode": "jewe203_sol"
       },
       {
         "number": 4,
-        "title": "Unit 4: Resilience and Adaptability - Solutions",
+        "title": "Unit 4: Resilience and Adaptability",
         "pdfCode": "jewe205_sol"
       },
       {
         "number": 5,
-        "title": "Unit 5: Critical Thinking and Problem Solving - Solutions",
+        "title": "Unit 5: Critical Thinking and Problem Solving",
         "pdfCode": "jewe206_sol"
       },
       {
         "number": 6,
-        "title": "Unit 6: Environmental Awareness - Solutions",
+        "title": "Unit 6: Environmental Awareness",
         "pdfCode": "jewe207_sol"
       },
       {
         "number": 7,
-        "title": "Unit 7: Digital Literacy and Ethics - Solutions",
+        "title": "Unit 7: Digital Literacy and Ethics",
         "pdfCode": "jewe208_sol"
       }
     ],
@@ -4213,52 +4213,52 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Fitness for Life - Solutions",
+        "title": "Fitness for Life",
         "pdfCode": "jehp101_sol"
       },
       {
         "number": 2,
-        "title": "Physical Activity and Health - Solutions",
+        "title": "Physical Activity and Health",
         "pdfCode": "jehp102_sol"
       },
       {
         "number": 3,
-        "title": "Sports Training and Coaching - Solutions",
+        "title": "Sports Training and Coaching",
         "pdfCode": "jehp103_sol"
       },
       {
         "number": 4,
-        "title": "Yoga and Well-being - Solutions",
+        "title": "Yoga and Well-being",
         "pdfCode": "jehp104_sol"
       },
       {
         "number": 5,
-        "title": "Lifestyle Diseases - Solutions",
+        "title": "Lifestyle Diseases",
         "pdfCode": "jehp105_sol"
       },
       {
         "number": 6,
-        "title": "First Aid and Safety - Solutions",
+        "title": "First Aid and Safety",
         "pdfCode": "jehp107_sol"
       },
       {
         "number": 7,
-        "title": "Doping in Sports - Solutions",
+        "title": "Doping in Sports",
         "pdfCode": "jehp109_sol"
       },
       {
         "number": 8,
-        "title": "Women in Sports - Solutions",
+        "title": "Women in Sports",
         "pdfCode": "jehp110_sol"
       },
       {
         "number": 9,
-        "title": "Sports Psychology - Solutions",
+        "title": "Sports Psychology",
         "pdfCode": "jehp111_sol"
       },
       {
         "number": 10,
-        "title": "Career in Physical Education - Solutions",
+        "title": "Career in Physical Education",
         "pdfCode": "jehp112_sol"
       }
     ],
@@ -4274,72 +4274,72 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Real Numbers - Solutions",
+        "title": "Real Numbers",
         "pdfCode": "jemh101_sol"
       },
       {
         "number": 2,
-        "title": "Polynomials - Solutions",
+        "title": "Polynomials",
         "pdfCode": "jemh102_sol"
       },
       {
         "number": 3,
-        "title": "Pair of Linear Equations in Two Variables - Solutions",
+        "title": "Pair of Linear Equations in Two Variables",
         "pdfCode": "jemh103_sol"
       },
       {
         "number": 4,
-        "title": "Quadratic Equations - Solutions",
+        "title": "Quadratic Equations",
         "pdfCode": "jemh104_sol"
       },
       {
         "number": 5,
-        "title": "Arithmetic Progressions - Solutions",
+        "title": "Arithmetic Progressions",
         "pdfCode": "jemh105_sol"
       },
       {
         "number": 6,
-        "title": "Triangles - Solutions",
+        "title": "Triangles",
         "pdfCode": "jemh106_sol"
       },
       {
         "number": 7,
-        "title": "Coordinate Geometry - Solutions",
+        "title": "Coordinate Geometry",
         "pdfCode": "jemh107_sol"
       },
       {
         "number": 8,
-        "title": "Introduction to Trigonometry - Solutions",
+        "title": "Introduction to Trigonometry",
         "pdfCode": "jemh108_sol"
       },
       {
         "number": 9,
-        "title": "Some Applications of Trigonometry - Solutions",
+        "title": "Some Applications of Trigonometry",
         "pdfCode": "jemh109_sol"
       },
       {
         "number": 10,
-        "title": "Circles - Solutions",
+        "title": "Circles",
         "pdfCode": "jemh110_sol"
       },
       {
         "number": 11,
-        "title": "Areas Related to Circles - Solutions",
+        "title": "Areas Related to Circles",
         "pdfCode": "jemh111_sol"
       },
       {
         "number": 12,
-        "title": "Surface Areas and Volumes - Solutions",
+        "title": "Surface Areas and Volumes",
         "pdfCode": "jemh112_sol"
       },
       {
         "number": 13,
-        "title": "Statistics - Solutions",
+        "title": "Statistics",
         "pdfCode": "jemh113_sol"
       },
       {
         "number": 14,
-        "title": "Probability - Solutions",
+        "title": "Probability",
         "pdfCode": "jemh114_sol"
       }
     ],
@@ -4355,67 +4355,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Chemical Reactions and Equations - Solutions",
+        "title": "Chemical Reactions and Equations",
         "pdfCode": "jesc101_sol"
       },
       {
         "number": 2,
-        "title": "Acids, Bases and Salts - Solutions",
+        "title": "Acids, Bases and Salts",
         "pdfCode": "jesc102_sol"
       },
       {
         "number": 3,
-        "title": "Metals and Non-metals - Solutions",
+        "title": "Metals and Non-metals",
         "pdfCode": "jesc103_sol"
       },
       {
         "number": 4,
-        "title": "Carbon and its Compounds - Solutions",
+        "title": "Carbon and its Compounds",
         "pdfCode": "jesc104_sol"
       },
       {
         "number": 5,
-        "title": "Life Processes - Solutions",
+        "title": "Life Processes",
         "pdfCode": "jesc105_sol"
       },
       {
         "number": 6,
-        "title": "Control and Coordination - Solutions",
+        "title": "Control and Coordination",
         "pdfCode": "jesc106_sol"
       },
       {
         "number": 7,
-        "title": "How do Organisms Reproduce? - Solutions",
+        "title": "How do Organisms Reproduce?",
         "pdfCode": "jesc107_sol"
       },
       {
         "number": 8,
-        "title": "Heredity - Solutions",
+        "title": "Heredity",
         "pdfCode": "jesc108_sol"
       },
       {
         "number": 9,
-        "title": "Light – Reflection and Refraction - Solutions",
+        "title": "Light – Reflection and Refraction",
         "pdfCode": "jesc109_sol"
       },
       {
         "number": 10,
-        "title": "The Human Eye and the Colourful World - Solutions",
+        "title": "The Human Eye and the Colourful World",
         "pdfCode": "jesc110_sol"
       },
       {
         "number": 11,
-        "title": "Electricity - Solutions",
+        "title": "Electricity",
         "pdfCode": "jesc111_sol"
       },
       {
         "number": 12,
-        "title": "Magnetic Effects of Electric Current - Solutions",
+        "title": "Magnetic Effects of Electric Current",
         "pdfCode": "jesc112_sol"
       },
       {
         "number": 13,
-        "title": "Our Environment - Solutions",
+        "title": "Our Environment",
         "pdfCode": "jesc113_sol"
       }
     ],
@@ -4431,37 +4431,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Resources and Development - Solutions",
+        "title": "Resources and Development",
         "pdfCode": "jess101_sol"
       },
       {
         "number": 2,
-        "title": "Forest and Wildlife Resources - Solutions",
+        "title": "Forest and Wildlife Resources",
         "pdfCode": "jess102_sol"
       },
       {
         "number": 3,
-        "title": "Water Resources - Solutions",
+        "title": "Water Resources",
         "pdfCode": "jess103_sol"
       },
       {
         "number": 4,
-        "title": "Agriculture - Solutions",
+        "title": "Agriculture",
         "pdfCode": "jess104_sol"
       },
       {
         "number": 5,
-        "title": "Minerals and Energy Resources - Solutions",
+        "title": "Minerals and Energy Resources",
         "pdfCode": "jess105_sol"
       },
       {
         "number": 6,
-        "title": "Manufacturing Industries - Solutions",
+        "title": "Manufacturing Industries",
         "pdfCode": "jess106_sol"
       },
       {
         "number": 7,
-        "title": "Lifelines of National Economy - Solutions",
+        "title": "Lifelines of National Economy",
         "pdfCode": "jess107_sol"
       }
     ],
@@ -4477,27 +4477,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Power Sharing - Solutions",
+        "title": "Power Sharing",
         "pdfCode": "jess401_sol"
       },
       {
         "number": 2,
-        "title": "Federalism - Solutions",
+        "title": "Federalism",
         "pdfCode": "jess402_sol"
       },
       {
         "number": 3,
-        "title": "Gender, Religion and Caste - Solutions",
+        "title": "Gender, Religion and Caste",
         "pdfCode": "jess403_sol"
       },
       {
         "number": 4,
-        "title": "Political Parties - Solutions",
+        "title": "Political Parties",
         "pdfCode": "jess404_sol"
       },
       {
         "number": 5,
-        "title": "Outcomes of Democracy - Solutions",
+        "title": "Outcomes of Democracy",
         "pdfCode": "jess405_sol"
       }
     ],
@@ -4513,27 +4513,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Rise of Nationalism in Europe - Solutions",
+        "title": "The Rise of Nationalism in Europe",
         "pdfCode": "jess301_sol"
       },
       {
         "number": 2,
-        "title": "Nationalism in India - Solutions",
+        "title": "Nationalism in India",
         "pdfCode": "jess302_sol"
       },
       {
         "number": 3,
-        "title": "The Making of a Global World - Solutions",
+        "title": "The Making of a Global World",
         "pdfCode": "jess303_sol"
       },
       {
         "number": 4,
-        "title": "The Age of Industrialisation - Solutions",
+        "title": "The Age of Industrialisation",
         "pdfCode": "jess304_sol"
       },
       {
         "number": 5,
-        "title": "Print Culture and the Modern World - Solutions",
+        "title": "Print Culture and the Modern World",
         "pdfCode": "jess305_sol"
       }
     ],
@@ -4549,27 +4549,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Development - Solutions",
+        "title": "Development",
         "pdfCode": "jess201_sol"
       },
       {
         "number": 2,
-        "title": "Sectors of the Indian Economy - Solutions",
+        "title": "Sectors of the Indian Economy",
         "pdfCode": "jess202_sol"
       },
       {
         "number": 3,
-        "title": "Money and Credit - Solutions",
+        "title": "Money and Credit",
         "pdfCode": "jess203_sol"
       },
       {
         "number": 4,
-        "title": "Globalisation and the Indian Economy - Solutions",
+        "title": "Globalisation and the Indian Economy",
         "pdfCode": "jess204_sol"
       },
       {
         "number": 5,
-        "title": "Consumer Rights - Solutions",
+        "title": "Consumer Rights",
         "pdfCode": "jess205_sol"
       }
     ],
@@ -4585,12 +4585,12 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Bank Reconciliation Statement - Solutions",
+        "title": "Bank Reconciliation Statement",
         "pdfCode": "keac201_sol"
       },
       {
         "number": 2,
-        "title": "Depreciation, Provisions and Reserves - Solutions",
+        "title": "Depreciation, Provisions and Reserves",
         "pdfCode": "keac202_sol"
       }
     ],
@@ -4606,37 +4606,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to Accounting - Solutions",
+        "title": "Introduction to Accounting",
         "pdfCode": "keac101_sol"
       },
       {
         "number": 2,
-        "title": "Theory Base of Accounting - Solutions",
+        "title": "Theory Base of Accounting",
         "pdfCode": "keac102_sol"
       },
       {
         "number": 3,
-        "title": "Recording of Transactions – I - Solutions",
+        "title": "Recording of Transactions – I",
         "pdfCode": "keac103_sol"
       },
       {
         "number": 4,
-        "title": "Recording of Transactions – II - Solutions",
+        "title": "Recording of Transactions – II",
         "pdfCode": "keac104_sol"
       },
       {
         "number": 5,
-        "title": "Bank Reconciliation Statement - Solutions",
+        "title": "Bank Reconciliation Statement",
         "pdfCode": "keac105_sol"
       },
       {
         "number": 6,
-        "title": "Trial Balance and Rectification of Errors - Solutions",
+        "title": "Trial Balance and Rectification of Errors",
         "pdfCode": "keac106_sol"
       },
       {
         "number": 7,
-        "title": "Depreciation, Provisions and Reserves - Solutions",
+        "title": "Depreciation, Provisions and Reserves",
         "pdfCode": "keac107_sol"
       }
     ],
@@ -4652,97 +4652,97 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Living World - Solutions",
+        "title": "The Living World",
         "pdfCode": "kebo101_sol"
       },
       {
         "number": 2,
-        "title": "Biological Classification - Solutions",
+        "title": "Biological Classification",
         "pdfCode": "kebo102_sol"
       },
       {
         "number": 3,
-        "title": "Plant Kingdom - Solutions",
+        "title": "Plant Kingdom",
         "pdfCode": "kebo103_sol"
       },
       {
         "number": 4,
-        "title": "Animal Kingdom - Solutions",
+        "title": "Animal Kingdom",
         "pdfCode": "kebo104_sol"
       },
       {
         "number": 5,
-        "title": "Morphology of Flowering Plants - Solutions",
+        "title": "Morphology of Flowering Plants",
         "pdfCode": "kebo105_sol"
       },
       {
         "number": 6,
-        "title": "Anatomy of Flowering Plants - Solutions",
+        "title": "Anatomy of Flowering Plants",
         "pdfCode": "kebo106_sol"
       },
       {
         "number": 7,
-        "title": "Structural Organisation in Animals - Solutions",
+        "title": "Structural Organisation in Animals",
         "pdfCode": "kebo107_sol"
       },
       {
         "number": 8,
-        "title": "Cell: The Unit of Life - Solutions",
+        "title": "Cell: The Unit of Life",
         "pdfCode": "kebo108_sol"
       },
       {
         "number": 9,
-        "title": "Biomolecules - Solutions",
+        "title": "Biomolecules",
         "pdfCode": "kebo109_sol"
       },
       {
         "number": 10,
-        "title": "Cell Cycle and Cell Division - Solutions",
+        "title": "Cell Cycle and Cell Division",
         "pdfCode": "kebo110_sol"
       },
       {
         "number": 11,
-        "title": "Photosynthesis in Higher Plants - Solutions",
+        "title": "Photosynthesis in Higher Plants",
         "pdfCode": "kebo111_sol"
       },
       {
         "number": 12,
-        "title": "Respiration in Plants - Solutions",
+        "title": "Respiration in Plants",
         "pdfCode": "kebo112_sol"
       },
       {
         "number": 13,
-        "title": "Plant Growth and Development - Solutions",
+        "title": "Plant Growth and Development",
         "pdfCode": "kebo113_sol"
       },
       {
         "number": 14,
-        "title": "Breathing and Exchange of Gases - Solutions",
+        "title": "Breathing and Exchange of Gases",
         "pdfCode": "kebo114_sol"
       },
       {
         "number": 15,
-        "title": "Body Fluids and Circulation - Solutions",
+        "title": "Body Fluids and Circulation",
         "pdfCode": "kebo115_sol"
       },
       {
         "number": 16,
-        "title": "Excretory Products and their Elimination - Solutions",
+        "title": "Excretory Products and their Elimination",
         "pdfCode": "kebo116_sol"
       },
       {
         "number": 17,
-        "title": "Locomotion and Movement - Solutions",
+        "title": "Locomotion and Movement",
         "pdfCode": "kebo117_sol"
       },
       {
         "number": 18,
-        "title": "Neural Control and Coordination - Solutions",
+        "title": "Neural Control and Coordination",
         "pdfCode": "kebo118_sol"
       },
       {
         "number": 19,
-        "title": "Chemical Coordination and Integration - Solutions",
+        "title": "Chemical Coordination and Integration",
         "pdfCode": "kebo119_sol"
       }
     ],
@@ -4758,62 +4758,62 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Biotechnology: An Introduction - Solutions",
+        "title": "Biotechnology: An Introduction",
         "pdfCode": "kebt101_sol"
       },
       {
         "number": 2,
-        "title": "Biomolecules - Solutions",
+        "title": "Biomolecules",
         "pdfCode": "kebt102_sol"
       },
       {
         "number": 3,
-        "title": "Cell and Molecular Biology - Solutions",
+        "title": "Cell and Molecular Biology",
         "pdfCode": "kebt103_sol"
       },
       {
         "number": 4,
-        "title": "Genetics - Solutions",
+        "title": "Genetics",
         "pdfCode": "kebt104_sol"
       },
       {
         "number": 5,
-        "title": "Microbiology - Solutions",
+        "title": "Microbiology",
         "pdfCode": "kebt105_sol"
       },
       {
         "number": 6,
-        "title": "Immunology - Solutions",
+        "title": "Immunology",
         "pdfCode": "kebt106_sol"
       },
       {
         "number": 7,
-        "title": "Bioinformatics - Solutions",
+        "title": "Bioinformatics",
         "pdfCode": "kebt107_sol"
       },
       {
         "number": 8,
-        "title": "Ecology - Solutions",
+        "title": "Ecology",
         "pdfCode": "kebt108_sol"
       },
       {
         "number": 9,
-        "title": "Genetically Modified Organisms - Solutions",
+        "title": "Genetically Modified Organisms",
         "pdfCode": "kebt109_sol"
       },
       {
         "number": 10,
-        "title": "Intellectual Property Rights - Solutions",
+        "title": "Intellectual Property Rights",
         "pdfCode": "kebt110_sol"
       },
       {
         "number": 11,
-        "title": "Biotechnology and Society - Solutions",
+        "title": "Biotechnology and Society",
         "pdfCode": "kebt111_sol"
       },
       {
         "number": 12,
-        "title": "Project Work - Solutions",
+        "title": "Project Work",
         "pdfCode": "kebt112_sol"
       }
     ],
@@ -4829,57 +4829,57 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Nature and Significance of Management - Solutions",
+        "title": "Nature and Significance of Management",
         "pdfCode": "kebs101_sol"
       },
       {
         "number": 2,
-        "title": "Principles of Management - Solutions",
+        "title": "Principles of Management",
         "pdfCode": "kebs102_sol"
       },
       {
         "number": 3,
-        "title": "Business Environment - Solutions",
+        "title": "Business Environment",
         "pdfCode": "kebs103_sol"
       },
       {
         "number": 4,
-        "title": "Planning - Solutions",
+        "title": "Planning",
         "pdfCode": "kebs104_sol"
       },
       {
         "number": 5,
-        "title": "Organising - Solutions",
+        "title": "Organising",
         "pdfCode": "kebs105_sol"
       },
       {
         "number": 6,
-        "title": "Staffing - Solutions",
+        "title": "Staffing",
         "pdfCode": "kebs106_sol"
       },
       {
         "number": 7,
-        "title": "Directing - Solutions",
+        "title": "Directing",
         "pdfCode": "kebs107_sol"
       },
       {
         "number": 8,
-        "title": "Controlling - Solutions",
+        "title": "Controlling",
         "pdfCode": "kebs108_sol"
       },
       {
         "number": 9,
-        "title": "Financial Management - Solutions",
+        "title": "Financial Management",
         "pdfCode": "kebs109_sol"
       },
       {
         "number": 10,
-        "title": "Financial Markets - Solutions",
+        "title": "Financial Markets",
         "pdfCode": "kebs110_sol"
       },
       {
         "number": 11,
-        "title": "Marketing Management - Solutions",
+        "title": "Marketing Management",
         "pdfCode": "kebs111_sol"
       }
     ],
@@ -4895,17 +4895,17 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 7,
-        "title": "Redox Reactions - Solutions",
+        "title": "Redox Reactions",
         "pdfCode": "kech201_sol"
       },
       {
         "number": 8,
-        "title": "Organic Chemistry: Some Basic Principles and Techniques - Solutions",
+        "title": "Organic Chemistry: Some Basic Principles and Techniques",
         "pdfCode": "kech202_sol"
       },
       {
         "number": 9,
-        "title": "Hydrocarbons - Solutions",
+        "title": "Hydrocarbons",
         "pdfCode": "kech203_sol"
       }
     ],
@@ -4921,32 +4921,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Some Basic Concepts of Chemistry - Solutions",
+        "title": "Some Basic Concepts of Chemistry",
         "pdfCode": "kech101_sol"
       },
       {
         "number": 2,
-        "title": "Structure of Atom - Solutions",
+        "title": "Structure of Atom",
         "pdfCode": "kech102_sol"
       },
       {
         "number": 3,
-        "title": "Classification of Elements and Periodicity in Properties - Solutions",
+        "title": "Classification of Elements and Periodicity in Properties",
         "pdfCode": "kech103_sol"
       },
       {
         "number": 4,
-        "title": "Chemical Bonding and Molecular Structure - Solutions",
+        "title": "Chemical Bonding and Molecular Structure",
         "pdfCode": "kech104_sol"
       },
       {
         "number": 5,
-        "title": "Thermodynamics - Solutions",
+        "title": "Thermodynamics",
         "pdfCode": "kech105_sol"
       },
       {
         "number": 6,
-        "title": "Equilibrium - Solutions",
+        "title": "Equilibrium",
         "pdfCode": "kech106_sol"
       }
     ],
@@ -4962,57 +4962,57 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Computing Machinery and Intelligence - Solutions",
+        "title": "Computing Machinery and Intelligence",
         "pdfCode": "kecs101_sol"
       },
       {
         "number": 2,
-        "title": "Data Representation - Solutions",
+        "title": "Data Representation",
         "pdfCode": "kecs102_sol"
       },
       {
         "number": 3,
-        "title": "Boolean Algebra - Solutions",
+        "title": "Boolean Algebra",
         "pdfCode": "kecs103_sol"
       },
       {
         "number": 4,
-        "title": "Number Systems - Solutions",
+        "title": "Number Systems",
         "pdfCode": "kecs104_sol"
       },
       {
         "number": 5,
-        "title": "Computer Fundamentals - Solutions",
+        "title": "Computer Fundamentals",
         "pdfCode": "kecs105_sol"
       },
       {
         "number": 6,
-        "title": "Programming Fundamentals - Solutions",
+        "title": "Programming Fundamentals",
         "pdfCode": "kecs106_sol"
       },
       {
         "number": 7,
-        "title": "Data Structures - Solutions",
+        "title": "Data Structures",
         "pdfCode": "kecs107_sol"
       },
       {
         "number": 8,
-        "title": "Database Concepts - Solutions",
+        "title": "Database Concepts",
         "pdfCode": "kecs108_sol"
       },
       {
         "number": 9,
-        "title": "Networking - Solutions",
+        "title": "Networking",
         "pdfCode": "kecs109_sol"
       },
       {
         "number": 10,
-        "title": "Societal Impacts - Solutions",
+        "title": "Societal Impacts",
         "pdfCode": "kecs110_sol"
       },
       {
         "number": 11,
-        "title": "Project - Solutions",
+        "title": "Project",
         "pdfCode": "kecs111_sol"
       }
     ],
@@ -5028,42 +5028,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Indian Economy in a Globalising World - Solutions",
+        "title": "The Indian Economy in a Globalising World",
         "pdfCode": "keec101_sol"
       },
       {
         "number": 2,
-        "title": "Economic Reforms since 1991 - Solutions",
+        "title": "Economic Reforms since 1991",
         "pdfCode": "keec102_sol"
       },
       {
         "number": 3,
-        "title": "Poverty - Solutions",
+        "title": "Poverty",
         "pdfCode": "keec103_sol"
       },
       {
         "number": 4,
-        "title": "Human Capital Formation in India - Solutions",
+        "title": "Human Capital Formation in India",
         "pdfCode": "keec104_sol"
       },
       {
         "number": 5,
-        "title": "Rural Development - Solutions",
+        "title": "Rural Development",
         "pdfCode": "keec105_sol"
       },
       {
         "number": 6,
-        "title": "Employment: Growth, Informalisation and Other Issues - Solutions",
+        "title": "Employment: Growth, Informalisation and Other Issues",
         "pdfCode": "keec106_sol"
       },
       {
         "number": 7,
-        "title": "Environment and Sustainable Development - Solutions",
+        "title": "Environment and Sustainable Development",
         "pdfCode": "keec107_sol"
       },
       {
         "number": 8,
-        "title": "Development Experience of India: A Comparison with Neighbours - Solutions",
+        "title": "Development Experience of India: A Comparison with Neighbours",
         "pdfCode": "keec108_sol"
       }
     ],
@@ -5079,42 +5079,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to Statistics - Solutions",
+        "title": "Introduction to Statistics",
         "pdfCode": "kest101_sol"
       },
       {
         "number": 2,
-        "title": "Collection of Data - Solutions",
+        "title": "Collection of Data",
         "pdfCode": "kest102_sol"
       },
       {
         "number": 3,
-        "title": "Organisation of Data - Solutions",
+        "title": "Organisation of Data",
         "pdfCode": "kest103_sol"
       },
       {
         "number": 4,
-        "title": "Presentation of Data - Solutions",
+        "title": "Presentation of Data",
         "pdfCode": "kest104_sol"
       },
       {
         "number": 5,
-        "title": "Measures of Central Tendency - Solutions",
+        "title": "Measures of Central Tendency",
         "pdfCode": "kest105_sol"
       },
       {
         "number": 6,
-        "title": "Measures of Dispersion - Solutions",
+        "title": "Measures of Dispersion",
         "pdfCode": "kest106_sol"
       },
       {
         "number": 7,
-        "title": "Correlation - Solutions",
+        "title": "Correlation",
         "pdfCode": "kest107_sol"
       },
       {
         "number": 8,
-        "title": "Index Numbers - Solutions",
+        "title": "Index Numbers",
         "pdfCode": "kest108_sol"
       }
     ],
@@ -5130,52 +5130,52 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Portrait of a Lady - Solutions",
+        "title": "The Portrait of a Lady",
         "pdfCode": "kehb101_sol"
       },
       {
         "number": 2,
-        "title": "We're Not Afraid to Die... if We Can All Be Together - Solutions",
+        "title": "We're Not Afraid to Die... if We Can All Be Together",
         "pdfCode": "kehb102_sol"
       },
       {
         "number": 3,
-        "title": "Discovering Tut: the Saga Continues - Solutions",
+        "title": "Discovering Tut: the Saga Continues",
         "pdfCode": "kehb103_sol"
       },
       {
         "number": 4,
-        "title": "The Ailing Planet: the Green Movement's Role - Solutions",
+        "title": "The Ailing Planet: the Green Movement's Role",
         "pdfCode": "kehb104_sol"
       },
       {
         "number": 5,
-        "title": "The Adventure - Solutions",
+        "title": "The Adventure",
         "pdfCode": "kehb105_sol"
       },
       {
         "number": 6,
-        "title": "Silk Road - Solutions",
+        "title": "Silk Road",
         "pdfCode": "kehb106_sol"
       },
       {
         "number": 7,
-        "title": "Note-making - Solutions",
+        "title": "Note-making",
         "pdfCode": "kehb111_sol"
       },
       {
         "number": 8,
-        "title": "Summarising - Solutions",
+        "title": "Summarising",
         "pdfCode": "kehb112_sol"
       },
       {
         "number": 9,
-        "title": "Sub-titling - Solutions",
+        "title": "Sub-titling",
         "pdfCode": "kehb113_sol"
       },
       {
         "number": 10,
-        "title": "Essay-writing - Solutions",
+        "title": "Essay-writing",
         "pdfCode": "kehb114_sol"
       }
     ],
@@ -5191,27 +5191,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Summer of the Beautiful White Horse - Solutions",
+        "title": "The Summer of the Beautiful White Horse",
         "pdfCode": "kesp101_sol"
       },
       {
         "number": 2,
-        "title": "The Address - Solutions",
+        "title": "The Address",
         "pdfCode": "kesp102_sol"
       },
       {
         "number": 3,
-        "title": "Mother's Day - Solutions",
+        "title": "Mother's Day",
         "pdfCode": "kesp103_sol"
       },
       {
         "number": 4,
-        "title": "Birth - Solutions",
+        "title": "Birth",
         "pdfCode": "kesp104_sol"
       },
       {
         "number": 5,
-        "title": "The Tale of Melon City - Solutions",
+        "title": "The Tale of Melon City",
         "pdfCode": "kesp105_sol"
       }
     ],
@@ -5227,102 +5227,102 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Lament - Solutions",
+        "title": "The Lament",
         "pdfCode": "keww101_sol"
       },
       {
         "number": 2,
-        "title": "A Pair of Mustachios - Solutions",
+        "title": "A Pair of Mustachios",
         "pdfCode": "keww102_sol"
       },
       {
         "number": 3,
-        "title": "The Rocking-horse Winner - Solutions",
+        "title": "The Rocking-horse Winner",
         "pdfCode": "keww103_sol"
       },
       {
         "number": 4,
-        "title": "The Adventure of the Three Garridebs - Solutions",
+        "title": "The Adventure of the Three Garridebs",
         "pdfCode": "keww104_sol"
       },
       {
         "number": 5,
-        "title": "Pappachi's Moth - Solutions",
+        "title": "Pappachi's Moth",
         "pdfCode": "keww105_sol"
       },
       {
         "number": 6,
-        "title": "The Third and Final Continent - Solutions",
+        "title": "The Third and Final Continent",
         "pdfCode": "keww106_sol"
       },
       {
         "number": 7,
-        "title": "Glory at Twilight - Solutions",
+        "title": "Glory at Twilight",
         "pdfCode": "keww107_sol"
       },
       {
         "number": 8,
-        "title": "The Luncheon - Solutions",
+        "title": "The Luncheon",
         "pdfCode": "keww108_sol"
       },
       {
         "number": 9,
-        "title": "The Peacock - Solutions",
+        "title": "The Peacock",
         "pdfCode": "keww111_sol"
       },
       {
         "number": 10,
-        "title": "Let Me Not to the Marriage of True Minds - Solutions",
+        "title": "Let Me Not to the Marriage of True Minds",
         "pdfCode": "keww112_sol"
       },
       {
         "number": 11,
-        "title": "Coming - Solutions",
+        "title": "Coming",
         "pdfCode": "keww113_sol"
       },
       {
         "number": 12,
-        "title": "Telephone Conversation - Solutions",
+        "title": "Telephone Conversation",
         "pdfCode": "keww114_sol"
       },
       {
         "number": 13,
-        "title": "The World Is Too Much with Us - Solutions",
+        "title": "The World Is Too Much with Us",
         "pdfCode": "keww115_sol"
       },
       {
         "number": 14,
-        "title": "Mother Tongue - Solutions",
+        "title": "Mother Tongue",
         "pdfCode": "keww116_sol"
       },
       {
         "number": 15,
-        "title": "Hawk Roosting - Solutions",
+        "title": "Hawk Roosting",
         "pdfCode": "keww117_sol"
       },
       {
         "number": 16,
-        "title": "Ode to a Nightingale - Solutions",
+        "title": "Ode to a Nightingale",
         "pdfCode": "keww118_sol"
       },
       {
         "number": 17,
-        "title": "My Watch - Solutions",
+        "title": "My Watch",
         "pdfCode": "keww119_sol"
       },
       {
         "number": 18,
-        "title": "My Three Passions - Solutions",
+        "title": "My Three Passions",
         "pdfCode": "keww120_sol"
       },
       {
         "number": 19,
-        "title": "Patterns of Creativity - Solutions",
+        "title": "Patterns of Creativity",
         "pdfCode": "keww121_sol"
       },
       {
         "number": 20,
-        "title": "Tribal Verse - Solutions",
+        "title": "Tribal Verse",
         "pdfCode": "keww122_sol"
       }
     ],
@@ -5338,42 +5338,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "An Introduction to Indian Art - Solutions",
+        "title": "An Introduction to Indian Art",
         "pdfCode": "kefa101_sol"
       },
       {
         "number": 2,
-        "title": "Indus Valley Civilization - Solutions",
+        "title": "Indus Valley Civilization",
         "pdfCode": "kefa102_sol"
       },
       {
         "number": 3,
-        "title": "Buddhist and Jain Art - Solutions",
+        "title": "Buddhist and Jain Art",
         "pdfCode": "kefa103_sol"
       },
       {
         "number": 4,
-        "title": "Cave Paintings - Solutions",
+        "title": "Cave Paintings",
         "pdfCode": "kefa104_sol"
       },
       {
         "number": 5,
-        "title": "Temple Architecture - Solutions",
+        "title": "Temple Architecture",
         "pdfCode": "kefa105_sol"
       },
       {
         "number": 6,
-        "title": "Sculpture - Solutions",
+        "title": "Sculpture",
         "pdfCode": "kefa106_sol"
       },
       {
         "number": 7,
-        "title": "Bronze and Metal Art - Solutions",
+        "title": "Bronze and Metal Art",
         "pdfCode": "kefa107_sol"
       },
       {
         "number": 8,
-        "title": "Indian Painting - Solutions",
+        "title": "Indian Painting",
         "pdfCode": "kefa108_sol"
       }
     ],
@@ -5389,72 +5389,72 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Earth in the Solar System - Solutions",
+        "title": "The Earth in the Solar System",
         "pdfCode": "kegy201_sol"
       },
       {
         "number": 2,
-        "title": "Globe: Latitudes and Longitudes - Solutions",
+        "title": "Globe: Latitudes and Longitudes",
         "pdfCode": "kegy202_sol"
       },
       {
         "number": 3,
-        "title": "Motions of the Earth - Solutions",
+        "title": "Motions of the Earth",
         "pdfCode": "kegy203_sol"
       },
       {
         "number": 4,
-        "title": "Maps - Solutions",
+        "title": "Maps",
         "pdfCode": "kegy204_sol"
       },
       {
         "number": 5,
-        "title": "Major Domains of the Earth - Solutions",
+        "title": "Major Domains of the Earth",
         "pdfCode": "kegy205_sol"
       },
       {
         "number": 6,
-        "title": "Major Landforms of the Earth - Solutions",
+        "title": "Major Landforms of the Earth",
         "pdfCode": "kegy206_sol"
       },
       {
         "number": 7,
-        "title": "Our Country – India - Solutions",
+        "title": "Our Country – India",
         "pdfCode": "kegy207_sol"
       },
       {
         "number": 8,
-        "title": "India: Climate - Solutions",
+        "title": "India: Climate",
         "pdfCode": "kegy208_sol"
       },
       {
         "number": 9,
-        "title": "India: Vegetation - Solutions",
+        "title": "India: Vegetation",
         "pdfCode": "kegy209_sol"
       },
       {
         "number": 10,
-        "title": "Drainage - Solutions",
+        "title": "Drainage",
         "pdfCode": "kegy210_sol"
       },
       {
         "number": 11,
-        "title": "Environment - Solutions",
+        "title": "Environment",
         "pdfCode": "kegy211_sol"
       },
       {
         "number": 12,
-        "title": "Human – Environment Interaction - Solutions",
+        "title": "Human – Environment Interaction",
         "pdfCode": "kegy212_sol"
       },
       {
         "number": 13,
-        "title": "Natural Hazards and Disasters - Solutions",
+        "title": "Natural Hazards and Disasters",
         "pdfCode": "kegy213_sol"
       },
       {
         "number": 14,
-        "title": "Human Geography: Nature and Scope - Solutions",
+        "title": "Human Geography: Nature and Scope",
         "pdfCode": "kegy214_sol"
       }
     ],
@@ -5470,32 +5470,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "India: Location - Solutions",
+        "title": "India: Location",
         "pdfCode": "kegy101_sol"
       },
       {
         "number": 2,
-        "title": "India: Physiography - Solutions",
+        "title": "India: Physiography",
         "pdfCode": "kegy102_sol"
       },
       {
         "number": 3,
-        "title": "India: Drainage - Solutions",
+        "title": "India: Drainage",
         "pdfCode": "kegy103_sol"
       },
       {
         "number": 4,
-        "title": "India: Climate - Solutions",
+        "title": "India: Climate",
         "pdfCode": "kegy104_sol"
       },
       {
         "number": 5,
-        "title": "India: Natural Vegetation - Solutions",
+        "title": "India: Natural Vegetation",
         "pdfCode": "kegy105_sol"
       },
       {
         "number": 6,
-        "title": "India: Population - Solutions",
+        "title": "India: Population",
         "pdfCode": "kegy106_sol"
       }
     ],
@@ -5511,32 +5511,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Map Reading and Field Surveys - Solutions",
+        "title": "Map Reading and Field Surveys",
         "pdfCode": "kegy301_sol"
       },
       {
         "number": 2,
-        "title": "Data Collection and Processing - Solutions",
+        "title": "Data Collection and Processing",
         "pdfCode": "kegy302_sol"
       },
       {
         "number": 3,
-        "title": "Graphical Representation of Data - Solutions",
+        "title": "Graphical Representation of Data",
         "pdfCode": "kegy303_sol"
       },
       {
         "number": 4,
-        "title": "Spatial Analysis Techniques - Solutions",
+        "title": "Spatial Analysis Techniques",
         "pdfCode": "kegy304_sol"
       },
       {
         "number": 5,
-        "title": "Field Study Methods - Solutions",
+        "title": "Field Study Methods",
         "pdfCode": "kegy305_sol"
       },
       {
         "number": 6,
-        "title": "Application of GIS in Geography - Solutions",
+        "title": "Application of GIS in Geography",
         "pdfCode": "kegy306_sol"
       }
     ],
@@ -5552,57 +5552,57 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Physical Education - Solutions",
+        "title": "Physical Education",
         "pdfCode": "kehp101_sol"
       },
       {
         "number": 2,
-        "title": "Understanding Health - Solutions",
+        "title": "Understanding Health",
         "pdfCode": "kehp102_sol"
       },
       {
         "number": 3,
-        "title": "Physical and Physiological Aspects of Physical Education and Sports - Solutions",
+        "title": "Physical and Physiological Aspects of Physical Education and Sports",
         "pdfCode": "kehp103_sol"
       },
       {
         "number": 4,
-        "title": "Individual Games - Solutions",
+        "title": "Individual Games",
         "pdfCode": "kehp104_sol"
       },
       {
         "number": 5,
-        "title": "Team Games - Solutions",
+        "title": "Team Games",
         "pdfCode": "kehp105_sol"
       },
       {
         "number": 6,
-        "title": "Yoga and its Relevance in the Modern Times - Solutions",
+        "title": "Yoga and its Relevance in the Modern Times",
         "pdfCode": "kehp106_sol"
       },
       {
         "number": 7,
-        "title": "Safety and Security - Solutions",
+        "title": "Safety and Security",
         "pdfCode": "kehp107_sol"
       },
       {
         "number": 8,
-        "title": "Health Related Physical Fitness - Solutions",
+        "title": "Health Related Physical Fitness",
         "pdfCode": "kehp108_sol"
       },
       {
         "number": 9,
-        "title": "Measurement and Evaluation - Solutions",
+        "title": "Measurement and Evaluation",
         "pdfCode": "kehp109_sol"
       },
       {
         "number": 10,
-        "title": "Tournaments and Competitions - Solutions",
+        "title": "Tournaments and Competitions",
         "pdfCode": "kehp110_sol"
       },
       {
         "number": 11,
-        "title": "Adventure Sports - Solutions",
+        "title": "Adventure Sports",
         "pdfCode": "kehp111_sol"
       }
     ],
@@ -5618,37 +5618,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "From the Beginning of Time - Solutions",
+        "title": "From the Beginning of Time",
         "pdfCode": "kehs101_sol"
       },
       {
         "number": 2,
-        "title": "Writing and City Life - Solutions",
+        "title": "Writing and City Life",
         "pdfCode": "kehs102_sol"
       },
       {
         "number": 3,
-        "title": "An Empire Across Three Continents - Solutions",
+        "title": "An Empire Across Three Continents",
         "pdfCode": "kehs103_sol"
       },
       {
         "number": 4,
-        "title": "The Central Islamic Lands - Solutions",
+        "title": "The Central Islamic Lands",
         "pdfCode": "kehs104_sol"
       },
       {
         "number": 5,
-        "title": "Nomadic Empires - Solutions",
+        "title": "Nomadic Empires",
         "pdfCode": "kehs105_sol"
       },
       {
         "number": 6,
-        "title": "The Three Orders - Solutions",
+        "title": "The Three Orders",
         "pdfCode": "kehs106_sol"
       },
       {
         "number": 7,
-        "title": "Changing Cultural Traditions - Solutions",
+        "title": "Changing Cultural Traditions",
         "pdfCode": "kehs107_sol"
       }
     ],
@@ -5664,37 +5664,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to Human Ecology - Solutions",
+        "title": "Introduction to Human Ecology",
         "pdfCode": "kehe101_sol"
       },
       {
         "number": 2,
-        "title": "Understanding the Self - Solutions",
+        "title": "Understanding the Self",
         "pdfCode": "kehe102_sol"
       },
       {
         "number": 3,
-        "title": "Food, Nutrition, Health and Fitness - Solutions",
+        "title": "Food, Nutrition, Health and Fitness",
         "pdfCode": "kehe103_sol"
       },
       {
         "number": 4,
-        "title": "Management of Resources - Solutions",
+        "title": "Management of Resources",
         "pdfCode": "kehe104_sol"
       },
       {
         "number": 5,
-        "title": "Fabrics Around Us - Solutions",
+        "title": "Fabrics Around Us",
         "pdfCode": "kehe105_sol"
       },
       {
         "number": 6,
-        "title": "Media and Communication Technology - Solutions",
+        "title": "Media and Communication Technology",
         "pdfCode": "kehe106_sol"
       },
       {
         "number": 7,
-        "title": "Concerns and Needs in Diverse Contexts - Solutions",
+        "title": "Concerns and Needs in Diverse Contexts",
         "pdfCode": "kehe107_sol"
       }
     ],
@@ -5710,22 +5710,22 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Development of Human Ecology - Solutions",
+        "title": "Development of Human Ecology",
         "pdfCode": "kehe201_sol"
       },
       {
         "number": 2,
-        "title": "Gender Issues - Solutions",
+        "title": "Gender Issues",
         "pdfCode": "kehe202_sol"
       },
       {
         "number": 3,
-        "title": "Education - Solutions",
+        "title": "Education",
         "pdfCode": "kehe203_sol"
       },
       {
         "number": 4,
-        "title": "Health - Solutions",
+        "title": "Health",
         "pdfCode": "kehe204_sol"
       }
     ],
@@ -5741,42 +5741,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to Computer Systems - Solutions",
+        "title": "Introduction to Computer Systems",
         "pdfCode": "keip101_sol"
       },
       {
         "number": 2,
-        "title": "Introduction to Python - Solutions",
+        "title": "Introduction to Python",
         "pdfCode": "keip102_sol"
       },
       {
         "number": 3,
-        "title": "Python Fundamentals - Solutions",
+        "title": "Python Fundamentals",
         "pdfCode": "keip103_sol"
       },
       {
         "number": 4,
-        "title": "Data Types and Operations - Solutions",
+        "title": "Data Types and Operations",
         "pdfCode": "keip104_sol"
       },
       {
         "number": 5,
-        "title": "Flow of Control - Solutions",
+        "title": "Flow of Control",
         "pdfCode": "keip105_sol"
       },
       {
         "number": 6,
-        "title": "Functions - Solutions",
+        "title": "Functions",
         "pdfCode": "keip106_sol"
       },
       {
         "number": 7,
-        "title": "Lists - Solutions",
+        "title": "Lists",
         "pdfCode": "keip107_sol"
       },
       {
         "number": 8,
-        "title": "Tuples and Dictionaries - Solutions",
+        "title": "Tuples and Dictionaries",
         "pdfCode": "keip108_sol"
       }
     ],
@@ -5792,47 +5792,47 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Language and Literature of India - Solutions",
+        "title": "Language and Literature of India",
         "pdfCode": "keks101_sol"
       },
       {
         "number": 2,
-        "title": "Indian Philosophical Systems - Solutions",
+        "title": "Indian Philosophical Systems",
         "pdfCode": "keks102_sol"
       },
       {
         "number": 3,
-        "title": "Performing Art Traditions in India - Solutions",
+        "title": "Performing Art Traditions in India",
         "pdfCode": "keks103_sol"
       },
       {
         "number": 4,
-        "title": "Indian Art and Architecture - Solutions",
+        "title": "Indian Art and Architecture",
         "pdfCode": "keks104_sol"
       },
       {
         "number": 5,
-        "title": "Astronomy in India - Solutions",
+        "title": "Astronomy in India",
         "pdfCode": "keks105_sol"
       },
       {
         "number": 6,
-        "title": "Mathematics in India - Solutions",
+        "title": "Mathematics in India",
         "pdfCode": "keks106_sol"
       },
       {
         "number": 7,
-        "title": "Introducing Ayurveda: the Science of Health and Disease - Solutions",
+        "title": "Introducing Ayurveda: the Science of Health and Disease",
         "pdfCode": "keks107_sol"
       },
       {
         "number": 8,
-        "title": "Chemistry and Metallurgy in India - Solutions",
+        "title": "Chemistry and Metallurgy in India",
         "pdfCode": "keks108_sol"
       },
       {
         "number": 9,
-        "title": "Yoga - Solutions",
+        "title": "Yoga",
         "pdfCode": "keks109_sol"
       }
     ],
@@ -5848,72 +5848,72 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Sets - Solutions",
+        "title": "Sets",
         "pdfCode": "kemh101_sol"
       },
       {
         "number": 2,
-        "title": "Relations and Functions - Solutions",
+        "title": "Relations and Functions",
         "pdfCode": "kemh102_sol"
       },
       {
         "number": 3,
-        "title": "Trigonometric Functions - Solutions",
+        "title": "Trigonometric Functions",
         "pdfCode": "kemh103_sol"
       },
       {
         "number": 4,
-        "title": "Complex Numbers and Quadratic Equations - Solutions",
+        "title": "Complex Numbers and Quadratic Equations",
         "pdfCode": "kemh104_sol"
       },
       {
         "number": 5,
-        "title": "Linear Inequalities - Solutions",
+        "title": "Linear Inequalities",
         "pdfCode": "kemh105_sol"
       },
       {
         "number": 6,
-        "title": "Permutations and Combinations - Solutions",
+        "title": "Permutations and Combinations",
         "pdfCode": "kemh106_sol"
       },
       {
         "number": 7,
-        "title": "Binomial Theorem - Solutions",
+        "title": "Binomial Theorem",
         "pdfCode": "kemh107_sol"
       },
       {
         "number": 8,
-        "title": "Sequences and Series - Solutions",
+        "title": "Sequences and Series",
         "pdfCode": "kemh108_sol"
       },
       {
         "number": 9,
-        "title": "Straight Lines - Solutions",
+        "title": "Straight Lines",
         "pdfCode": "kemh109_sol"
       },
       {
         "number": 10,
-        "title": "Conic Sections - Solutions",
+        "title": "Conic Sections",
         "pdfCode": "kemh110_sol"
       },
       {
         "number": 11,
-        "title": "Introduction to Three Dimensional Geometry - Solutions",
+        "title": "Introduction to Three Dimensional Geometry",
         "pdfCode": "kemh111_sol"
       },
       {
         "number": 12,
-        "title": "Limits and Derivatives - Solutions",
+        "title": "Limits and Derivatives",
         "pdfCode": "kemh112_sol"
       },
       {
         "number": 13,
-        "title": "Statistics - Solutions",
+        "title": "Statistics",
         "pdfCode": "kemh113_sol"
       },
       {
         "number": 14,
-        "title": "Probability - Solutions",
+        "title": "Probability",
         "pdfCode": "kemh114_sol"
       }
     ],
@@ -5929,37 +5929,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Units and Measurements - Solutions",
+        "title": "Units and Measurements",
         "pdfCode": "keph101_sol"
       },
       {
         "number": 2,
-        "title": "Motion in a Straight Line - Solutions",
+        "title": "Motion in a Straight Line",
         "pdfCode": "keph102_sol"
       },
       {
         "number": 3,
-        "title": "Motion in a Plane - Solutions",
+        "title": "Motion in a Plane",
         "pdfCode": "keph103_sol"
       },
       {
         "number": 4,
-        "title": "Laws of Motion - Solutions",
+        "title": "Laws of Motion",
         "pdfCode": "keph104_sol"
       },
       {
         "number": 5,
-        "title": "Work, Energy and Power - Solutions",
+        "title": "Work, Energy and Power",
         "pdfCode": "keph105_sol"
       },
       {
         "number": 6,
-        "title": "System of Particles and Rotational Motion - Solutions",
+        "title": "System of Particles and Rotational Motion",
         "pdfCode": "keph106_sol"
       },
       {
         "number": 7,
-        "title": "Gravitation - Solutions",
+        "title": "Gravitation",
         "pdfCode": "keph107_sol"
       }
     ],
@@ -5975,37 +5975,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 8,
-        "title": "Mechanical Properties of Solids - Solutions",
+        "title": "Mechanical Properties of Solids",
         "pdfCode": "keph201_sol"
       },
       {
         "number": 9,
-        "title": "Mechanical Properties of Fluids - Solutions",
+        "title": "Mechanical Properties of Fluids",
         "pdfCode": "keph202_sol"
       },
       {
         "number": 10,
-        "title": "Mechanical Properties of Solids - Solutions",
+        "title": "Mechanical Properties of Solids",
         "pdfCode": "keph203_sol"
       },
       {
         "number": 11,
-        "title": "Thermodynamics - Solutions",
+        "title": "Thermodynamics",
         "pdfCode": "keph204_sol"
       },
       {
         "number": 12,
-        "title": "Kinetic Theory - Solutions",
+        "title": "Kinetic Theory",
         "pdfCode": "keph205_sol"
       },
       {
         "number": 13,
-        "title": "Oscillations - Solutions",
+        "title": "Oscillations",
         "pdfCode": "keph206_sol"
       },
       {
         "number": 14,
-        "title": "Waves - Solutions",
+        "title": "Waves",
         "pdfCode": "keph207_sol"
       }
     ],
@@ -6021,52 +6021,52 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Computer System - Solutions",
+        "title": "Computer System",
         "pdfCode": "keps201_sol"
       },
       {
         "number": 2,
-        "title": "Encoding Schemes and Number System - Solutions",
+        "title": "Encoding Schemes and Number System",
         "pdfCode": "keps202_sol"
       },
       {
         "number": 3,
-        "title": "Emerging Trends - Solutions",
+        "title": "Emerging Trends",
         "pdfCode": "keps203_sol"
       },
       {
         "number": 4,
-        "title": "Introduction to Problem Solving - Solutions",
+        "title": "Introduction to Problem Solving",
         "pdfCode": "keps204_sol"
       },
       {
         "number": 5,
-        "title": "Getting Started with Python - Solutions",
+        "title": "Getting Started with Python",
         "pdfCode": "keps205_sol"
       },
       {
         "number": 6,
-        "title": "Flow of Control - Solutions",
+        "title": "Flow of Control",
         "pdfCode": "keps206_sol"
       },
       {
         "number": 7,
-        "title": "Functions - Solutions",
+        "title": "Functions",
         "pdfCode": "keps207_sol"
       },
       {
         "number": 8,
-        "title": "Strings - Solutions",
+        "title": "Strings",
         "pdfCode": "keps208_sol"
       },
       {
         "number": 9,
-        "title": "Lists - Solutions",
+        "title": "Lists",
         "pdfCode": "keps209_sol"
       },
       {
         "number": 10,
-        "title": "Tuples and Dictionaries - Solutions",
+        "title": "Tuples and Dictionaries",
         "pdfCode": "keps210_sol"
       }
     ],
@@ -6082,42 +6082,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Political Theory: An Introduction - Solutions",
+        "title": "Political Theory: An Introduction",
         "pdfCode": "keps101_sol"
       },
       {
         "number": 2,
-        "title": "Freedom - Solutions",
+        "title": "Freedom",
         "pdfCode": "keps102_sol"
       },
       {
         "number": 3,
-        "title": "Equality - Solutions",
+        "title": "Equality",
         "pdfCode": "keps103_sol"
       },
       {
         "number": 4,
-        "title": "Social Justice - Solutions",
+        "title": "Social Justice",
         "pdfCode": "keps104_sol"
       },
       {
         "number": 5,
-        "title": "Rights - Solutions",
+        "title": "Rights",
         "pdfCode": "keps105_sol"
       },
       {
         "number": 6,
-        "title": "Citizenship - Solutions",
+        "title": "Citizenship",
         "pdfCode": "keps106_sol"
       },
       {
         "number": 7,
-        "title": "Nationalism - Solutions",
+        "title": "Nationalism",
         "pdfCode": "keps107_sol"
       },
       {
         "number": 8,
-        "title": "Secularism - Solutions",
+        "title": "Secularism",
         "pdfCode": "keps108_sol"
       }
     ],
@@ -6133,42 +6133,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "What is Psychology? - Solutions",
+        "title": "What is Psychology?",
         "pdfCode": "kepy101_sol"
       },
       {
         "number": 2,
-        "title": "Methods of Enquiry in Psychology - Solutions",
+        "title": "Methods of Enquiry in Psychology",
         "pdfCode": "kepy102_sol"
       },
       {
         "number": 3,
-        "title": "The Bases of Human Behaviour - Solutions",
+        "title": "The Bases of Human Behaviour",
         "pdfCode": "kepy103_sol"
       },
       {
         "number": 4,
-        "title": "Human Development - Solutions",
+        "title": "Human Development",
         "pdfCode": "kepy104_sol"
       },
       {
         "number": 5,
-        "title": "Sensory, Attentional and Perceptual Processes - Solutions",
+        "title": "Sensory, Attentional and Perceptual Processes",
         "pdfCode": "kepy105_sol"
       },
       {
         "number": 6,
-        "title": "Learning - Solutions",
+        "title": "Learning",
         "pdfCode": "kepy106_sol"
       },
       {
         "number": 7,
-        "title": "Human Memory - Solutions",
+        "title": "Human Memory",
         "pdfCode": "kepy107_sol"
       },
       {
         "number": 8,
-        "title": "Thinking - Solutions",
+        "title": "Thinking",
         "pdfCode": "kepy108_sol"
       }
     ],
@@ -6184,27 +6184,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Sociology and Society - Solutions",
+        "title": "Sociology and Society",
         "pdfCode": "kesy101_sol"
       },
       {
         "number": 2,
-        "title": "Social Institutions - Solutions",
+        "title": "Social Institutions",
         "pdfCode": "kesy102_sol"
       },
       {
         "number": 3,
-        "title": "Social Stratification - Solutions",
+        "title": "Social Stratification",
         "pdfCode": "kesy103_sol"
       },
       {
         "number": 4,
-        "title": "Social Change in Modern India - Solutions",
+        "title": "Social Change in Modern India",
         "pdfCode": "kesy104_sol"
       },
       {
         "number": 5,
-        "title": "Cultural Change - Solutions",
+        "title": "Cultural Change",
         "pdfCode": "kesy105_sol"
       }
     ],
@@ -6220,27 +6220,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introducing Sociology - Solutions",
+        "title": "Introducing Sociology",
         "pdfCode": "kesy201_sol"
       },
       {
         "number": 2,
-        "title": "Social Structure, Stratification and Social Processes in Society - Solutions",
+        "title": "Social Structure, Stratification and Social Processes in Society",
         "pdfCode": "kesy202_sol"
       },
       {
         "number": 3,
-        "title": "Culture and Socialisation - Solutions",
+        "title": "Culture and Socialisation",
         "pdfCode": "kesy203_sol"
       },
       {
         "number": 4,
-        "title": "Society: Structure and Change - Solutions",
+        "title": "Society: Structure and Change",
         "pdfCode": "kesy204_sol"
       },
       {
         "number": 5,
-        "title": "Introducing Indian Society - Solutions",
+        "title": "Introducing Indian Society",
         "pdfCode": "kesy205_sol"
       }
     ],
@@ -6256,32 +6256,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Accounting for Share Capital - Solutions",
+        "title": "Accounting for Share Capital",
         "pdfCode": "leac201_sol"
       },
       {
         "number": 2,
-        "title": "Accounting for Debentures - Solutions",
+        "title": "Accounting for Debentures",
         "pdfCode": "leac202_sol"
       },
       {
         "number": 3,
-        "title": "Financial Statements of a Company - Solutions",
+        "title": "Financial Statements of a Company",
         "pdfCode": "leac203_sol"
       },
       {
         "number": 4,
-        "title": "Analysis of Financial Statements - Solutions",
+        "title": "Analysis of Financial Statements",
         "pdfCode": "leac204_sol"
       },
       {
         "number": 5,
-        "title": "Accounting Ratios - Solutions",
+        "title": "Accounting Ratios",
         "pdfCode": "leac205_sol"
       },
       {
         "number": 6,
-        "title": "Cash Flow Statement - Solutions",
+        "title": "Cash Flow Statement",
         "pdfCode": "leac206_sol"
       }
     ],
@@ -6297,22 +6297,22 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Accounting Not-for-Profit Organisation - Solutions",
+        "title": "Accounting Not-for-Profit Organisation",
         "pdfCode": "leac101_sol"
       },
       {
         "number": 2,
-        "title": "Accounting for Partnership Firms - Solutions",
+        "title": "Accounting for Partnership Firms",
         "pdfCode": "leac102_sol"
       },
       {
         "number": 3,
-        "title": "Reconstitution of a Partnership Firm - Solutions",
+        "title": "Reconstitution of a Partnership Firm",
         "pdfCode": "leac103_sol"
       },
       {
         "number": 4,
-        "title": "Dissolution of Partnership Firm - Solutions",
+        "title": "Dissolution of Partnership Firm",
         "pdfCode": "leac104_sol"
       }
     ],
@@ -6328,22 +6328,22 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to Computerised Accounting - Solutions",
+        "title": "Introduction to Computerised Accounting",
         "pdfCode": "leca101_sol"
       },
       {
         "number": 2,
-        "title": "Concepts of Database Management - Solutions",
+        "title": "Concepts of Database Management",
         "pdfCode": "leca102_sol"
       },
       {
         "number": 3,
-        "title": "Using a Computerised Accounting System - Solutions",
+        "title": "Using a Computerised Accounting System",
         "pdfCode": "leca103_sol"
       },
       {
         "number": 4,
-        "title": "Accounting Using Database Management Systems - Solutions",
+        "title": "Accounting Using Database Management Systems",
         "pdfCode": "leca104_sol"
       }
     ],
@@ -6359,67 +6359,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Sexual Reproduction in Flowering Plants - Solutions",
+        "title": "Sexual Reproduction in Flowering Plants",
         "pdfCode": "lebo101_sol"
       },
       {
         "number": 2,
-        "title": "Human Reproduction - Solutions",
+        "title": "Human Reproduction",
         "pdfCode": "lebo102_sol"
       },
       {
         "number": 3,
-        "title": "Reproductive Health - Solutions",
+        "title": "Reproductive Health",
         "pdfCode": "lebo103_sol"
       },
       {
         "number": 4,
-        "title": "Principles of Inheritance and Variation - Solutions",
+        "title": "Principles of Inheritance and Variation",
         "pdfCode": "lebo104_sol"
       },
       {
         "number": 5,
-        "title": "Molecular Basis of Inheritance - Solutions",
+        "title": "Molecular Basis of Inheritance",
         "pdfCode": "lebo105_sol"
       },
       {
         "number": 6,
-        "title": "Evolution - Solutions",
+        "title": "Evolution",
         "pdfCode": "lebo106_sol"
       },
       {
         "number": 7,
-        "title": "Human Health and Disease - Solutions",
+        "title": "Human Health and Disease",
         "pdfCode": "lebo107_sol"
       },
       {
         "number": 8,
-        "title": "Microbes in Human Welfare - Solutions",
+        "title": "Microbes in Human Welfare",
         "pdfCode": "lebo108_sol"
       },
       {
         "number": 9,
-        "title": "Biotechnology: Principles and Processes - Solutions",
+        "title": "Biotechnology: Principles and Processes",
         "pdfCode": "lebo109_sol"
       },
       {
         "number": 10,
-        "title": "Biotechnology and its Applications - Solutions",
+        "title": "Biotechnology and its Applications",
         "pdfCode": "lebo110_sol"
       },
       {
         "number": 11,
-        "title": "Organisms and Populations - Solutions",
+        "title": "Organisms and Populations",
         "pdfCode": "lebo111_sol"
       },
       {
         "number": 12,
-        "title": "Ecosystem - Solutions",
+        "title": "Ecosystem",
         "pdfCode": "lebo112_sol"
       },
       {
         "number": 13,
-        "title": "Biodiversity and Conservation - Solutions",
+        "title": "Biodiversity and Conservation",
         "pdfCode": "lebo113_sol"
       }
     ],
@@ -6435,67 +6435,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Nature and Significance of Management - Solutions",
+        "title": "Nature and Significance of Management",
         "pdfCode": "lebt101_sol"
       },
       {
         "number": 2,
-        "title": "Principles of Management - Solutions",
+        "title": "Principles of Management",
         "pdfCode": "lebt102_sol"
       },
       {
         "number": 3,
-        "title": "Business Environment - Solutions",
+        "title": "Business Environment",
         "pdfCode": "lebt103_sol"
       },
       {
         "number": 4,
-        "title": "Planning - Solutions",
+        "title": "Planning",
         "pdfCode": "lebt104_sol"
       },
       {
         "number": 5,
-        "title": "Organising - Solutions",
+        "title": "Organising",
         "pdfCode": "lebt105_sol"
       },
       {
         "number": 6,
-        "title": "Staffing - Solutions",
+        "title": "Staffing",
         "pdfCode": "lebt106_sol"
       },
       {
         "number": 7,
-        "title": "Directing - Solutions",
+        "title": "Directing",
         "pdfCode": "lebt107_sol"
       },
       {
         "number": 8,
-        "title": "Controlling - Solutions",
+        "title": "Controlling",
         "pdfCode": "lebt108_sol"
       },
       {
         "number": 9,
-        "title": "Financial Management - Solutions",
+        "title": "Financial Management",
         "pdfCode": "lebt109_sol"
       },
       {
         "number": 10,
-        "title": "Financial Markets - Solutions",
+        "title": "Financial Markets",
         "pdfCode": "lebt110_sol"
       },
       {
         "number": 11,
-        "title": "Marketing Management - Solutions",
+        "title": "Marketing Management",
         "pdfCode": "lebt111_sol"
       },
       {
         "number": 12,
-        "title": "Consumer Protection - Solutions",
+        "title": "Consumer Protection",
         "pdfCode": "lebt112_sol"
       },
       {
         "number": 13,
-        "title": "Emerging Modes of Business - Solutions",
+        "title": "Emerging Modes of Business",
         "pdfCode": "lebt113_sol"
       }
     ],
@@ -6511,42 +6511,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Nature and Significance of Management - Solutions",
+        "title": "Nature and Significance of Management",
         "pdfCode": "lebs101_sol"
       },
       {
         "number": 2,
-        "title": "Principles of Management - Solutions",
+        "title": "Principles of Management",
         "pdfCode": "lebs102_sol"
       },
       {
         "number": 3,
-        "title": "Business Environment - Solutions",
+        "title": "Business Environment",
         "pdfCode": "lebs103_sol"
       },
       {
         "number": 4,
-        "title": "Planning - Solutions",
+        "title": "Planning",
         "pdfCode": "lebs104_sol"
       },
       {
         "number": 5,
-        "title": "Organising - Solutions",
+        "title": "Organising",
         "pdfCode": "lebs105_sol"
       },
       {
         "number": 6,
-        "title": "Staffing - Solutions",
+        "title": "Staffing",
         "pdfCode": "lebs106_sol"
       },
       {
         "number": 7,
-        "title": "Directing - Solutions",
+        "title": "Directing",
         "pdfCode": "lebs107_sol"
       },
       {
         "number": 8,
-        "title": "Controlling - Solutions",
+        "title": "Controlling",
         "pdfCode": "lebs108_sol"
       }
     ],
@@ -6562,17 +6562,17 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Financial Management - Solutions",
+        "title": "Financial Management",
         "pdfCode": "lebs201_sol"
       },
       {
         "number": 2,
-        "title": "Financial Markets - Solutions",
+        "title": "Financial Markets",
         "pdfCode": "lebs202_sol"
       },
       {
         "number": 3,
-        "title": "Marketing Management - Solutions",
+        "title": "Marketing Management",
         "pdfCode": "lebs203_sol"
       }
     ],
@@ -6588,27 +6588,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Solutions - Solutions",
+        "title": "Solutions",
         "pdfCode": "lech101_sol"
       },
       {
         "number": 2,
-        "title": "Electrochemistry - Solutions",
+        "title": "Electrochemistry",
         "pdfCode": "lech102_sol"
       },
       {
         "number": 3,
-        "title": "Chemical Kinetics - Solutions",
+        "title": "Chemical Kinetics",
         "pdfCode": "lech103_sol"
       },
       {
         "number": 4,
-        "title": "The d- and f-Block Elements - Solutions",
+        "title": "The d- and f-Block Elements",
         "pdfCode": "lech104_sol"
       },
       {
         "number": 5,
-        "title": "Coordination Compounds - Solutions",
+        "title": "Coordination Compounds",
         "pdfCode": "lech105_sol"
       }
     ],
@@ -6624,27 +6624,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 6,
-        "title": "Haloalkanes and Haloarenes - Solutions",
+        "title": "Haloalkanes and Haloarenes",
         "pdfCode": "lech201_sol"
       },
       {
         "number": 7,
-        "title": "Alcohols, Phenols and Ethers - Solutions",
+        "title": "Alcohols, Phenols and Ethers",
         "pdfCode": "lech202_sol"
       },
       {
         "number": 8,
-        "title": "Aldehydes, Ketones and Carboxylic Acids - Solutions",
+        "title": "Aldehydes, Ketones and Carboxylic Acids",
         "pdfCode": "lech203_sol"
       },
       {
         "number": 9,
-        "title": "Amines - Solutions",
+        "title": "Amines",
         "pdfCode": "lech204_sol"
       },
       {
         "number": 10,
-        "title": "Haloalkanes and Haloarenes - Solutions",
+        "title": "Haloalkanes and Haloarenes",
         "pdfCode": "lech205_sol"
       }
     ],
@@ -6660,67 +6660,67 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Formal Language and Regular Expressions - Solutions",
+        "title": "Formal Language and Regular Expressions",
         "pdfCode": "lecs101_sol"
       },
       {
         "number": 2,
-        "title": "Boolean Algebra - Solutions",
+        "title": "Boolean Algebra",
         "pdfCode": "lecs102_sol"
       },
       {
         "number": 3,
-        "title": "Data Representation - Solutions",
+        "title": "Data Representation",
         "pdfCode": "lecs103_sol"
       },
       {
         "number": 4,
-        "title": "Introduction to Python - Solutions",
+        "title": "Introduction to Python",
         "pdfCode": "lecs104_sol"
       },
       {
         "number": 5,
-        "title": "Python Fundamentals - Solutions",
+        "title": "Python Fundamentals",
         "pdfCode": "lecs105_sol"
       },
       {
         "number": 6,
-        "title": "Data Types and Operations - Solutions",
+        "title": "Data Types and Operations",
         "pdfCode": "lecs106_sol"
       },
       {
         "number": 7,
-        "title": "Flow of Control - Solutions",
+        "title": "Flow of Control",
         "pdfCode": "lecs107_sol"
       },
       {
         "number": 8,
-        "title": "Functions and User-Defined Functions - Solutions",
+        "title": "Functions and User-Defined Functions",
         "pdfCode": "lecs108_sol"
       },
       {
         "number": 9,
-        "title": "Lists - Solutions",
+        "title": "Lists",
         "pdfCode": "lecs109_sol"
       },
       {
         "number": 10,
-        "title": "Tuples and Dictionaries - Solutions",
+        "title": "Tuples and Dictionaries",
         "pdfCode": "lecs110_sol"
       },
       {
         "number": 11,
-        "title": "File Handling - Solutions",
+        "title": "File Handling",
         "pdfCode": "lecs111_sol"
       },
       {
         "number": 12,
-        "title": "Database Connectivity - Solutions",
+        "title": "Database Connectivity",
         "pdfCode": "lecs112_sol"
       },
       {
         "number": 13,
-        "title": "Project Work - Solutions",
+        "title": "Project Work",
         "pdfCode": "lecs113_sol"
       }
     ],
@@ -6736,32 +6736,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Macroeconomics: An Introduction - Solutions",
+        "title": "Macroeconomics: An Introduction",
         "pdfCode": "leec101_sol"
       },
       {
         "number": 2,
-        "title": "National Income Accounting - Solutions",
+        "title": "National Income Accounting",
         "pdfCode": "leec102_sol"
       },
       {
         "number": 3,
-        "title": "Money and Banking - Solutions",
+        "title": "Money and Banking",
         "pdfCode": "leec103_sol"
       },
       {
         "number": 4,
-        "title": "Income Determination - Solutions",
+        "title": "Income Determination",
         "pdfCode": "leec104_sol"
       },
       {
         "number": 5,
-        "title": "The Government: Budget and the Economy - Solutions",
+        "title": "The Government: Budget and the Economy",
         "pdfCode": "leec105_sol"
       },
       {
         "number": 6,
-        "title": "Balance of Payments - Solutions",
+        "title": "Balance of Payments",
         "pdfCode": "leec106_sol"
       }
     ],
@@ -6777,27 +6777,27 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Micro Economics: An Introduction - Solutions",
+        "title": "Micro Economics: An Introduction",
         "pdfCode": "leec201_sol"
       },
       {
         "number": 2,
-        "title": "Consumer Equilibrium and Demand - Solutions",
+        "title": "Consumer Equilibrium and Demand",
         "pdfCode": "leec202_sol"
       },
       {
         "number": 3,
-        "title": "Producer Behaviour and Supply - Solutions",
+        "title": "Producer Behaviour and Supply",
         "pdfCode": "leec203_sol"
       },
       {
         "number": 4,
-        "title": "Forms of Market and Price Determination - Solutions",
+        "title": "Forms of Market and Price Determination",
         "pdfCode": "leec204_sol"
       },
       {
         "number": 5,
-        "title": "Simple Applications of Tools of Demand and Supply - Solutions",
+        "title": "Simple Applications of Tools of Demand and Supply",
         "pdfCode": "leec205_sol"
       }
     ],
@@ -6813,57 +6813,57 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Last Lesson - Solutions",
+        "title": "The Last Lesson",
         "pdfCode": "lefl101_sol"
       },
       {
         "number": 2,
-        "title": "Lost Spring - Solutions",
+        "title": "Lost Spring",
         "pdfCode": "lefl102_sol"
       },
       {
         "number": 3,
-        "title": "Deep Water - Solutions",
+        "title": "Deep Water",
         "pdfCode": "lefl103_sol"
       },
       {
         "number": 4,
-        "title": "The Rattrap - Solutions",
+        "title": "The Rattrap",
         "pdfCode": "lefl104_sol"
       },
       {
         "number": 5,
-        "title": "Indigo - Solutions",
+        "title": "Indigo",
         "pdfCode": "lefl105_sol"
       },
       {
         "number": 6,
-        "title": "Going Places - Solutions",
+        "title": "Going Places",
         "pdfCode": "lefl106_sol"
       },
       {
         "number": 7,
-        "title": "My Mother at Sixty-six - Solutions",
+        "title": "My Mother at Sixty-six",
         "pdfCode": "lefl107_sol"
       },
       {
         "number": 8,
-        "title": "Keeping Quiet - Solutions",
+        "title": "Keeping Quiet",
         "pdfCode": "lefl108_sol"
       },
       {
         "number": 9,
-        "title": "A Thing of Beauty - Solutions",
+        "title": "A Thing of Beauty",
         "pdfCode": "lefl111_sol"
       },
       {
         "number": 10,
-        "title": "A Roadside Stand - Solutions",
+        "title": "A Roadside Stand",
         "pdfCode": "lefl112_sol"
       },
       {
         "number": 11,
-        "title": "Aunt Jennifer's Tigers - Solutions",
+        "title": "Aunt Jennifer's Tigers",
         "pdfCode": "lefl113_sol"
       }
     ],
@@ -6879,72 +6879,72 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Lament - Solutions",
+        "title": "The Lament",
         "pdfCode": "lekl101_sol"
       },
       {
         "number": 2,
-        "title": "A Pair of Mustachios - Solutions",
+        "title": "A Pair of Mustachios",
         "pdfCode": "lekl102_sol"
       },
       {
         "number": 3,
-        "title": "The Rocking-horse Winner - Solutions",
+        "title": "The Rocking-horse Winner",
         "pdfCode": "lekl103_sol"
       },
       {
         "number": 4,
-        "title": "The Adventure of the Three Garridebs - Solutions",
+        "title": "The Adventure of the Three Garridebs",
         "pdfCode": "lekl104_sol"
       },
       {
         "number": 5,
-        "title": "Pappachi's Moth - Solutions",
+        "title": "Pappachi's Moth",
         "pdfCode": "lekl105_sol"
       },
       {
         "number": 6,
-        "title": "The Third and Final Continent - Solutions",
+        "title": "The Third and Final Continent",
         "pdfCode": "lekl111_sol"
       },
       {
         "number": 7,
-        "title": "Glory at Twilight - Solutions",
+        "title": "Glory at Twilight",
         "pdfCode": "lekl112_sol"
       },
       {
         "number": 8,
-        "title": "The Luncheon - Solutions",
+        "title": "The Luncheon",
         "pdfCode": "lekl113_sol"
       },
       {
         "number": 9,
-        "title": "The Peacock - Solutions",
+        "title": "The Peacock",
         "pdfCode": "lekl114_sol"
       },
       {
         "number": 10,
-        "title": "Let Me Not to the Marriage of True Minds - Solutions",
+        "title": "Let Me Not to the Marriage of True Minds",
         "pdfCode": "lekl115_sol"
       },
       {
         "number": 11,
-        "title": "Coming - Solutions",
+        "title": "Coming",
         "pdfCode": "lekl116_sol"
       },
       {
         "number": 12,
-        "title": "Telephone Conversation - Solutions",
+        "title": "Telephone Conversation",
         "pdfCode": "lekl117_sol"
       },
       {
         "number": 13,
-        "title": "The World Is Too Much with Us - Solutions",
+        "title": "The World Is Too Much with Us",
         "pdfCode": "lekl118_sol"
       },
       {
         "number": 14,
-        "title": "Mother Tongue - Solutions",
+        "title": "Mother Tongue",
         "pdfCode": "lekl121_sol"
       }
     ],
@@ -6960,32 +6960,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Third Level - Solutions",
+        "title": "The Third Level",
         "pdfCode": "levt101_sol"
       },
       {
         "number": 2,
-        "title": "The Tiger King - Solutions",
+        "title": "The Tiger King",
         "pdfCode": "levt102_sol"
       },
       {
         "number": 3,
-        "title": "Journey to the End of the Earth - Solutions",
+        "title": "Journey to the End of the Earth",
         "pdfCode": "levt103_sol"
       },
       {
         "number": 4,
-        "title": "The Enemy - Solutions",
+        "title": "The Enemy",
         "pdfCode": "levt104_sol"
       },
       {
         "number": 5,
-        "title": "On the Face of It - Solutions",
+        "title": "On the Face of It",
         "pdfCode": "levt105_sol"
       },
       {
         "number": 6,
-        "title": "Memories of Childhood - Solutions",
+        "title": "Memories of Childhood",
         "pdfCode": "levt106_sol"
       }
     ],
@@ -7001,42 +7001,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Pre-Historic Cave Paintings - Solutions",
+        "title": "Pre-Historic Cave Paintings",
         "pdfCode": "lefa101_sol"
       },
       {
         "number": 2,
-        "title": "Indus Valley Civilisation - Solutions",
+        "title": "Indus Valley Civilisation",
         "pdfCode": "lefa102_sol"
       },
       {
         "number": 3,
-        "title": "Buddhist and Jain Art - Solutions",
+        "title": "Buddhist and Jain Art",
         "pdfCode": "lefa103_sol"
       },
       {
         "number": 4,
-        "title": "Cave Paintings of India - Solutions",
+        "title": "Cave Paintings of India",
         "pdfCode": "lefa104_sol"
       },
       {
         "number": 5,
-        "title": "Temple Architecture - Solutions",
+        "title": "Temple Architecture",
         "pdfCode": "lefa105_sol"
       },
       {
         "number": 6,
-        "title": "Sculpture - Solutions",
+        "title": "Sculpture",
         "pdfCode": "lefa106_sol"
       },
       {
         "number": 7,
-        "title": "Bronze and Metal Art - Solutions",
+        "title": "Bronze and Metal Art",
         "pdfCode": "lefa107_sol"
       },
       {
         "number": 8,
-        "title": "Indian Painting - Solutions",
+        "title": "Indian Painting",
         "pdfCode": "lefa108_sol"
       }
     ],
@@ -7052,42 +7052,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Human Geography: Nature and Scope - Solutions",
+        "title": "Human Geography: Nature and Scope",
         "pdfCode": "legy101_sol"
       },
       {
         "number": 2,
-        "title": "The World Population - Solutions",
+        "title": "The World Population",
         "pdfCode": "legy102_sol"
       },
       {
         "number": 3,
-        "title": "Migration - Solutions",
+        "title": "Migration",
         "pdfCode": "legy103_sol"
       },
       {
         "number": 4,
-        "title": "Human Development - Solutions",
+        "title": "Human Development",
         "pdfCode": "legy104_sol"
       },
       {
         "number": 5,
-        "title": "Primary Activities - Solutions",
+        "title": "Primary Activities",
         "pdfCode": "legy105_sol"
       },
       {
         "number": 6,
-        "title": "Secondary Activities - Solutions",
+        "title": "Secondary Activities",
         "pdfCode": "legy106_sol"
       },
       {
         "number": 7,
-        "title": "Tertiary and Quaternary Activities - Solutions",
+        "title": "Tertiary and Quaternary Activities",
         "pdfCode": "legy107_sol"
       },
       {
         "number": 8,
-        "title": "Transport and Communication - Solutions",
+        "title": "Transport and Communication",
         "pdfCode": "legy108_sol"
       }
     ],
@@ -7103,47 +7103,47 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "People - Solutions",
+        "title": "People",
         "pdfCode": "legy201_sol"
       },
       {
         "number": 2,
-        "title": "Human Development - Solutions",
+        "title": "Human Development",
         "pdfCode": "legy202_sol"
       },
       {
         "number": 3,
-        "title": "Human Settlements - Solutions",
+        "title": "Human Settlements",
         "pdfCode": "legy203_sol"
       },
       {
         "number": 4,
-        "title": "Land Resources and Land Use - Solutions",
+        "title": "Land Resources and Land Use",
         "pdfCode": "legy204_sol"
       },
       {
         "number": 5,
-        "title": "Water Resources - Solutions",
+        "title": "Water Resources",
         "pdfCode": "legy205_sol"
       },
       {
         "number": 6,
-        "title": "Mineral and Energy Resources - Solutions",
+        "title": "Mineral and Energy Resources",
         "pdfCode": "legy206_sol"
       },
       {
         "number": 7,
-        "title": "Agricultural Geography - Solutions",
+        "title": "Agricultural Geography",
         "pdfCode": "legy207_sol"
       },
       {
         "number": 8,
-        "title": "Manufacturing Industries - Solutions",
+        "title": "Manufacturing Industries",
         "pdfCode": "legy208_sol"
       },
       {
         "number": 9,
-        "title": "Planning and Sustainable Development - Solutions",
+        "title": "Planning and Sustainable Development",
         "pdfCode": "legy209_sol"
       }
     ],
@@ -7159,22 +7159,22 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Map Reading - Solutions",
+        "title": "Map Reading",
         "pdfCode": "legy301_sol"
       },
       {
         "number": 2,
-        "title": "Data Collection and Presentation - Solutions",
+        "title": "Data Collection and Presentation",
         "pdfCode": "legy302_sol"
       },
       {
         "number": 3,
-        "title": "Data Analysis and Interpretation - Solutions",
+        "title": "Data Analysis and Interpretation",
         "pdfCode": "legy303_sol"
       },
       {
         "number": 4,
-        "title": "Practical Work in Geography - Solutions",
+        "title": "Practical Work in Geography",
         "pdfCode": "legy304_sol"
       }
     ],
@@ -7190,22 +7190,22 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Bricks, Beads and Bones - Solutions",
+        "title": "Bricks, Beads and Bones",
         "pdfCode": "lehs101_sol"
       },
       {
         "number": 2,
-        "title": "Kinship, Caste and Class - Solutions",
+        "title": "Kinship, Caste and Class",
         "pdfCode": "lehs102_sol"
       },
       {
         "number": 3,
-        "title": "Fiscal Decentralisation - Solutions",
+        "title": "Fiscal Decentralisation",
         "pdfCode": "lehs103_sol"
       },
       {
         "number": 4,
-        "title": "An Imperial Capital: Vijayanagara - Solutions",
+        "title": "An Imperial Capital: Vijayanagara",
         "pdfCode": "lehs104_sol"
       }
     ],
@@ -7221,22 +7221,22 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Bricks, Beads and Bones - Solutions",
+        "title": "Bricks, Beads and Bones",
         "pdfCode": "lehs201_sol"
       },
       {
         "number": 2,
-        "title": "Kinship, Caste and Class - Solutions",
+        "title": "Kinship, Caste and Class",
         "pdfCode": "lehs202_sol"
       },
       {
         "number": 3,
-        "title": "Fiscal Decentralisation - Solutions",
+        "title": "Fiscal Decentralisation",
         "pdfCode": "lehs203_sol"
       },
       {
         "number": 4,
-        "title": "An Imperial Capital: Vijayanagara - Solutions",
+        "title": "An Imperial Capital: Vijayanagara",
         "pdfCode": "lehs204_sol"
       }
     ],
@@ -7252,22 +7252,22 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Bricks, Beads and Bones - Solutions",
+        "title": "Bricks, Beads and Bones",
         "pdfCode": "lehs301_sol"
       },
       {
         "number": 2,
-        "title": "Kinship, Caste and Class - Solutions",
+        "title": "Kinship, Caste and Class",
         "pdfCode": "lehs302_sol"
       },
       {
         "number": 3,
-        "title": "Fiscal Decentralisation - Solutions",
+        "title": "Fiscal Decentralisation",
         "pdfCode": "lehs303_sol"
       },
       {
         "number": 4,
-        "title": "An Imperial Capital: Vijayanagara - Solutions",
+        "title": "An Imperial Capital: Vijayanagara",
         "pdfCode": "lehs304_sol"
       }
     ],
@@ -7283,37 +7283,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to Human Ecology - Solutions",
+        "title": "Introduction to Human Ecology",
         "pdfCode": "lehe101_sol"
       },
       {
         "number": 2,
-        "title": "Family as a Social Institution - Solutions",
+        "title": "Family as a Social Institution",
         "pdfCode": "lehe102_sol"
       },
       {
         "number": 3,
-        "title": "Marriage as a Social Institution - Solutions",
+        "title": "Marriage as a Social Institution",
         "pdfCode": "lehe103_sol"
       },
       {
         "number": 4,
-        "title": "Food and Nutrition - Solutions",
+        "title": "Food and Nutrition",
         "pdfCode": "lehe104_sol"
       },
       {
         "number": 5,
-        "title": "Shelter - Solutions",
+        "title": "Shelter",
         "pdfCode": "lehe105_sol"
       },
       {
         "number": 6,
-        "title": "Clothing - Solutions",
+        "title": "Clothing",
         "pdfCode": "lehe106_sol"
       },
       {
         "number": 7,
-        "title": "Development of Human Ecology - Solutions",
+        "title": "Development of Human Ecology",
         "pdfCode": "lehe107_sol"
       }
     ],
@@ -7329,37 +7329,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Gender Issues - Solutions",
+        "title": "Gender Issues",
         "pdfCode": "lehe201_sol"
       },
       {
         "number": 2,
-        "title": "Education - Solutions",
+        "title": "Education",
         "pdfCode": "lehe202_sol"
       },
       {
         "number": 3,
-        "title": "Health - Solutions",
+        "title": "Health",
         "pdfCode": "lehe203_sol"
       },
       {
         "number": 4,
-        "title": "Population - Solutions",
+        "title": "Population",
         "pdfCode": "lehe204_sol"
       },
       {
         "number": 5,
-        "title": "Environmental Concerns - Solutions",
+        "title": "Environmental Concerns",
         "pdfCode": "lehe205_sol"
       },
       {
         "number": 6,
-        "title": "Social Change - Solutions",
+        "title": "Social Change",
         "pdfCode": "lehe206_sol"
       },
       {
         "number": 7,
-        "title": "Contemporary Challenges - Solutions",
+        "title": "Contemporary Challenges",
         "pdfCode": "lehe207_sol"
       }
     ],
@@ -7375,37 +7375,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introduction to Human Ecology - Solutions",
+        "title": "Introduction to Human Ecology",
         "pdfCode": "lehh101_sol"
       },
       {
         "number": 2,
-        "title": "Family as a Social Institution - Solutions",
+        "title": "Family as a Social Institution",
         "pdfCode": "lehh102_sol"
       },
       {
         "number": 3,
-        "title": "Marriage as a Social Institution - Solutions",
+        "title": "Marriage as a Social Institution",
         "pdfCode": "lehh103_sol"
       },
       {
         "number": 4,
-        "title": "Food and Nutrition - Solutions",
+        "title": "Food and Nutrition",
         "pdfCode": "lehh104_sol"
       },
       {
         "number": 5,
-        "title": "Shelter - Solutions",
+        "title": "Shelter",
         "pdfCode": "lehh105_sol"
       },
       {
         "number": 6,
-        "title": "Clothing - Solutions",
+        "title": "Clothing",
         "pdfCode": "lehh106_sol"
       },
       {
         "number": 7,
-        "title": "Development of Human Ecology - Solutions",
+        "title": "Development of Human Ecology",
         "pdfCode": "lehh107_sol"
       }
     ],
@@ -7421,37 +7421,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Gender Issues - Solutions",
+        "title": "Gender Issues",
         "pdfCode": "lehh201_sol"
       },
       {
         "number": 2,
-        "title": "Education - Solutions",
+        "title": "Education",
         "pdfCode": "lehh202_sol"
       },
       {
         "number": 3,
-        "title": "Health - Solutions",
+        "title": "Health",
         "pdfCode": "lehh203_sol"
       },
       {
         "number": 4,
-        "title": "Population - Solutions",
+        "title": "Population",
         "pdfCode": "lehh204_sol"
       },
       {
         "number": 5,
-        "title": "Environmental Concerns - Solutions",
+        "title": "Environmental Concerns",
         "pdfCode": "lehh205_sol"
       },
       {
         "number": 6,
-        "title": "Social Change - Solutions",
+        "title": "Social Change",
         "pdfCode": "lehh206_sol"
       },
       {
         "number": 7,
-        "title": "Contemporary Challenges - Solutions",
+        "title": "Contemporary Challenges",
         "pdfCode": "lehh207_sol"
       }
     ],
@@ -7467,37 +7467,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Computer Networks - Solutions",
+        "title": "Computer Networks",
         "pdfCode": "leip101_sol"
       },
       {
         "number": 2,
-        "title": "Data Communication - Solutions",
+        "title": "Data Communication",
         "pdfCode": "leip102_sol"
       },
       {
         "number": 3,
-        "title": "Security of Computer - Solutions",
+        "title": "Security of Computer",
         "pdfCode": "leip103_sol"
       },
       {
         "number": 4,
-        "title": "Data Handling Using Pandas - Solutions",
+        "title": "Data Handling Using Pandas",
         "pdfCode": "leip104_sol"
       },
       {
         "number": 5,
-        "title": "Introduction to NumPy - Solutions",
+        "title": "Introduction to NumPy",
         "pdfCode": "leip105_sol"
       },
       {
         "number": 6,
-        "title": "Database Concepts - Solutions",
+        "title": "Database Concepts",
         "pdfCode": "leip106_sol"
       },
       {
         "number": 7,
-        "title": "Introduction to Structured Query Language - Solutions",
+        "title": "Introduction to Structured Query Language",
         "pdfCode": "leip107_sol"
       }
     ],
@@ -7513,32 +7513,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Relations and Functions - Solutions",
+        "title": "Relations and Functions",
         "pdfCode": "lemh101_sol"
       },
       {
         "number": 2,
-        "title": "Inverse Trigonometric Functions - Solutions",
+        "title": "Inverse Trigonometric Functions",
         "pdfCode": "lemh102_sol"
       },
       {
         "number": 3,
-        "title": "Matrices - Solutions",
+        "title": "Matrices",
         "pdfCode": "lemh103_sol"
       },
       {
         "number": 4,
-        "title": "Determinants - Solutions",
+        "title": "Determinants",
         "pdfCode": "lemh104_sol"
       },
       {
         "number": 5,
-        "title": "Continuity and Differentiability - Solutions",
+        "title": "Continuity and Differentiability",
         "pdfCode": "lemh105_sol"
       },
       {
         "number": 6,
-        "title": "Application of Derivatives - Solutions",
+        "title": "Application of Derivatives",
         "pdfCode": "lemh106_sol"
       }
     ],
@@ -7554,37 +7554,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 7,
-        "title": "Probability - Solutions",
+        "title": "Probability",
         "pdfCode": "lemh201_sol"
       },
       {
         "number": 8,
-        "title": "Application of Integrals - Solutions",
+        "title": "Application of Integrals",
         "pdfCode": "lemh202_sol"
       },
       {
         "number": 9,
-        "title": "Differential Equations - Solutions",
+        "title": "Differential Equations",
         "pdfCode": "lemh203_sol"
       },
       {
         "number": 10,
-        "title": "Integrals - Solutions",
+        "title": "Integrals",
         "pdfCode": "lemh204_sol"
       },
       {
         "number": 11,
-        "title": "Three Dimensional Geometry - Solutions",
+        "title": "Three Dimensional Geometry",
         "pdfCode": "lemh205_sol"
       },
       {
         "number": 12,
-        "title": "Linear Programming - Solutions",
+        "title": "Linear Programming",
         "pdfCode": "lemh206_sol"
       },
       {
         "number": 13,
-        "title": "Probability - Solutions",
+        "title": "Probability",
         "pdfCode": "lemh207_sol"
       }
     ],
@@ -7600,42 +7600,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Electric Charges and Fields - Solutions",
+        "title": "Electric Charges and Fields",
         "pdfCode": "leph101_sol"
       },
       {
         "number": 2,
-        "title": "Electrostatic Potential and Capacitance - Solutions",
+        "title": "Electrostatic Potential and Capacitance",
         "pdfCode": "leph102_sol"
       },
       {
         "number": 3,
-        "title": "Current Electricity - Solutions",
+        "title": "Current Electricity",
         "pdfCode": "leph103_sol"
       },
       {
         "number": 4,
-        "title": "Moving Charges and Magnetism - Solutions",
+        "title": "Moving Charges and Magnetism",
         "pdfCode": "leph104_sol"
       },
       {
         "number": 5,
-        "title": "Magnetism and Matter - Solutions",
+        "title": "Magnetism and Matter",
         "pdfCode": "leph105_sol"
       },
       {
         "number": 6,
-        "title": "Electromagnetic Induction - Solutions",
+        "title": "Electromagnetic Induction",
         "pdfCode": "leph106_sol"
       },
       {
         "number": 7,
-        "title": "Alternating Current - Solutions",
+        "title": "Alternating Current",
         "pdfCode": "leph107_sol"
       },
       {
         "number": 8,
-        "title": "Electromagnetic Waves - Solutions",
+        "title": "Electromagnetic Waves",
         "pdfCode": "leph108_sol"
       }
     ],
@@ -7651,32 +7651,32 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 9,
-        "title": "Ray Optics and Optical Instruments - Solutions",
+        "title": "Ray Optics and Optical Instruments",
         "pdfCode": "leph201_sol"
       },
       {
         "number": 10,
-        "title": "Ray Optics and Optical Instruments - Solutions",
+        "title": "Ray Optics and Optical Instruments",
         "pdfCode": "leph202_sol"
       },
       {
         "number": 11,
-        "title": "Dual Nature of Radiation and Matter - Solutions",
+        "title": "Dual Nature of Radiation and Matter",
         "pdfCode": "leph203_sol"
       },
       {
         "number": 12,
-        "title": "Atoms - Solutions",
+        "title": "Atoms",
         "pdfCode": "leph204_sol"
       },
       {
         "number": 13,
-        "title": "Nuclei - Solutions",
+        "title": "Nuclei",
         "pdfCode": "leph205_sol"
       },
       {
         "number": 14,
-        "title": "Semiconductor Electronics: Materials, Devices and Simple Circuits - Solutions",
+        "title": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
         "pdfCode": "leph206_sol"
       }
     ],
@@ -7692,37 +7692,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "The Cold War Era - Solutions",
+        "title": "The Cold War Era",
         "pdfCode": "leps101_sol"
       },
       {
         "number": 2,
-        "title": "The End of Bipolarity - Solutions",
+        "title": "The End of Bipolarity",
         "pdfCode": "leps102_sol"
       },
       {
         "number": 3,
-        "title": "US Hegemony in World Politics - Solutions",
+        "title": "US Hegemony in World Politics",
         "pdfCode": "leps103_sol"
       },
       {
         "number": 4,
-        "title": "Alternative Centres of Power - Solutions",
+        "title": "Alternative Centres of Power",
         "pdfCode": "leps104_sol"
       },
       {
         "number": 5,
-        "title": "Contemporary South Asia - Solutions",
+        "title": "Contemporary South Asia",
         "pdfCode": "leps105_sol"
       },
       {
         "number": 6,
-        "title": "International Organisations - Solutions",
+        "title": "International Organisations",
         "pdfCode": "leps106_sol"
       },
       {
         "number": 7,
-        "title": "Environmental Issues - Solutions",
+        "title": "Environmental Issues",
         "pdfCode": "leps107_sol"
       }
     ],
@@ -7738,42 +7738,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Nations - Solutions",
+        "title": "Nations",
         "pdfCode": "leps201_sol"
       },
       {
         "number": 2,
-        "title": "India's External Relations - Solutions",
+        "title": "India's External Relations",
         "pdfCode": "leps202_sol"
       },
       {
         "number": 3,
-        "title": "Challenge of Nation-Building - Solutions",
+        "title": "Challenge of Nation-Building",
         "pdfCode": "leps203_sol"
       },
       {
         "number": 4,
-        "title": "Era of One-Party Dominance - Solutions",
+        "title": "Era of One-Party Dominance",
         "pdfCode": "leps204_sol"
       },
       {
         "number": 5,
-        "title": "Politics of Planned Development - Solutions",
+        "title": "Politics of Planned Development",
         "pdfCode": "leps205_sol"
       },
       {
         "number": 6,
-        "title": "India's External Relations - Solutions",
+        "title": "India's External Relations",
         "pdfCode": "leps206_sol"
       },
       {
         "number": 7,
-        "title": "Challenge to and Restoration of Congress System - Solutions",
+        "title": "Challenge to and Restoration of Congress System",
         "pdfCode": "leps207_sol"
       },
       {
         "number": 8,
-        "title": "Regional Aspirations - Solutions",
+        "title": "Regional Aspirations",
         "pdfCode": "leps208_sol"
       }
     ],
@@ -7789,37 +7789,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Variations in Psychological Attributes - Solutions",
+        "title": "Variations in Psychological Attributes",
         "pdfCode": "lepy101_sol"
       },
       {
         "number": 2,
-        "title": "Self and Personality - Solutions",
+        "title": "Self and Personality",
         "pdfCode": "lepy102_sol"
       },
       {
         "number": 3,
-        "title": "Meeting Life Challenges - Solutions",
+        "title": "Meeting Life Challenges",
         "pdfCode": "lepy103_sol"
       },
       {
         "number": 4,
-        "title": "Psychological Disorders - Solutions",
+        "title": "Psychological Disorders",
         "pdfCode": "lepy104_sol"
       },
       {
         "number": 5,
-        "title": "Therapeutic Approaches - Solutions",
+        "title": "Therapeutic Approaches",
         "pdfCode": "lepy105_sol"
       },
       {
         "number": 6,
-        "title": "Attitude and Social Cognition - Solutions",
+        "title": "Attitude and Social Cognition",
         "pdfCode": "lepy106_sol"
       },
       {
         "number": 7,
-        "title": "Social Influence and Group Processes - Solutions",
+        "title": "Social Influence and Group Processes",
         "pdfCode": "lepy107_sol"
       }
     ],
@@ -7835,37 +7835,37 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Introducing Indian Society - Solutions",
+        "title": "Introducing Indian Society",
         "pdfCode": "lesy101_sol"
       },
       {
         "number": 2,
-        "title": "The Demographic Structure of the Indian Society - Solutions",
+        "title": "The Demographic Structure of the Indian Society",
         "pdfCode": "lesy102_sol"
       },
       {
         "number": 3,
-        "title": "Social Institutions: Continuity and Change - Solutions",
+        "title": "Social Institutions: Continuity and Change",
         "pdfCode": "lesy103_sol"
       },
       {
         "number": 4,
-        "title": "Market as a Social Institution - Solutions",
+        "title": "Market as a Social Institution",
         "pdfCode": "lesy104_sol"
       },
       {
         "number": 5,
-        "title": "Patterns of Social Inequality and Exclusion - Solutions",
+        "title": "Patterns of Social Inequality and Exclusion",
         "pdfCode": "lesy105_sol"
       },
       {
         "number": 6,
-        "title": "The Challenges of Cultural Diversity - Solutions",
+        "title": "The Challenges of Cultural Diversity",
         "pdfCode": "lesy106_sol"
       },
       {
         "number": 7,
-        "title": "Structural Change - Solutions",
+        "title": "Structural Change",
         "pdfCode": "lesy107_sol"
       }
     ],
@@ -7881,42 +7881,42 @@ export const SOLUTIONS_CATALOG: Book[] = [
     "chapters": [
       {
         "number": 1,
-        "title": "Structural Change - Solutions",
+        "title": "Structural Change",
         "pdfCode": "lesy201_sol"
       },
       {
         "number": 2,
-        "title": "Cultural Change - Solutions",
+        "title": "Cultural Change",
         "pdfCode": "lesy202_sol"
       },
       {
         "number": 3,
-        "title": "The Story of Indian Democracy - Solutions",
+        "title": "The Story of Indian Democracy",
         "pdfCode": "lesy203_sol"
       },
       {
         "number": 4,
-        "title": "Change and Development in Rural Society - Solutions",
+        "title": "Change and Development in Rural Society",
         "pdfCode": "lesy204_sol"
       },
       {
         "number": 5,
-        "title": "Change and Development in Industrial Society - Solutions",
+        "title": "Change and Development in Industrial Society",
         "pdfCode": "lesy205_sol"
       },
       {
         "number": 6,
-        "title": "Globalisation and Social Change - Solutions",
+        "title": "Globalisation and Social Change",
         "pdfCode": "lesy206_sol"
       },
       {
         "number": 7,
-        "title": "Mass Media and Communication - Solutions",
+        "title": "Mass Media and Communication",
         "pdfCode": "lesy207_sol"
       },
       {
         "number": 8,
-        "title": "Social Movements - Solutions",
+        "title": "Social Movements",
         "pdfCode": "lesy208_sol"
       }
     ],

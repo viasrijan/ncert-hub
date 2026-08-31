@@ -12,8 +12,7 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
   const { bookmarks, toggleBookmark } = useBookmarks()
   const bookmarked = bookmarks.includes(book.id)
   const { gradient, icon: Icon } = getSubjectGradient(book.subject)
-  const isSolution = book.kind === 'solution'
-  const href = isSolution && book.chapters[0] ? `/read/${book.chapters[0].pdfCode}` : `/book/${book.id}`
+  const href = `/book/${book.id}`
 
   return (
     <div className="group relative flex w-[260px] max-w-full flex-col overflow-hidden rounded-2xl bg-card/80 backdrop-blur-sm shadow-card transition-colors duration-200">

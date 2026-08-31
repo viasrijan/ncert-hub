@@ -154,7 +154,7 @@ export function PdfViewer({
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
                   className="shadow-lg"
-                  width={Math.min(800, typeof window !== 'undefined' ? window.innerWidth - 64 : 800)}
+                  width={typeof window !== 'undefined' ? Math.min(600, window.innerWidth - 32) : 600}
                 />
               </Document>
             )}
