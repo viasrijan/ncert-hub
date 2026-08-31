@@ -5,6 +5,7 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 import { ChevronLeft, ChevronRight, TriangleAlert } from 'lucide-react'
+import { getSolutionPdfUrl } from '@/lib/catalog'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
@@ -16,12 +17,6 @@ const JD_BASES = [
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-2@main',
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-3@main',
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@main',
-]
-const SOLUTION_BASES = [
-  '/solutions-pdf-1',
-  '/solutions-pdf-2',
-  '/solutions-pdf-3',
-  '/solutions-pdf-4',
 ]
 const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
 
@@ -50,7 +45,7 @@ export function PdfViewer({
   })()
 
   // Try each jsDelivr mirror; fall back to the Cloudflare Worker proxy.
-  // For local solution PDFs (_sol.pdf) try the 4 sharded public folders (like original textbooks' 4 repos)
+  // For local solution PDFs (_sol.pdf) use sharded public folders via helper
   useEffect(() => {
     let cancelled = false
     setLoading(true)
@@ -60,19 +55,8 @@ export function PdfViewer({
 
     const resolve = async () => {
       if (file.endsWith('_sol.pdf')) {
-        for (const base of SOLUTION_BASES) {
-          const candidate = `${base}/${file}`
-          try {
-            const res = await fetch(candidate, { method: 'HEAD' })
-            if (res.ok) {
-              if (!cancelled) setPdfUrl(candidate)
-              return
-            }
-          } catch {
-            // try next shard
-          }
-        }
-        if (!cancelled) setPdfUrl(`${SOLUTION_BASES[0]}/${file}`)
+        const local = getSolutionPdfUrl(file.replace('.pdf', ''))
+        if (!cancelled) setPdfUrl(local)
         return
       }
       for (const base of JD_BASES) {

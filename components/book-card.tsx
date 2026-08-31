@@ -12,11 +12,13 @@ export function BookCard({ book, showClass = false }: { book: Book; showClass?: 
   const { bookmarks, toggleBookmark } = useBookmarks()
   const bookmarked = bookmarks.includes(book.id)
   const { gradient, icon: Icon } = getSubjectGradient(book.subject)
+  const isSolution = book.kind === 'solution'
+  const href = isSolution && book.chapters[0] ? `/read/${book.chapters[0].pdfCode}` : `/book/${book.id}`
 
   return (
     <div className="group relative flex w-[260px] max-w-full flex-col overflow-hidden rounded-2xl bg-card/80 backdrop-blur-sm shadow-card transition-colors duration-200">
       <Link
-        href={`/book/${book.id}`}
+        href={href}
         className="flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         <div className="relative aspect-[4/3] w-full overflow-hidden" style={{ background: gradient }}>

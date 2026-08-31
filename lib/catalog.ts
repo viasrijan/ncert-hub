@@ -7740,3 +7740,24 @@ export function findBookByPdfCode(pdfCode: string): { book: Book; chapter: Chapt
   }
   return undefined
 }
+
+const SOLUTION_SHARD_BASES = [
+  '/solutions-pdf-1',
+  '/solutions-pdf-2',
+  '/solutions-pdf-3',
+  '/solutions-pdf-4',
+] as const
+
+let _sortedSolutionCodes: string[] | null = null
+function getSortedSolutionCodes(): string[] {
+  if (_sortedSolutionCodes) return _sortedSolutionCodes
+  _sortedSolutionCodes = SOLUTIONS.flatMap((b) => b.chapters.map((c) => c.pdfCode)).sort()
+  return _sortedSolutionCodes
+}
+
+export function getSolutionPdfUrl(pdfCode: string): string {
+  const codes = getSortedSolutionCodes()
+  const idx = codes.indexOf(pdfCode)
+  if (idx === -1) return `${SOLUTION_SHARD_BASES[0]}/${pdfCode}.pdf`
+  return `${SOLUTION_SHARD_BASES[idx % SOLUTION_SHARD_BASES.length]}/${pdfCode}.pdf`
+}

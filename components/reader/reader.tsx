@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight, Download, ExternalLink } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import type { Book, Chapter } from '@/lib/catalog'
-import { NCERT_PDF_BASE, toRoman } from '@/lib/catalog'
+import { NCERT_PDF_BASE, toRoman, getSolutionPdfUrl } from '@/lib/catalog'
 import { useRecents } from '@/lib/library-store'
 import { cn } from '@/lib/utils'
 
@@ -15,12 +15,6 @@ const JD_BASES = [
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-2@main',
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-3@main',
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@main',
-]
-const SOLUTION_BASES = [
-  '/solutions-pdf-1',
-  '/solutions-pdf-2',
-  '/solutions-pdf-3',
-  '/solutions-pdf-4',
 ]
 const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
 
@@ -51,22 +45,13 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   const next = idx < book.chapters.length - 1 ? book.chapters[idx + 1] : null
 
   const isSolution = book.kind === 'solution'
-  const pdfUrl = isSolution ? `${SOLUTION_BASES[0]}/${chapter.pdfCode}.pdf` : `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
+  const pdfUrl = isSolution ? getSolutionPdfUrl(chapter.pdfCode) : `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
 
   const [downloading, setDownloading] = useState(false)
 
   const resolveUrl = useCallback(async (file: string): Promise<string> => {
     if (file.endsWith('_sol.pdf')) {
-      for (const base of SOLUTION_BASES) {
-        const candidate = `${base}/${file}`
-        try {
-          const res = await fetch(candidate, { method: 'HEAD' })
-          if (res.ok) return candidate
-        } catch {
-          // try next
-        }
-      }
-      return `${SOLUTION_BASES[0]}/${file}`
+      return getSolutionPdfUrl(file.replace('.pdf', ''))
     }
     for (const base of JD_BASES) {
       const candidate = `${base}/${file}`
