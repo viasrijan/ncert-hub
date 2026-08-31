@@ -1,0 +1,124 @@
+'use client'
+
+import { useCallback, useEffect, useState } from 'react'
+import { Document, Page, pdfjs } from 'react-pdf'
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
+import type { Book, Chapter } from '@/lib/catalog'
+import { getSolutionPdfUrl } from '@/lib/catalog'
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
+
+const JD_BASES = [
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-1@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-2@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-3@main',
+  'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@main',
+]
+const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
+
+export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; chapter: Chapter; isActive?: boolean }) {
+  const [numPages, setNumPages] = useState(0)
+  const [pdfUrl, setPdfUrl] = useState<string | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  const isSolution = book.kind === 'solution'
+  const file = `${chapter.pdfCode}.pdf`
+
+  useEffect(() => {
+    let cancelled = false
+    const resolve = async () => {
+      if (isSolution) {
+        const url = getSolutionPdfUrl(chapter.pdfCode)
+        if (!cancelled) {
+          setPdfUrl(url)
+          setLoading(false)
+        }
+        return
+      }
+      for (const base of JD_BASES) {
+        const candidate = `${base}/${file}`
+        try {
+          const res = await fetch(candidate, { method: 'HEAD' })
+          if (res.ok) {
+            if (!cancelled) {
+              setPdfUrl(candidate)
+              setLoading(false)
+            }
+            return
+          }
+        } catch {}
+      }
+      if (!cancelled) {
+        setPdfUrl(`${PROXY_BASE}/pdf/${file}`)
+        setLoading(false)
+      }
+    }
+    resolve()
+    return () => { cancelled = true }
+  }, [file, chapter.pdfCode, isSolution])
+
+  const onLoadSuccess = useCallback(({ numPages: n }: { numPages: number }) => {
+    setNumPages(n)
+  }, [])
+
+  if (loading || !pdfUrl) {
+    return (
+      <div className="flex min-h-[200px] items-center justify-center rounded-xl bg-card/50 p-8">
+        <div className="size-6 animate-spin rounded-full border-2 border-muted border-t-gold" />
+      </div>
+    )
+  }
+
+  return (
+    <div ref={isActive ? (el) => el?.scrollIntoView({ behavior: 'smooth', block: 'start' }) : undefined} className="flex flex-col gap-4 rounded-xl bg-card/30 p-4">
+      <h3 className="text-center text-sm font-bold text-foreground md:text-base">
+        {chapter.number}. {chapter.title}
+      </h3>
+      <Document
+        file={pdfUrl}
+        onLoadSuccess={onLoadSuccess}
+        loading={<div className="flex justify-center py-8"><div className="size-6 animate-spin rounded-full border-2 border-muted border-t-gold" /></div>}
+        error={<div className="py-8 text-center text-sm text-muted-foreground">Failed to load chapter</div>}
+      >
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory md:hidden">
+            {Array.from({ length: numPages || 1 }, (_, i) => (
+              <div key={i} className="min-w-[23%] snap-start">
+                <Page
+                  pageNumber={i + 1}
+                  renderTextLayer={false}
+                  renderAnnotationLayer={false}
+                  className="shadow-md"
+                  width={typeof window !== 'undefined' ? Math.min(280, (window.innerWidth - 48) / 4) : 280}
+                />
+                <p className="mt-1 text-center text-[10px] text-muted-foreground">{i + 1}</p>
+              </div>
+            ))}
+          </div>
+          <div className="hidden flex-col gap-6 md:flex">
+            {Array.from({ length: numPages || 1 }, (_, i) => (
+              <Page
+                key={i}
+                pageNumber={i + 1}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+                className="shadow-lg"
+                width={typeof window !== 'undefined' ? Math.min(700, window.innerWidth - 64) : 700}
+              />
+            ))}
+          </div>
+          {numPages === 0 && (
+            <Page
+              pageNumber={1}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+              className="shadow-lg"
+              width={typeof window !== 'undefined' ? Math.min(700, window.innerWidth - 64) : 700}
+            />
+          )}
+        </div>
+      </Document>
+    </div>
+  )
+}

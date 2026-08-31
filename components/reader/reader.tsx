@@ -34,6 +34,18 @@ const PdfViewer = dynamic(
   },
 )
 
+const CombinedChapterPdf = dynamic(
+  () => import('@/components/reader/combined-chapter-pdf').then((mod) => mod.CombinedChapterPdf),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex min-h-[200px] items-center justify-center rounded-xl bg-card/50 p-8">
+        <div className="size-6 animate-spin rounded-full border-2 border-muted border-t-gold" />
+      </div>
+    ),
+  },
+)
+
 export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   const { addRecent } = useRecents()
   const router = useRouter()
@@ -98,23 +110,47 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
     }
   }, [resolveUrl, pdfUrl, chapter.pdfCode])
 
+  const [showChrome, setShowChrome] = useState(true)
+  const hideTimeoutRef = useState<NodeJS.Timeout | null>(null)[0] as unknown as React.MutableRefObject<NodeJS.Timeout | null>
+  const chromeTimeout = useCallback(() => {
+    if (hideTimeoutRef && hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current)
+    const t = setTimeout(() => setShowChrome(false), 3000)
+    // @ts-ignore
+    if (hideTimeoutRef) hideTimeoutRef.current = t
+  }, [])
+
+  useEffect(() => {
+    chromeTimeout()
+    const handleMove = () => {
+      setShowChrome(true)
+      chromeTimeout()
+    }
+    window.addEventListener('mousemove', handleMove)
+    window.addEventListener('touchstart', handleMove)
+    return () => {
+      window.removeEventListener('mousemove', handleMove)
+      window.removeEventListener('touchstart', handleMove)
+      if (hideTimeoutRef && hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current)
+    }
+  }, [chromeTimeout])
+
   return (
-    <div className="flex h-svh flex-col bg-muted">
-      {/* Top bar */}
-      <header className="flex items-center gap-2 bg-background/95 px-3 py-2 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4">
+    <div className="flex h-svh flex-col bg-muted" onMouseMove={() => setShowChrome(true)}>
+      {/* Top bar - autohide, centered title, bigger buttons */}
+      <header className={`flex items-center gap-2 bg-background/95 px-3 py-3 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4 transition-transform duration-300 ${showChrome ? 'translate-y-0' : '-translate-y-full'}`}>
         <button
           type="button"
           onClick={handleBack}
           aria-label={`Back to ${book.title}`}
-          className="flex size-10 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
+          className="flex size-12 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
         >
-          <ChevronLeft className="size-5" />
+          <ChevronLeft className="size-6" />
         </button>
-        <div className="min-w-0 flex-1">
-          <h1 className="truncate text-sm font-bold leading-tight">
+        <div className="min-w-0 flex-1 text-center">
+          <h1 className="truncate text-base font-bold leading-tight md:text-lg">
             {chapter.title}
           </h1>
-          <p className="truncate text-[11px] text-muted-foreground">
+          <p className="truncate text-xs text-muted-foreground md:text-[13px]">
             {book.title} · Class {toRoman(book.classNum)}
           </p>
         </div>
@@ -124,37 +160,46 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
             onClick={downloadPdf}
             disabled={downloading}
             aria-label="Download chapter PDF"
-            className="flex size-10 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground disabled:opacity-50"
+            className="flex size-12 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground disabled:opacity-50"
           >
-            <Download className="size-4" />
+            <Download className="size-5" />
           </button>
           <a
             href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open official NCERT PDF"
-            className="flex size-10 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
+            className="flex size-12 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
           >
-            <ExternalLink className="size-4" />
+            <ExternalLink className="size-5" />
           </a>
           <button
             type="button"
             onClick={handleBack}
             aria-label="Close viewer"
-            className="flex size-10 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
+            className="flex size-12 items-center justify-center rounded-md bg-secondary text-foreground transition-colors duration-150 hover:bg-secondary/80"
           >
-            <X className="size-5" />
+            <X className="size-6" />
           </button>
         </div>
       </header>
 
-      {/* PDF viewer */}
-      <PdfViewer url={pdfUrl} title={chapter.title} onDownload={downloadPdf} />
+      {/* Combined scrollable book viewer - all chapters */}
+      <div className="flex-1 overflow-auto bg-sidebar">
+        <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 p-4 md:p-6">
+          {book.chapters.map((ch) => (
+            <CombinedChapterPdf key={ch.pdfCode} book={book} chapter={ch} isActive={ch.pdfCode === chapter.pdfCode} />
+          ))}
+        </div>
+      </div>
 
-      {/* Bottom chapter nav */}
-      <footer className="flex items-center justify-between gap-2 bg-background/95 px-3 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] shadow-[0_-4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4">
+      {/* Bottom chapter nav - locked visible */}
+      <footer className="flex items-center justify-between gap-2 bg-background/95 px-3 py-3 pb-[calc(0.5rem+env(safe-area-inset-bottom))] shadow-[0_-4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4">
         <ChapterNavLink chapter={prev} direction="prev" />
-        <p className="text-[11px] font-semibold text-muted-foreground">
+        <p className="hidden text-xs font-semibold text-muted-foreground md:block">
+          {book.title} · {book.chapters.length} chapters
+        </p>
+        <p className="text-xs font-semibold text-muted-foreground md:hidden">
           {idx + 1} / {book.chapters.length}
         </p>
         <ChapterNavLink chapter={next} direction="next" />
@@ -162,7 +207,6 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
     </div>
   )
 }
-
 function ChapterNavLink({
   chapter,
   direction,
