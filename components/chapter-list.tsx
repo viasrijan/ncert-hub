@@ -1,10 +1,7 @@
 import Link from 'next/link'
-import { ExternalLink } from 'lucide-react'
 import type { Book } from '@/lib/catalog'
-import { getSolutionDriveUrl } from '@/lib/catalog'
 
 export function ChapterList({ book }: { book: Book }) {
-  const isSolution = book.kind === 'solution'
   return (
     <section aria-label="Chapters" className="flex flex-col gap-2">
       <div className="flex items-center gap-2">

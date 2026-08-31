@@ -17,12 +17,12 @@ export function BookmarkButton({ bookId }: { bookId: string }) {
       className={cn(
         'flex items-center gap-2 rounded-xl px-4 py-3 text-base font-bold transition-all duration-200',
         bookmarked
-          ? 'btn-gradient shadow-md'
+          ? 'bg-gold text-white shadow-md'
           : 'bg-card/80 text-muted-foreground hover:text-foreground hover:bg-card',
       )}
     >
       <Bookmark className={cn('h-[18px] w-[18px]', bookmarked && 'fill-white text-white')} />
-      {bookmarked ? 'Saved' : 'Save'}
+      <span className={cn(bookmarked && 'text-white')}>{bookmarked ? 'Saved' : 'Save'}</span>
     </button>
   )
 }

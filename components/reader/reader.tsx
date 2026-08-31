@@ -16,6 +16,12 @@ const JD_BASES = [
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-3@main',
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@main',
 ]
+const SOLUTION_BASES = [
+  '/solutions-pdf-1',
+  '/solutions-pdf-2',
+  '/solutions-pdf-3',
+  '/solutions-pdf-4',
+]
 const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
 
 const PdfViewer = dynamic(
@@ -45,13 +51,22 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   const next = idx < book.chapters.length - 1 ? book.chapters[idx + 1] : null
 
   const isSolution = book.kind === 'solution'
-  const pdfUrl = isSolution ? `/solutions-pdf/${chapter.pdfCode}.pdf` : `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
+  const pdfUrl = isSolution ? `${SOLUTION_BASES[0]}/${chapter.pdfCode}.pdf` : `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
 
   const [downloading, setDownloading] = useState(false)
 
   const resolveUrl = useCallback(async (file: string): Promise<string> => {
     if (file.endsWith('_sol.pdf')) {
-      return `/solutions-pdf/${file}`
+      for (const base of SOLUTION_BASES) {
+        const candidate = `${base}/${file}`
+        try {
+          const res = await fetch(candidate, { method: 'HEAD' })
+          if (res.ok) return candidate
+        } catch {
+          // try next
+        }
+      }
+      return `${SOLUTION_BASES[0]}/${file}`
     }
     for (const base of JD_BASES) {
       const candidate = `${base}/${file}`

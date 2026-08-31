@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { BookOpen, FileText, Search, X } from 'lucide-react'
 import { BOOKS, SOLUTIONS, toRoman, type Book, type Chapter } from '@/lib/catalog'
-import { getSolutionDriveUrl } from '@/lib/catalog'
 import { cn } from '@/lib/utils'
 import { getSubjectGradient } from '@/lib/subject-gradients'
 
@@ -135,27 +134,6 @@ export function SearchView({ scope = 'textbook' }: { scope?: 'textbook' | 'solut
                     </div>
                     <BookOpen className="size-5 shrink-0 text-muted-foreground/50" />
                   </Link>
-                </li>
-              )
-            }
-            // chapter hit
-            if (isSolBook) {
-              const idx = hit.book.chapters.findIndex((c) => c.pdfCode === hit.chapter.pdfCode)
-              const external = getSolutionDriveUrl(hit.book.solutionFor ?? hit.book.id.replace('_sol', ''), idx)
-              const href = external ?? hit.book.sourceUrl ?? `/book/${hit.book.id}`
-              const isExternal = Boolean(external || hit.book.sourceUrl)
-              return (
-                <li key={`c-${hit.chapter.pdfCode}`}>
-                  <a href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}
-                    className="flex items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-accent/50">
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-gold/10 border-2 border-gold">
-                      <FileText className="size-5 text-gold" />
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate text-base font-bold text-foreground">{hit.chapter.title}</p>
-                      <p className="truncate text-sm text-muted-foreground">{hit.book.title} · Class {toRoman(hit.book.classNum)}</p>
-                    </div>
-                  </a>
                 </li>
               )
             }

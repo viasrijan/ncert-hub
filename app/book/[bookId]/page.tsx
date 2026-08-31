@@ -25,6 +25,9 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
 
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 py-12 md:px-8 md:py-16">
+      {isSolution && (
+        <h1 className="font-display text-5xl font-bold tracking-tight md:text-6xl text-foreground text-center animate-fade-in-up">Solutions</h1>
+      )}
       <Link href={isSolution ? `/solutions/classes/${book.classNum}` : `/classes/${book.classNum}`} className="flex items-center gap-1.5 text-[14px] font-bold text-muted-foreground transition-colors hover:text-foreground animate-fade-in">
         <ChevronLeft className="size-[18px]" /> Class {toRoman(book.classNum)} {isSolution && '· Solutions'}
       </Link>

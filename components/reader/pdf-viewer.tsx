@@ -17,6 +17,12 @@ const JD_BASES = [
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-3@main',
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@main',
 ]
+const SOLUTION_BASES = [
+  '/solutions-pdf-1',
+  '/solutions-pdf-2',
+  '/solutions-pdf-3',
+  '/solutions-pdf-4',
+]
 const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
 
 export function PdfViewer({
@@ -44,7 +50,7 @@ export function PdfViewer({
   })()
 
   // Try each jsDelivr mirror; fall back to the Cloudflare Worker proxy.
-  // For local solution PDFs (_sol.pdf) load directly from public/solutions-pdf
+  // For local solution PDFs (_sol.pdf) try the 4 sharded public folders (like original textbooks' 4 repos)
   useEffect(() => {
     let cancelled = false
     setLoading(true)
@@ -54,7 +60,19 @@ export function PdfViewer({
 
     const resolve = async () => {
       if (file.endsWith('_sol.pdf')) {
-        if (!cancelled) setPdfUrl(`/solutions-pdf/${file}`)
+        for (const base of SOLUTION_BASES) {
+          const candidate = `${base}/${file}`
+          try {
+            const res = await fetch(candidate, { method: 'HEAD' })
+            if (res.ok) {
+              if (!cancelled) setPdfUrl(candidate)
+              return
+            }
+          } catch {
+            // try next shard
+          }
+        }
+        if (!cancelled) setPdfUrl(`${SOLUTION_BASES[0]}/${file}`)
         return
       }
       for (const base of JD_BASES) {
