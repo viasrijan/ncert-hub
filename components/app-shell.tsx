@@ -8,12 +8,12 @@ import { cn } from '@/lib/utils'
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']
 
 const NAV_ITEMS = [
+  { href: '/bookmarks', label: 'Saved', icon: Bookmark },
+  { href: '/subjects', label: 'Subjects', icon: BookOpen },
+  { href: '/classes', label: 'Classes', icon: GraduationCap },
   { href: '/', label: 'Home', icon: Home },
   { href: '/search', label: 'Search', icon: Search },
-  { href: '/classes', label: 'Classes', icon: GraduationCap },
-  { href: '/subjects', label: 'Subjects', icon: BookOpen },
   { href: '/solutions', label: 'Solutions', icon: FileCheck },
-  { href: '/bookmarks', label: 'Saved', icon: Bookmark },
   { href: '/support', label: 'Support', icon: Heart },
 ]
 
@@ -27,16 +27,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const isReader = pathname.startsWith('/read/')
 
   if (isReader) {
-    // Keep bottom bar locked visible on mobile reader, hidden on desktop reader
+    // Keep bottom bar locked visible on mobile reader, hidden on desktop reader, z-index 30 so reader (z-50) sits on top
     return (
-      <div className="flex min-h-svh flex-col">
+      <div className="flex min-h-svh flex-col relative z-50">
         <div className="flex-1 min-h-0">{children}</div>
-        <nav aria-label="Primary" className="flex bg-sidebar/95 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] overflow-x-auto snap-x snap-mandatory scrollbar-hide lg:hidden">
-          {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+        <nav aria-label="Primary" className="flex bg-sidebar/95 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] overflow-x-auto snap-x snap-mandatory scrollbar-hide lg:hidden z-50 relative border-t border-white/10">
+          {NAV_ITEMS.map(({ href, label, icon: Icon }, idx) => {
             const active = isActive(pathname, href)
             return (
-              <Link key={href} href={href}
-                className={`flex min-w-[25%] snap-start flex-col items-center gap-1.5 py-3.5 text-[12px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
+              <Link key={href} href={href} id={idx === 3 ? "default-nav-home" : undefined}
+                className={`flex min-w-[20%] snap-start flex-col items-center gap-1.5 py-3.5 text-[11px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
                 <Icon className="h-6 w-6" /> {label}
               </Link>
             )
@@ -122,12 +122,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
 
-      <nav aria-label="Primary" className="fixed inset-x-0 bottom-0 z-40 flex bg-sidebar/90 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] lg:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide">
-        {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+      <nav aria-label="Primary" className="fixed inset-x-0 bottom-0 z-50 flex bg-sidebar/95 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] lg:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide border-t border-white/10" id="mobile-nav-bar">
+        {NAV_ITEMS.map(({ href, label, icon: Icon }, idx) => {
           const active = isActive(pathname, href)
           return (
-            <Link key={href} href={href}
-              className={`flex min-w-[25%] snap-start flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[12px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
+            <Link key={href} href={href} id={idx === 3 ? "default-nav-home" : undefined}
+              className={`flex min-w-[20%] snap-start flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[11px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
               <Icon className="h-6 w-6" /> {label}
             </Link>
           )

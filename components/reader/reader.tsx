@@ -140,9 +140,9 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   }, [handleBack])
 
   return (
-    <div className="flex h-svh flex-col bg-[#0c0c0c]">
+    <div className="flex h-svh flex-col bg-[#0c0c0c] relative z-50">
       {/* Top bar - locked visible, centered title, bigger buttons (size-14) with tooltips */}
-      <header className="flex items-center gap-3 bg-background/95 px-4 py-3.5 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0">
+      <header className="flex items-center gap-3 bg-background/95 px-4 py-3.5 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0 z-50">
         <button
           type="button"
           onClick={handleBack}
@@ -194,7 +194,7 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
       </header>
 
       {/* Combined scrollable book viewer - A4, full page, centered, cropped, butter smooth scrolling */}
-      <div className="flex-1 overflow-y-auto bg-[#0a0a0a] flex justify-center scroll-smooth overscroll-contain">
+      <div className="flex-1 overflow-y-auto bg-[#0a0a0a] flex justify-center scroll-smooth overscroll-auto">
         <div className="w-full max-w-[850px] bg-[#0c0c0c] shadow-2xl min-h-full flex flex-col items-center py-6 gap-6">
           {book.chapters.map((ch) => (
             <div key={ch.pdfCode} data-chapter-title={ch.title} className="w-full flex justify-center px-4">
