@@ -7734,5 +7734,9 @@ export function findBookByPdfCode(pdfCode: string): { book: Book; chapter: Chapt
     const chapter = book.chapters.find((c) => c.pdfCode === pdfCode)
     if (chapter) return { book, chapter }
   }
+  for (const book of SOLUTIONS) {
+    const chapter = book.chapters.find((c) => c.pdfCode === pdfCode)
+    if (chapter) return { book, chapter }
+  }
   return undefined
 }

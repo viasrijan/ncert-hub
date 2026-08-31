@@ -44,6 +44,7 @@ export function PdfViewer({
   })()
 
   // Try each jsDelivr mirror; fall back to the Cloudflare Worker proxy.
+  // For local solution PDFs (_sol.pdf) load directly from public/solutions-pdf
   useEffect(() => {
     let cancelled = false
     setLoading(true)
@@ -52,6 +53,10 @@ export function PdfViewer({
     setCurrentPage(1)
 
     const resolve = async () => {
+      if (file.endsWith('_sol.pdf')) {
+        if (!cancelled) setPdfUrl(`/solutions-pdf/${file}`)
+        return
+      }
       for (const base of JD_BASES) {
         const candidate = `${base}/${file}`
         try {

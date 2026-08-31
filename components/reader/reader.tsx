@@ -44,11 +44,15 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   const prev = idx > 0 ? book.chapters[idx - 1] : null
   const next = idx < book.chapters.length - 1 ? book.chapters[idx + 1] : null
 
-  const pdfUrl = `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
+  const isSolution = book.kind === 'solution'
+  const pdfUrl = isSolution ? `/solutions-pdf/${chapter.pdfCode}.pdf` : `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
 
   const [downloading, setDownloading] = useState(false)
 
   const resolveUrl = useCallback(async (file: string): Promise<string> => {
+    if (file.endsWith('_sol.pdf')) {
+      return `/solutions-pdf/${file}`
+    }
     for (const base of JD_BASES) {
       const candidate = `${base}/${file}`
       try {

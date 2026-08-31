@@ -24,6 +24,7 @@ function isActive(pathname: string, href: string) {
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
+  const isSolutions = pathname.startsWith('/solutions') || pathname.includes('_sol')
 
   if (pathname.startsWith('/read/')) return <>{children}</>
 
@@ -37,7 +38,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <Link key={href} href={href}
                 className={cn(
                   'nav-btn',
-                  active ? 'text-white font-extrabold' : 'text-gold',
+                  active && 'nav-btn-active',
                 )}>
                 <Icon className="h-5 w-5 shrink-0" /> {label}
               </Link>
@@ -48,7 +49,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       <div className="flex min-w-0 flex-1 flex-col overflow-y-auto h-svh">
         <main className="flex-1 pb-28 lg:pb-0 mt-4">
-          <div className="mx-auto w-full max-w-5xl flex items-center justify-center gap-3 px-6 pt-10 pb-10 md:px-8">
+          <div className="mx-auto w-full max-w-5xl flex flex-col items-center justify-center gap-1 px-6 pt-10 pb-6 md:px-8">
             <Link href="/" className="flex items-center gap-3 group">
               <span className="btn-gradient flex h-9 w-9 items-center justify-center rounded-full overflow-hidden shadow-elevated md:h-12 md:w-12">
                 <svg viewBox="0 0 20 20" className="h-[19px] w-[19px] text-white md:h-[26px] md:w-[26px]" fill="currentColor" aria-hidden="true">
@@ -57,6 +58,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </span>
               <span className="font-display text-3xl font-extrabold tracking-tight text-gold md:text-5xl">NCERT Hub</span>
             </Link>
+            {isSolutions && (
+              <span className="font-display text-sm font-bold tracking-[0.2em] uppercase text-gold">Solutions</span>
+            )}
+          </div>
+          <div className="mx-auto w-full max-w-5xl flex flex-col items-center justify-center px-6 pb-4 md:px-8">
+            {isSolutions && <h1 className="sr-only">Solutions</h1>}
           </div>
           {children}
         </main>

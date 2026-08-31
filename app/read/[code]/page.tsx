@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { BOOKS, findBookByPdfCode, toRoman } from '@/lib/catalog'
+import { BOOKS, SOLUTIONS, findBookByPdfCode, toRoman } from '@/lib/catalog'
 import { Reader } from '@/components/reader/reader'
 
 export function generateStaticParams() {
-  return BOOKS.flatMap((b) => b.chapters.map((c) => ({ code: c.pdfCode })))
+  return [...BOOKS, ...SOLUTIONS].flatMap((b) => b.chapters.map((c) => ({ code: c.pdfCode })))
 }
 
 export async function generateMetadata({

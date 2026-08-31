@@ -309,15 +309,21 @@
   color: var(--gold);
   border: 2px solid transparent;
 }
-.nav-btn:hover {
-  color: #ffffff;
-}
+.nav-btn:hover,
 .nav-btn:hover svg {
-  color: #ffffff;
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
 }
-.nav-btn-active {
-  color: #ffffff;
-  font-weight: 800;
+.nav-btn-active,
+.nav-btn-active svg {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
 }
 .light .nav-btn {
   color: var(--gold);
