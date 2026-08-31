@@ -110,34 +110,9 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
     }
   }, [resolveUrl, pdfUrl, chapter.pdfCode])
 
-  const [showChrome, setShowChrome] = useState(true)
   const [activeChapterTitle, setActiveChapterTitle] = useState(chapter.title)
-  const hideTimeoutRef = useState<NodeJS.Timeout | null>(null)[0] as unknown as React.MutableRefObject<NodeJS.Timeout | null>
-  const chromeTimeout = useCallback(() => {
-    if (hideTimeoutRef && hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current)
-    const t = setTimeout(() => setShowChrome(false), 3000)
-    // @ts-ignore
-    if (hideTimeoutRef) hideTimeoutRef.current = t
-  }, [])
 
-  useEffect(() => {
-    chromeTimeout()
-    const handleMove = () => {
-      setShowChrome(true)
-      chromeTimeout()
-    }
-    window.addEventListener('mousemove', handleMove)
-    window.addEventListener('touchstart', handleMove)
-    window.addEventListener('scroll', handleMove, true)
-    return () => {
-      window.removeEventListener('mousemove', handleMove)
-      window.removeEventListener('touchstart', handleMove)
-      window.removeEventListener('scroll', handleMove, true)
-      if (hideTimeoutRef && hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current)
-    }
-  }, [chromeTimeout])
-
-  // Track current chapter as user scrolls (for footer)
+  // Track current chapter as user scrolls (for footer/header)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -155,37 +130,46 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
     return () => observer.disconnect()
   }, [book.chapters])
 
+  // Esc key closes viewer
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') handleBack()
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [handleBack])
+
   return (
-    <div className="flex h-svh flex-col bg-muted" onMouseMove={() => setShowChrome(true)}>
-      {/* Top bar - autohide, centered title, bigger buttons with tooltips */}
-      <header className={`flex items-center gap-2 bg-background/95 px-3 py-3 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4 transition-transform duration-300 ${showChrome ? 'translate-y-0' : '-translate-y-full'}`}>
+    <div className="flex h-svh flex-col bg-[#0c0c0c]">
+      {/* Top bar - locked visible, centered title, bigger buttons (size-14) with tooltips */}
+      <header className="flex items-center gap-3 bg-background/95 px-4 py-3.5 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0">
         <button
           type="button"
           onClick={handleBack}
           aria-label="Back"
-          title="Back"
-          className="flex size-12 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
+          title="Back (Esc)"
+          className="flex size-14 shrink-0 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
         >
-          <ChevronLeft className="size-6" />
+          <ChevronLeft className="size-7" />
         </button>
         <div className="min-w-0 flex-1 text-center">
-          <h1 className="truncate text-base font-bold leading-tight md:text-lg">
+          <h1 className="truncate text-base font-bold leading-tight md:text-xl text-foreground">
             {activeChapterTitle}
           </h1>
-          <p className="truncate text-xs text-muted-foreground md:text-[13px]">
+          <p className="truncate text-xs text-muted-foreground md:text-sm">
             {book.title} · Class {toRoman(book.classNum)}
           </p>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
           <button
             type="button"
             onClick={downloadPdf}
             disabled={downloading}
-            aria-label="Download"
+            aria-label="Download PDF"
             title="Download PDF"
-            className="flex size-12 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground disabled:opacity-50"
+            className="flex size-14 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm disabled:opacity-50"
           >
-            <Download className="size-5" />
+            <Download className="size-6" />
           </button>
           <a
             href={pdfUrl}
@@ -193,39 +177,37 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
             rel="noopener noreferrer"
             aria-label="Open in new tab"
             title="Open in new tab"
-            className="flex size-12 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-secondary hover:text-foreground"
+            className="flex size-14 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
           >
-            <ExternalLink className="size-5" />
+            <ExternalLink className="size-6" />
           </a>
           <button
             type="button"
             onClick={handleBack}
             aria-label="Close"
-            title="Close"
-            className="flex size-12 items-center justify-center rounded-md bg-secondary text-foreground transition-colors duration-150 hover:bg-secondary/80"
+            title="Close (Esc)"
+            className="flex size-14 items-center justify-center rounded-xl bg-gold text-black font-extrabold transition-colors duration-150 hover:opacity-90 shadow-md"
           >
-            <X className="size-6" />
+            <X className="size-7" />
           </button>
         </div>
       </header>
 
-      {/* Combined scrollable book viewer - A4, full page, centered, cropped */}
-      <div className="flex-1 overflow-auto bg-[#0a0a0a] flex justify-center">
-        <div className="w-full max-w-[850px] bg-white shadow-2xl min-h-full">
-          <div className="flex flex-col">
-            {book.chapters.map((ch) => (
-              <div key={ch.pdfCode} data-chapter-title={ch.title} className="border-b border-gray-200 last:border-0">
-                <CombinedChapterPdf book={book} chapter={ch} isActive={ch.pdfCode === chapter.pdfCode} />
-              </div>
-            ))}
-          </div>
+      {/* Combined scrollable book viewer - A4, full page, centered, cropped, butter smooth scrolling */}
+      <div className="flex-1 overflow-y-auto bg-[#0a0a0a] flex justify-center scroll-smooth overscroll-contain">
+        <div className="w-full max-w-[850px] bg-[#0c0c0c] shadow-2xl min-h-full flex flex-col items-center py-6 gap-6">
+          {book.chapters.map((ch) => (
+            <div key={ch.pdfCode} data-chapter-title={ch.title} className="w-full flex justify-center px-4">
+              <CombinedChapterPdf book={book} chapter={ch} isActive={ch.pdfCode === chapter.pdfCode} />
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Bottom bar - locked visible, only chapter count */}
-      <footer className="flex items-center justify-between gap-2 bg-background/95 px-3 py-3 pb-[calc(0.5rem+env(safe-area-inset-bottom))] shadow-[0_-4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-4">
+      <footer className="flex items-center justify-between gap-3 bg-background/95 px-4 py-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0">
         <ChapterNavLink chapter={prev} direction="prev" />
-        <p className="text-xs font-semibold text-muted-foreground">
+        <p className="text-sm font-bold text-foreground">
           {book.chapters.length} chapters
         </p>
         <ChapterNavLink chapter={next} direction="next" />

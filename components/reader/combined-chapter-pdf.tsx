@@ -71,22 +71,22 @@ export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; ch
   }
 
   return (
-    <div ref={isActive ? (el) => el?.scrollIntoView({ behavior: 'smooth', block: 'start' }) : undefined} className="flex flex-col gap-2">
+    <div ref={isActive ? (el) => el?.scrollIntoView({ behavior: 'smooth', block: 'start' }) : undefined} className="flex flex-col gap-2 w-full items-center bg-[#0c0c0c] py-4">
       <Document
         file={pdfUrl}
         onLoadSuccess={onLoadSuccess}
         loading={<div className="flex justify-center py-8"><div className="size-6 animate-spin rounded-full border-2 border-muted border-t-gold" /></div>}
         error={<div className="py-8 text-center text-sm text-muted-foreground">Failed to load chapter</div>}
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6 w-full items-center">
           {Array.from({ length: numPages || 1 }, (_, i) => (
             <Page
               key={i}
               pageNumber={i + 1}
               renderTextLayer={false}
               renderAnnotationLayer={false}
-              className="shadow-lg mx-auto"
-              width={typeof window !== 'undefined' ? Math.min(700, window.innerWidth - 32) : 700}
+              className="shadow-xl bg-white"
+              width={typeof window !== 'undefined' ? Math.min(800, window.innerWidth - 48) : 800}
             />
           ))}
           {numPages === 0 && (
@@ -94,8 +94,8 @@ export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; ch
               pageNumber={1}
               renderTextLayer={false}
               renderAnnotationLayer={false}
-              className="shadow-lg mx-auto"
-              width={typeof window !== 'undefined' ? Math.min(700, window.innerWidth - 32) : 700}
+              className="shadow-xl bg-white"
+              width={typeof window !== 'undefined' ? Math.min(800, window.innerWidth - 48) : 800}
             />
           )}
         </div>

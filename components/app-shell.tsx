@@ -27,11 +27,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const isReader = pathname.startsWith('/read/')
 
   if (isReader) {
-    // Keep bottom bar locked visible even in reader - render viewer with chrome
+    // Keep bottom bar locked visible on mobile reader, hidden on desktop reader
     return (
       <div className="flex min-h-svh flex-col">
         <div className="flex-1 min-h-0">{children}</div>
-        <nav aria-label="Primary" className="flex bg-sidebar/95 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+        <nav aria-label="Primary" className="flex bg-sidebar/95 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] overflow-x-auto snap-x snap-mandatory scrollbar-hide lg:hidden">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
             return (
