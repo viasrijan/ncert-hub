@@ -233,6 +233,13 @@
     opacity: 0.9;
     box-shadow: 0 4px 20px rgba(249,115,22,0.35);
   }
+
+  /* Book page "View all" links: whole text turns white on hover */
+  .view-link { transition: color 0.2s; }
+  .view-link:hover, .view-link:hover span, .view-link:hover strong {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+  }
 }
 
 /* Shadows */
