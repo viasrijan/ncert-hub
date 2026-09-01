@@ -9,13 +9,13 @@ import { cn } from '@/lib/utils'
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']
 
 const NAV_ITEMS = [
-  { href: '/bookmarks', label: 'Saved', icon: Bookmark, color: '#a78bfa' },
-  { href: '/subjects', label: 'Subjects', icon: BookOpen, color: '#6aa9e9' },
-  { href: '/classes', label: 'Classes', icon: GraduationCap, color: '#52c7b8' },
-  { href: '/', label: 'Home', icon: Home, color: '#7cb87a' },
-  { href: '/search', label: 'Search', icon: Search, color: '#ddc94f' },
-  { href: '/solutions', label: 'Solutions', icon: FileCheck, color: '#e88f4a' },
-  { href: '/support', label: 'Support', icon: Heart, color: '#e57373' },
+  { href: '/bookmarks', label: 'Saved', icon: Bookmark },
+  { href: '/subjects', label: 'Subjects', icon: BookOpen },
+  { href: '/classes', label: 'Classes', icon: GraduationCap },
+  { href: '/', label: 'Home', icon: Home },
+  { href: '/search', label: 'Search', icon: Search },
+  { href: '/solutions', label: 'Solutions', icon: FileCheck },
+  { href: '/support', label: 'Support', icon: Heart },
 ]
 
 function isActive(pathname: string, href: string) {
@@ -77,15 +77,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-svh">
       <aside className="sidebar-left sticky top-0 hidden h-svh w-[275px] shrink-0 flex-col justify-center backdrop-blur-md lg:flex">
         <nav aria-label="Main" className="flex flex-col items-center gap-1.5 px-8">
-          {NAV_ITEMS.map(({ href, label, icon: Icon, color }) => {
+          {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href)
             return (
               <Link key={href} href={href}
                 className={cn(
                   'nav-btn',
                   active && 'nav-btn-active',
-                )}
-                style={{ color }}>
+                )}>
                 <Icon className="h-5 w-5 shrink-0" /> {label}
               </Link>
             )
@@ -110,25 +109,30 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
           {children}
         </main>
-        <footer className="hidden px-8 pt-6 pb-10 lg:flex lg:items-center lg:justify-center lg:gap-4">
+        <footer className="hidden flex-col items-center gap-2 px-8 pt-6 pb-10 lg:flex">
           <p className="text-sm font-normal text-foreground text-center">
-            An <strong className="font-bold">Unofficial Library</strong> of NCERT Books and their{' '}
-            <strong className="font-bold">Solutions</strong>.{' '}Visit the official website at{' '}
+            Visit the official website at{' '}
             <a href="https://ncert.nic.in" target="_blank" rel="noopener noreferrer" className="font-bold text-gold no-underline hover:text-foreground">
               © NCERT.NIC.IN
             </a>
           </p>
-          <a
-            href="https://www.paypal.me/iSrijan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full bg-white px-2 py-1 text-xs font-bold text-black transition-opacity hover:opacity-90"
-          >
-            Donate
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z" />
-            </svg>
-          </a>
+          <div className="flex items-center justify-center gap-3">
+            <p className="text-sm font-normal text-foreground text-center">
+              An <strong className="font-bold">Unofficial Library</strong> of NCERT Books and{' '}
+              <strong className="font-bold">Solutions</strong>.
+            </p>
+            <a
+              href="https://www.paypal.me/iSrijan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-white px-2 py-1 text-xs font-bold text-black transition-opacity hover:opacity-90"
+            >
+              Donate
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z" />
+              </svg>
+            </a>
+          </div>
         </footer>
       </div>
 
@@ -140,14 +144,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             {ROMAN.map((r, i) => {
               const href = pathname.startsWith('/solutions') ? `/solutions/classes/${i + 1}` : `/classes/${i + 1}`
               const active = isActive(pathname, href)
-              const color = NAV_ITEMS[i % NAV_ITEMS.length].color
               return (
                 <Link key={r} href={href}
                   className={cn(
                     'flex items-center justify-center rounded-full text-[17px] font-extrabold transition-colors duration-200 aspect-square shadow-card scale-110 origin-center',
                     active ? 'bg-white text-[#40663f] shadow-elevated' : 'btn-gradient hover:opacity-90',
-                  )}
-                  style={active ? undefined : { background: `linear-gradient(225deg, ${color} 0%, ${color}B3 100%)` }}>
+                  )}>
                   {r}
                 </Link>
               )

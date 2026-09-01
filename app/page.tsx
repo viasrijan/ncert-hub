@@ -23,7 +23,7 @@ export default function HomePage() {
         </div>
 
         <h1 className="max-w-3xl font-display leading-relaxed tracking-tight text-balance text-foreground">
-          <span className="text-lg md:text-2xl">An <strong className="font-bold text-gold">unofficial library</strong> of <strong className="font-bold">NCERT Books</strong> and their <strong className="font-bold">Solutions</strong>.</span>
+          <span className="text-lg md:text-2xl">An <strong className="font-bold text-gold">unofficial library</strong> of <strong className="font-bold">NCERT Books</strong> and <strong className="font-bold">Solutions</strong>.</span>
         </h1>
 
         <div className="flex justify-center w-full">
