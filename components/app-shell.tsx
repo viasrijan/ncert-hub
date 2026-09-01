@@ -112,8 +112,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <footer className="hidden flex-col items-center gap-2 px-8 pt-6 pb-10 lg:flex">
           <div className="flex items-center justify-center gap-3">
             <p className="text-sm font-normal text-foreground text-center">
-              An <strong className="font-bold">Unofficial Library</strong> of NCERT Books and{' '}
-              <strong className="font-bold">Solutions</strong>.
+              An <strong className="font-bold">Unofficial Library</strong> of NCERT Books and Solutions.
             </p>
             <a
               href="https://www.paypal.me/iSrijan"
