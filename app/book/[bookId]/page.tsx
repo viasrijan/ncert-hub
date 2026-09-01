@@ -25,7 +25,7 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
   const gradient = getSubjectGradient(book.subject)
   const CoverIcon = gradient.icon
 
-  const viewLinkClass = 'group flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold text-gold transition-all duration-200 hover:bg-gold/10 hover:scale-105 hover:text-gold hover:shadow-sm'
+  const viewLinkClass = 'group flex items-center gap-1 rounded-full px-3 py-1.5 text-sm transition-all duration-200 hover:bg-gold/10 hover:scale-105 hover:shadow-sm'
 
   return (
     <div className="mx-auto flex w-full max-w-[1600px] flex-col items-stretch gap-8 px-6 py-6 md:px-10 lg:h-[calc(100svh-13.5rem)] lg:flex-row lg:gap-12 lg:overflow-hidden lg:py-4">
@@ -73,12 +73,12 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
         <div className="flex shrink-0 items-center justify-center gap-8 pt-5">
           {isSolution && book.solutionFor && (
             <Link href={`/book/${book.solutionFor}`} className={viewLinkClass}>
-              <span className="text-white">View all</span> <strong className="font-bold">original textbooks</strong>
+              <span className="text-white">View all</span> <strong className="font-bold text-gold">original textbooks</strong>
             </Link>
           )}
           {!isSolution && (
             <Link href={`/book/${book.id}_sol`} className={viewLinkClass}>
-              <span className="text-white">View all</span> <strong className="font-bold">solutions</strong>
+              <span className="text-white">View all</span> <strong className="font-bold text-gold">solutions</strong>
             </Link>
           )}
         </div>
