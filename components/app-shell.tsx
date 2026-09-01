@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Bookmark, GraduationCap, Heart, Home, Search, BookOpen, FileCheck } from 'lucide-react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { Bookmark, ChevronLeft, ChevronRight, GraduationCap, Heart, Home, Search, BookOpen, FileCheck } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']
@@ -22,28 +23,76 @@ function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(href + '/')
 }
 
+function MobileNavBar({ pathname }: { pathname: string }) {
+  const navRef = useRef<HTMLElement>(null)
+  const [edge, setEdge] = useState({ left: false, right: true })
+
+  const updateEdges = useCallback(() => {
+    const nav = navRef.current
+    if (!nav) return
+    setEdge({
+      left: nav.scrollLeft > 4,
+      right: nav.scrollLeft < nav.scrollWidth - nav.clientWidth - 4,
+    })
+  }, [])
+
+  // Center the active item (Home on the home page) in the bar on load.
+  useEffect(() => {
+    const nav = navRef.current
+    if (!nav) return
+    const activeIdx = NAV_ITEMS.findIndex(({ href }) => isActive(pathname, href))
+    const el = nav.children[activeIdx >= 0 ? activeIdx : 3] as HTMLElement | undefined
+    if (el) {
+      const centeredLeft = el.offsetLeft + el.offsetWidth / 2 - nav.clientWidth / 2
+      nav.scrollLeft = Math.max(0, centeredLeft)
+    }
+    requestAnimationFrame(updateEdges)
+  }, [pathname, updateEdges])
+
+  useEffect(() => {
+    window.addEventListener('resize', updateEdges)
+    return () => window.removeEventListener('resize', updateEdges)
+  }, [updateEdges])
+
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-50 lg:hidden">
+      {edge.left && (
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 flex w-10 items-center bg-gradient-to-r from-[#0c0c0c] via-[#0c0c0c]/80 to-transparent">
+          <ChevronLeft className="size-4 text-white/50" />
+        </div>
+      )}
+      {edge.right && (
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-10 items-center justify-end bg-gradient-to-l from-[#0c0c0c] via-[#0c0c0c]/80 to-transparent">
+          <ChevronRight className="size-4 text-white/50" />
+        </div>
+      )}
+      <nav
+        ref={navRef}
+        onScroll={updateEdges}
+        aria-label="Primary"
+        className="relative flex bg-[#0c0c0c] shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] overflow-x-auto snap-x snap-mandatory scrollbar-hide border-t border-white/10"
+      >
+        {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+          const active = isActive(pathname, href)
+          return (
+            <Link key={href} href={href}
+              className={`flex min-w-[20%] snap-start flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[11px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
+              <Icon className="h-[22px] w-[22px]" /> {label}
+            </Link>
+          )
+        })}
+      </nav>
+    </div>
+  )
+}
+
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const isReader = pathname.startsWith('/read/')
 
   if (isReader) {
-    // Keep bottom bar locked visible on mobile reader, hidden on desktop reader, z-index 30 so reader (z-50) sits on top
-    return (
-      <div className="flex min-h-svh flex-col relative z-50">
-        <div className="flex-1 min-h-0">{children}</div>
-        <nav aria-label="Primary" className="flex bg-sidebar/95 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] overflow-x-auto snap-x snap-mandatory scrollbar-hide lg:hidden z-50 relative border-t border-white/10">
-          {NAV_ITEMS.map(({ href, label, icon: Icon }, idx) => {
-            const active = isActive(pathname, href)
-            return (
-              <Link key={href} href={href} id={idx === 3 ? "default-nav-home" : undefined}
-                className={`flex min-w-[20%] snap-start flex-col items-center gap-1.5 py-3.5 text-[11px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
-                <Icon className="h-6 w-6" /> {label}
-              </Link>
-            )
-          })}
-        </nav>
-      </div>
-    )
+    // The PDF viewer takes up the whole screen - no bottom nav bar.
+    return <div className="relative z-50 h-dvh overflow-hidden">{children}</div>
   }
 
   return (
@@ -125,17 +174,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
 
-      <nav aria-label="Primary" className="fixed inset-x-0 bottom-0 z-50 flex bg-sidebar/95 backdrop-blur-xl shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] lg:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide border-t border-white/10" id="mobile-nav-bar">
-        {NAV_ITEMS.map(({ href, label, icon: Icon }, idx) => {
-          const active = isActive(pathname, href)
-          return (
-            <Link key={href} href={href} id={idx === 3 ? "default-nav-home" : undefined}
-              className={`flex min-w-[20%] snap-start flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[11px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
-              <Icon className="h-6 w-6" /> {label}
-            </Link>
-          )
-        })}
-      </nav>
+      <MobileNavBar pathname={pathname} />
     </div>
   )
 }

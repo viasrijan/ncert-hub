@@ -6,7 +6,7 @@ import { getClassGradient, getClassIconGradient, getSubjectGradient } from '@/li
 import { SearchView } from '@/components/search-view'
 
 export const metadata: Metadata = {
-  title: 'NCERT Solutions — All Classes & Subjects',
+  title: 'Solutions',
   description: 'Browse NCERT Solutions for Classes I to XII — external, legal-safe links. Search solutions by class, subject, or chapter.',
 }
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { SearchView } from '@/components/search-view'
 
 export const metadata: Metadata = {
-  title: 'Search Textbooks',
+  title: 'Search',
   description: 'Search NCERT textbooks by title, subject, or chapter.',
 }
 

@@ -5,7 +5,7 @@ import { CLASSES, getSolutionsByClass, toRoman } from '@/lib/catalog'
 import { getClassIconGradient } from '@/lib/subject-gradients'
 
 export const metadata: Metadata = {
-  title: 'Solutions by Class',
+  title: 'Solutions - By Class',
   description: 'Browse NCERT Solutions by class — external, legal-safe.',
 }
 

@@ -5,7 +5,7 @@ import { getAllSolutionSubjects, getSolutionsBySubject } from '@/lib/catalog'
 import { getSubjectGradient } from '@/lib/subject-gradients'
 
 export const metadata: Metadata = {
-  title: 'Solutions by Subject',
+  title: 'Solutions - By Subject',
   description: 'Browse NCERT Solutions by subject — external, legal-safe.',
 }
 

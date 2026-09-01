@@ -5,7 +5,7 @@ import { getAllSubjects, getBooksBySubject } from '@/lib/catalog'
 import { getSubjectGradient } from '@/lib/subject-gradients'
 
 export const metadata: Metadata = {
-  title: 'All Subjects',
+  title: 'Subjects',
   description: 'Browse NCERT textbooks by subject.',
 }
 

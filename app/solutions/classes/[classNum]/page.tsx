@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ classNum: string }> }): Promise<Metadata> {
   const { classNum } = await params
-  return { title: `Class ${toRoman(Number(classNum))} Solutions`, description: `NCERT Solutions for Class ${toRoman(Number(classNum))} — external, legal-safe.` }
+  return { title: `Class ${toRoman(Number(classNum))}`, description: `NCERT Solutions for Class ${toRoman(Number(classNum))} — external, legal-safe.` }
 }
 
 export default async function SolutionClassPage({ params }: { params: Promise<{ classNum: string }> }) {

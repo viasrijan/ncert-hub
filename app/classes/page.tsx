@@ -5,7 +5,7 @@ import { CLASSES, getBooksByClass, toRoman } from '@/lib/catalog'
 import { getClassGradient, getClassIconGradient } from '@/lib/subject-gradients'
 
 export const metadata: Metadata = {
-  title: 'All Classes',
+  title: 'Classes',
   description: 'Browse NCERT textbooks for Classes I to XII.',
 }
 

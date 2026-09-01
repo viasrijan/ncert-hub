@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ bookId: s
   const { bookId } = await params
   const book = getBook(bookId)
   if (!book) return { title: 'Book not found' }
-  return { title: `${book.title} — Class ${toRoman(book.classNum)}`, description: `Read and download chapters of ${book.title}` }
+  return { title: `${book.title} - Class ${book.classNum}`, description: `Read and download chapters of ${book.title}` }
 }
 
 export default async function BookPage({ params }: { params: Promise<{ bookId: string }> }) {
@@ -59,13 +59,12 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
         </div>
       </section>
 
-      {/* Right: chapters, independently scrollable with an inner shadow */}
+      {/* Right: chapters, independently scrollable */}
       <section className="flex min-w-0 flex-1 flex-col">
-        <div className="relative min-h-0 flex-1">
+        <div className="min-h-0 flex-1">
           <div className="h-full overflow-y-auto pr-1 lg:pr-3">
             <ChapterList book={book} />
           </div>
-          <div className="pointer-events-none absolute inset-0 rounded-xl shadow-[inset_0_26px_32px_-22px_rgba(0,0,0,0.7),inset_0_-26px_32px_-22px_rgba(0,0,0,0.7)]" />
         </div>
         <div className="flex shrink-0 items-center justify-center gap-8 pt-5">
           {isSolution && book.solutionFor && (

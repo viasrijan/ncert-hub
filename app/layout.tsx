@@ -8,7 +8,10 @@ import './globals.css'
 const geist = Geist({ subsets: ['latin'], variable: '--font-satoshi' })
 
 export const metadata: Metadata = {
-  title: 'NCERT Hub',
+  title: {
+    default: 'NCERT Hub',
+    template: 'NCERT Hub: %s',
+  },
   description: 'Browse, read, and download NCERT textbooks for Classes I to XII.',
   generator: 'v0.app',
   icons: {

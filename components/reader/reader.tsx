@@ -63,6 +63,14 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
     }
   }, [router, book.id, isSolution])
 
+  // Close always exits the viewer deterministically, regardless of history state.
+  const handleClose = useCallback(() => {
+    const destination = isSolution
+      ? (book.solutionFor ? `/book/${book.solutionFor}` : '/solutions')
+      : `/book/${book.id}`
+    router.replace(destination)
+  }, [router, book.id, book.solutionFor, isSolution])
+
   const idx = book.chapters.findIndex((c) => c.pdfCode === chapter.pdfCode)
   const prev = idx > 0 ? book.chapters[idx - 1] : null
   const next = idx < book.chapters.length - 1 ? book.chapters[idx + 1] : null
@@ -132,63 +140,114 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
   // Esc key closes viewer
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') handleBack()
+      if (e.key === 'Escape') handleClose()
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [handleBack])
+  }, [handleClose])
 
   return (
-    <div className="flex h-svh flex-col bg-[#0c0c0c] relative z-50">
-      {/* Top bar - locked visible, title centered on the site, bigger buttons (size-14) with tooltips */}
-      <header className="relative z-50 flex items-center justify-between gap-3 bg-background/95 px-4 py-3.5 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0">
-        <button
-          type="button"
-          onClick={handleBack}
-          aria-label="Back"
-          title="Back (Esc)"
-          className="z-10 flex size-14 shrink-0 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
-        >
-          <ChevronLeft className="size-7" />
-        </button>
-        <div className="pointer-events-none absolute inset-x-0 top-1/2 flex min-w-0 -translate-y-1/2 flex-col items-center px-[4.5rem] text-center md:px-[6rem]">
-          <h1 className="w-full truncate text-base font-bold leading-tight md:text-xl text-foreground">
-            {activeChapterTitle}
-          </h1>
-          <p className="w-full truncate text-xs text-muted-foreground md:text-sm">
-            {book.title} · Class {toRoman(book.classNum)}
-          </p>
+    <div className="flex h-dvh flex-col bg-[#0c0c0c] relative z-50 overflow-hidden">
+      {/* Top bar - locked visible. Mobile: two compact rows (controls under the title).
+          Desktop: single row with the title centered on the site. */}
+      <header className="relative z-50 shrink-0 bg-background/95 px-3 py-2.5 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 md:py-3.5">
+        {/* Mobile row 1: back · title · close */}
+        <div className="flex items-center justify-between gap-2 md:hidden">
+          <button
+            type="button"
+            onClick={handleBack}
+            aria-label="Back"
+            className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
+          >
+            <ChevronLeft className="size-6" />
+          </button>
+          <div className="min-w-0 flex-1 text-center">
+            <h1 className="truncate text-base font-bold leading-tight text-foreground">
+              {activeChapterTitle}
+            </h1>
+            <p className="truncate text-xs text-muted-foreground">
+              {book.title} · Class {book.classNum}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={handleClose}
+            aria-label="Close"
+            className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gold text-black font-extrabold transition-colors duration-150 hover:opacity-90 shadow-md"
+          >
+            <X className="size-6" />
+          </button>
         </div>
-        <div className="flex items-center gap-2">
+        {/* Mobile row 2: download + open */}
+        <div className="flex items-center justify-center gap-2 pt-2.5 md:hidden">
           <button
             type="button"
             onClick={downloadPdf}
             disabled={downloading}
-            aria-label="Download PDF"
-            title="Download PDF"
-            className="flex size-14 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm disabled:opacity-50"
+            className="flex items-center gap-1.5 rounded-lg bg-secondary/80 px-3 py-1.5 text-[13px] font-bold text-foreground transition-colors duration-150 hover:bg-secondary disabled:opacity-50"
           >
-            <Download className="size-6" />
+            <Download className="size-4" /> {downloading ? 'Preparing…' : 'Download'}
           </button>
           <a
             href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Open in new tab"
-            title="Open in new tab"
-            className="flex size-14 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
+            className="flex items-center gap-1.5 rounded-lg bg-secondary/80 px-3 py-1.5 text-[13px] font-bold text-foreground transition-colors duration-150 hover:bg-secondary"
           >
-            <ExternalLink className="size-6" />
+            <ExternalLink className="size-4" /> Open in new tab
           </a>
+        </div>
+
+        {/* Desktop: back · centered title · download/open/close */}
+        <div className="hidden md:flex items-center justify-between gap-3">
           <button
             type="button"
             onClick={handleBack}
-            aria-label="Close"
-            title="Close (Esc)"
-            className="flex size-14 items-center justify-center rounded-xl bg-gold text-black font-extrabold transition-colors duration-150 hover:opacity-90 shadow-md"
+            aria-label="Back"
+            title="Back"
+            className="z-10 flex size-14 shrink-0 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
           >
-            <X className="size-7" />
+            <ChevronLeft className="size-7" />
           </button>
+          <div className="pointer-events-none absolute inset-x-0 top-1/2 flex min-w-0 -translate-y-1/2 flex-col items-center px-[6rem] text-center">
+            <h1 className="w-full truncate text-base font-bold leading-tight md:text-xl text-foreground">
+              {activeChapterTitle}
+            </h1>
+            <p className="w-full truncate text-xs text-muted-foreground md:text-sm">
+              {book.title} · Class {book.classNum}
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={downloadPdf}
+              disabled={downloading}
+              aria-label="Download PDF"
+              title="Download PDF"
+              className="flex size-14 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm disabled:opacity-50"
+            >
+              <Download className="size-6" />
+            </button>
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open in new tab"
+              title="Open in new tab"
+              className="flex size-14 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
+            >
+              <ExternalLink className="size-6" />
+            </a>
+            <button
+              type="button"
+              onClick={handleClose}
+              aria-label="Close"
+              title="Close (Esc)"
+              className="flex size-14 items-center justify-center rounded-xl bg-gold text-black font-extrabold transition-colors duration-150 hover:opacity-90 shadow-md"
+            >
+              <X className="size-7" />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -209,9 +268,9 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
           href={`/read/${prev.pdfCode}`}
           aria-label={`Previous chapter: ${prev.title}`}
           title={prev.title}
-          className="fixed left-3 top-1/2 z-30 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-background/80 text-foreground shadow-elevated backdrop-blur transition-colors duration-150 hover:bg-secondary md:left-6 md:size-14"
+          className="fixed top-1/2 z-30 flex size-14 -translate-y-1/2 items-center justify-center rounded-full bg-background/85 text-foreground shadow-elevated backdrop-blur transition-colors duration-150 hover:bg-secondary left-2 md:size-16 md:left-[max(1rem,calc((100%-850px)/2-5rem))]"
         >
-          <ChevronLeft className="size-6 md:size-7" />
+          <ChevronLeft className="size-7 md:size-8" />
         </Link>
       )}
       {next && (
@@ -219,9 +278,9 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
           href={`/read/${next.pdfCode}`}
           aria-label={`Next chapter: ${next.title}`}
           title={next.title}
-          className="fixed right-3 top-1/2 z-30 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-background/80 text-foreground shadow-elevated backdrop-blur transition-colors duration-150 hover:bg-secondary md:right-6 md:size-14"
+          className="fixed top-1/2 z-30 flex size-14 -translate-y-1/2 items-center justify-center rounded-full bg-background/85 text-foreground shadow-elevated backdrop-blur transition-colors duration-150 hover:bg-secondary right-2 md:size-16 md:right-[max(1rem,calc((100%-850px)/2-5rem))]"
         >
-          <ChevronRight className="size-6 md:size-7" />
+          <ChevronRight className="size-7 md:size-8" />
         </Link>
       )}
 

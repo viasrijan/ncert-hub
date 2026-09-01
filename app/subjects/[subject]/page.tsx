@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ subject: string }> }): Promise<Metadata> {
   const { subject } = await params
   const decodedSubject = decodeURIComponent(subject)
-  return { title: `${decodedSubject} Textbooks`, description: `All NCERT textbooks for ${decodedSubject}.` }
+  return { title: decodedSubject, description: `All NCERT textbooks for ${decodedSubject}.` }
 }
 
 export default async function SubjectPage({ params }: { params: Promise<{ subject: string }> }) {
