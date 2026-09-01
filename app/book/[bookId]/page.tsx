@@ -28,7 +28,7 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
   const viewLinkClass = 'view-link flex items-center gap-1 text-sm hover:scale-105'
 
   return (
-    <div className="mx-auto flex w-full max-w-[1600px] flex-col items-stretch gap-8 px-6 py-6 md:px-10 lg:h-[calc(100svh-13.5rem)] lg:flex-row lg:gap-12 lg:overflow-hidden lg:py-4">
+    <div className="mx-auto flex w-full max-w-[1600px] flex-col items-stretch gap-6 px-6 py-6 md:px-12 lg:h-[calc(100svh-13.5rem)] lg:flex-row lg:gap-10 lg:overflow-hidden lg:py-4">
       {/* Left: cover + actions, locked vertically in the middle of the site */}
       <section className="flex flex-col lg:w-[42%] lg:shrink-0">
         <Link
@@ -38,13 +38,13 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
           <ChevronLeft className="size-[18px]" /> Class {toRoman(book.classNum)} {isSolution && '· Solutions'}
         </Link>
 
-        <div className="flex flex-1 flex-col items-center justify-center gap-4 py-8 text-center lg:py-0">
-          <div className="relative aspect-[3/4] w-40 shrink-0 overflow-hidden rounded-2xl shadow-lg md:w-52" style={{ background: gradient.gradient }}>
+        <div className="flex flex-1 flex-col items-center justify-center gap-3 py-6 text-center lg:py-0">
+          <div className="relative aspect-[3/4] w-36 shrink-0 overflow-hidden rounded-2xl shadow-lg md:w-44" style={{ background: gradient.gradient }}>
             <CoverIcon className="absolute inset-0 m-auto size-12 text-white/30" />
           </div>
           <div className="flex flex-col items-center gap-2">
-            <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl text-foreground text-balance">{book.title}</h1>
-            <p className="text-[15px] font-semibold text-muted-foreground">{book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'}</p>
+            <h1 className="font-display text-2xl font-bold leading-tight tracking-tight md:text-3xl text-foreground text-balance">{book.title}</h1>
+            <p className="text-sm font-semibold text-muted-foreground">{book.chapters.length} {book.chapters.length === 1 ? 'chapter' : 'chapters'}</p>
             <div className="flex flex-wrap items-center justify-center gap-2.5 mt-2">
               <BookmarkButton bookId={book.id} />
               <BookDownloadButton pdfCode={book.chapters[0].pdfCode} label="Download" />
@@ -65,10 +65,10 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
 
       {/* Right: chapters, independently scrollable */}
       <section className="flex min-w-0 flex-1 flex-col">
-        <div className="flex min-h-0 flex-1 flex-col pt-4 lg:pt-6">
+        <div className="flex min-h-0 flex-1 flex-col">
           <ChapterList book={book} />
         </div>
-        <div className="flex shrink-0 items-center justify-center gap-8 pt-5">
+        <div className="flex shrink-0 items-center justify-center gap-6 pt-4">
           {isSolution && book.solutionFor && (
             <Link href={`/book/${book.solutionFor}`} className={viewLinkClass}>
               <span className="text-white">View all</span> <strong className="text-base font-bold text-gold">Original Textbooks</strong>
