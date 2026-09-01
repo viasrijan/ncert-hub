@@ -15,7 +15,7 @@ export function BookmarkButton({ bookId }: { bookId: string }) {
       aria-pressed={bookmarked}
       aria-label={bookmarked ? 'Remove bookmark' : 'Bookmark this book'}
       className={cn(
-        'flex items-center gap-1.5 rounded-xl px-3 py-2 text-[13px] font-bold transition-all duration-200',
+        'flex items-center gap-1.5 rounded-xl px-3 py-2 text-[13px] font-bold transition-all duration-200 hover:scale-105 hover:shadow-elevated',
         bookmarked
           ? 'bg-gold text-white shadow-md'
           : 'bg-card/80 text-muted-foreground hover:text-foreground hover:bg-card',

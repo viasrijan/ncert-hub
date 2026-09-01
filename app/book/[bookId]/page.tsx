@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ bookId: s
   const { bookId } = await params
   const book = getBook(bookId)
   if (!book) return { title: 'Book not found' }
-  return { title: `${book.title} - Class ${book.classNum}`, description: `Read and download chapters of ${book.title}` }
+  return { title: `${book.kind === 'solution' ? 'Solutions - ' : ''}${book.title} (Class ${book.classNum})`, description: `Read and download chapters of ${book.title}` }
 }
 
 export default async function BookPage({ params }: { params: Promise<{ bookId: string }> }) {
@@ -24,6 +24,8 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
   const isSolution = book.kind === 'solution'
   const gradient = getSubjectGradient(book.subject)
   const CoverIcon = gradient.icon
+
+  const viewLinkClass = 'group flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold text-gold transition-all duration-200 hover:bg-gold/10 hover:scale-105 hover:text-gold hover:shadow-sm'
 
   return (
     <div className="mx-auto flex w-full max-w-[1600px] flex-col items-stretch gap-8 px-6 py-6 md:px-10 lg:h-[calc(100svh-13.5rem)] lg:flex-row lg:gap-12 lg:overflow-hidden lg:py-4">
@@ -48,12 +50,12 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
               <BookDownloadButton pdfCode={book.chapters[0].pdfCode} label="Download" />
               {isSolution && book.sourceUrl && (
                 <a href={book.sourceUrl} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 rounded-xl btn-gradient px-3 py-2 text-[13px] font-bold transition-all duration-200 hover:opacity-90">
+                  className="flex items-center gap-1.5 rounded-xl btn-gradient px-3 py-2 text-[13px] font-bold transition-all duration-200 hover:scale-105 hover:shadow-elevated hover:opacity-90">
                   <ExternalLink className="size-4" /> Open Solutions
                 </a>
               )}
               <a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 rounded-xl bg-card/80 px-3 py-2 text-[13px] font-bold text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:text-foreground hover:shadow-sm">
+                className="flex items-center gap-1.5 rounded-xl bg-card/80 px-3 py-2 text-[13px] font-bold text-muted-foreground backdrop-blur-sm transition-all duration-200 hover:scale-105 hover:text-foreground hover:shadow-elevated">
                 <ExternalLink className="size-4" /> NCERT
               </a>
             </div>
@@ -63,20 +65,20 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
 
       {/* Right: chapters, independently scrollable */}
       <section className="flex min-w-0 flex-1 flex-col">
-        <div className="min-h-0 flex-1">
+        <div className="min-h-0 flex-1 pt-4 lg:pt-6">
           <div className="h-full overflow-y-auto pr-1 lg:pr-3">
             <ChapterList book={book} />
           </div>
         </div>
         <div className="flex shrink-0 items-center justify-center gap-8 pt-5">
           {isSolution && book.solutionFor && (
-            <Link href={`/book/${book.solutionFor}`} className="text-sm font-semibold text-gold transition-opacity hover:opacity-70">
-              View <strong className="font-bold">original textbook</strong>
+            <Link href={`/book/${book.solutionFor}`} className={viewLinkClass}>
+              <span className="text-white">View all</span> <strong className="font-bold">original textbooks</strong>
             </Link>
           )}
           {!isSolution && (
-            <Link href={`/book/${book.id}_sol`} className="text-sm font-semibold text-gold transition-opacity hover:opacity-70">
-              View <strong className="font-bold">solutions</strong>
+            <Link href={`/book/${book.id}_sol`} className={viewLinkClass}>
+              <span className="text-white">View all</span> <strong className="font-bold">solutions</strong>
             </Link>
           )}
         </div>

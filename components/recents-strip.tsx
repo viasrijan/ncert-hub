@@ -27,7 +27,7 @@ export function RecentsStrip() {
         <h2 id="recents-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
           Continue reading
         </h2>
-        <Link href="/bookmarks" className="group flex items-center gap-2 text-base font-semibold text-white transition-colors hover:text-white/70">
+        <Link href="/bookmarks" className="group flex items-center gap-2 text-base font-semibold text-gold transition-colors hover:text-gold/70">
           View all <ArrowRight className="h-4 w-4" />
         </Link>
       </div>

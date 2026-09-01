@@ -44,7 +44,9 @@ function MobileNavBar({ pathname }: { pathname: string }) {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 lg:hidden">
-      <nav ref={navRef} aria-label="Primary" className="relative flex overflow-x-auto snap-x snap-mandatory scrollbar-hide border-t border-white/10 bg-[#0c0c0c] shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] before:pointer-events-none before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-10 before:bg-gradient-to-r before:from-[#0c0c0c] before:to-transparent before:shadow-[8px_0_18px_-14px_rgba(255,255,255,0.8)] after:pointer-events-none after:absolute after:inset-y-0 after:right-0 after:z-10 after:w-10 after:bg-gradient-to-l after:from-[#0c0c0c] after:to-transparent after:shadow-[-8px_0_18px_-14px_rgba(255,255,255,0.8)]">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-10 bg-gradient-to-r from-[#0c0c0c] via-[#0c0c0c]/85 to-transparent shadow-[8px_0_18px_-14px_rgba(255,255,255,0.8)]" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-10 bg-gradient-to-l from-[#0c0c0c] via-[#0c0c0c]/85 to-transparent shadow-[-8px_0_18px_-14px_rgba(255,255,255,0.8)]" />
+      <nav ref={navRef} aria-label="Primary" className="relative flex overflow-x-auto snap-x snap-mandatory scrollbar-hide border-t border-white/10 bg-[#0c0c0c] shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)]">
         {NAV_ITEMS.map(({ href, label, icon: Icon }, idx) => {
           const active = isActive(pathname, href)
           const distance = Math.abs(idx - 3)
@@ -64,6 +66,7 @@ function MobileNavBar({ pathname }: { pathname: string }) {
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const isReader = pathname.startsWith('/read/')
+  const isSolutions = pathname.startsWith('/solutions') || pathname.startsWith('/book/') && pathname.includes('_sol')
 
   if (isReader) {
     // The PDF viewer takes up the whole screen - no bottom nav bar.
@@ -99,7 +102,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 </svg>
               </span>
               <span className="font-display text-3xl font-extrabold tracking-tight text-gold md:text-5xl">NCERT Hub</span>
-              {pathname.startsWith('/solutions') && (
+              {isSolutions && (
                 <span className="font-display text-3xl font-extrabold tracking-tight text-white md:text-5xl">Solutions</span>
               )}
             </Link>

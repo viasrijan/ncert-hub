@@ -33,7 +33,7 @@ export default function SolutionClassesPage() {
                 {toRoman(c)}
               </span>
               <div className="flex flex-col min-w-0 flex-1">
-                <h2 className="font-display text-xl font-bold text-foreground">Class {toRoman(c)}</h2>
+                <h2 className="font-display text-2xl font-bold text-foreground">Class {toRoman(c)}</h2>
                 <p className="text-[14px] font-semibold text-muted-foreground">
                   <span className="text-[#69a667]">{books.length}</span> <span className="text-[#69a667]">{books.length === 1 ? 'book' : 'books'}</span>
                 </p>

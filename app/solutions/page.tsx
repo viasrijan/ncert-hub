@@ -25,7 +25,7 @@ export default function SolutionsPage() {
 
       <section aria-labelledby="sol-subjects-heading" className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
-          <h2 id="sol-subjects-heading" className="font-display text-2xl font-bold tracking-tight text-foreground">Browse by Subject</h2>
+          <h2 id="sol-subjects-heading" className="font-display text-3xl font-bold tracking-tight text-foreground">Browse by Subject</h2>
           <span className="rounded-full bg-card/60 px-3 py-1 text-xs font-bold text-foreground">{solutionSubjects.length} subjects</span>
         </div>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
@@ -45,7 +45,7 @@ export default function SolutionsPage() {
                   {subject.charAt(0)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <h3 className="font-display text-xl font-bold text-foreground">{subject}</h3>
+                  <h3 className="font-display text-2xl font-bold text-foreground">{subject}</h3>
                   <p className="text-[14px] font-semibold text-muted-foreground">
                     <span className="text-[#69a667]">{books.length}</span> <span className="text-[#69a667]">{books.length === 1 ? 'book' : 'books'}</span>
                   </p>
@@ -59,7 +59,7 @@ export default function SolutionsPage() {
 
       <section aria-labelledby="sol-classes-heading" className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
-          <h2 id="sol-classes-heading" className="font-display text-2xl font-bold tracking-tight text-foreground">Browse by Class</h2>
+          <h2 id="sol-classes-heading" className="font-display text-3xl font-bold tracking-tight text-foreground">Browse by Class</h2>
           <span className="rounded-full bg-card/60 px-3 py-1 text-xs font-bold text-foreground">{CLASSES.length} classes</span>
         </div>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
@@ -79,7 +79,7 @@ export default function SolutionsPage() {
                   {toRoman(c)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <h3 className="font-display text-xl font-bold text-foreground">Class {toRoman(c)}</h3>
+                  <h3 className="font-display text-2xl font-bold text-foreground">Class {toRoman(c)}</h3>
                   <p className="text-[14px] font-semibold text-muted-foreground">
                     <span className="text-[#69a667]">{books.length}</span> <span className="text-[#69a667]">{books.length === 1 ? 'book' : 'books'}</span>
                   </p>

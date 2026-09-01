@@ -16,7 +16,7 @@ export async function generateMetadata({
   const match = findBookByPdfCode(code)
   if (!match) return { title: 'Chapter not found' }
   return {
-    title: `${match.book.title} - Class ${match.book.classNum}`,
+    title: `${match.book.kind === 'solution' ? 'Solutions - ' : ''}${match.book.title} (Class ${match.book.classNum})`,
     description: `Read ${match.chapter.title} from ${match.book.title} (NCERT, Class ${toRoman(match.book.classNum)}).`,
   }
 }
