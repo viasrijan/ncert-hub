@@ -17,7 +17,7 @@ const JD_BASES = [
 ]
 const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
 
-export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; chapter: Chapter; isActive?: boolean }) {
+export function CombinedChapterPdf({ book, chapter, isActive, scale = 1 }: { book: Book; chapter: Chapter; isActive?: boolean; scale?: number }) {
   const [numPages, setNumPages] = useState(0)
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
@@ -97,7 +97,7 @@ export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; ch
               renderTextLayer={false}
               renderAnnotationLayer={false}
               className="shadow-xl bg-white"
-              width={typeof window !== 'undefined' ? Math.min(800, window.innerWidth - 48) : 800}
+              width={typeof window !== 'undefined' ? Math.min(800, window.innerWidth - 48) * scale : 800 * scale}
             />
           ))}
           {numPages === 0 && (
@@ -106,7 +106,7 @@ export function CombinedChapterPdf({ book, chapter, isActive }: { book: Book; ch
               renderTextLayer={false}
               renderAnnotationLayer={false}
               className="shadow-xl bg-white"
-              width={typeof window !== 'undefined' ? Math.min(800, window.innerWidth - 48) : 800}
+              width={typeof window !== 'undefined' ? Math.min(800, window.innerWidth - 48) * scale : 800 * scale}
             />
           )}
         </div>

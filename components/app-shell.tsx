@@ -2,8 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { Bookmark, ChevronLeft, ChevronRight, GraduationCap, Heart, Home, Search, BookOpen, FileCheck } from 'lucide-react'
+import { useCallback, useEffect, useRef } from 'react'
+import { Bookmark, GraduationCap, Heart, Home, Search, BookOpen, FileCheck } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']
@@ -25,58 +25,33 @@ function isActive(pathname: string, href: string) {
 
 function MobileNavBar({ pathname }: { pathname: string }) {
   const navRef = useRef<HTMLElement>(null)
-  const [edge, setEdge] = useState({ left: false, right: true })
 
-  const updateEdges = useCallback(() => {
-    const nav = navRef.current
-    if (!nav) return
-    setEdge({
-      left: nav.scrollLeft > 4,
-      right: nav.scrollLeft < nav.scrollWidth - nav.clientWidth - 4,
-    })
-  }, [])
-
-  // Center the active item (Home on the home page) in the bar on load.
-  useEffect(() => {
+  const centerActive = useCallback(() => {
     const nav = navRef.current
     if (!nav) return
     const activeIdx = NAV_ITEMS.findIndex(({ href }) => isActive(pathname, href))
     const el = nav.children[activeIdx >= 0 ? activeIdx : 3] as HTMLElement | undefined
     if (el) {
-      const centeredLeft = el.offsetLeft + el.offsetWidth / 2 - nav.clientWidth / 2
-      nav.scrollLeft = Math.max(0, centeredLeft)
+      nav.scrollLeft = Math.max(0, el.offsetLeft + el.offsetWidth / 2 - nav.clientWidth / 2)
     }
-    requestAnimationFrame(updateEdges)
-  }, [pathname, updateEdges])
+  }, [pathname])
 
   useEffect(() => {
-    window.addEventListener('resize', updateEdges)
-    return () => window.removeEventListener('resize', updateEdges)
-  }, [updateEdges])
+    centerActive()
+    window.addEventListener('resize', centerActive)
+    return () => window.removeEventListener('resize', centerActive)
+  }, [centerActive])
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 lg:hidden">
-      {edge.left && (
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 flex w-10 items-center bg-gradient-to-r from-[#0c0c0c] via-[#0c0c0c]/80 to-transparent">
-          <ChevronLeft className="size-4 text-white/50" />
-        </div>
-      )}
-      {edge.right && (
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-10 items-center justify-end bg-gradient-to-l from-[#0c0c0c] via-[#0c0c0c]/80 to-transparent">
-          <ChevronRight className="size-4 text-white/50" />
-        </div>
-      )}
-      <nav
-        ref={navRef}
-        onScroll={updateEdges}
-        aria-label="Primary"
-        className="relative flex bg-[#0c0c0c] shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] overflow-x-auto snap-x snap-mandatory scrollbar-hide border-t border-white/10"
-      >
-        {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+      <nav ref={navRef} aria-label="Primary" className="relative flex overflow-x-auto snap-x snap-mandatory scrollbar-hide border-t border-white/10 bg-[#0c0c0c] shadow-[0_-6px_20px_-4px_rgba(0,0,0,0.45)] before:pointer-events-none before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-10 before:bg-gradient-to-r before:from-[#0c0c0c] before:to-transparent before:shadow-[8px_0_18px_-14px_rgba(255,255,255,0.8)] after:pointer-events-none after:absolute after:inset-y-0 after:right-0 after:z-10 after:w-10 after:bg-gradient-to-l after:from-[#0c0c0c] after:to-transparent after:shadow-[-8px_0_18px_-14px_rgba(255,255,255,0.8)]">
+        {NAV_ITEMS.map(({ href, label, icon: Icon }, idx) => {
           const active = isActive(pathname, href)
+          const distance = Math.abs(idx - 3)
           return (
             <Link key={href} href={href}
-              className={`flex min-w-[20%] snap-start flex-col items-center gap-1.5 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[11px] font-bold tracking-tight shrink-0 ${active ? 'text-white' : 'text-white/60'}`}>
+              className={`flex min-w-[20%] snap-start shrink-0 flex-col items-center gap-1.5 px-1 pt-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-[11px] font-bold tracking-tight ${active ? 'text-white' : 'text-white/60'}`}
+              style={{ opacity: active ? 1 : Math.max(0.3, 0.8 - distance * 0.13) }}>
               <Icon className="h-[22px] w-[22px]" /> {label}
             </Link>
           )

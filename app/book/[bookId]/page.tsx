@@ -22,6 +22,8 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
   const book = getBook(bookId)
   if (!book) notFound()
   const isSolution = book.kind === 'solution'
+  const gradient = getSubjectGradient(book.subject)
+  const CoverIcon = gradient.icon
 
   return (
     <div className="mx-auto flex w-full max-w-[1600px] flex-col items-stretch gap-8 px-6 py-6 md:px-10 lg:h-[calc(100svh-13.5rem)] lg:flex-row lg:gap-12 lg:overflow-hidden lg:py-4">
@@ -35,8 +37,8 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
         </Link>
 
         <div className="flex flex-1 flex-col items-center justify-center gap-4 py-8 text-center lg:py-0">
-          <div className="relative aspect-[3/4] w-40 shrink-0 overflow-hidden rounded-2xl shadow-lg md:w-52" style={{ background: getSubjectGradient(book.subject).gradient }}>
-            {(() => { const Ic = getSubjectGradient(book.subject).icon; return <Ic className="size-12 text-white/30 absolute inset-0 m-auto" strokeWidth={1.5} /> })()}
+          <div className="relative aspect-[3/4] w-40 shrink-0 overflow-hidden rounded-2xl shadow-lg md:w-52" style={{ background: gradient.gradient }}>
+            <CoverIcon className="absolute inset-0 m-auto size-12 text-white/30" />
           </div>
           <div className="flex flex-col items-center gap-2">
             <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl text-foreground text-balance">{book.title}</h1>

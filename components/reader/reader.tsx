@@ -1,11 +1,9 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { ChevronLeft, ChevronRight, Download, ExternalLink, X } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import { ChevronLeft, Download, ExternalLink, ZoomIn, ZoomOut, RotateCcw, X } from 'lucide-react'
 import type { Book, Chapter } from '@/lib/catalog'
 import { NCERT_PDF_BASE, toRoman, getSolutionPdfUrl } from '@/lib/catalog'
 import { useRecents } from '@/lib/library-store'
@@ -17,21 +15,6 @@ const JD_BASES = [
   'https://cdn.jsdelivr.net/gh/viasrijan/ncert-pdfs-4@main',
 ]
 const PROXY_BASE = 'https://ncert-pdf-proxy.srijan-pratap1998.workers.dev'
-
-const PdfViewer = dynamic(
-  () => import('@/components/reader/pdf-viewer').then((mod) => mod.PdfViewer),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex flex-1 items-center justify-center py-20">
-        <div className="flex flex-col items-center gap-3">
-          <div className="size-8 animate-spin rounded-full border-4 border-muted border-t-gold" />
-          <p className="text-sm text-muted-foreground">Loading PDF viewer...</p>
-        </div>
-      </div>
-    ),
-  },
-)
 
 const CombinedChapterPdf = dynamic(
   () => import('@/components/reader/combined-chapter-pdf').then((mod) => mod.CombinedChapterPdf),
@@ -71,13 +54,11 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
     router.replace(destination)
   }, [router, book.id, book.solutionFor, isSolution])
 
-  const idx = book.chapters.findIndex((c) => c.pdfCode === chapter.pdfCode)
-  const prev = idx > 0 ? book.chapters[idx - 1] : null
-  const next = idx < book.chapters.length - 1 ? book.chapters[idx + 1] : null
-
   const pdfUrl = isSolution ? getSolutionPdfUrl(chapter.pdfCode) : `${NCERT_PDF_BASE}/${chapter.pdfCode}.pdf`
 
   const [downloading, setDownloading] = useState(false)
+  const [zoom, setZoom] = useState(1)
+  const clampZoom = (value: number) => Math.min(1.75, Math.max(0.75, Number(value.toFixed(2))))
 
   const resolveUrl = useCallback(async (file: string): Promise<string> => {
     if (file.endsWith('_sol.pdf')) {
@@ -119,7 +100,7 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
 
   const [activeChapterTitle, setActiveChapterTitle] = useState(chapter.title)
 
-  // Track current chapter as user scrolls (for footer/header)
+  // Track current chapter as user scrolls (for the header)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -157,7 +138,7 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
             type="button"
             onClick={handleBack}
             aria-label="Back"
-            className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
+            className="flex size-11 shrink-0 items-center justify-center rounded-full text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
           >
             <ChevronLeft className="size-6" />
           </button>
@@ -166,37 +147,19 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
               {activeChapterTitle}
             </h1>
             <p className="truncate text-xs text-muted-foreground">
-              {book.title} · Class {book.classNum}
+              {book.title} · Class {book.classNum} ({book.chapters.length} chapters)
             </p>
           </div>
           <button
             type="button"
             onClick={handleClose}
             aria-label="Close"
-            className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gold text-black font-extrabold transition-colors duration-150 hover:opacity-90 shadow-md"
+            className="flex size-11 shrink-0 items-center justify-center rounded-full bg-gold text-black font-extrabold transition-colors duration-150 hover:opacity-90 shadow-md"
           >
             <X className="size-6" />
           </button>
         </div>
-        {/* Mobile row 2: download + open */}
-        <div className="flex items-center justify-center gap-2 pt-2.5 md:hidden">
-          <button
-            type="button"
-            onClick={downloadPdf}
-            disabled={downloading}
-            className="flex items-center gap-1.5 rounded-lg bg-secondary/80 px-3 py-1.5 text-[13px] font-bold text-foreground transition-colors duration-150 hover:bg-secondary disabled:opacity-50"
-          >
-            <Download className="size-4" /> {downloading ? 'Preparing…' : 'Download'}
-          </button>
-          <a
-            href={pdfUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 rounded-lg bg-secondary/80 px-3 py-1.5 text-[13px] font-bold text-foreground transition-colors duration-150 hover:bg-secondary"
-          >
-            <ExternalLink className="size-4" /> Open in new tab
-          </a>
-        </div>
+        {/* Mobile row 2 is intentionally omitted: controls float over the lower page area. */}
 
         {/* Desktop: back · centered title · download/open/close */}
         <div className="hidden md:flex items-center justify-between gap-3">
@@ -205,7 +168,7 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
             onClick={handleBack}
             aria-label="Back"
             title="Back"
-            className="z-10 flex size-14 shrink-0 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
+            className="z-10 flex size-14 shrink-0 items-center justify-center rounded-full text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
           >
             <ChevronLeft className="size-7" />
           </button>
@@ -214,19 +177,19 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
               {activeChapterTitle}
             </h1>
             <p className="w-full truncate text-xs text-muted-foreground md:text-sm">
-              {book.title} · Class {book.classNum}
+              {book.title} · Class {book.classNum} ({book.chapters.length} chapters)
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={downloadPdf}
-              disabled={downloading}
-              aria-label="Download PDF"
-              title="Download PDF"
-              className="flex size-14 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm disabled:opacity-50"
-            >
-              <Download className="size-6" />
+          <button
+            type="button"
+            onClick={downloadPdf}
+            disabled={downloading}
+            aria-label="Download PDF"
+            title="Download PDF"
+            className="flex size-11 items-center justify-center rounded-full bg-secondary/80 text-foreground transition-colors duration-150 hover:bg-secondary shadow-sm disabled:opacity-50 md:size-14"
+          >
+              <Download className="size-5 md:size-6" />
             </button>
             <a
               href={pdfUrl}
@@ -234,62 +197,52 @@ export function Reader({ book, chapter }: { book: Book; chapter: Chapter }) {
               rel="noopener noreferrer"
               aria-label="Open in new tab"
               title="Open in new tab"
-              className="flex size-14 items-center justify-center rounded-xl text-foreground bg-secondary/80 transition-colors duration-150 hover:bg-secondary hover:text-foreground shadow-sm"
+              className="flex size-11 items-center justify-center rounded-full bg-secondary/80 text-foreground transition-colors duration-150 hover:bg-secondary shadow-sm md:size-14"
             >
-              <ExternalLink className="size-6" />
+              <ExternalLink className="size-5 md:size-6" />
             </a>
             <button
               type="button"
               onClick={handleClose}
               aria-label="Close"
               title="Close (Esc)"
-              className="flex size-14 items-center justify-center rounded-xl bg-gold text-black font-extrabold transition-colors duration-150 hover:opacity-90 shadow-md"
+              className="flex size-11 items-center justify-center rounded-full bg-gold text-black font-extrabold transition-colors duration-150 hover:opacity-90 shadow-md md:size-14"
             >
-              <X className="size-7" />
+              <X className="size-5 md:size-7" />
             </button>
           </div>
         </div>
       </header>
 
-      {/* Combined scrollable book viewer - A4, full page, centered, cropped, butter smooth scrolling */}
+      {/* Combined scrollable book viewer - zoom changes page width while this header stays locked */}
       <div className="flex-1 overflow-y-auto bg-[#0a0a0a] flex justify-center scroll-smooth overscroll-auto">
         <div className="w-full max-w-[850px] bg-[#0c0c0c] shadow-2xl min-h-full flex flex-col items-center py-6 gap-6">
           {book.chapters.map((ch) => (
             <div key={ch.pdfCode} data-chapter-title={ch.title} className="w-full flex justify-center px-4">
-              <CombinedChapterPdf book={book} chapter={ch} isActive={ch.pdfCode === chapter.pdfCode} />
+              <CombinedChapterPdf book={book} chapter={ch} isActive={ch.pdfCode === chapter.pdfCode} scale={zoom} />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Floating prev/next round arrows hovering on either side of the document */}
-      {prev && (
-        <Link
-          href={`/read/${prev.pdfCode}`}
-          aria-label={`Previous chapter: ${prev.title}`}
-          title={prev.title}
-          className="fixed top-1/2 z-30 flex size-14 -translate-y-1/2 items-center justify-center rounded-full bg-background/85 text-foreground shadow-elevated backdrop-blur transition-colors duration-150 hover:bg-secondary left-2 md:size-16 md:left-[max(1rem,calc((100%-850px)/2-5rem))]"
-        >
-          <ChevronLeft className="size-7 md:size-8" />
-        </Link>
-      )}
-      {next && (
-        <Link
-          href={`/read/${next.pdfCode}`}
-          aria-label={`Next chapter: ${next.title}`}
-          title={next.title}
-          className="fixed top-1/2 z-30 flex size-14 -translate-y-1/2 items-center justify-center rounded-full bg-background/85 text-foreground shadow-elevated backdrop-blur transition-colors duration-150 hover:bg-secondary right-2 md:size-16 md:right-[max(1rem,calc((100%-850px)/2-5rem))]"
-        >
-          <ChevronRight className="size-7 md:size-8" />
-        </Link>
-      )}
+        {/* Mobile controls: icon-only and hidden until hovered/focused near the bottom of the page */}
+      <div className="group absolute inset-x-0 bottom-0 z-40 flex justify-center pb-5 md:hidden">
+          <div className="flex translate-y-12 items-center gap-2 rounded-full bg-background/90 p-1.5 opacity-0 shadow-elevated backdrop-blur transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100">
+            <button type="button" onClick={downloadPdf} disabled={downloading} aria-label="Download PDF" title="Download PDF" className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-secondary disabled:opacity-50"><Download className="size-5" /></button>
+            <a href={pdfUrl} target="_blank" rel="noopener noreferrer" aria-label="Open in new tab" title="Open in new tab" className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-secondary"><ExternalLink className="size-5" /></a>
+            <button type="button" onClick={() => setZoom(clampZoom(zoom - 0.1))} disabled={zoom <= 0.75} aria-label="Zoom out" title="Zoom out" className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-secondary disabled:opacity-40"><ZoomOut className="size-5" /></button>
+            <button type="button" onClick={() => setZoom(clampZoom(zoom + 0.1))} disabled={zoom >= 1.75} aria-label="Zoom in" title="Zoom in" className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-secondary disabled:opacity-40"><ZoomIn className="size-5" /></button>
+            <button type="button" onClick={() => setZoom(1)} disabled={zoom === 1} aria-label="Reset zoom" title="Reset zoom" className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-secondary disabled:opacity-40"><RotateCcw className="size-5" /></button>
+          </div>
+        </div>
 
-      {/* Bottom bar - locked visible, only chapter count */}
-      <footer className="flex items-center justify-center gap-3 bg-background/95 px-4 py-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-4px_16px_-4px_rgba(0,0,0,0.4)] backdrop-blur md:px-6 shrink-0">
-        <p className="text-sm font-bold text-foreground">
-          {book.chapters.length} chapters
-        </p>
-      </footer>
+        {/* Desktop zoom controls */}
+        <div className="absolute bottom-5 left-1/2 z-40 hidden -translate-x-1/2 items-center gap-1 overflow-hidden rounded-full bg-background/90 p-1 shadow-elevated backdrop-blur md:flex">
+          <button type="button" onClick={() => setZoom(clampZoom(zoom - 0.1))} disabled={zoom <= 0.75} aria-label="Zoom out" title="Zoom out" className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-secondary disabled:opacity-40"><ZoomOut className="size-5" /></button>
+          <span className="w-12 text-center text-xs font-bold text-muted-foreground">{Math.round(zoom * 100)}%</span>
+          <button type="button" onClick={() => setZoom(clampZoom(zoom + 0.1))} disabled={zoom >= 1.75} aria-label="Zoom in" title="Zoom in" className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-secondary disabled:opacity-40"><ZoomIn className="size-5" /></button>
+          <button type="button" onClick={() => setZoom(1)} disabled={zoom === 1} aria-label="Reset zoom" title="Reset zoom" className="flex size-10 items-center justify-center rounded-full text-foreground hover:bg-secondary disabled:opacity-40"><RotateCcw className="size-5" /></button>
+        </div>
     </div>
   )
 }
