@@ -3,13 +3,13 @@ import type { Book } from '@/lib/catalog'
 
 export function ChapterList({ book }: { book: Book }) {
   return (
-    <section aria-label="Chapters" className="flex flex-col gap-4 mt-4 lg:mt-6">
+    <section aria-label="Chapters" className="flex min-h-0 flex-1 flex-col gap-4 mt-4 lg:mt-6">
       <div className="flex items-center justify-center md:justify-start gap-2">
         <h2 className="text-2xl font-extrabold text-foreground">Chapters</h2>
       </div>
-      <ol className="flex flex-col overflow-hidden rounded-lg bg-card/60 backdrop-blur-sm shadow-card">
+      <ol className="flex min-h-0 flex-1 flex-col divide-y divide-border/70 overflow-y-auto rounded-lg bg-card/60 py-5 backdrop-blur-sm shadow-card">
         {book.chapters.map((chapter) => (
-          <li key={chapter.pdfCode} className="flex items-stretch">
+          <li key={chapter.pdfCode} className="flex shrink-0 items-stretch">
             <Link
               href={`/read/${chapter.pdfCode}`}
               className="flex min-w-0 flex-1 items-center gap-4 px-7 py-3.5 transition-colors duration-150 hover:bg-accent/50 md:px-10"

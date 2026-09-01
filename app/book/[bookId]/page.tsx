@@ -25,7 +25,7 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
   const gradient = getSubjectGradient(book.subject)
   const CoverIcon = gradient.icon
 
-  const viewLinkClass = 'view-link flex items-center gap-1 text-sm'
+  const viewLinkClass = 'view-link flex items-center gap-1 text-sm hover:scale-105'
 
   return (
     <div className="mx-auto flex w-full max-w-[1600px] flex-col items-stretch gap-8 px-6 py-6 md:px-10 lg:h-[calc(100svh-13.5rem)] lg:flex-row lg:gap-12 lg:overflow-hidden lg:py-4">
@@ -65,10 +65,8 @@ export default async function BookPage({ params }: { params: Promise<{ bookId: s
 
       {/* Right: chapters, independently scrollable */}
       <section className="flex min-w-0 flex-1 flex-col">
-        <div className="min-h-0 flex-1 pt-4 lg:pt-6">
-          <div className="h-full overflow-y-auto pr-1 lg:pr-3">
-            <ChapterList book={book} />
-          </div>
+        <div className="flex min-h-0 flex-1 flex-col pt-4 lg:pt-6">
+          <ChapterList book={book} />
         </div>
         <div className="flex shrink-0 items-center justify-center gap-8 pt-5">
           {isSolution && book.solutionFor && (
