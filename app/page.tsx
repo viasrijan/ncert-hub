@@ -34,7 +34,7 @@ export default function HomePage() {
   const totalChapters = BOOKS.reduce((n, b) => n + b.chapters.length, 0)
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 pb-12 pt-0 md:px-8 md:pb-16">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 pb-12 pt-0 md:px-8 md:pb-16">
       <section className="flex flex-col items-center text-center gap-10 animate-fade-in-up">
         <div className="flex items-center gap-2 sm:gap-3 rounded-full bg-card/60 px-4 sm:px-7 py-2.5 sm:py-3.5 text-sm sm:text-base font-bold text-foreground uppercase tracking-wider backdrop-blur-sm shadow-card">
           <span className="num-gold">{BOOKS.length}</span> TEXTBOOKS
@@ -67,7 +67,7 @@ export default function HomePage() {
 
       <RecentsStrip />
 
-      <section aria-labelledby="featured-heading" className="mt-10 flex flex-col items-center gap-10">
+      <section aria-labelledby="featured-heading" className="mt-8 flex flex-col items-center gap-6">
         <div className="flex flex-col items-center gap-2">
           <h2 id="featured-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
             Popular textbooks
@@ -81,65 +81,70 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="how-heading" className="mt-10 flex flex-col items-center gap-6">
-        <h2 id="how-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
-          How NCERT Hub works
-        </h2>
-        <p className="max-w-3xl text-center text-[15px] leading-relaxed text-foreground/80">
+      <section aria-labelledby="how-heading" className="mt-8 flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-1.5">
+          <p className="text-xs font-bold tracking-widest uppercase text-gold">How it works</p>
+          <h2 id="how-heading" className="font-display text-xl font-bold tracking-tight md:text-2xl text-center text-foreground">
+            Browse, read, revise
+          </h2>
+        </div>
+        <p className="max-w-3xl text-center text-[14px] leading-relaxed text-foreground/75">
           Pick your class to see every textbook prescribed for it, or pick a subject to follow it across all
-          twelve classes. Open any chapter to read it in a fast, mobile-friendly viewer with page navigation,
-          download, and fullscreen support. Tap the bookmark icon on any book to save it — your library lives
-          in your browser, so it works without an account and never leaves your device. When you finish a
-          chapter&apos;s exercises, the companion Solutions section links you to chapter-wise answer guides
-          from trusted external sources.
+          twelve classes. Open any chapter to read it in a fast, mobile-friendly viewer, download the PDF for
+          offline study, or bookmark the book — your library lives in your browser, no account needed. Finished
+          the exercises? The companion Solutions section links chapter-wise answer guides from trusted sources.
         </p>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 w-full">
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3 w-full">
           {[
-            { t: 'Browse', d: 'Find any of 139 NCERT textbooks across Classes I–XII, organised by class and subject.' },
-            { t: 'Read & download', d: 'Read 1,200+ chapters online or download the PDFs for offline study, free forever.' },
-            { t: 'Check answers', d: 'Compare your exercise solutions against trusted chapter-wise answer guides.' },
+            { t: 'Browse', d: '139 NCERT textbooks across Classes I–XII, organised by class and subject.' },
+            { t: 'Read & download', d: '1,200+ chapters online or as PDFs for offline study, free forever.' },
+            { t: 'Check answers', d: 'Chapter-wise answer guides to verify your exercise solutions.' },
           ].map((f) => (
-            <div key={f.t} className="rounded-2xl bg-card/60 backdrop-blur-sm shadow-card p-5 flex flex-col gap-2">
-              <h3 className="font-display text-lg font-bold text-foreground">{f.t}</h3>
-              <p className="text-[14px] leading-relaxed text-muted-foreground">{f.d}</p>
+            <div key={f.t} className="rounded-xl bg-card/60 backdrop-blur-sm shadow-card px-4 py-3.5 flex flex-col gap-1 border border-white/5">
+              <h3 className="font-display text-base font-bold text-foreground">{f.t}</h3>
+              <p className="text-[13px] leading-relaxed text-muted-foreground">{f.d}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section aria-labelledby="guides-heading" className="mt-10 flex flex-col items-center gap-6">
-        <div className="flex flex-col items-center gap-2">
-          <h2 id="guides-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
+      <section aria-labelledby="guides-heading" className="mt-8 flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-1.5">
+          <p className="text-xs font-bold tracking-widest uppercase text-gold">Guides</p>
+          <h2 id="guides-heading" className="font-display text-xl font-bold tracking-tight md:text-2xl text-center text-foreground">
             Study guides
           </h2>
-          <Link href="/guides" className="group flex items-center gap-2 text-base font-semibold text-gold transition-colors hover:text-gold/70">
+          <Link href="/guides" className="group flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold/70">
             View all <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 w-full">
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 w-full">
           {GUIDES.map((guide) => (
             <Link
               key={guide.slug}
               href={`/guides/${guide.slug}`}
-              className="group flex flex-col gap-2 rounded-2xl bg-card/80 backdrop-blur-sm p-5 shadow-card transition-colors duration-200 hover:shadow-elevated"
+              className="group flex flex-col gap-1.5 rounded-xl bg-card/80 backdrop-blur-sm px-4 py-3.5 shadow-card border border-white/5 transition-colors duration-200 hover:shadow-elevated"
             >
-              <h3 className="font-display text-lg font-bold text-foreground">{guide.title}</h3>
-              <p className="text-[14px] leading-relaxed text-muted-foreground">{guide.description}</p>
-              <span className="text-sm font-bold text-gold">Read guide · {guide.readMinutes} min →</span>
+              <h3 className="font-display text-base font-bold text-foreground">{guide.title}</h3>
+              <p className="text-[13px] leading-relaxed text-muted-foreground line-clamp-2">{guide.description}</p>
+              <span className="text-[13px] font-bold text-gold">Read guide · {guide.readMinutes} min →</span>
             </Link>
           ))}
         </div>
       </section>
 
-      <section aria-labelledby="faq-heading" className="mt-10 flex flex-col items-center gap-6">
-        <h2 id="faq-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
-          Frequently asked questions
-        </h2>
-        <div className="flex flex-col gap-3 w-full max-w-3xl">
+      <section aria-labelledby="faq-heading" className="mt-8 flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-1.5">
+          <p className="text-xs font-bold tracking-widest uppercase text-gold">FAQ</p>
+          <h2 id="faq-heading" className="font-display text-xl font-bold tracking-tight md:text-2xl text-center text-foreground">
+            Frequently asked questions
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 w-full">
           {FAQS.map((faq) => (
-            <div key={faq.q} className="rounded-2xl bg-card/60 backdrop-blur-sm shadow-card p-5 flex flex-col gap-2">
-              <h3 className="text-base font-extrabold text-foreground">{faq.q}</h3>
-              <p className="text-[14px] leading-relaxed text-muted-foreground">{faq.a}</p>
+            <div key={faq.q} className="rounded-xl bg-card/60 backdrop-blur-sm shadow-card px-4 py-3.5 flex flex-col gap-1.5 border border-white/5">
+              <h3 className="text-[15px] font-extrabold text-foreground">{faq.q}</h3>
+              <p className="text-[13px] leading-relaxed text-muted-foreground">{faq.a}</p>
             </div>
           ))}
         </div>

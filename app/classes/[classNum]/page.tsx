@@ -40,20 +40,25 @@ export default async function ClassPage({ params }: { params: Promise<{ classNum
           {books.length} {books.length === 1 ? 'textbook' : 'textbooks'}
         </p>
       </div>
-      {guide && (
-        <section aria-label={`About Class ${toRoman(c)}`} className="w-full max-w-4xl rounded-2xl bg-card/60 backdrop-blur-sm shadow-card p-6 md:p-8 flex flex-col gap-4">
-          <p className="text-[15px] leading-relaxed text-foreground/85">{guide.blurb}</p>
-          <div className="flex flex-col gap-2">
-            <h2 className="text-base font-extrabold text-foreground">How to study Class {toRoman(c)}</h2>
-            <ul className="flex flex-col gap-2 list-disc pl-5 text-[14px] leading-relaxed text-foreground/80">
-              {guide.studyTips.map((tip) => (<li key={tip}>{tip}</li>))}
-            </ul>
-          </div>
-        </section>
-      )}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-4 w-full place-items-center stagger-children">
         {books.map((book) => (<BookCard key={book.id} book={book} />))}
       </div>
+      {guide && (
+        <section aria-label={`About Class ${toRoman(c)}`} className="w-full max-w-4xl rounded-2xl bg-card/60 backdrop-blur-sm shadow-card border border-white/5 p-5 md:p-6 flex flex-col gap-3">
+          <div className="grid gap-4 md:grid-cols-5 md:gap-6">
+            <div className="flex flex-col gap-2 md:col-span-3">
+              <h2 className="text-xs font-bold tracking-widest uppercase text-gold">About Class {toRoman(c)}</h2>
+              <p className="text-[14px] leading-relaxed text-foreground/80">{guide.blurb}</p>
+            </div>
+            <div className="flex flex-col gap-2 md:col-span-2 md:border-l md:border-white/10 md:pl-6">
+              <h2 className="text-xs font-bold tracking-widest uppercase text-gold">Study tips</h2>
+              <ul className="flex flex-col gap-1.5 list-disc pl-4 text-[13px] leading-relaxed text-foreground/75">
+                {guide.studyTips.map((tip) => (<li key={tip}>{tip}</li>))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   )
 }

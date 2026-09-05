@@ -38,14 +38,15 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
           {books.length} {books.length === 1 ? 'textbook' : 'textbooks'} across all classes
         </p>
       </div>
-      {guide && (
-        <section aria-label={`About ${decodedSubject}`} className="w-full max-w-4xl rounded-2xl bg-card/60 backdrop-blur-sm shadow-card p-6 md:p-8">
-          <p className="text-[15px] leading-relaxed text-foreground/85">{guide}</p>
-        </section>
-      )}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-4 w-full place-items-center stagger-children">
         {books.map((book) => (<BookCard key={book.id} book={book} showClass />))}
       </div>
+      {guide && (
+        <section aria-label={`About ${decodedSubject}`} className="w-full max-w-4xl rounded-2xl bg-card/60 backdrop-blur-sm shadow-card border border-white/5 p-5 md:p-6 flex flex-col gap-2">
+          <h2 className="text-xs font-bold tracking-widest uppercase text-gold">About {decodedSubject}</h2>
+          <p className="text-[14px] leading-relaxed text-foreground/80">{guide}</p>
+        </section>
+      )}
     </div>
   )
 }
