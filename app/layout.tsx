@@ -3,6 +3,7 @@ import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { AppShell } from '@/components/app-shell'
+import { AdSense } from '@/components/adsense'
 import './globals.css'
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-satoshi' })
@@ -34,11 +35,7 @@ export default function RootLayout({
           <AppShell>{children}</AppShell>
         </ThemeProvider>
         <Analytics />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8953158636455900"
-          crossOrigin="anonymous"
-        />
+        <AdSense />
       </body>
     </html>
   )

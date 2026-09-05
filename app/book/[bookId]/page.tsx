@@ -13,8 +13,16 @@ export function generateStaticParams() { return [...BOOKS, ...SOLUTIONS].map((b)
 export async function generateMetadata({ params }: { params: Promise<{ bookId: string }> }): Promise<Metadata> {
   const { bookId } = await params
   const book = getBook(bookId)
-  if (!book) return { title: 'Book not found' }
-  return { title: `${book.kind === 'solution' ? 'Solutions - ' : ''}${book.title} (Class ${book.classNum})`, description: `Read and download chapters of ${book.title}` }
+  if (!book) return { title: 'Book not found', robots: { index: false, follow: false } }
+  // Quarantined solution books stay usable but out of search indexes and ad-free.
+  if (book.kind === 'solution') {
+    return {
+      title: `Solutions - ${book.title} (Class ${book.classNum})`,
+      description: `Read and download chapters of ${book.title}`,
+      robots: { index: false, follow: false },
+    }
+  }
+  return { title: `${book.title} (Class ${book.classNum})`, description: `Read and download chapters of ${book.title}` }
 }
 
 export default async function BookPage({ params }: { params: Promise<{ bookId: string }> }) {

@@ -1,11 +1,31 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { BOOKS, toRoman } from '@/lib/catalog'
+import { GUIDES } from '@/lib/guides'
 import { BookCard } from '@/components/book-card'
 import { RecentsStrip } from '@/components/recents-strip'
 import { SearchTrigger } from '@/components/search-trigger'
 
 const FEATURED_IDS = ['jemh1', 'jesc1', 'lemh1', 'leph1', 'kebo1', 'jeff1', 'iemh1', 'hesc1']
+
+const FAQS = [
+  {
+    q: 'Is NCERT Hub official?',
+    a: 'No. NCERT Hub is an independent, unofficial project. All textbooks belong to NCERT, and the official editions live at ncert.nic.in. This site simply organises the same books by class and subject so they are easier to browse, read, and download.',
+  },
+  {
+    q: 'Are the books free to read and download?',
+    a: 'Yes. Every textbook chapter can be read online in the built-in reader or downloaded as a PDF for offline study, with no account and no payment. Bookmarks and reading history are stored only in your own browser.',
+  },
+  {
+    q: 'Which books should I read for board exams?',
+    a: 'Start with the NCERT textbook for your class and subject — board questions in Classes 10 and 12 are overwhelmingly drawn from NCERT text, examples, and exercises. Finish the textbook honestly before touching reference books, then practise with sample papers.',
+  },
+  {
+    q: 'What are the Solutions books?',
+    a: 'Solutions are chapter-wise answer guides that open from trusted external educational websites. Attempt the NCERT questions yourself first, then use solutions to check your method — especially the steps, which is where most marks are lost.',
+  },
+]
 
 export default function HomePage() {
   const featured = FEATURED_IDS.map((id) => BOOKS.find((b) => b.id === id)).filter(
@@ -58,6 +78,70 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5 lg:grid-cols-4 stagger-children w-full">
           {featured.map((book) => (<BookCard key={book.id} book={book} showClass />))}
+        </div>
+      </section>
+
+      <section aria-labelledby="how-heading" className="mt-10 flex flex-col items-center gap-6">
+        <h2 id="how-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
+          How NCERT Hub works
+        </h2>
+        <p className="max-w-3xl text-center text-[15px] leading-relaxed text-foreground/80">
+          Pick your class to see every textbook prescribed for it, or pick a subject to follow it across all
+          twelve classes. Open any chapter to read it in a fast, mobile-friendly viewer with page navigation,
+          download, and fullscreen support. Tap the bookmark icon on any book to save it — your library lives
+          in your browser, so it works without an account and never leaves your device. When you finish a
+          chapter&apos;s exercises, the companion Solutions section links you to chapter-wise answer guides
+          from trusted external sources.
+        </p>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 w-full">
+          {[
+            { t: 'Browse', d: 'Find any of 139 NCERT textbooks across Classes I–XII, organised by class and subject.' },
+            { t: 'Read & download', d: 'Read 1,200+ chapters online or download the PDFs for offline study, free forever.' },
+            { t: 'Check answers', d: 'Compare your exercise solutions against trusted chapter-wise answer guides.' },
+          ].map((f) => (
+            <div key={f.t} className="rounded-2xl bg-card/60 backdrop-blur-sm shadow-card p-5 flex flex-col gap-2">
+              <h3 className="font-display text-lg font-bold text-foreground">{f.t}</h3>
+              <p className="text-[14px] leading-relaxed text-muted-foreground">{f.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section aria-labelledby="guides-heading" className="mt-10 flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-2">
+          <h2 id="guides-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
+            Study guides
+          </h2>
+          <Link href="/guides" className="group flex items-center gap-2 text-base font-semibold text-gold transition-colors hover:text-gold/70">
+            View all <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 w-full">
+          {GUIDES.map((guide) => (
+            <Link
+              key={guide.slug}
+              href={`/guides/${guide.slug}`}
+              className="group flex flex-col gap-2 rounded-2xl bg-card/80 backdrop-blur-sm p-5 shadow-card transition-colors duration-200 hover:shadow-elevated"
+            >
+              <h3 className="font-display text-lg font-bold text-foreground">{guide.title}</h3>
+              <p className="text-[14px] leading-relaxed text-muted-foreground">{guide.description}</p>
+              <span className="text-sm font-bold text-gold">Read guide · {guide.readMinutes} min →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section aria-labelledby="faq-heading" className="mt-10 flex flex-col items-center gap-6">
+        <h2 id="faq-heading" className="font-display text-2xl font-bold tracking-tight md:text-3xl text-center text-foreground">
+          Frequently asked questions
+        </h2>
+        <div className="flex flex-col gap-3 w-full max-w-3xl">
+          {FAQS.map((faq) => (
+            <div key={faq.q} className="rounded-2xl bg-card/60 backdrop-blur-sm shadow-card p-5 flex flex-col gap-2">
+              <h3 className="text-base font-extrabold text-foreground">{faq.q}</h3>
+              <p className="text-[14px] leading-relaxed text-muted-foreground">{faq.a}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>

@@ -7,6 +7,7 @@ import { getClassIconGradient } from '@/lib/subject-gradients'
 export const metadata: Metadata = {
   title: 'Solutions - By Class',
   description: 'Browse NCERT Solutions by class — external, legal-safe.',
+  robots: { index: false, follow: false },
 }
 
 export default function SolutionClassesPage() {

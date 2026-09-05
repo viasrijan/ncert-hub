@@ -108,6 +108,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
           {children}
+          <nav aria-label="Legal" className="flex items-center justify-center gap-4 px-6 pb-4 text-xs font-semibold text-muted-foreground lg:hidden">
+            <Link href="/guides" className="hover:text-foreground">Guides</Link>
+            <Link href="/about" className="hover:text-foreground">About</Link>
+            <Link href="/privacy" className="hover:text-foreground">Privacy</Link>
+            <Link href="/terms" className="hover:text-foreground">Terms</Link>
+            <Link href="/disclaimer" className="hover:text-foreground">Disclaimer</Link>
+          </nav>
         </main>
         <footer className="hidden flex-col items-center gap-2 px-8 pt-6 pb-10 lg:flex">
           <div className="flex items-center justify-center gap-3">
@@ -126,6 +133,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </svg>
             </a>
           </div>
+          <nav aria-label="Legal" className="flex items-center gap-4 text-xs font-semibold text-muted-foreground">
+            <Link href="/guides" className="hover:text-foreground">Guides</Link>
+            <Link href="/about" className="hover:text-foreground">About</Link>
+            <Link href="/privacy" className="hover:text-foreground">Privacy</Link>
+            <Link href="/terms" className="hover:text-foreground">Terms</Link>
+            <Link href="/disclaimer" className="hover:text-foreground">Disclaimer</Link>
+          </nav>
           <p className="text-sm font-normal text-foreground text-center">
             Visit the official website at{' '}
             <a href="https://ncert.nic.in" target="_blank" rel="noopener noreferrer" className="font-bold text-gold no-underline hover:text-foreground">

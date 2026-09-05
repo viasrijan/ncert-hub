@@ -4,6 +4,7 @@ import { BookmarksView } from '@/components/bookmarks-view'
 export const metadata: Metadata = {
   title: 'Saved',
   description: 'Your bookmarked NCERT textbooks.',
+  robots: { index: false, follow: false },
 }
 
 export default function BookmarksPage() {

@@ -8,6 +8,7 @@ import { SearchView } from '@/components/search-view'
 export const metadata: Metadata = {
   title: 'Solutions',
   description: 'Browse NCERT Solutions for Classes I to XII — external, legal-safe links. Search solutions by class, subject, or chapter.',
+  robots: { index: false, follow: false },
 }
 
 export default function SolutionsPage() {

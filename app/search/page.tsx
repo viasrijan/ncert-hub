@@ -4,6 +4,7 @@ import { SearchView } from '@/components/search-view'
 export const metadata: Metadata = {
   title: 'Search',
   description: 'Search NCERT textbooks by title, subject, or chapter.',
+  robots: { index: false, follow: false },
 }
 
 export default function SearchPage() {
